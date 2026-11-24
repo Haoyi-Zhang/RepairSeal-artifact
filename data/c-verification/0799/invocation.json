@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/usr/bin/prlimit",
+    "--as=2147483648",
+    "--cpu=32",
+    "--",
+    "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/bin/cbmc",
+    "--32",
+    "--c11",
+    "--gcc",
+    "--no-standard-checks",
+    "--div-by-zero-check",
+    "--undefined-shift-check",
+    "--retain-trivial-checks",
+    "--json-ui",
+    "--trace",
+    "harness.c"
+  ],
+  "cwd": ".",
+  "timeout_seconds": 30.0,
+  "memory_mib": 2048
+}

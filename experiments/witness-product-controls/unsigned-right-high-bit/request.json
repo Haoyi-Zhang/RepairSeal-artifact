@@ -1,0 +1,17 @@
+{
+  "id": "unsigned-right-high-bit",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      2,
+      2147483648,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned x) { return x; }",
+  "candidate": "unsigned f(unsigned x) { return x >> 31u; }",
+  "reference": "unsigned f(unsigned x) { return x / 2147483648u; }",
+  "repair_guard": "x == x"
+}

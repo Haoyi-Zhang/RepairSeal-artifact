@@ -1,0 +1,1 @@
+unsigned f(unsigned n) { return (3u / 2u) * n; }

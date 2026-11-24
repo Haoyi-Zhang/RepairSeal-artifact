@@ -1,0 +1,522 @@
+{
+  "status": "REFUTED",
+  "reason": "at least one reachable failed property",
+  "properties": [
+    {
+      "property": "main.assertion.1",
+      "description": "repairseal.repair",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "27",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "repair-equality"
+    },
+    {
+      "property": "main.assertion.2",
+      "description": "repairseal.preserve",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "30",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "preservation-equality"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.1",
+      "description": "shift distance too large in y << (y & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.2",
+      "description": "shift distance too large in ~(y << (y & 31u)) >> (x & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.3",
+      "description": "shift distance too large in y >> (15u & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.4",
+      "description": "shift distance too large in (y >> (15u & 31u)) >> (b & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.division-by-zero.1",
+      "description": "division by zero in b % (((y >> (15u & 31u)) >> (b & 31u) & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-division-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.5",
+      "description": "shift distance too large in x >> (2u & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.division-by-zero.2",
+      "description": "division by zero in (x >> (2u & 31u)) % ((b + x & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-division-definedness"
+    },
+    {
+      "property": "__repairseal_original.division-by-zero.3",
+      "description": "division by zero in y / ((4294967295u & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-division-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.6",
+      "description": "shift distance too large in 0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.division-by-zero.4",
+      "description": "division by zero in (0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)) / ((r & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-division-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.7",
+      "description": "shift distance too large in y << (b & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "10",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.undefined-shift.8",
+      "description": "shift distance too large in a << ((3u | r) & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "11",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-shift-definedness"
+    },
+    {
+      "property": "__repairseal_original.division-by-zero.5",
+      "description": "division by zero in 0u % ((b & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "original.c",
+        "function": "__repairseal_original",
+        "line": "11",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "original-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.1",
+      "description": "division by zero in 1u / (y ^ 1u)",
+      "status": "FAILURE",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.1",
+      "description": "shift distance too large in y << (y & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "3",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.2",
+      "description": "shift distance too large in ~(y << (y & 31u)) >> (x & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "3",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.3",
+      "description": "shift distance too large in y >> (15u & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.4",
+      "description": "shift distance too large in (y >> (15u & 31u)) >> (b & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.2",
+      "description": "division by zero in b % (((y >> (15u & 31u)) >> (b & 31u) & 7u) + 1u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.5",
+      "description": "shift distance too large in x >> (2u & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "6",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.3",
+      "description": "division by zero in (x >> (2u & 31u)) % ((b + x & 7u) + 1u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "6",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.4",
+      "description": "division by zero in y / ((4294967295u & 7u) + 1u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "9",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.6",
+      "description": "shift distance too large in 0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "9",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.5",
+      "description": "division by zero in (0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)) / ((r & 7u) + 1u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "9",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.7",
+      "description": "shift distance too large in y << (b & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "11",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.undefined-shift.8",
+      "description": "shift distance too large in a << ((3u | r) & 31u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "12",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-shift-definedness"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.6",
+      "description": "division by zero in 0u % ((b & 7u) + 1u)",
+      "status": "UNKNOWN",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "12",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "candidate-division-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.1",
+      "description": "shift distance too large in y << (y & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.2",
+      "description": "shift distance too large in ~(y << (y & 31u)) >> (x & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.3",
+      "description": "shift distance too large in y >> (15u & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.4",
+      "description": "shift distance too large in (y >> (15u & 31u)) >> (b & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.division-by-zero.1",
+      "description": "division by zero in b % (((y >> (15u & 31u)) >> (b & 31u) & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "4",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-division-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.5",
+      "description": "shift distance too large in x >> (2u & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.division-by-zero.2",
+      "description": "division by zero in (x >> (2u & 31u)) % ((b + x & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "5",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-division-definedness"
+    },
+    {
+      "property": "__repairseal_reference.division-by-zero.3",
+      "description": "division by zero in y / ((4294967295u & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-division-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.6",
+      "description": "shift distance too large in 0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.division-by-zero.4",
+      "description": "division by zero in (0u - r << (y / ((4294967295u & 7u) + 1u) & 31u)) / ((r & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "8",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-division-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.7",
+      "description": "shift distance too large in y << (b & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "10",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.undefined-shift.8",
+      "description": "shift distance too large in a << ((3u | r) & 31u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "11",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-shift-definedness"
+    },
+    {
+      "property": "__repairseal_reference.division-by-zero.5",
+      "description": "division by zero in 0u % ((b & 7u) + 1u)",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "reference.c",
+        "function": "__repairseal_reference",
+        "line": "11",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0671"
+      },
+      "category": "reference-division-definedness"
+    }
+  ],
+  "terminal_statuses": [
+    "failure"
+  ],
+  "error_messages": [],
+  "failed_property_count": 1,
+  "unknown_property_count": 13,
+  "exit_code": 10,
+  "wall_seconds": 0.17547708900019643,
+  "timed_out": false,
+  "stdout_sha256": "8dfcc7ac59cae76c3c8edf21707d36a36e0e955e4af5addc5aefe927da0f5a9b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "counterexample_contract": "any property failure; not canonical leastness"
+}

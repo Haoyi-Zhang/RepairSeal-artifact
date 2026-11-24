@@ -1,0 +1,32 @@
+{
+  "index": 1,
+  "population": "core",
+  "request_id": "fixture-01-overfit",
+  "input_file": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/proof-data/fixture-inputs/fixture-01-overfit.json",
+  "input_file_sha256": "22c26bd397318268b40f9d4dabec26f334788119b225936e0fd108b755d31b20",
+  "input_order": [
+    "x",
+    "y",
+    "z",
+    "t"
+  ],
+  "domain_size": 81,
+  "case_directory": "0001",
+  "source_sha256": {
+    "original": "86caebd508ed286fcf9c8cc77847a758dabe6455fa9c37f8d1c565f6253770ff",
+    "candidate": "bdf387cee0d1548cdda544d87e974715a78a425cee58ea49d4f9f94a7e862047",
+    "reference": "ce31663dac6d3c9bd2b6f6a787d7f23cebb22ca8d74c8643bf5c56f151d97198",
+    "repair_guard": "e9acd5d5ab2be963345fd4e64fb9dbdc08b45a39b1200514f58bca3f95db7427"
+  },
+  "harness_sha256": "96e44668b1fd56977873fca8a74a68fe4a9361bc75f789b332c279215cb452b4",
+  "direct_status": "REFUTED",
+  "direct_checked_cells": 50,
+  "direct_wall_seconds": 0.0007186780021584127,
+  "cbmc_status": "REFUTED",
+  "cbmc_exit_code": 10,
+  "cbmc_wall_seconds": 0.041307024999696296,
+  "status_agreement": true,
+  "failed_property_categories": {
+    "repair-equality": 1
+  }
+}

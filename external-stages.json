@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "stages": {
+    "historical_receipt": {
+      "required": [
+        "python312"
+      ],
+      "description": "Exact CPython 3.12 historical receipt replay"
+    },
+    "cbmc_boolean": {
+      "required": [
+        "cbmc66"
+      ],
+      "description": "CBMC 6.6 Boolean campaign"
+    },
+    "witness": {
+      "required": [
+        "cbmc611",
+        "cpachecker"
+      ],
+      "description": "CBMC producer and CPAchecker receiver campaign"
+    },
+    "codeflaws_functional": {
+      "required": [
+        "codeflaws_archive"
+      ],
+      "description": "Pinned Codeflaws functional/native/coverage campaign"
+    },
+    "codeflaws_timing": {
+      "required": [
+        "codeflaws_archive",
+        "timing_cpu"
+      ],
+      "description": "Pinned timing campaign with explicit CPU affinity"
+    },
+    "vulkan_application": {
+      "required": [
+        "vulkan_scenario",
+        "vulkan_runner"
+      ],
+      "description": "Application-level CEIL_DIV/Vulkan scenario with bound observations"
+    }
+  }
+}

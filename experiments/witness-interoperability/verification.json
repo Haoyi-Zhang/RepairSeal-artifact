@@ -1,0 +1,127 @@
+{
+  "outcome": "PASS_RETAINED_WITNESS_RECORDS",
+  "requests": 804,
+  "checked": {
+    "native_points": 699086,
+    "native_compilations": 804,
+    "receiving_processes": 5418,
+    "ignored_annotation_runs": 900,
+    "input_projections_native_refuted": 594,
+    "corrected_policy_native_compilations": 804,
+    "corrected_policy_native_points": 699086,
+    "preserved_initial_failed_native_attempts": 1,
+    "actual_native_compilation_attempts": 1332,
+    "preserved_resource_interruptions": 1,
+    "control_processes": 18
+  },
+  "producer_statuses": {
+    "ACCEPT": 210,
+    "REFUTED": 594
+  },
+  "arm_outcomes": {
+    "direct": {
+      "TRUE": 206,
+      "FALSE": 593,
+      "UNKNOWN": 5
+    },
+    "raw": {
+      "ERROR": 804
+    },
+    "context": {
+      "CONFIRMED": 216,
+      "UNCONFIRMED": 586,
+      "UNKNOWN": 2
+    },
+    "standard": {
+      "CONFIRMED": 207,
+      "UNCONFIRMED": 594,
+      "UNKNOWN": 3
+    },
+    "located": {
+      "CONFIRMED": 402,
+      "UNCONFIRMED": 399,
+      "UNKNOWN": 3
+    },
+    "input": {
+      "NOT_APPLICABLE": 210,
+      "CONFIRMED": 594
+    },
+    "trivial": {
+      "CONFIRMED": 801,
+      "UNKNOWN": 3
+    }
+  },
+  "arm_outcomes_by_claim": {
+    "direct": {
+      "ACCEPT": {
+        "TRUE": 206,
+        "UNKNOWN": 4
+      },
+      "REFUTED": {
+        "FALSE": 593,
+        "UNKNOWN": 1
+      }
+    },
+    "raw": {
+      "ACCEPT": {
+        "ERROR": 210
+      },
+      "REFUTED": {
+        "ERROR": 594
+      }
+    },
+    "context": {
+      "ACCEPT": {
+        "CONFIRMED": 208,
+        "UNKNOWN": 2
+      },
+      "REFUTED": {
+        "UNCONFIRMED": 586,
+        "CONFIRMED": 8
+      }
+    },
+    "standard": {
+      "ACCEPT": {
+        "CONFIRMED": 207,
+        "UNKNOWN": 3
+      },
+      "REFUTED": {
+        "UNCONFIRMED": 594
+      }
+    },
+    "located": {
+      "ACCEPT": {
+        "CONFIRMED": 207,
+        "UNKNOWN": 3
+      },
+      "REFUTED": {
+        "UNCONFIRMED": 399,
+        "CONFIRMED": 195
+      }
+    },
+    "input": {
+      "ACCEPT": {
+        "NOT_APPLICABLE": 210
+      },
+      "REFUTED": {
+        "CONFIRMED": 594
+      }
+    },
+    "trivial": {
+      "ACCEPT": {
+        "CONFIRMED": 208,
+        "UNKNOWN": 2
+      },
+      "REFUTED": {
+        "CONFIRMED": 593,
+        "UNKNOWN": 1
+      }
+    }
+  },
+  "scope": "Retained command/output reconciliation, exact original input retention, native-vector agreement, context/adapter graph structure, standard input-constraint reconstruction; this audit does not rerun external tools.",
+  "execution_phase_subjects": {
+    "initial": 527,
+    "compiler_policy_continuation": 45,
+    "resource_resume": 232
+  }
+}

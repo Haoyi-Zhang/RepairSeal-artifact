@@ -1,0 +1,229 @@
+{
+  "schema": "repairseal-codeflaws-int32-corpus-v1",
+  "profile_id": "codeflaws-closed-int32-v1",
+  "archive_sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+  "indexed_subjects": 3903,
+  "indexed_source_occurrences": 7806,
+  "syntactically_admitted_source_occurrences": 223,
+  "compatible_syntactic_pairs": 101,
+  "complete_io_subjects": 100,
+  "all_defined_subjects": 95,
+  "all_defined_problems": 35,
+  "all_defined_classes": {
+    "DCCR": 10,
+    "HIMS": 10,
+    "ORRN": 11,
+    "HOTH": 13,
+    "DRVA": 5,
+    "OILN": 20,
+    "HDMS": 4,
+    "OAIS": 10,
+    "STYP": 1,
+    "DRWV": 1,
+    "SMOV": 2,
+    "HEXP": 3,
+    "OAAN": 2,
+    "OEDE": 1,
+    "SRIF": 1,
+    "OMOP": 1
+  },
+  "test_file_occurrences": 4760,
+  "repair_test_occurrences": 811,
+  "heldout_test_occurrences": 3949,
+  "subject_distinct_input_vectors": 3923,
+  "reference_all_oracle_match": 95,
+  "original_with_oracle_mismatch": 95,
+  "excluded_undefined_subjects": [
+    {
+      "id": "171-B-bug-1463121-1463124",
+      "exclusions": [
+        {
+          "role": "original",
+          "source_sha256": "c3817fb0082e5265653e80f20352dc91494a92d626bdf78238f3c878927e52ba",
+          "reasons": {
+            "signed-overflow": 9
+          },
+          "first": {
+            "input_member": "codeflaws/171-B-bug-1463121-1463124/heldout-input-pos10",
+            "input": [
+              15000
+            ],
+            "reason": "signed-overflow",
+            "line": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "675-A-bug-18264119-18264212",
+      "exclusions": [
+        {
+          "role": "original",
+          "source_sha256": "9e822be55b6c81815bbdb1b87ada80ae721c0664c724a880f156c45b042fec1b",
+          "reasons": {
+            "signed-overflow": 19
+          },
+          "first": {
+            "input_member": "codeflaws/675-A-bug-18264119-18264212/heldout-input-pos10",
+            "input": [
+              -1000000000,
+              1000000000,
+              5
+            ],
+            "reason": "signed-overflow",
+            "line": 11
+          }
+        }
+      ]
+    },
+    {
+      "id": "227-A-bug-4213239-4213257",
+      "exclusions": [
+        {
+          "role": "original",
+          "source_sha256": "c7e79fae4708b8e6c15cb13ef70e00e542cc83c9efb5a1ac60dc6b3315d31ce5",
+          "reasons": {
+            "signed-overflow": 54
+          },
+          "first": {
+            "input_member": "codeflaws/227-A-bug-4213239-4213257/heldout-input-pos16",
+            "input": [
+              -783785,
+              244379,
+              -827111,
+              1135071,
+              63581,
+              1178397
+            ],
+            "reason": "signed-overflow",
+            "line": 8
+          }
+        },
+        {
+          "role": "reference",
+          "source_sha256": "3b92ec62135e89a1615e0a510607211b83bf97be752bd88c183b49fd4cd2774c",
+          "reasons": {
+            "signed-overflow": 54
+          },
+          "first": {
+            "input_member": "codeflaws/227-A-bug-4213239-4213257/heldout-input-pos16",
+            "input": [
+              -783785,
+              244379,
+              -827111,
+              1135071,
+              63581,
+              1178397
+            ],
+            "reason": "signed-overflow",
+            "line": 8
+          }
+        }
+      ]
+    },
+    {
+      "id": "515-A-bug-16019620-16019646",
+      "exclusions": [
+        {
+          "role": "original",
+          "source_sha256": "a1887e9527f2d5a4cfa0e9eb33a7acda7fc33fe495086e90a226c9d88b530b94",
+          "reasons": {
+            "signed-overflow": 4
+          },
+          "first": {
+            "input_member": "codeflaws/515-A-bug-16019620-16019646/heldout-input-pos14",
+            "input": [
+              -1000000000,
+              -1000000000,
+              2000000000
+            ],
+            "reason": "signed-overflow",
+            "line": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "675-A-bug-18264177-18264212",
+      "exclusions": [
+        {
+          "role": "original",
+          "source_sha256": "e92c84ad85fbbc5328bc6c781f0cc4369993f90cbff5b821135ba1b8f94eb970",
+          "reasons": {
+            "division-by-zero": 34
+          },
+          "first": {
+            "input_member": "codeflaws/675-A-bug-18264177-18264212/heldout-input-pos103",
+            "input": [
+              1,
+              -2,
+              0
+            ],
+            "reason": "division-by-zero",
+            "line": 12
+          }
+        }
+      ]
+    }
+  ],
+  "stage_summary": {
+    "eligible_subjects": 95,
+    "distinct_problems": 35,
+    "distinct_source_hashes": 176,
+    "candidate_subject_combinations": 739,
+    "repair_pass": 420,
+    "both_stages_pass": 328,
+    "repair_pass_heldout_fail": 92,
+    "stage_failure_subjects": 40,
+    "stage_failure_candidate_hashes": 49,
+    "stage_failure_problems": [
+      "104-A",
+      "112-B",
+      "122-A",
+      "124-A",
+      "151-A",
+      "194-A",
+      "197-A",
+      "216-A",
+      "313-A",
+      "4-A",
+      "448-A",
+      "476-A",
+      "478-A",
+      "513-A",
+      "560-B",
+      "617-A",
+      "62-A",
+      "638-A",
+      "659-A"
+    ],
+    "undefined_candidate_subject_combinations": 0,
+    "both_stages_fail": 312,
+    "repair_fail_heldout_pass": 7
+  },
+  "pycparser_version": "3.0",
+  "native_executed": true,
+  "upstream_scripts_executed": false,
+  "source_payloads_redistributed": false,
+  "native": {
+    "compilers": 2,
+    "distinct_external_source_units": 176,
+    "compiled_external_source_units": 352,
+    "logical_test_occurrences_per_compiler": 33726,
+    "unique_source_raw_input_cases_per_compiler": 7684,
+    "actual_external_program_executions": 15368,
+    "native_interpreter_agreements": 15368,
+    "undefined_not_executed": 0,
+    "failures": [],
+    "raw_input_bytes_preserved": true,
+    "source_bytes_rewritten": false,
+    "upstream_scripts_executed": false,
+    "branch_traces_observed_natively": false,
+    "cache_key": "compiler identity + source SHA256 + SHA256 of original input-file bytes",
+    "scope": "GCC with UBSan and ordinary Clang; resource/codec failures are execution failures, never semantic counterexamples. Duplicate logical file occurrences retain separate alias records."
+  },
+  "implementation_bindings": {
+    "bridge": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "study": "7841187d9d79c1002eb0f2ac1be5bbd1d27466f77cab646decb12102966ed25e"
+  }
+}

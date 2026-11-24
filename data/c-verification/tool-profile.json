@@ -1,0 +1,61 @@
+{
+  "binary": "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/bin/cbmc",
+  "binary_sha256": "346f5ff6ef13aa49c187977edfc9ac86754ded0d12e9fc9fd6e3e4d8ef49e498",
+  "version_probe": {
+    "command": [
+      "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/bin/cbmc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "6.6.0 (cbmc-6.6.0)\n",
+    "stderr": ""
+  },
+  "flags": [
+    "--32",
+    "--c11",
+    "--gcc",
+    "--no-standard-checks",
+    "--div-by-zero-check",
+    "--undefined-shift-check",
+    "--retain-trivial-checks",
+    "--json-ui",
+    "--trace"
+  ],
+  "library_directories": [
+    "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/lib"
+  ],
+  "dynamic_dependencies": {
+    "command": [
+      "ldd",
+      "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/bin/cbmc"
+    ],
+    "exit_code": 0,
+    "stdout": "\tlinux-vdso.so.1 (0x00007fc6b0eea000)\n\tlibminisat.so.2 => /workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/lib/libminisat.so.2 (0x00007fc6b00cc000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007fc6afe43000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fc6afd53000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fc6afd26000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fc6afb30000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fc6b0eec000)\n",
+    "stderr": ""
+  },
+  "dynamic_library_sha256": {
+    "/workspace/scratch/1069ed1cc3ce/tools/cbmc/sysroot/usr/lib/libminisat.so.2.1.0": "dce6ad0eb0d04cae44430f1cdea9278973b380e071691238e15640e2e538e7b0",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "9792e3cbb541c8f44c7acf5f14f4022ea62998ecc787d326bed4d8b6547dfd92",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "c8438e4fde1934e61c88311633f00949ff645d5c04cdb8671fa3d78164d2f307"
+  },
+  "gcc": "/usr/bin/x86_64-linux-gnu-gcc-14",
+  "gcc_sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+  "gcc_version": {
+    "command": [
+      "/usr/bin/gcc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  "prlimit": "/usr/bin/prlimit",
+  "prlimit_sha256": "06275e616ca2b721482aeb564260489be3fdc6d5f86836b4a78e96485845f060",
+  "timeout_seconds": 30.0,
+  "address_space_limit_mib": 2048,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

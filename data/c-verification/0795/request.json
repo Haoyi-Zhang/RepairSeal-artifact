@@ -1,0 +1,20 @@
+{
+  "id": "natural-domain-84-A-supplied-part1",
+  "word_bits": 32,
+  "inputs": {
+    "n": [
+      10000,
+      25460,
+      50000,
+      54646,
+      59790,
+      578456,
+      8457980,
+      56798056
+    ]
+  },
+  "original": "unsigned f(unsigned n) { return (3u / 2u) * n; }",
+  "candidate": "unsigned f(unsigned n) { return n + n / 2u; }",
+  "reference": "unsigned f(unsigned n) { return (3u * n) / 2u; }",
+  "repair_guard": "n == n"
+}

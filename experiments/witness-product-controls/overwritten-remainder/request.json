@@ -1,0 +1,21 @@
+{
+  "id": "overwritten-remainder",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ],
+    "y": [
+      0,
+      1,
+      31,
+      32
+    ]
+  },
+  "original": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "candidate": "unsigned f(unsigned x, unsigned y) { unsigned r = x % y; r = x; return r; }",
+  "reference": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "repair_guard": "x == x"
+}

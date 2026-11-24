@@ -1,0 +1,43 @@
+{
+  "schema": "repairseal-external-inputs-v1",
+  "purpose": "Inputs that are intentionally not redistributed. The evaluator checks executable versions and archive identity before starting external scientific children.",
+  "historical_python": {
+    "implementation": "CPython",
+    "version": "3.12.14",
+    "official_release_index": "https://www.python.org/ftp/python/3.12.14/",
+    "source_tarball": "https://www.python.org/ftp/python/3.12.14/Python-3.12.14.tar.xz",
+    "required_form": "an executable that reports Python 3.12.14",
+    "purpose": "exact historical admission-receipt compatibility"
+  },
+  "boolean_cbmc": {
+    "version": "6.6.0",
+    "official_release": "https://github.com/diffblue/cbmc/releases/tag/cbmc-6.6.0",
+    "purpose": "fresh 804-request Boolean comparison"
+  },
+  "witness_cbmc": {
+    "version": "6.11.0",
+    "official_release": "https://github.com/diffblue/cbmc/releases/tag/cbmc-6.11.0",
+    "purpose": "fresh GraphML witness production"
+  },
+  "cpachecker": {
+    "version": "4.3",
+    "official_record": "https://zenodo.org/records/24339049",
+    "archive_name": "CPAchecker-4.3-unix.zip",
+    "purpose": "fresh witness receiving and search controls"
+  },
+  "codeflaws_archive": {
+    "download_url": "https://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz",
+    "bytes": 265695532,
+    "sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+    "purpose": "fresh native, signed, coverage, and timing campaigns"
+  },
+  "upstream_vulkan": {
+    "repository": "https://github.com/ggml-org/llama.cpp",
+    "before_commit": "d80e87850173a674ea2673fd003ac54ac93774c0",
+    "after_commit": "86961efd5675279a4ec2f3d1a3c7d6e3803c1935",
+    "source_path": "ggml/src/ggml-vulkan/ggml-vulkan.cpp",
+    "application_execution_required": true,
+    "runner_bundled": false,
+    "purpose": "application-level CEIL_DIV build and execution beyond the packaged scalar model"
+  }
+}

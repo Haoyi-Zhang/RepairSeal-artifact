@@ -1,0 +1,19 @@
+{
+  "id": "selected-reference-fault",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ],
+    "y": [
+      0,
+      1
+    ]
+  },
+  "original": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "candidate": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "reference": "unsigned f(unsigned x, unsigned y) { return x / y; }",
+  "repair_guard": "x == x"
+}

@@ -1,0 +1,454 @@
+{
+  "transformation": "Exact scope-specific AST removal of measurement bookkeeping",
+  "source_bindings": {
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc"
+  },
+  "selections": [
+    {
+      "source": "src/demand_evaluator.py",
+      "definitions": [
+        "_supports",
+        "_Frame",
+        "_Memo"
+      ],
+      "source_identity": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+      "selected_ast_identity": "92a0531a980056a34a7557e4613e88c4b3f0c15aa516ab61ec2a7834b16c015f",
+      "derived_ast_identity": "60f9cd1d906359c6113f6ddce1051b6ca409bb4239f387b9c5e01be61fe5c428",
+      "renames": {
+        "_supports": "support_sets",
+        "_Frame": "SupportFrame",
+        "_Memo": "SupportMemo"
+      },
+      "rename_occurrences": {
+        "_supports": 1,
+        "_Frame": 3,
+        "_Memo": 1
+      },
+      "removed_statements": 13
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "definitions": [
+        "evaluate_direct"
+      ],
+      "source_identity": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+      "selected_ast_identity": "b5f4433fdb7442b9124721fd38b9a98c1f338e86eda1dd58783e6ae2423ca5c7",
+      "derived_ast_identity": "8fd7f679f92d34a9fd2b3f5605aa5a63b01c489dab305934f8ac43a797d9626a",
+      "renames": {
+        "evaluate_direct": "evaluate_support",
+        "_supports": "support_sets",
+        "_Memo": "SupportMemo"
+      },
+      "rename_occurrences": {
+        "evaluate_direct": 1,
+        "_supports": 1,
+        "_Memo": 1
+      },
+      "removed_statements": 9
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "definitions": [
+        "_Frame",
+        "PointMemo",
+        "evaluate_point_demand"
+      ],
+      "source_identity": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+      "selected_ast_identity": "365759448d061a23da907e2f3d5de642d8fbd1e5bd28735e13d3d46d75aceb53",
+      "derived_ast_identity": "0547f55f91c5f511cd097f1a56246d3da271aa6022045d4c30169f3126cc4afa",
+      "renames": {
+        "_Frame": "PointFrame",
+        "evaluate_point_demand": "evaluate_point"
+      },
+      "rename_occurrences": {
+        "_Frame": 3,
+        "evaluate_point_demand": 1
+      },
+      "removed_statements": 15
+    }
+  ],
+  "changes": [
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_supports",
+      "kind": "remove_counter_parameter",
+      "before": "circuit, names, count",
+      "after": "circuit, names"
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_supports",
+      "kind": "remove_measurement_statement",
+      "line": 70,
+      "before": "count.add('support_nodes')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_supports",
+      "kind": "remove_measurement_statement",
+      "line": 78,
+      "before": "count.add('support_edges')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_supports",
+      "kind": "remove_measurement_statement",
+      "line": 79,
+      "before": "count.add('support_coordinate_visits', len(supports[child]))",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.__init__",
+      "kind": "remove_counter_parameter",
+      "before": "self, circuit, supports, count",
+      "after": "self, circuit, supports"
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.__init__",
+      "kind": "remove_measurement_statement",
+      "line": 97,
+      "before": "self.count = count",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.__init__",
+      "kind": "remove_measurement_statement",
+      "line": 99,
+      "before": "self.maximum_stack_depth = 0",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo._query",
+      "kind": "remove_measurement_statement",
+      "line": 102,
+      "before": "self.count.add('cache_queries')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo._query",
+      "kind": "remove_measurement_statement",
+      "line": 104,
+      "before": "self.count.add('key_coordinates', len(support))",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo._query",
+      "kind": "remove_measurement_statement",
+      "line": 111,
+      "before": "self.count.add('cache_hits')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo._store",
+      "kind": "remove_measurement_statement",
+      "line": 121,
+      "before": "self.count.add('semantic_cells')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo._store",
+      "kind": "remove_measurement_statement",
+      "line": 122,
+      "before": "self.count.add('cache_writes')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.get",
+      "kind": "remove_measurement_statement",
+      "line": 131,
+      "before": "self.maximum_stack_depth = max(self.maximum_stack_depth, len(stack))",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.get",
+      "kind": "remove_measurement_statement",
+      "line": 145,
+      "before": "self.count.add('conditional_choices')",
+      "after": null
+    },
+    {
+      "source": "src/demand_evaluator.py",
+      "scope": "_Memo.get",
+      "kind": "remove_measurement_statement",
+      "line": 157,
+      "before": "self.count.add('conditional_choices')",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "route_local_helpers_to_derived_definitions",
+      "line": 454,
+      "before": "from demand_evaluator import _Counter, _Memo, _supports",
+      "after": "from _repairseal_counter_free_derived import SupportMemo, support_sets"
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_measurement_statement",
+      "line": 458,
+      "before": "count = _Counter(None)",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_measurement_statement",
+      "line": 459,
+      "before": "projection_work = {'points_scanned': 0, 'key_coordinates': 0, 'unique_representatives': 0, 'projection_queries': 0, 'encoded_coordinates': len(points) * len(names)}",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_counter_argument",
+      "line": 462,
+      "before": "_supports(circuit, names, count)",
+      "after": "_supports(circuit, names)"
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_counter_argument",
+      "line": 463,
+      "before": "_Memo(circuit, supports, count)",
+      "after": "_Memo(circuit, supports)"
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct.representatives",
+      "kind": "remove_measurement_statement",
+      "line": 468,
+      "before": "projection_work['projection_queries'] += 1",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct.representatives",
+      "kind": "remove_measurement_statement",
+      "line": 471,
+      "before": "projection_work['points_scanned'] += 1",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct.representatives",
+      "kind": "remove_measurement_statement",
+      "line": 472,
+      "before": "projection_work['key_coordinates'] += len(support)",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct.representatives",
+      "kind": "remove_measurement_statement",
+      "line": 475,
+      "before": "projection_work['unique_representatives'] += len(chosen)",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_measurement_statement",
+      "line": 482,
+      "before": "count.add('root_predicate_tests')",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_measurement_statement",
+      "line": 494,
+      "before": "count.add('diagnostic_points')",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "remove_measurement_statement",
+      "line": 499,
+      "before": "count.add('trace_events_examined')",
+      "after": null
+    },
+    {
+      "source": "src/int32_circuit.py",
+      "scope": "evaluate_direct",
+      "kind": "omit_measurement_return_fields",
+      "line": 509,
+      "before": "return {'status': 'REFUTED' if witness else 'ACCEPT', 'witness': witness, 'semantic_cells': count.values['semantic_cells'], 'counters': count.values, 'projection_work': projection_work, 'counter_scope': 'local DAG values, named memo/support work, and point-set projection operations; source admission, allocation, and elapsed time excluded', 'nodes': len(circuit.nodes), 'mode': 'int32-demand'}",
+      "after": "return {'status': 'REFUTED' if witness else 'ACCEPT', 'witness': witness}"
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.__init__",
+      "kind": "remove_counter_parameter",
+      "before": "self, circuit, names, points, count",
+      "after": "self, circuit, names, points"
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.__init__",
+      "kind": "remove_measurement_statement",
+      "line": 35,
+      "before": "self.count = count",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.__init__",
+      "kind": "remove_measurement_statement",
+      "line": 38,
+      "before": "self.maximum_stack_depth = 0",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo._query",
+      "kind": "remove_measurement_statement",
+      "line": 41,
+      "before": "self.count.add('cache_queries')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo._query",
+      "kind": "remove_measurement_statement",
+      "line": 44,
+      "before": "self.count.add('cache_hits')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo._store",
+      "kind": "remove_measurement_statement",
+      "line": 55,
+      "before": "self.count.add('semantic_cells')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo._store",
+      "kind": "remove_measurement_statement",
+      "line": 56,
+      "before": "self.count.add('cache_writes')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.get",
+      "kind": "remove_measurement_statement",
+      "line": 68,
+      "before": "self.maximum_stack_depth = max(self.maximum_stack_depth, len(stack))",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.get",
+      "kind": "remove_measurement_statement",
+      "line": 82,
+      "before": "self.count.add('conditional_choices')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "PointMemo.get",
+      "kind": "remove_measurement_statement",
+      "line": 94,
+      "before": "self.count.add('conditional_choices')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 123,
+      "before": "count = _Counter(None)",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_counter_argument",
+      "line": 124,
+      "before": "PointMemo(circuit, names, encoded, count)",
+      "after": "PointMemo(circuit, names, encoded)"
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 130,
+      "before": "count.add('root_predicate_tests')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 138,
+      "before": "count.add('diagnostic_points')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 143,
+      "before": "count.add('trace_events_examined')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 153,
+      "before": "cells = count.values['semantic_cells']",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "remove_measurement_statement",
+      "line": 154,
+      "before": "if cells != count.values['cache_writes'] or count.values['cache_queries'] != cells + count.values['cache_hits']:\n    raise RuntimeError('point-demand cache accounting')",
+      "after": null
+    },
+    {
+      "source": "tests/int32_point_demand.py",
+      "scope": "evaluate_point_demand",
+      "kind": "omit_measurement_return_fields",
+      "line": 156,
+      "before": "return {'status': 'REFUTED' if witness else 'ACCEPT', 'witness': witness, 'semantic_cells': cells, 'counters': count.values, 'allocated_point_rows': sum((row is not None for row in memo.rows)), 'allocated_value_slots': sum((len(row) for row in memo.rows if row is not None)), 'maximum_evaluation_stack_depth': memo.maximum_stack_depth, 'nodes': len(circuit.nodes), 'mode': 'int32-point-demand'}",
+      "after": "return {'status': 'REFUTED' if witness else 'ACCEPT', 'witness': witness}"
+    }
+  ],
+  "derived_source_identity": "0b2d7ff31a3ef7caacd3b8ed80169a444f68da7c3484921f45eb9d15584be9d3",
+  "removed_statement_count": 37,
+  "canonical_return_fields": [
+    "status",
+    "witness"
+  ],
+  "preserved": [
+    "source admission and reconstruction",
+    "type checks and local rules",
+    "source definedness",
+    "support construction and projection representatives",
+    "memo keys, lookups, writes and traversal",
+    "trace construction and canonical minimization"
+  ],
+  "measurement_free_check": "No count, _Counter, projection_work, cells or maximum_stack_depth AST references remain"
+}

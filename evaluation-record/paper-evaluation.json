@@ -1,0 +1,206 @@
+{
+  "schema": "repairseal-artifact-evaluation-v1",
+  "mode": "paper",
+  "started_utc": "2026-11-22T05:41:53+00:00",
+  "project_root": "$PROJECT",
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "verify-packaged-results",
+      "command": [
+        "python3",
+        "-B",
+        "$PROJECT/artifact/verify_expected_results.py",
+        "--output",
+        "$PAPER_OUTPUT/key-result-trace"
+      ],
+      "cwd": "$PROJECT",
+      "stdout": "logs/verify-packaged-results.stdout.log",
+      "stderr": "logs/verify-packaged-results.stderr.log",
+      "started_utc": "2026-11-22T05:41:54+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-22T05:41:55+00:00",
+      "elapsed_seconds": 0.9192935419996502
+    },
+    {
+      "name": "audit-delivery",
+      "command": [
+        "python3",
+        "-B",
+        "$PROJECT/artifact/audit_delivery.py",
+        "--output",
+        "$PAPER_OUTPUT/delivery-audit.json"
+      ],
+      "cwd": "$PROJECT",
+      "stdout": "logs/audit-delivery.stdout.log",
+      "stderr": "logs/audit-delivery.stderr.log",
+      "started_utc": "2026-11-22T05:41:55+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-22T05:41:56+00:00",
+      "elapsed_seconds": 1.3235433459994965
+    },
+    {
+      "name": "paper-build",
+      "command": [
+        "sh",
+        "build.sh"
+      ],
+      "cwd": "$PROJECT/paper",
+      "stdout": "logs/paper-build.stdout.log",
+      "stderr": "logs/paper-build.stderr.log",
+      "started_utc": "2026-11-22T05:41:56+00:00",
+      "timeout_seconds": 3600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-22T05:42:57+00:00",
+      "elapsed_seconds": 60.46565850799925
+    }
+  ],
+  "interpretation": "Local fresh execution, retained-output recomputation, and external-only campaigns are distinct states. A missing external prerequisite starts zero scientific studies and is not a negative result.",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_count": 5,
+    "packages": {
+      "pycparser": {
+        "expected": "3.0",
+        "actual": "3.0",
+        "status": "PASS"
+      },
+      "matplotlib": {
+        "expected": "3.10.8",
+        "actual": "3.10.8",
+        "status": "PASS"
+      },
+      "numpy": {
+        "expected": "2.3.5",
+        "actual": "2.3.5",
+        "status": "PASS"
+      },
+      "PyMuPDF": {
+        "expected": "1.26.7",
+        "actual": "1.26.7",
+        "status": "PASS"
+      },
+      "pillow": {
+        "expected": "12.3.0",
+        "actual": "12.3.0",
+        "status": "PASS"
+      }
+    },
+    "gcc": {
+      "status": "READY",
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+      "returncode": 0,
+      "version_output": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "clang": {
+      "status": "READY",
+      "path": "/usr/local/swift/usr/bin/clang-17",
+      "sha256": "aa7389d9766be7e61df76cf094ac4f1861fd067e12908d1e9fd5cd7eb2a078f4",
+      "returncode": 0,
+      "version_output": "clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /usr/local/swift/usr/bin"
+    },
+    "java": {
+      "status": "READY",
+      "path": "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+      "sha256": "6698f6f10143ed8463b06062281c727152d2e0ae2a3569b1716fbb2c6cedf0ba",
+      "returncode": 0,
+      "version_output": "openjdk 21.0.12.1 2026-08-18\nOpenJDK Runtime Environment (build 21.0.12.1+1-1-deb13u1-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-deb13u1-Debian, mixed mode, sharing)"
+    }
+  },
+  "required_files": [
+    {
+      "path": "artifact/LICENSE",
+      "status": "PASS"
+    },
+    {
+      "path": "README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/reproduce.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/verify_expected_results.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/expected-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/main.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/supplementary.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/build.sh",
+      "status": "PASS"
+    }
+  ],
+  "path_hygiene": {
+    "status": "PASS",
+    "documentation_hits": [],
+    "cache_files": []
+  },
+  "external_preconditions": {
+    "status": "FAILED_PRECONDITION",
+    "scientific_studies_started": 0,
+    "requirements": {
+      "historical_python": {
+        "status": "MISSING"
+      },
+      "boolean_cbmc": {
+        "status": "MISSING"
+      },
+      "witness_cbmc": {
+        "status": "MISSING"
+      },
+      "cpachecker": {
+        "status": "MISSING"
+      },
+      "codeflaws_archive": {
+        "status": "MISSING"
+      },
+      "upstream_vulkan": {
+        "status": "MISSING",
+        "note": "A source checkout alone is not proof of application-level execution; the external mode records the command separately."
+      }
+    }
+  },
+  "paper_outputs": {
+    "main.pdf": {
+      "status": "PASS",
+      "bytes": 742648,
+      "sha256": "a97c5e97b981017cf0c02111bb96c1b281ad5acb94e28c531f40b203548c779f"
+    },
+    "supplementary.pdf": {
+      "status": "PASS",
+      "bytes": 520868,
+      "sha256": "6cd07afd3d7490043cc4fbafa13dc055a6d3de01be7a184114f88f4d9d57675f"
+    },
+    "figure-atlas.pdf": {
+      "status": "PASS",
+      "bytes": 1146532,
+      "sha256": "1b753f80e489a5773d6a218230aab9fa5c9b0a9417bcd7b1651e3fd95568f59c"
+    }
+  },
+  "ended_utc": "2026-11-22T05:42:57+00:00",
+  "exit_code": 0
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "contract-comparison-v1",
+  "outcome": "PASS",
+  "corpora": {
+    "core": {
+      "requests": 380,
+      "accepted": 95,
+      "point_agreements": 30780,
+      "full_cells": 1179684,
+      "pruned_cells": 934011,
+      "requests_with_fewer_cells": 380,
+      "repair_failures_accepted_by_preservation_ablation": 95
+    },
+    "grammar": {
+      "requests": 400,
+      "accepted": 100,
+      "point_agreements": 657728,
+      "full_cells": 47327168,
+      "pruned_cells": 38342272,
+      "requests_with_fewer_cells": 400,
+      "repair_failures_accepted_by_preservation_ablation": 100
+    }
+  },
+  "same_canonical_results": 780,
+  "guarded_reference_point_agreements": 688508,
+  "transport": {
+    "accepted_bases": 95,
+    "new_requests": 285,
+    "same_full_direct_history_results": 285,
+    "covered_requests": 190,
+    "covered_target_points": 164255,
+    "covered_new_semantic_cells_per_arm": 0,
+    "covered_cold_pruned_cells": 4350164,
+    "covered_fresh_full_cells": 5413499,
+    "covered_kinds": {
+      "axis-subset": 95,
+      "irrelevant-axis-replacement": 95
+    },
+    "fallback_requests": 95,
+    "fallback_statuses": {
+      "ACCEPT": 95
+    },
+    "old_packets_rejected": 285,
+    "scope": "sequential receiver-owned acceptance history; newly identified results, not stale-packet acceptance or refutation transport"
+  },
+  "records": {
+    "protocol.json": "458b3744d93660a141d797df3b9fed7647f50464d34440fca930ca118b435167",
+    "corpus-bindings.json": "b02e6af66eea60fa455fa630fc0a772952388197cda6e15ef090ab24a5726454",
+    "decisions.json": "c350dff81f2516eba53dbda69722bc4618fc9290913c84bc8fd752b02214e407",
+    "transport.json": "14bc9baa5fdca510265b4dffbbc87463ab4627ffdb2d44e98347381942004c86"
+  }
+}

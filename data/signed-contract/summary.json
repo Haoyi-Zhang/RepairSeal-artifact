@@ -1,0 +1,62 @@
+{
+  "schema": "repairseal-int32-contract-study-v1",
+  "outcome": "PASS",
+  "profile": "repairseal-int32-point-task-v1",
+  "policy": "reference-everywhere",
+  "source_bindings": {
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be"
+  },
+  "corpus_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+  "archive_sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+  "eligible_subjects": 95,
+  "eligible_problems": 35,
+  "candidate_subject_combinations": 739,
+  "requests": 1478,
+  "source_input_observations": 8064,
+  "undefined_source_input_observations": 122,
+  "work": {
+    "repair": {
+      "requests": 739,
+      "points": 5382,
+      "full_cells": 919166,
+      "demand_cells": 489688,
+      "direct_record_cells": 919166,
+      "packet_bytes": 10171609,
+      "ACCEPT": 420,
+      "REFUTED": 319
+    },
+    "union": {
+      "requests": 739,
+      "points": 28180,
+      "full_cells": 4220215,
+      "demand_cells": 2175382,
+      "direct_record_cells": 4220215,
+      "packet_bytes": 27705505,
+      "ACCEPT": 328,
+      "REFUTED": 411
+    }
+  },
+  "repair_accept_union_refute": 92,
+  "changed_subjects": 40,
+  "changed_problems": 19,
+  "identical_full_and_direct_records": 1478,
+  "eligible_references_match_raw_oracles": 95,
+  "eligible_originals_with_oracle_mismatch": 95,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "pycparser": "3.00"
+  },
+  "timing_scope": "one ordered observation per arm; no speedup estimate; includes fresh admission/reconstruction, excludes archive and oracle preparation",
+  "records": {
+    "requests.json": "1870224417ead612fb93ac18083e1351af0b6d57999b85fbfdb3c41dc3f6828e",
+    "stages.json": "21f87befbca8e6b14dd758cac48740c5e6fdc3c175dd9a5b99b76d8eabb31af1",
+    "source-observations.json": "4f8f284be5bc7ce85a7b421eb74f5453acce79a2b0ddde9f0dbef97812151a25",
+    "oracle-audit.json": "f546f248e6786c614846e9faf60e8970556020955dad232dda94b60f3551fa19"
+  }
+}

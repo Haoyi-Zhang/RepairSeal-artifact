@@ -1,0 +1,1959 @@
+{
+  "native_controls": 25,
+  "records": [
+    {
+      "id": "eight-inputs",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 2,
+      "in_domain_points": 1,
+      "native_wrapper_points": 1,
+      "observations": [
+        {
+          "input": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "domain-holes",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 8,
+      "in_domain_points": 4,
+      "native_wrapper_points": 4,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2,
+            32
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "identifier-f",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "identifier-main",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "projection-point",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 4,
+      "in_domain_points": 4,
+      "native_wrapper_points": 4,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            7
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2,
+            7
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "legitimate-xor",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "unselected-original-fault",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 6,
+      "in_domain_points": 6,
+      "native_wrapper_points": 6,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "unselected-reference-fault",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 6,
+      "in_domain_points": 6,
+      "native_wrapper_points": 6,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "selected-original-fault",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 6,
+      "in_domain_points": 6,
+      "native_wrapper_points": 6,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "selected-reference-fault",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 6,
+      "in_domain_points": 6,
+      "native_wrapper_points": 6,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "overwritten-division",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "overwritten-remainder",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "overwritten-shift",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            4294967295
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            4294967295
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            4294967295
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-skipped-divide",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-skipped-remainder",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-skipped-left-shift",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-skipped-right-shift",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-selected-division",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "guard-selected-unsigned-shift",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 3,
+      "in_domain_points": 3,
+      "native_wrapper_points": 3,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2147483648
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "short-circuit-and",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "short-circuit-or",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "selected-statement-fault",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 12,
+      "in_domain_points": 12,
+      "native_wrapper_points": 12,
+      "observations": [
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected_error_flag": 1,
+          "exit_code": 17,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            0,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            31
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295,
+            32
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "unsigned-left-high-bit",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 5,
+      "in_domain_points": 5,
+      "native_wrapper_points": 5,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2147483648
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "unsigned-right-high-bit",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 5,
+      "in_domain_points": 5,
+      "native_wrapper_points": 5,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2147483648
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "id": "unsigned-wrap",
+      "exit_compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-pedantic-errors",
+        "exit-wrapper.c",
+        "-o",
+        "exit-product"
+      ],
+      "exit_compile_code": 0,
+      "actual_process_executions": 5,
+      "in_domain_points": 5,
+      "native_wrapper_points": 5,
+      "observations": [
+        {
+          "input": [
+            0
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            2147483648
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "input": [
+            4294967295
+          ],
+          "expected_error_flag": 0,
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "source_bindings": {
+    "tests/witness_interoperability.py": "c4933005ee18d58679053cce8cfdd8a15f77c1dee13e9189c4ec5b07b9d623b1",
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "tests/cbmc_comparison.py": "00a5ec5cd0a02811e386d47be7b38979512b07c1a873737987f43065338ca458",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "tests/test_witness_product_semantics.py": "2b29d24b4fdf3f2533f8f16e9c575caaa9638c1524ec8c96937a1aaaa059d4e6"
+  },
+  "compiler": "/usr/bin/x86_64-linux-gnu-gcc-14",
+  "compiler_identity": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+  "source_and_compiler_unchanged": true,
+  "actual_immediate_error_process_executions": 152,
+  "actual_sticky_flag_point_calls": 147,
+  "scope": "Owned C semantic controls, using immediate-error process exits and the independent study native wrapper; not a new benchmark population."
+}

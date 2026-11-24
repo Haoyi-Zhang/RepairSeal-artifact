@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant" />
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope" />
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang" />
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile" />
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash" />
+  <key attr.name="specification" attr.type="string" for="graph" id="specification" />
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture" />
+  <key attr.name="producer" attr.type="string" for="graph" id="producer" />
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime" />
+  <key attr.name="startline" attr.type="int" for="edge" id="startline" />
+  <key attr.name="control" attr.type="string" for="edge" id="control" />
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption" />
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction" />
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope" />
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction" />
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom" />
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type" />
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink" />
+    <node id="121.13">
+      <data key="entry">true</data>
+    </node>
+    <edge source="121.13" target="124.15">
+      <data key="originfile">program.c</data>
+      <data key="startline">112</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 3u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">__VERIFIER_nondet_uint</data>
+    </edge>
+    <node id="124.15" />
+    <edge source="124.15" target="130.18">
+      <data key="originfile">program.c</data>
+      <data key="startline">113</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="130.18" />
+    <edge source="130.18" target="133.20">
+      <data key="originfile">program.c</data>
+      <data key="startline">114</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result = 2147483648u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">main</data>
+    </edge>
+    <node id="133.20" />
+    <edge source="133.20" target="140.23">
+      <data key="originfile">program.c</data>
+      <data key="startline">115</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="140.23" />
+    <edge source="140.23" target="143.25">
+      <data key="originfile">program.c</data>
+      <data key="startline">116</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result = 0u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">main</data>
+    </edge>
+    <node id="143.25" />
+    <edge source="143.25" target="151.28">
+      <data key="originfile">program.c</data>
+      <data key="startline">117</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="151.28" />
+    <edge source="151.28" target="154.30">
+      <data key="originfile">program.c</data>
+      <data key="startline">118</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result = 2u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">main</data>
+    </edge>
+    <node id="154.30" />
+    <edge source="154.30" target="163.35">
+      <data key="originfile">program.c</data>
+      <data key="startline">119</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="163.35" />
+    <edge source="163.35" target="11.40">
+      <data key="originfile">program.c</data>
+      <data key="startline">120</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 3u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="11.40" />
+    <edge source="11.40" target="13.42">
+      <data key="originfile">program.c</data>
+      <data key="startline">55</data>
+      <data key="threadId">0</data>
+      <data key="assumption">a = 2u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="13.42" />
+    <edge source="13.42" target="15.44">
+      <data key="originfile">program.c</data>
+      <data key="startline">56</data>
+      <data key="threadId">0</data>
+      <data key="assumption">b = 2147483648u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="15.44" />
+    <edge source="15.44" target="17.48">
+      <data key="originfile">program.c</data>
+      <data key="startline">57</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 2u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="17.48" />
+    <edge source="17.48" target="105.50">
+      <data key="originfile">program.c</data>
+      <data key="startline">58</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 0u;</data>
+      <data key="assumption.scope">__repairseal_shl</data>
+    </edge>
+    <node id="105.50" />
+    <edge source="105.50" target="110.51">
+      <data key="originfile">program.c</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="110.51" />
+    <edge source="110.51" target="17.53">
+      <data key="originfile">program.c</data>
+      <data key="startline">14</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="17.53" />
+    <edge source="17.53" target="23.55">
+      <data key="originfile">program.c</data>
+      <data key="startline">58</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 0u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+      <data key="assumption.resultfunction">__repairseal_shl</data>
+    </edge>
+    <node id="23.55" />
+    <edge source="23.55" target="24.56">
+      <data key="originfile">program.c</data>
+      <data key="startline">64</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 2u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="24.56" />
+    <edge source="24.56" target="26.60">
+      <data key="originfile">program.c</data>
+      <data key="startline">66</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="26.60" />
+    <edge source="26.60" target="105.62">
+      <data key="originfile">program.c</data>
+      <data key="startline">68</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 2u;</data>
+      <data key="assumption.scope">__repairseal_shl</data>
+    </edge>
+    <node id="105.62" />
+    <edge source="105.62" target="110.63">
+      <data key="originfile">program.c</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="110.63" />
+    <edge source="110.63" target="26.65">
+      <data key="originfile">program.c</data>
+      <data key="startline">14</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="26.65" />
+    <edge source="26.65" target="112.71">
+      <data key="originfile">program.c</data>
+      <data key="startline">68</data>
+      <data key="threadId">0</data>
+      <data key="assumption">return_value___repairseal_shl$0 = 16u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="112.71" />
+    <edge source="112.71" target="117.72">
+      <data key="originfile">program.c</data>
+      <data key="startline">17</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="117.72" />
+    <edge source="117.72" target="28.74">
+      <data key="originfile">program.c</data>
+      <data key="startline">18</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="28.74" />
+    <edge source="28.74" target="34.77">
+      <data key="originfile">program.c</data>
+      <data key="startline">68</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 536870911u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+      <data key="assumption.resultfunction">__repairseal_shr</data>
+    </edge>
+    <node id="34.77" />
+    <edge source="34.77" target="35.78">
+      <data key="originfile">program.c</data>
+      <data key="startline">74</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="35.78" />
+    <edge source="35.78" target="38.80">
+      <data key="originfile">program.c</data>
+      <data key="startline">76</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 536870930u;</data>
+      <data key="assumption.scope">__repairseal_candidate</data>
+    </edge>
+    <node id="38.80" />
+    <edge source="38.80" target="163.82">
+      <data key="originfile">program.c</data>
+      <data key="startline">82</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="163.82" />
+    <edge source="163.82" target="166.84">
+      <data key="originfile">program.c</data>
+      <data key="startline">120</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 536870930u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">__repairseal_candidate</data>
+    </edge>
+    <node id="166.84" />
+    <edge source="166.84" target="179.89">
+      <data key="originfile">program.c</data>
+      <data key="startline">121</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="179.89" />
+    <edge source="179.89" target="44.94">
+      <data key="originfile">program.c</data>
+      <data key="startline">125</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 3u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="44.94" />
+    <edge source="44.94" target="46.96">
+      <data key="originfile">program.c</data>
+      <data key="startline">22</data>
+      <data key="threadId">0</data>
+      <data key="assumption">a = 2u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="46.96" />
+    <edge source="46.96" target="48.98">
+      <data key="originfile">program.c</data>
+      <data key="startline">23</data>
+      <data key="threadId">0</data>
+      <data key="assumption">b = 2147483648u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="48.98" />
+    <edge source="48.98" target="50.102">
+      <data key="originfile">program.c</data>
+      <data key="startline">24</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 2u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="50.102" />
+    <edge source="50.102" target="105.104">
+      <data key="originfile">program.c</data>
+      <data key="startline">25</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 0u;</data>
+      <data key="assumption.scope">__repairseal_shl</data>
+    </edge>
+    <node id="105.104" />
+    <edge source="105.104" target="110.105">
+      <data key="originfile">program.c</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="110.105" />
+    <edge source="110.105" target="50.107">
+      <data key="originfile">program.c</data>
+      <data key="startline">14</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="50.107" />
+    <edge source="50.107" target="56.109">
+      <data key="originfile">program.c</data>
+      <data key="startline">25</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 0u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+      <data key="assumption.resultfunction">__repairseal_shl</data>
+    </edge>
+    <node id="56.109" />
+    <edge source="56.109" target="57.110">
+      <data key="originfile">program.c</data>
+      <data key="startline">31</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 2u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="57.110" />
+    <edge source="57.110" target="59.114">
+      <data key="originfile">program.c</data>
+      <data key="startline">33</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="59.114" />
+    <edge source="59.114" target="105.116">
+      <data key="originfile">program.c</data>
+      <data key="startline">35</data>
+      <data key="threadId">0</data>
+      <data key="assumption">x = 2u;</data>
+      <data key="assumption.scope">__repairseal_shl</data>
+    </edge>
+    <node id="105.116" />
+    <edge source="105.116" target="110.117">
+      <data key="originfile">program.c</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="110.117" />
+    <edge source="110.117" target="59.119">
+      <data key="originfile">program.c</data>
+      <data key="startline">14</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="59.119" />
+    <edge source="59.119" target="112.125">
+      <data key="originfile">program.c</data>
+      <data key="startline">35</data>
+      <data key="threadId">0</data>
+      <data key="assumption">return_value___repairseal_shl$0 = 16u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="112.125" />
+    <edge source="112.125" target="117.126">
+      <data key="originfile">program.c</data>
+      <data key="startline">17</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="117.126" />
+    <edge source="117.126" target="61.128">
+      <data key="originfile">program.c</data>
+      <data key="startline">18</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="61.128" />
+    <edge source="61.128" target="67.131">
+      <data key="originfile">program.c</data>
+      <data key="startline">35</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 536870911u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+      <data key="assumption.resultfunction">__repairseal_shr</data>
+    </edge>
+    <node id="67.131" />
+    <edge source="67.131" target="70.132">
+      <data key="originfile">program.c</data>
+      <data key="startline">41</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="70.132" />
+    <edge source="70.132" target="71.133">
+      <data key="originfile">program.c</data>
+      <data key="startline">47</data>
+      <data key="threadId">0</data>
+      <data key="assumption">r = 536870929u;</data>
+      <data key="assumption.scope">__repairseal_original</data>
+    </edge>
+    <node id="71.133" />
+    <edge source="71.133" target="179.135">
+      <data key="originfile">program.c</data>
+      <data key="startline">49</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="179.135" />
+    <edge source="179.135" target="182.137">
+      <data key="originfile">program.c</data>
+      <data key="startline">125</data>
+      <data key="threadId">0</data>
+      <data key="assumption">\result == 536870929u;</data>
+      <data key="assumption.scope">main</data>
+      <data key="assumption.resultfunction">__repairseal_original</data>
+    </edge>
+    <node id="182.137" />
+    <edge source="182.137" target="183.138">
+      <data key="originfile">program.c</data>
+      <data key="startline">126</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="183.138">
+      <data key="violation">true</data>
+    </node>
+    <data key="witness-type">violation_witness</data>
+    <data key="producer">CBMC (context adapter)</data>
+    <data key="specification">CHECK( init(main()), LTL(G ! call(__VERIFIER_error())) )</data>
+    <data key="programfile">program.c</data>
+    <data key="programhash">930d4c0e1bba1f43240f1a464bb9cfc29e94bb3bf70ea7b3e4878aaebd1fd41a</data>
+    <data key="architecture">32bit</data>
+    <data key="creationtime">2026-11-19T16:15:01.958305+00:00</data>
+  </graph>
+</graphml>

@@ -1,0 +1,17 @@
+{
+  "id": "natural-domain-4-A-supplied-part1",
+  "word_bits": 32,
+  "inputs": {
+    "w": [
+      2,
+      3,
+      4,
+      5,
+      8
+    ]
+  },
+  "original": "unsigned f(unsigned w) { unsigned r = 0u; if ((w >= w) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "candidate": "unsigned f(unsigned w) { unsigned r = 0u; if ((w >= 4u) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "reference": "unsigned f(unsigned w) { unsigned r = 0u; if ((w > 2u) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "repair_guard": "w == 2u"
+}

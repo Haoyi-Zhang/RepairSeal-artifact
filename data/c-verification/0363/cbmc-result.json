@@ -1,0 +1,54 @@
+{
+  "status": "REFUTED",
+  "reason": "at least one reachable failed property",
+  "properties": [
+    {
+      "property": "main.assertion.1",
+      "description": "repairseal.repair",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0363"
+      },
+      "category": "repair-equality"
+    },
+    {
+      "property": "main.assertion.2",
+      "description": "repairseal.preserve",
+      "status": "SUCCESS",
+      "sourceLocation": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "34",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0363"
+      },
+      "category": "preservation-equality"
+    },
+    {
+      "property": "__repairseal_candidate.division-by-zero.1",
+      "description": "division by zero in 1u / (t ^ 2u)",
+      "status": "FAILURE",
+      "sourceLocation": {
+        "file": "candidate.c",
+        "function": "__repairseal_candidate",
+        "line": "2",
+        "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0363"
+      },
+      "category": "candidate-division-definedness"
+    }
+  ],
+  "terminal_statuses": [
+    "failure"
+  ],
+  "error_messages": [],
+  "failed_property_count": 1,
+  "unknown_property_count": 0,
+  "exit_code": 10,
+  "wall_seconds": 0.06931509399873903,
+  "timed_out": false,
+  "stdout_sha256": "bfe4da8972069529aaa57e66ffae9ced4b71c2ec18b30196fa999f47d288d519",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "counterexample_contract": "any property failure; not canonical leastness"
+}

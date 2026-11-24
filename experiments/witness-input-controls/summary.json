@@ -1,0 +1,165 @@
+{
+  "planned_controls": 3,
+  "actual_native_executions": 3,
+  "actual_validator_runs": 3,
+  "expected_unconfirmed": 3,
+  "source_inputs_and_executables_unchanged": true,
+  "controls": [
+    {
+      "population": "core",
+      "case": 1,
+      "request_id": "fixture-01-overfit",
+      "changed_input": "x",
+      "before": 0,
+      "after": 2,
+      "full_input": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "first_initializer_line": 67,
+      "native_error_flag": 0,
+      "validator": {
+        "argv": [
+          "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+          "--heap",
+          "768M",
+          "--32",
+          "--stats",
+          "--no-output-files",
+          "--timelimit",
+          "30s",
+          "--output-path",
+          "excluded-input-output",
+          "--spec",
+          "property.prp",
+          "--witnessValidation",
+          "--witness",
+          "excluded-input.graphml",
+          "program.c"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 4.27191409200168,
+        "wall_limit_seconds": 45.0,
+        "status": "TRUE",
+        "outcome": "UNCONFIRMED",
+        "witness_type": "violation_witness",
+        "terminal_results": [
+          "TRUE"
+        ],
+        "warnings": [
+          "Source input4 of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+          " (CPAchecker.printConfigurationWarnings, WARNING)"
+        ],
+        "ignored_semantic_annotations": []
+      },
+      "outcome": "EXPECTED_UNCONFIRMED"
+    },
+    {
+      "population": "grammar",
+      "case": 381,
+      "request_id": "holdout-51a959f7-repair",
+      "changed_input": "x",
+      "before": 1,
+      "after": 2,
+      "full_input": [
+        2,
+        1,
+        3
+      ],
+      "first_initializer_line": 112,
+      "native_error_flag": 0,
+      "validator": {
+        "argv": [
+          "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+          "--heap",
+          "768M",
+          "--32",
+          "--stats",
+          "--no-output-files",
+          "--timelimit",
+          "30s",
+          "--output-path",
+          "excluded-input-output",
+          "--spec",
+          "property.prp",
+          "--witnessValidation",
+          "--witness",
+          "excluded-input.graphml",
+          "program.c"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 4.639451506998739,
+        "wall_limit_seconds": 45.0,
+        "status": "TRUE",
+        "outcome": "UNCONFIRMED",
+        "witness_type": "violation_witness",
+        "terminal_results": [
+          "TRUE"
+        ],
+        "warnings": [
+          "Source input3 of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+          " (CPAchecker.printConfigurationWarnings, WARNING)"
+        ],
+        "ignored_semantic_annotations": []
+      },
+      "outcome": "EXPECTED_UNCONFIRMED"
+    },
+    {
+      "population": "natural",
+      "case": 780,
+      "request_id": "natural-domain-4-A-original-part1",
+      "changed_input": "w",
+      "before": 2,
+      "after": 0,
+      "full_input": [
+        0
+      ],
+      "first_initializer_line": 66,
+      "native_error_flag": 0,
+      "validator": {
+        "argv": [
+          "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+          "--heap",
+          "768M",
+          "--32",
+          "--stats",
+          "--no-output-files",
+          "--timelimit",
+          "30s",
+          "--output-path",
+          "excluded-input-output",
+          "--spec",
+          "property.prp",
+          "--witnessValidation",
+          "--witness",
+          "excluded-input.graphml",
+          "program.c"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 5.261642018005659,
+        "wall_limit_seconds": 45.0,
+        "status": "TRUE",
+        "outcome": "UNCONFIRMED",
+        "witness_type": "violation_witness",
+        "terminal_results": [
+          "TRUE"
+        ],
+        "warnings": [
+          "Source input1 of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+          " (CPAchecker.printConfigurationWarnings, WARNING)"
+        ],
+        "ignored_semantic_annotations": []
+      },
+      "outcome": "EXPECTED_UNCONFIRMED"
+    }
+  ],
+  "outcome": "PASS_INPUT_CONSTRAINT_CONTROLS"
+}

@@ -1,0 +1,42 @@
+{
+  "argv": [
+    "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+    "--heap",
+    "768M",
+    "--32",
+    "--stats",
+    "--no-output-files",
+    "--timelimit",
+    "30s",
+    "--output-path",
+    "context-output",
+    "--spec",
+    "property.prp",
+    "--witnessValidation",
+    "--witness",
+    "context.graphml",
+    "program.c"
+  ],
+  "cwd": ".",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 5.002189400001953,
+  "wall_limit_seconds": 45.0,
+  "status": "TRUE",
+  "outcome": "UNCONFIRMED",
+  "witness_type": "violation_witness",
+  "terminal_results": [
+    "TRUE"
+  ],
+  "warnings": [
+    "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+    "Expression <operand1=[return_value___repairseal_candidate], operand2=[53U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_candidate] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+    "Expression <operand1=[return_value___repairseal_reference], operand2=[52U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_reference] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+    " (CPAchecker.printConfigurationWarnings, WARNING)"
+  ],
+  "ignored_semantic_annotations": [
+    "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+    "Expression <operand1=[return_value___repairseal_candidate], operand2=[53U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_candidate] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+    "Expression <operand1=[return_value___repairseal_reference], operand2=[52U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_reference] (AutomatonGraphmlParser.getAssumptions, WARNING)"
+  ]
+}

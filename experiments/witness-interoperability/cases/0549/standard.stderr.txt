@@ -1,0 +1,53 @@
+Detected a violation witness and switching to config file /workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/violation-witness-validation.properties (CPAMain.createNewConfigForSwitching, INFO)
+
+Using the following resource limits: CPU-time limit of 30s (ResourceLimitChecker.fromConfiguration, INFO)
+
+CPAchecker 4.3 / witnessValidation (OpenJDK 64-Bit Server VM 21.0.13) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "program.c" (CPAchecker.parse, INFO)
+
+Expression <operand1=[return_value___repairseal_rem$0], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_rem$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_shl$0], operand2=[12U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_shl$1], operand2=[96U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl$1] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_div$0], operand2=[2147483646U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_rem$0], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_rem$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_shl$0], operand2=[12U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_shl$1], operand2=[96U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl$1] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Expression <operand1=[return_value___repairseal_div$0], operand2=[2147483646U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)
+
+Using Restarting Algorithm (CoreComponentsFactory.createAlgorithm, INFO)
+
+The following configuration options were specified but are not used:
+ cpa.automaton.treatErrorsAsTargets
+ cpa.composite.aggregateBasicBlocks
+ WitnessAutomaton.cpa.automaton.treatErrorsAsTargets
+ counterexample.export.exportAsSource 
+ (CPAchecker.printConfigurationWarnings, WARNING)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Loading analysis 1 from file /workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation.properties ... (RestartAlgorithm.run, INFO)
+
+Mismatch of configuration options when loading from '/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation.properties': 'limits.time.cpu' has two values '30s' and ''. Using ''. (NestingAlgorithm.checkConfigs, INFO)
+
+Mismatch of configuration options when loading from '/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation.properties': 'specification' has two values 'property.prp,standard.graphml' and ''. Using ''. (NestingAlgorithm.checkConfigs, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.19 (f1f678f19b5c) (Oct  6 2026 09:55:06, gmp 6.2.0, gcc 9.4.0, 64-bit, reentrant) and JFactory 1.21. (Analysis /workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation.properties:PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (Analysis /workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation.properties:PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Starting analysis 1 ... (RestartAlgorithm.run, INFO)
+
+Ignoring restart configuration '/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation--recursion.properties' because condition if-recursive did not match. (RestartAlgorithm.skipNextAnalysesIfRequired, INFO)
+
+Ignoring restart configuration '/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/components/violationWitnessValidation--concurrency.properties' because condition if-concurrent did not match. (RestartAlgorithm.skipNextAnalysesIfRequired, INFO)
+
+Stopping analysis ... (CPAchecker.runAlgorithm, INFO)
+

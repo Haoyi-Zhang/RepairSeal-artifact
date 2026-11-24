@@ -1,0 +1,25 @@
+{
+  "id": "natural-domain-4-A-original-part1",
+  "word_bits": 32,
+  "inputs": {
+    "w": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      44,
+      67,
+      77,
+      88,
+      99,
+      100
+    ]
+  },
+  "original": "unsigned f(unsigned w) { unsigned r = 0u; if ((w >= w) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "candidate": "unsigned f(unsigned w) { unsigned r = 0u; if ((w >= w) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "reference": "unsigned f(unsigned w) { unsigned r = 0u; if ((w > 2u) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }",
+  "repair_guard": "w == 2u"
+}

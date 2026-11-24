@@ -1,0 +1,115 @@
+[
+  {
+    "program": "CBMC 6.6.0 (cbmc-6.6.0)"
+  },
+  {
+    "messageText": "CBMC version 6.6.0 (cbmc-6.6.0) 64-bit x86_64 linux",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Type-checking harness",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generating GOTO Program",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding CPROVER library (x86_64)",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Removal of function pointers and virtual functions",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generic Property Instrumentation",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Starting Bounded Model Checking",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Passing problem to propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "converting SSA",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "SAT checker: instance is UNSATISFIABLE",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "result": [
+      {
+        "description": "repairseal.repair",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "25",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0781"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "repairseal.preserve",
+        "property": "main.assertion.2",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "28",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0781"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "division by zero in w % 2u",
+        "property": "__repairseal_original.division-by-zero.1",
+        "sourceLocation": {
+          "file": "original.c",
+          "function": "__repairseal_original",
+          "line": "1",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0781"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "division by zero in w % 2u",
+        "property": "__repairseal_candidate.division-by-zero.1",
+        "sourceLocation": {
+          "file": "candidate.c",
+          "function": "__repairseal_candidate",
+          "line": "1",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0781"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "division by zero in w % 2u",
+        "property": "__repairseal_reference.division-by-zero.1",
+        "sourceLocation": {
+          "file": "reference.c",
+          "function": "__repairseal_reference",
+          "line": "1",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0781"
+        },
+        "status": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "messageText": "VERIFICATION SUCCESSFUL",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "cProverStatus": "success"
+  }
+]

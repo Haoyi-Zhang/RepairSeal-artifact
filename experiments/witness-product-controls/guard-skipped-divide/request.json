@@ -1,0 +1,15 @@
+{
+  "id": "guard-skipped-divide",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned x) { return x + 1u; }",
+  "candidate": "unsigned f(unsigned x) { return x; }",
+  "reference": "unsigned f(unsigned x) { return x; }",
+  "repair_guard": "(x == x) || (1u / 0u > 0u)"
+}

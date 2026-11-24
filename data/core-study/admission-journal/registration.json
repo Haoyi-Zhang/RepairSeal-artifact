@@ -1,0 +1,36 @@
+{
+  "campaign_seconds": 120,
+  "cases": [
+    "original",
+    "supplied",
+    "regression",
+    "definedness",
+    "trace-overfit"
+  ],
+  "input_scope": "One source-derived request plus four existing controls; no new independent upstream repairs",
+  "no_performance_or_memory_advantage_claim": true,
+  "outcome": "full/direct semantic decision and identity-safe durable approval, not upstream application correctness",
+  "per_process_seconds": 10,
+  "receiver_identity": "de894c6be3934a4975cbc10f51aa31f99185b211d18fa7845f78a0101bc5cf8d",
+  "receiver_modules": [
+    "admission_journal.py",
+    "proof_dag_checker.py"
+  ],
+  "source_bindings": {
+    "results/upstream-ceil/definedness-full.json": "ec8f472319ab0f8c0942b568972d6e7ad06439850124469cbaede72a4b006c5a",
+    "results/upstream-ceil/definedness-request.json": "942adf1fbe7cf6255964b2048327ecc7ffb1df5c0f427900f3fab969000957c5",
+    "results/upstream-ceil/original-full.json": "49f8a5923cd9fa842739e422cf7f80cc7dbc3ca780bb7b232695bf697de21064",
+    "results/upstream-ceil/original-request.json": "6c67b0017e883b5e847a74b9d7fca2b5dc166598c9e589f0272a86443fdca2bf",
+    "results/upstream-ceil/regression-full.json": "de1cdb8e9c719fd3dd8d07e20f056981d05d00b0b252fd523b2f1b2a21a6c167",
+    "results/upstream-ceil/regression-request.json": "d0462f0631766887762a4574fa407c4d6a087f3a17753133a73367449ff017d1",
+    "results/upstream-ceil/supplied-full.json": "e37383103e812fc87574896da87e2f1098ad97f32f386c847c1faef2f4c9dbad",
+    "results/upstream-ceil/supplied-request.json": "ce795a29d64002f0daa444da1db9ac402337b21fe71897ae8dd4454542330e08",
+    "results/upstream-ceil/trace-overfit-full.json": "bce4b405a006e9c97a7eccd5c2c75f5239928a3a87e103fe8de52fc1d86ac8e1",
+    "results/upstream-ceil/trace-overfit-request.json": "9ab6fb1d8f6ed46e1aceb4304383645307de4d74bc3bf5cc08de2fe56bacd12e",
+    "src/admission_journal.py": "2591a498a13ba855e45caa3f03dbe15d82e38d553d485cd6c31c5f16fd227b81",
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "tests/admission_journal_study.py": "f822d5f06bf4ab0623116cc3601aef1af0b2bed10e0bbadc8b1cd5cfc1a46146",
+    "tests/report_admission_results.py": "6ccf33257ef653851192ffea2fc90badef4d069accf749a418020d663d261f2f"
+  },
+  "subprocess_limit": 30
+}

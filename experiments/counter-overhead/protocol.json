@@ -1,0 +1,226 @@
+{
+  "study": "Paired removal of measurement bookkeeping from demand receiving",
+  "source_bindings": {
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "tests/int32_baselines.py": "ba71a1840bf50b16c7717edb81fae97011beb7200dfe6c868164c0f2fd778f37",
+    "tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be",
+    "tests/int32_evaluator_study.py": "10885bcfa30f37fb8a21cae07aea3c57f42761235bcb13e00a681cf47b663f2e",
+    "tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+    "tests/int32_point_demand_study.py": "50031934b0dbff332eef5226939377c3d9ce109e507fa2ef9b6c73ce47122842",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "tests/counter_free_receivers.py": "1bc77dc19fc0ef3b321d2e78ce02e4d8c8f9385043b642c0508a0a386814540c",
+    "tests/counter_overhead_study.py": "c6865edbb162ef51055d52bbb1b0e457d67f20898b19f6f512d353716e7e2431"
+  },
+  "source_snapshots": {
+    "executed-sources/src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "executed-sources/src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "executed-sources/src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "executed-sources/src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "executed-sources/tests/int32_baselines.py": "ba71a1840bf50b16c7717edb81fae97011beb7200dfe6c868164c0f2fd778f37",
+    "executed-sources/tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be",
+    "executed-sources/tests/int32_evaluator_study.py": "10885bcfa30f37fb8a21cae07aea3c57f42761235bcb13e00a681cf47b663f2e",
+    "executed-sources/tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+    "executed-sources/tests/int32_point_demand_study.py": "50031934b0dbff332eef5226939377c3d9ce109e507fa2ef9b6c73ce47122842",
+    "executed-sources/tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "executed-sources/tests/counter_free_receivers.py": "1bc77dc19fc0ef3b321d2e78ce02e4d8c8f9385043b642c0508a0a386814540c",
+    "executed-sources/tests/counter_overhead_study.py": "c6865edbb162ef51055d52bbb1b0e457d67f20898b19f6f512d353716e7e2431"
+  },
+  "derivation_files": {
+    "derived/receivers.py": "0b2d7ff31a3ef7caacd3b8ed80169a444f68da7c3484921f45eb9d15584be9d3",
+    "derived/manifest.json": "83e45191b19979a30b66dc97e19f60292836446fce8bc48bff57f707d46abbaa"
+  },
+  "corpus_identity": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+  "archive_identity": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+  "prior_summary_identity": "e4f38b28e1ddcdbe2167e1dc1676755953e924d70ffe917483e726b74092ba3e",
+  "prior_records": {
+    "requests.json": "1870224417ead612fb93ac18083e1351af0b6d57999b85fbfdb3c41dc3f6828e",
+    "stages.json": "21f87befbca8e6b14dd758cac48740c5e6fdc3c175dd9a5b99b76d8eabb31af1",
+    "source-observations.json": "4f8f284be5bc7ce85a7b421eb74f5453acce79a2b0ddde9f0dbef97812151a25",
+    "oracle-audit.json": "f546f248e6786c614846e9faf60e8970556020955dad232dda94b60f3551fa19"
+  },
+  "point_prior_summary_identity": "3d1f3737168e047751dba95eaeef9e043bc428a5e51493c115e7489f61a5c826",
+  "point_prior_records": {
+    "protocol.json": "9fc39898bcb8029031d34b5c42718b169eb4b455d1b95f07ed99eeba69acf4dd",
+    "work.json": "138a5da32c95a90d67460e49e8502d96b32faa51c62dd875dd0008ae325b0760",
+    "timings.jsonl": "2e2a18bb49b48f6e210e23be9982be53b0e1b7884643b8912e1a47b3cdbc8af7",
+    "request-timing-summary.json": "06a1a3f4fa27d8bb74b9d56cb1b89b42330a7dfd1e072cc133d5f836cabca211",
+    "analysis.json": "0ff70ef863e6035d647b57119498d7907cd91ff623d0c896055664f18eaab8cc"
+  },
+  "reference_identities": {
+    "signed_requests": "1870224417ead612fb93ac18083e1351af0b6d57999b85fbfdb3c41dc3f6828e",
+    "point_work": "138a5da32c95a90d67460e49e8502d96b32faa51c62dd875dd0008ae325b0760"
+  },
+  "requests": 1478,
+  "arms": [
+    "support",
+    "point",
+    "support_uninstrumented",
+    "point_uninstrumented",
+    "live"
+  ],
+  "repetitions_per_request": 10,
+  "seed": 20261121,
+  "orders": [
+    [
+      "support",
+      "point",
+      "live",
+      "support_uninstrumented",
+      "point_uninstrumented"
+    ],
+    [
+      "point",
+      "support_uninstrumented",
+      "support",
+      "point_uninstrumented",
+      "live"
+    ],
+    [
+      "support_uninstrumented",
+      "point_uninstrumented",
+      "point",
+      "live",
+      "support"
+    ],
+    [
+      "point_uninstrumented",
+      "live",
+      "support_uninstrumented",
+      "support",
+      "point"
+    ],
+    [
+      "live",
+      "support",
+      "point_uninstrumented",
+      "point",
+      "support_uninstrumented"
+    ],
+    [
+      "point_uninstrumented",
+      "support_uninstrumented",
+      "live",
+      "point",
+      "support"
+    ],
+    [
+      "live",
+      "point_uninstrumented",
+      "support",
+      "support_uninstrumented",
+      "point"
+    ],
+    [
+      "support",
+      "live",
+      "point",
+      "point_uninstrumented",
+      "support_uninstrumented"
+    ],
+    [
+      "point",
+      "support",
+      "support_uninstrumented",
+      "live",
+      "point_uninstrumented"
+    ],
+    [
+      "support_uninstrumented",
+      "point",
+      "point_uninstrumented",
+      "support",
+      "live"
+    ]
+  ],
+  "ratio_specs": {
+    "support_over_live": [
+      "support",
+      "live"
+    ],
+    "point_over_live": [
+      "point",
+      "live"
+    ],
+    "support_uninstrumented_over_live": [
+      "support_uninstrumented",
+      "live"
+    ],
+    "point_uninstrumented_over_live": [
+      "point_uninstrumented",
+      "live"
+    ],
+    "point_uninstrumented_over_support_uninstrumented": [
+      "point_uninstrumented",
+      "support_uninstrumented"
+    ],
+    "support_over_uninstrumented": [
+      "support",
+      "support_uninstrumented"
+    ],
+    "point_over_uninstrumented": [
+      "point",
+      "point_uninstrumented"
+    ],
+    "point_over_support": [
+      "point",
+      "support"
+    ]
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "pycparser": "3.00",
+    "processor": "AMD EPYC 9V74 80-Core Processor",
+    "affinity": [
+      8
+    ],
+    "clock": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-09
+    },
+    "gc_enabled": true,
+    "gc_threshold": [
+      700,
+      10,
+      10
+    ],
+    "process_workers": 1
+  },
+  "measurement": "perf_counter_ns immediately around the same complete receiving dispatch for every arm; result validation and logging follow the timer",
+  "included": [
+    "fresh source admission and reconstruction",
+    "semantic evaluation",
+    "unchanged type and local-rule checks",
+    "canonical diagnostics",
+    "normal Python garbage collection",
+    "original measurement bookkeeping only in instrumented demand arms"
+  ],
+  "removed": [
+    "per-event Counter.add calls and counter object",
+    "maximum-stack-depth measurement",
+    "projection measurement updates",
+    "measurement-only returned metadata",
+    "measurement-only accounting self-check"
+  ],
+  "preserved": [
+    "source admission and reconstruction",
+    "type checks and local rules",
+    "source definedness",
+    "support construction and projection representatives",
+    "memo keys, lookups, writes and traversal",
+    "trace construction and canonical minimization"
+  ],
+  "preflight": "One untimed call per arm and request. Temporary store hooks compare the exact typed local-value sequence between each demand implementation and its counter-elided derivative. These are the 7390 preflight calls, not additional calls.",
+  "trace_scope": "Untimed execution correspondence under an exact AST derivation, not an independent C-semantics proof. A digest and number of stores are retained after exact sequence equality is checked.",
+  "timing_hooks": "Every temporary method hook is restored and identity-checked before the first timed call and after measurement.",
+  "reference_scope": "Canonical decisions match the retained independent signed study. Original support/point/live preflight results also match their complete prior point-study records.",
+  "semantic_work_scope": "Actual counters from the three original preflight arms. Counter-elided results contain status and witness only; no zero work counts are invented.",
+  "unit": "Paired repeated requests, described per request, per problem and for all compatible cross-source combinations",
+  "population": "All 739 original natural candidate-subject combinations on repair and union domains; no selection by cost or effect direction",
+  "campaign_scope": "All reported timing contrasts use this campaign's co-measured arms; previous measured nanoseconds are not reused."
+}

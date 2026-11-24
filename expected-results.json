@@ -1,0 +1,67 @@
+{
+  "schema": "repairseal-expected-results-v2",
+  "scope": "Exact finite-domain results packaged with this artifact. Fresh-current values must be verified against newly generated outputs; retained-recomputed values are independently recomputed from bound raw records. External-only campaigns are never inferred from retained files.",
+  "fresh_current": {
+    "complete_decision_requests": 780,
+    "pruned_live_node_semantic_values": 39276283,
+    "support_keyed_semantic_values": 5308130,
+    "controlled_transport_targets": 285,
+    "covered_transport_targets": 190,
+    "fallback_transport_targets": 95,
+    "covered_new_semantic_cells_per_arm": 0,
+    "header_cases": 30,
+    "header_compilers": 2,
+    "header_native_compilations": 60,
+    "header_native_executions": 42,
+    "functional_core_outcome": "PASS_COMPLETE_REPRODUCTION"
+  },
+  "retained_recomputed": {
+    "witness_planned_refutations": 594,
+    "witness_matched_confirmations": 593,
+    "witness_iterations_lower": 585,
+    "witness_iterations_equal": 8,
+    "witness_abstractions_lower": 585,
+    "witness_abstractions_equal": 8,
+    "signed_combinations": 739,
+    "repair_accepted": 420,
+    "coverage_authorized": 0,
+    "union_accepted": 328,
+    "repair_accept_union_refute": 92,
+    "receiving_time_repair_requests": 739,
+    "receiving_time_union_requests": 739,
+    "demand_slower_than_live_repair": 730,
+    "demand_slower_than_live_union": 739,
+    "median_demand_over_live_repair": 1.297816140061079,
+    "median_demand_over_live_union": 2.188666174775451,
+    "median_uninstrumented_support_over_live_repair": 1.1874391518275138,
+    "median_uninstrumented_support_over_live_union": 1.730102797664843
+  },
+  "external_only": {
+    "historical_python": {
+      "implementation": "CPython",
+      "version": "3.12.14",
+      "purpose": "exact historical admission-receipt compatibility"
+    },
+    "boolean_cbmc": {
+      "version": "6.6.0",
+      "purpose": "fresh 804-request Boolean comparison"
+    },
+    "witness_cbmc": {
+      "version": "6.11.0",
+      "purpose": "fresh witness producer campaign"
+    },
+    "cpachecker": {
+      "version": "4.3",
+      "purpose": "fresh witness receiver campaign"
+    },
+    "codeflaws_archive": {
+      "bytes": 265695532,
+      "sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+      "purpose": "fresh native, signed, coverage, and timing campaigns"
+    },
+    "upstream_vulkan": {
+      "purpose": "application-level CEIL_DIV build and execution",
+      "bundled": false
+    }
+  }
+}

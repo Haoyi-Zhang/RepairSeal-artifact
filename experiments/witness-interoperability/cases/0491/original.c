@@ -1,0 +1,16 @@
+unsigned f(unsigned x, unsigned y) {
+  unsigned a = 7u;
+  unsigned b = 4294967295u;
+  unsigned r = a;
+  if ((((r / ((3u & 7u) + 1u)) - (31u * b)) != (x - y))) {
+    r = 4294967295u;
+  } else {
+    r = x;
+  }
+  if ((x == 4294967295u)) {
+    r = (r - 1u);
+  } else {
+    r = r;
+  }
+  return r;
+}

@@ -1,0 +1,15 @@
+{
+  "id": "legitimate-xor",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned x) { return x; }",
+  "candidate": "unsigned f(unsigned x) { return x + (2u ^ 15u); }",
+  "reference": "unsigned f(unsigned x) { return x + 13u; }",
+  "repair_guard": "x == x"
+}

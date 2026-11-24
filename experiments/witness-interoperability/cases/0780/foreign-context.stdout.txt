@@ -1,0 +1,45 @@
+Running CPAchecker with Java heap of size 768M.
+Running CPAchecker with default stack size (1024k). Specify a larger value with --stack if needed.
+Running CPAchecker with the following extra VM options:  -Djava.io.tmpdir=/tmp
+
+CPAchecker general statistics
+-----------------------------
+Number of program locations:                       103
+Number of CFA edges (per node):                         129 (count: 103, min: 0, max: 3, avg: 1.25)
+Number of relevant variables:                      26
+Number of functions:                               8
+Number of loops (and loop nodes):                         0 (sum: 0, min: 0, max: 0, avg: 0.00)
+
+Time for analysis setup:          2.697s
+  Time for loading CPAs:          0.000s
+  Time for loading parser:        0.545s
+  Time for CFA construction:      1.560s
+    Time for parsing file(s):     0.427s
+    Time for AST to CFA:          0.583s
+    Time for CFA sanity check:    0.055s
+    Time for post-processing:     0.408s
+    Time for loop structure:      0.002s
+    Time for known functions:     0.004s
+  Number of functions with known behavior: 0
+    Time for AST structure:       0.000s
+      Time for function pointers resolving:            0.010s
+        Function calls via function pointers:             0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Instrumented function pointer calls:              0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Function calls with function pointer arguments:        0 (count: 1, min: 0, max: 0, avg: 0.00)
+        Instrumented function pointer arguments:          0 (count: 1, min: 0, max: 0, avg: 0.00)
+      Time for classifying variables:                  0.142s
+        Time for collecting variables:                 0.078s
+        Time for solving dependencies:                 0.000s
+        Time for building hierarchy:                   0.000s
+        Time for building classification:              0.064s
+        Time for exporting data:                       0.000s
+Time for Analysis:                0.000s
+CPU time for analysis:            0.000s
+Total time for CPAchecker:        2.676s
+Total CPU time for CPAchecker:    1.710s
+Time for statistics:              0.029s
+
+Time for Garbage Collector:       0.226s (in 4 runs)
+Garbage Collector(s) used:    PS MarkSweep, PS Scavenge
+
+More details about the verification run can be found in the directory "./foreign-context-output".

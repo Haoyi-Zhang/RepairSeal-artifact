@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/continue_witness_interoperability.py", line 258, in <module>
+    main()
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/continue_witness_interoperability.py", line 197, in main
+    row = future.result()
+          ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/witness_interoperability.py", line 471, in check_case
+    directory.mkdir(parents=True)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+OSError: [Errno 28] No space left on device: '/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/experiments/witness-interoperability/cases/0572'

@@ -1,0 +1,1 @@
+unsigned f(unsigned n) { return n + n / 2u; }

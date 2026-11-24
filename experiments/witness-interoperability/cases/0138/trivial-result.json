@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+    "--heap",
+    "768M",
+    "--32",
+    "--stats",
+    "--no-output-files",
+    "--timelimit",
+    "30s",
+    "--output-path",
+    "trivial-output",
+    "--spec",
+    "property.prp",
+    "--witnessValidation",
+    "--witness",
+    "trivial.graphml",
+    "program.c"
+  ],
+  "cwd": ".",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 2.8220810150014586,
+  "wall_limit_seconds": 45.0,
+  "status": "FALSE",
+  "outcome": "CONFIRMED",
+  "witness_type": "violation_witness",
+  "terminal_results": [
+    "FALSE"
+  ],
+  "warnings": [
+    "Source all of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+    " (CPAchecker.printConfigurationWarnings, WARNING)"
+  ],
+  "ignored_semantic_annotations": []
+}

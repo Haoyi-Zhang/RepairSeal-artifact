@@ -1,0 +1,18 @@
+{
+  "id": "domain-holes",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      2
+    ],
+    "y": [
+      0,
+      32
+    ]
+  },
+  "original": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "candidate": "unsigned f(unsigned x, unsigned y) { return x + 1u; }",
+  "reference": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "repair_guard": "x == x"
+}

@@ -1,0 +1,281 @@
+CBMC version 6.11.0 (cbmc-6.11.0) 64-bit x86_64 linux
+Type-checking program
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+SAT checker: instance is SATISFIABLE
+Building error trace
+Counterexample:
+
+State 13 file program.c function main line 64 thread 0
+----------------------------------------------------
+  return_value___VERIFIER_nondet_uint=4294967295u (11111111 11111111 11111111 11111111)
+
+State 14 file program.c function main line 64 thread 0
+----------------------------------------------------
+  x=4294967295u (11111111 11111111 11111111 11111111)
+
+State 18 file program.c function main line 66 thread 0
+----------------------------------------------------
+  return_value___VERIFIER_nondet_uint$0=31u (00000000 00000000 00000000 00011111)
+
+State 19 file program.c function main line 66 thread 0
+----------------------------------------------------
+  y=31u (00000000 00000000 00000000 00011111)
+
+State 23 file program.c function main line 68 thread 0
+----------------------------------------------------
+  return_value___VERIFIER_nondet_uint$1=31u (00000000 00000000 00000000 00011111)
+
+State 24 file program.c function main line 68 thread 0
+----------------------------------------------------
+  z=31u (00000000 00000000 00000000 00011111)
+
+State 30 file program.c function main line 70 thread 0
+----------------------------------------------------
+  x=4294967295u (11111111 11111111 11111111 11111111)
+
+State 31 file program.c function main line 70 thread 0
+----------------------------------------------------
+  y=31u (00000000 00000000 00000000 00011111)
+
+State 32 file program.c function main line 70 thread 0
+----------------------------------------------------
+  z=31u (00000000 00000000 00000000 00011111)
+
+State 37 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  x=2147483647u (01111111 11111111 11111111 11111111)
+
+State 38 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  y=0u (00000000 00000000 00000000 00000000)
+
+State 40 file program.c function __repairseal_shl line 14 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shl=2147483647u (01111111 11111111 11111111 11111111)
+
+State 42 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  return_value___repairseal_shl=2147483647u (01111111 11111111 11111111 11111111)
+
+State 46 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  x=6u (00000000 00000000 00000000 00000110)
+
+State 47 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  y=2u (00000000 00000000 00000000 00000010)
+
+State 49 file program.c function __repairseal_rem line 10 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 51 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  return_value___repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 55 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  x=0u (00000000 00000000 00000000 00000000)
+
+State 56 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  y=8u (00000000 00000000 00000000 00001000)
+
+State 58 file program.c function __repairseal_rem line 10 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 60 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  return_value___repairseal_rem$0=0u (00000000 00000000 00000000 00000000)
+
+State 61 file program.c function __repairseal_candidate line 39 thread 0
+----------------------------------------------------
+  a=0u (00000000 00000000 00000000 00000000)
+
+State 66 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  x=0u (00000000 00000000 00000000 00000000)
+
+State 67 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  y=31u (00000000 00000000 00000000 00011111)
+
+State 69 file program.c function __repairseal_shr line 18 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shr=0u (00000000 00000000 00000000 00000000)
+
+State 71 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  return_value___repairseal_shr=0u (00000000 00000000 00000000 00000000)
+
+State 75 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  x=465u (00000000 00000000 00000001 11010001)
+
+State 76 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  y=0u (00000000 00000000 00000000 00000000)
+
+State 78 file program.c function __repairseal_shr line 18 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shr=465u (00000000 00000000 00000001 11010001)
+
+State 80 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  return_value___repairseal_shr$0=465u (00000000 00000000 00000001 11010001)
+
+State 81 file program.c function __repairseal_candidate line 40 thread 0
+----------------------------------------------------
+  b=449u (00000000 00000000 00000001 11000001)
+
+State 83 file program.c function __repairseal_candidate line 41 thread 0
+----------------------------------------------------
+  r=2u (00000000 00000000 00000000 00000010)
+
+State 85 file program.c function __repairseal_candidate line 44 thread 0
+----------------------------------------------------
+  r=3u (00000000 00000000 00000000 00000011)
+
+State 87 file program.c function __repairseal_candidate line 50 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_candidate=3u (00000000 00000000 00000000 00000011)
+
+State 89 file program.c function main line 70 thread 0
+----------------------------------------------------
+  return_value___repairseal_candidate=3u (00000000 00000000 00000000 00000011)
+
+State 90 file program.c function main line 70 thread 0
+----------------------------------------------------
+  __repairseal_q=3u (00000000 00000000 00000000 00000011)
+
+State 96 file program.c function main line 72 thread 0
+----------------------------------------------------
+  x=4294967295u (11111111 11111111 11111111 11111111)
+
+State 97 file program.c function main line 72 thread 0
+----------------------------------------------------
+  y=31u (00000000 00000000 00000000 00011111)
+
+State 98 file program.c function main line 72 thread 0
+----------------------------------------------------
+  z=31u (00000000 00000000 00000000 00011111)
+
+State 103 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  x=2147483647u (01111111 11111111 11111111 11111111)
+
+State 104 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  y=0u (00000000 00000000 00000000 00000000)
+
+State 106 file program.c function __repairseal_shl line 14 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shl=2147483647u (01111111 11111111 11111111 11111111)
+
+State 108 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  return_value___repairseal_shl=2147483647u (01111111 11111111 11111111 11111111)
+
+State 112 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  x=6u (00000000 00000000 00000000 00000110)
+
+State 113 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  y=2u (00000000 00000000 00000000 00000010)
+
+State 115 file program.c function __repairseal_rem line 10 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 117 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  return_value___repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 121 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  x=0u (00000000 00000000 00000000 00000000)
+
+State 122 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  y=8u (00000000 00000000 00000000 00001000)
+
+State 124 file program.c function __repairseal_rem line 10 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_rem=0u (00000000 00000000 00000000 00000000)
+
+State 126 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  return_value___repairseal_rem$0=0u (00000000 00000000 00000000 00000000)
+
+State 127 file program.c function __repairseal_reference line 56 thread 0
+----------------------------------------------------
+  a=0u (00000000 00000000 00000000 00000000)
+
+State 132 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  x=0u (00000000 00000000 00000000 00000000)
+
+State 133 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  y=31u (00000000 00000000 00000000 00011111)
+
+State 135 file program.c function __repairseal_shr line 18 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shr=0u (00000000 00000000 00000000 00000000)
+
+State 137 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  return_value___repairseal_shr=0u (00000000 00000000 00000000 00000000)
+
+State 141 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  x=465u (00000000 00000000 00000001 11010001)
+
+State 142 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  y=0u (00000000 00000000 00000000 00000000)
+
+State 144 file program.c function __repairseal_shr line 18 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_shr=465u (00000000 00000000 00000001 11010001)
+
+State 146 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  return_value___repairseal_shr$0=465u (00000000 00000000 00000001 11010001)
+
+State 147 file program.c function __repairseal_reference line 57 thread 0
+----------------------------------------------------
+  b=449u (00000000 00000000 00000001 11000001)
+
+State 149 file program.c function __repairseal_reference line 58 thread 0
+----------------------------------------------------
+  r=2u (00000000 00000000 00000000 00000010)
+
+State 150 file program.c function __repairseal_reference line 59 thread 0
+----------------------------------------------------
+  goto_symex$$return_value$$__repairseal_reference=2u (00000000 00000000 00000000 00000010)
+
+State 152 file program.c function main line 72 thread 0
+----------------------------------------------------
+  return_value___repairseal_reference=2u (00000000 00000000 00000000 00000010)
+
+State 153 file program.c function main line 72 thread 0
+----------------------------------------------------
+  __repairseal_t=2u (00000000 00000000 00000000 00000010)
+
+Violated property:
+  file program.c function main line 73 thread 0
+  assertion
+  FALSE
+
+
+VERIFICATION FAILED

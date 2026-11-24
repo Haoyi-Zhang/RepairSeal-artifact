@@ -1,0 +1,8 @@
+unsigned f(unsigned x, unsigned y, unsigned z, unsigned t) {
+unsigned unused = 1u / (t ^ 3u);
+unsigned scratch = t;
+if (z == 0u) { scratch = scratch + 1u; } else { scratch = scratch + 2u; }
+unsigned r = 0u;
+if (x >= y) { r = x - y; } else { r = y - x; }
+return r;
+}

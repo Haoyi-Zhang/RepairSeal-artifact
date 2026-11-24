@@ -1,0 +1,284 @@
+{
+  "index": 643,
+  "population": "grammar",
+  "request_id": "holdout-534c098d-defined",
+  "input_file": "proof-data/holdout-differential/inputs/holdout-534c098d-defined.json",
+  "receiver_status": "REFUTED",
+  "producer": {
+    "argv": [
+      "/workspace/scratch/1069ed1cc3ce/tools/witness-producer/sysroot/usr/bin/cbmc",
+      "--32",
+      "--c11",
+      "--no-standard-checks",
+      "--graphml-witness",
+      "raw.graphml",
+      "program.c"
+    ],
+    "cwd": ".",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_seconds": 0.20982626000477467,
+    "wall_limit_seconds": 45.0,
+    "status": "REFUTED"
+  },
+  "native_correspondence": {
+    "points": 64,
+    "refuting_points": 8,
+    "mismatches": []
+  },
+  "arms": {
+    "trivial": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "trivial-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "trivial.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.7006714309973177,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "CONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [
+        "Source all of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    },
+    "direct": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "direct-output",
+        "--spec",
+        "property.prp",
+        "--predicateAnalysis",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.012353730999166,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "FALSE",
+      "witness_type": null,
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [],
+      "ignored_semantic_annotations": []
+    },
+    "raw": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "raw-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "raw.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 1,
+      "timed_out": false,
+      "wall_seconds": 1.6863340429990785,
+      "wall_limit_seconds": 45.0,
+      "status": "ERROR",
+      "outcome": "ERROR",
+      "witness_type": "violation_witness",
+      "terminal_results": [],
+      "warnings": [],
+      "ignored_semantic_annotations": []
+    },
+    "context": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "context-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "context.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 5.516658444001223,
+      "wall_limit_seconds": 45.0,
+      "status": "TRUE",
+      "outcome": "UNCONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "TRUE"
+      ],
+      "warnings": [
+        "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[2147483647U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": [
+        "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[2147483647U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)"
+      ]
+    },
+    "standard": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "standard-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "standard.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.339880373001506,
+      "wall_limit_seconds": 45.0,
+      "status": "TRUE",
+      "outcome": "UNCONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "TRUE"
+      ],
+      "warnings": [
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    },
+    "located": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "located-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "located.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 4.805974430993956,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "CONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    },
+    "input": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "input-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "input.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.3091138509989833,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "CONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [
+        "Source input2 of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    }
+  },
+  "adapter_changes": 1,
+  "location_changes": 1,
+  "arm_order": [
+    "trivial",
+    "direct",
+    "raw",
+    "context",
+    "standard",
+    "located",
+    "input"
+  ]
+}

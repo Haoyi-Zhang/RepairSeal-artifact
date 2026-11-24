@@ -1,0 +1,359 @@
+{
+  "kind": "finite-semantic-proof-dag-v1",
+  "request_id": "natural-domain-84-A-supplied-part1",
+  "word_bits": 32,
+  "input_order": [
+    "n"
+  ],
+  "domains": {
+    "n": [
+      2,
+      4,
+      10000,
+      25460,
+      50000,
+      54646,
+      59790,
+      578456,
+      8457980,
+      56798056
+    ]
+  },
+  "points": [
+    [
+      2
+    ],
+    [
+      4
+    ],
+    [
+      10000
+    ],
+    [
+      25460
+    ],
+    [
+      50000
+    ],
+    [
+      54646
+    ],
+    [
+      59790
+    ],
+    [
+      578456
+    ],
+    [
+      8457980
+    ],
+    [
+      56798056
+    ]
+  ],
+  "source_sha256": {
+    "original": "678ddddde8374e262bcb5cae2f1f91ba03704cec84851341c667d773dee483f1",
+    "candidate": "5b467d5f47df2ea16dd24771b92c40cb90456bab592b88176c42fcb4d3819950",
+    "reference": "b0973ffbebd131f3a235f028f1fbbeb251eda4ee8d5bbaccbd2d5e4da3fab57a",
+    "repair_guard": "18d3181ffa8cbc032ed10ed9ec08d16a9ef869750972ce7000f752a2583d7f7a"
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "op": "b",
+      "sort": "bool",
+      "vector": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "data": true
+    },
+    {
+      "id": 1,
+      "op": "b",
+      "sort": "bool",
+      "vector": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "data": false
+    },
+    {
+      "id": 2,
+      "op": "input",
+      "sort": "u32",
+      "vector": [
+        2,
+        4,
+        10000,
+        25460,
+        50000,
+        54646,
+        59790,
+        578456,
+        8457980,
+        56798056
+      ],
+      "data": "n"
+    },
+    {
+      "id": 3,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "data": 3
+    },
+    {
+      "id": 4,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "data": 2
+    },
+    {
+      "id": 5,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data": 0
+    },
+    {
+      "id": 6,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data": 1
+    },
+    {
+      "id": 7,
+      "op": "*",
+      "sort": "u32",
+      "vector": [
+        2,
+        4,
+        10000,
+        25460,
+        50000,
+        54646,
+        59790,
+        578456,
+        8457980,
+        56798056
+      ],
+      "children": [
+        6,
+        2
+      ]
+    },
+    {
+      "id": 8,
+      "op": "/",
+      "sort": "u32",
+      "vector": [
+        1,
+        2,
+        5000,
+        12730,
+        25000,
+        27323,
+        29895,
+        289228,
+        4228990,
+        28399028
+      ],
+      "children": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 9,
+      "op": "+",
+      "sort": "u32",
+      "vector": [
+        3,
+        6,
+        15000,
+        38190,
+        75000,
+        81969,
+        89685,
+        867684,
+        12686970,
+        85197084
+      ],
+      "children": [
+        2,
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "op": "*",
+      "sort": "u32",
+      "vector": [
+        6,
+        12,
+        30000,
+        76380,
+        150000,
+        163938,
+        179370,
+        1735368,
+        25373940,
+        170394168
+      ],
+      "children": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": 11,
+      "op": "/",
+      "sort": "u32",
+      "vector": [
+        3,
+        6,
+        15000,
+        38190,
+        75000,
+        81969,
+        89685,
+        867684,
+        12686970,
+        85197084
+      ],
+      "children": [
+        10,
+        4
+      ]
+    },
+    {
+      "id": 12,
+      "op": "==",
+      "sort": "bool",
+      "vector": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "children": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "op": "==",
+      "sort": "bool",
+      "vector": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "children": [
+        9,
+        7
+      ]
+    }
+  ],
+  "role_roots": {
+    "original": {
+      "output": 7,
+      "defined": 0,
+      "trace_events": []
+    },
+    "candidate": {
+      "output": 9,
+      "defined": 0,
+      "trace_events": []
+    },
+    "reference": {
+      "output": 11,
+      "defined": 0,
+      "trace_events": []
+    }
+  },
+  "guard_root": 0,
+  "obligation_roots": {
+    "defined": 0,
+    "repair": 12,
+    "preserve": 0
+  },
+  "certificate_sha256": "0778bba23b02fec8ecbef268505abd4d6038cfefce095694050336c4b87b848c"
+}

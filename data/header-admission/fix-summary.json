@@ -1,0 +1,115 @@
+{
+  "schema": "repairseal-header-admission-fix-summary-v1",
+  "problem": "The parser removed accepted header directives before admitting declarations. An identifier such as EOF was treated as an ordinary local even though native preprocessing replaces it. Main parameter names also escaped the old reserved-name check. Header filenames with internal whitespace were incorrectly normalized by the old admission regex.",
+  "counterexample": "#include <stdio.h>\nint main(void){int EOF;scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n",
+  "before": "The preimage admits this source. Concrete and symbolic interpretation return 7 for input 7. Both named native compilers reject the untouched C source.",
+  "new_rules": [
+    "Only exact <stdio.h>, <stdlib.h>, <string.h>, <math.h>, <ctype.h> names are accepted; whitespace outside the header name remains accepted.",
+    "Header directives must precede source tokens, after comment removal. Raw source bytes and source hashes are unchanged.",
+    "Declared locals and both main parameter names exclude a leading underscore and the macro namespace associated with their included headers. Function-like macro identifiers are excluded conservatively as well.",
+    "No preprocessor is invoked during admission and no macro expansion is invented. The owned native audit checks coverage of compiler/header macros for the selected strict C99 environment."
+  ],
+  "source_scope": "Modified only src/codeflaws_int32_bridge.py and added tests/test_codeflaws_header_admission.py; did not edit any other scientific source or existing test.",
+  "hashes": {
+    "source_sha256_before": "ebce9235b23521b20759e1debadc1c13221674c1036814b334a6d63c80334bfe",
+    "source_sha256_after": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "test_sha256": "018c5e79f53246a682b80e15f80e7d08cb70f85ac873ec06bbbfa9891d51f4c4"
+  },
+  "owned_controls": {
+    "source_cases": 30,
+    "compile_attempts": 60,
+    "native_executions": 42,
+    "previously_admitted_now_rejected_by_profile_and_both_compilers": [
+      "stdio_EOF",
+      "stdio_BUFSIZ",
+      "stdio_L_tmpnam",
+      "stdio_NULL",
+      "stdlib_EXIT_SUCCESS",
+      "stdlib_MB_CUR_MAX",
+      "math_NAN",
+      "math_math_errhandling",
+      "parameter_EOF_argv",
+      "parameter_n_EOF",
+      "parameter___LINE___argv",
+      "unreachable_macro",
+      "header_internal_space_leading",
+      "header_internal_space_trailing",
+      "late_include"
+    ],
+    "conservative_profile_exclusions_that_both_compilers_accept": [
+      "stdio_stdin",
+      "ctype_isalpha",
+      "implementation__Private",
+      "implementation__local"
+    ],
+    "unit_test_methods": 16,
+    "unit_skips": 0
+  },
+  "natural_cohort": {
+    "indexed_subjects": 3903,
+    "source_occurrences": 7806,
+    "unique_source_contents_checked": 7425,
+    "admitted_occurrences_before": 223,
+    "admitted_occurrences_after": 223,
+    "interface_compatible_pairs_before": 101,
+    "interface_compatible_pairs_after": 101,
+    "admission_decision_changes": 0,
+    "pairs_added": [],
+    "pairs_removed": []
+  },
+  "changed_existing_rejections": [
+    {
+      "subject": "373-B-bug-5440932-5440937",
+      "member": "codeflaws/373-B-bug-5440932-5440937/373-B-5440932.c",
+      "sha256": "986a8b2521b182f5b793a6509ba3e6296c90f2cfdbaf6ebf7619c0c6857adccc",
+      "before": {
+        "admitted": false,
+        "code": "single-main-only",
+        "detail": ""
+      },
+      "after": {
+        "admitted": false,
+        "code": "header-after-source-token",
+        "detail": ""
+      }
+    },
+    {
+      "subject": "373-B-bug-5440932-5440937",
+      "member": "codeflaws/373-B-bug-5440932-5440937/373-B-5440937.c",
+      "sha256": "5e6e14b59be71cbc9eba3db4ec3666702e79b715db356159b8c7f28cfc6183ca",
+      "before": {
+        "admitted": false,
+        "code": "single-main-only",
+        "detail": ""
+      },
+      "after": {
+        "admitted": false,
+        "code": "header-after-source-token",
+        "detail": ""
+      }
+    }
+  ],
+  "unchanged_semantic_ast": {
+    "literal_string": true,
+    "canonical_output": true,
+    "parse_input": true,
+    "_Interpreter": true,
+    "evaluate": true
+  },
+  "not_claimed": [
+    "No rerun of all native corpus observations or signed-contract experiments by this audit task.",
+    "No portability guarantee for arbitrary predefined -D macros, C implementations or header versions.",
+    "No final release-gate PASS. Root is regenerating evidence and bindings."
+  ],
+  "evidence_files": [
+    "preimage.json",
+    "codeflaws_int32_bridge.before.py",
+    "bridge.patch",
+    "native-preimage-and-macros.json",
+    "native-controls/report.json",
+    "cohort-difference.json",
+    "change-and-test-summary.json",
+    "owned-unit-tests.log",
+    "existing-bridge-tests.log"
+  ]
+}

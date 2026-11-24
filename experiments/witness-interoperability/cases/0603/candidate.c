@@ -1,0 +1,7 @@
+unsigned f(unsigned x, unsigned y, unsigned z, unsigned t) {
+  unsigned poison = (1u / (t ^ 3u));
+  unsigned a = (z - ((x + y) + z));
+  unsigned b = (z / (((t & (~a)) & 7u) + 1u));
+  unsigned r = t;
+  return r;
+}

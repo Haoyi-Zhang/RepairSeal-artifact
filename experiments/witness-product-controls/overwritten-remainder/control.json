@@ -1,0 +1,138 @@
+{
+  "id": "overwritten-remainder",
+  "exit_compile_command": [
+    "/usr/bin/x86_64-linux-gnu-gcc-14",
+    "-std=c11",
+    "-O2",
+    "-pedantic-errors",
+    "exit-wrapper.c",
+    "-o",
+    "exit-product"
+  ],
+  "exit_compile_code": 0,
+  "actual_process_executions": 12,
+  "in_domain_points": 12,
+  "native_wrapper_points": 12,
+  "observations": [
+    {
+      "input": [
+        0,
+        0
+      ],
+      "expected_error_flag": 1,
+      "exit_code": 17,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        0,
+        1
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        0,
+        31
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        0,
+        32
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        1,
+        0
+      ],
+      "expected_error_flag": 1,
+      "exit_code": 17,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        1,
+        1
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        1,
+        31
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        1,
+        32
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        4294967295,
+        0
+      ],
+      "expected_error_flag": 1,
+      "exit_code": 17,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        4294967295,
+        1
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        4294967295,
+        31
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "input": [
+        4294967295,
+        32
+      ],
+      "expected_error_flag": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

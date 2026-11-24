@@ -1,0 +1,1 @@
+unsigned f(unsigned m, unsigned n) { return (((m + n) - 1u) / n); }

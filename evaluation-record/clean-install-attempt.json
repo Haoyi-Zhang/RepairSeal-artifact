@@ -1,0 +1,17 @@
+{
+  "schema": "repairseal-clean-install-attempt-v1",
+  "status": "FAILED_PRECONDITION_NETWORK_OR_INDEX",
+  "virtual_environment_created": true,
+  "requirements": "artifact/requirements-evaluator.txt",
+  "returncode": 1,
+  "first_requested_distribution": "pycparser==3.0",
+  "failure_class": "Temporary failure in name resolution while contacting the package index",
+  "scientific_studies_started": 0,
+  "interpretation": "This attempt does not establish dependency incompatibility and is not counted as an artifact test failure.",
+  "stderr_excerpt": [
+    "WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7ff688182990>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pycparser/",
+    "WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7ff688182c10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pycparser/",
+    "ERROR: Could not find a version that satisfies the requirement pycparser==3.0 (from versions: none)",
+    "ERROR: No matching distribution found for pycparser==3.0"
+  ]
+}

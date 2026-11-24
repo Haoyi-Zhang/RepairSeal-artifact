@@ -1,0 +1,1 @@
+unsigned f(unsigned m, unsigned n) { unsigned r = 0u; if (m == 0u) { r = 0u; } else { r = 1u + (m - 1u) / n; } return r; }

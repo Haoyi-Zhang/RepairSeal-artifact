@@ -1,0 +1,314 @@
+{
+  "index": 758,
+  "population": "grammar",
+  "request_id": "holdout-5403cfc8-preserve",
+  "input_file": "proof-data/holdout-differential/inputs/holdout-5403cfc8-preserve.json",
+  "receiver_status": "REFUTED",
+  "producer": {
+    "argv": [
+      "/workspace/scratch/1069ed1cc3ce/tools/witness-producer/sysroot/usr/bin/cbmc",
+      "--32",
+      "--c11",
+      "--no-standard-checks",
+      "--graphml-witness",
+      "raw.graphml",
+      "program.c"
+    ],
+    "cwd": ".",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_seconds": 0.15499247000116156,
+    "wall_limit_seconds": 45.0,
+    "status": "REFUTED"
+  },
+  "native_correspondence": {
+    "points": 64,
+    "refuting_points": 1,
+    "mismatches": []
+  },
+  "arms": {
+    "context": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "context-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "context.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 5.669039952001185,
+      "wall_limit_seconds": 45.0,
+      "status": "TRUE",
+      "outcome": "UNCONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "TRUE"
+      ],
+      "warnings": [
+        "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[3U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div], operand2=[715827882U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shl], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shr], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shr] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_candidate], operand2=[1U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_candidate] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div], operand2=[715827882U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shl], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shr], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shr] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_original], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_original] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": [
+        "Expression <operand1=[return_value___VERIFIER_nondet_uint], operand2=[3U], operator=[EQUALS]> contains unknown variables: [return_value___VERIFIER_nondet_uint] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div], operand2=[715827882U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shl], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shr], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shr] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_candidate], operand2=[1U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_candidate] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div], operand2=[715827882U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shl], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shl] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_shr], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_shr] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_original], operand2=[0U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_original] (AutomatonGraphmlParser.getAssumptions, WARNING)"
+      ]
+    },
+    "standard": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "standard-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "standard.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 4.005903479999688,
+      "wall_limit_seconds": 45.0,
+      "status": "TRUE",
+      "outcome": "UNCONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "TRUE"
+      ],
+      "warnings": [
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": [
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)"
+      ]
+    },
+    "located": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "located-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "located.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 3.8730736229990725,
+      "wall_limit_seconds": 45.0,
+      "status": "TRUE",
+      "outcome": "UNCONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "TRUE"
+      ],
+      "warnings": [
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": [
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)",
+        "Expression <operand1=[return_value___repairseal_div$0], operand2=[178956970U], operator=[EQUALS]> contains unknown variables: [return_value___repairseal_div$0] (AutomatonGraphmlParser.getAssumptions, WARNING)"
+      ]
+    },
+    "input": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "input-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "input.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 6.454713055994944,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "CONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [
+        "Source input2 of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    },
+    "trivial": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "trivial-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "trivial.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 5.9447789389960235,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "CONFIRMED",
+      "witness_type": "violation_witness",
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [
+        "Source all of transition [edge: null] is a violation state. No outgoing edges expected. (AutomatonGraphmlParser.collectEdgeData, WARNING)",
+        " (CPAchecker.printConfigurationWarnings, WARNING)"
+      ],
+      "ignored_semantic_annotations": []
+    },
+    "direct": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "direct-output",
+        "--spec",
+        "property.prp",
+        "--predicateAnalysis",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "timed_out": false,
+      "wall_seconds": 6.0564723950010375,
+      "wall_limit_seconds": 45.0,
+      "status": "FALSE",
+      "outcome": "FALSE",
+      "witness_type": null,
+      "terminal_results": [
+        "FALSE"
+      ],
+      "warnings": [],
+      "ignored_semantic_annotations": []
+    },
+    "raw": {
+      "argv": [
+        "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+        "--heap",
+        "768M",
+        "--32",
+        "--stats",
+        "--no-output-files",
+        "--timelimit",
+        "30s",
+        "--output-path",
+        "raw-output",
+        "--spec",
+        "property.prp",
+        "--witnessValidation",
+        "--witness",
+        "raw.graphml",
+        "program.c"
+      ],
+      "cwd": ".",
+      "exit_code": 1,
+      "timed_out": false,
+      "wall_seconds": 1.675938740001584,
+      "wall_limit_seconds": 45.0,
+      "status": "ERROR",
+      "outcome": "ERROR",
+      "witness_type": "violation_witness",
+      "terminal_results": [],
+      "warnings": [],
+      "ignored_semantic_annotations": []
+    }
+  },
+  "adapter_changes": 9,
+  "location_changes": 1,
+  "arm_order": [
+    "context",
+    "standard",
+    "located",
+    "input",
+    "trivial",
+    "direct",
+    "raw"
+  ]
+}

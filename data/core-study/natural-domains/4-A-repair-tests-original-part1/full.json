@@ -1,0 +1,353 @@
+{
+  "kind": "finite-semantic-proof-dag-v1",
+  "request_id": "natural-domain-4-A-original-part1",
+  "word_bits": 32,
+  "input_order": [
+    "w"
+  ],
+  "domains": {
+    "w": [
+      2,
+      3,
+      4,
+      5,
+      8
+    ]
+  },
+  "points": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      8
+    ]
+  ],
+  "source_sha256": {
+    "original": "06fa399e859994e7c7cb96a5b860978056b95a6d1e5fcffdf03703e546a01950",
+    "candidate": "06fa399e859994e7c7cb96a5b860978056b95a6d1e5fcffdf03703e546a01950",
+    "reference": "bb4a1f81c39ff0b241197592d1f6ab22b2ff1ea2472af5b95d5ed95d14e59be5",
+    "repair_guard": "6fd4728b3e018a510fc0f0f722d59a1ba1d92de826a9a04aaa7640aec52142da"
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "op": "b",
+      "sort": "bool",
+      "vector": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "data": true
+    },
+    {
+      "id": 1,
+      "op": "b",
+      "sort": "bool",
+      "vector": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "data": false
+    },
+    {
+      "id": 2,
+      "op": "input",
+      "sort": "u32",
+      "vector": [
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "data": "w"
+    },
+    {
+      "id": 3,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data": 0
+    },
+    {
+      "id": 4,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "data": 2
+    },
+    {
+      "id": 5,
+      "op": "%",
+      "sort": "u32",
+      "vector": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "children": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "op": "==",
+      "sort": "bool",
+      "vector": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "children": [
+        5,
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "op": "u",
+      "sort": "u32",
+      "vector": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data": 1
+    },
+    {
+      "id": 8,
+      "op": "not",
+      "sort": "bool",
+      "vector": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "children": [
+        6
+      ]
+    },
+    {
+      "id": 9,
+      "op": "ite",
+      "sort": "u32",
+      "vector": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "children": [
+        6,
+        7,
+        3
+      ]
+    },
+    {
+      "id": 10,
+      "op": ">",
+      "sort": "bool",
+      "vector": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "children": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 11,
+      "op": "and",
+      "sort": "bool",
+      "vector": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "children": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": 12,
+      "op": "not",
+      "sort": "bool",
+      "vector": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "children": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "op": "ite",
+      "sort": "u32",
+      "vector": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "children": [
+        11,
+        7,
+        3
+      ]
+    },
+    {
+      "id": 14,
+      "op": "==",
+      "sort": "bool",
+      "vector": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "children": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 15,
+      "op": "==",
+      "sort": "bool",
+      "vector": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "children": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": 16,
+      "op": "not",
+      "sort": "bool",
+      "vector": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "children": [
+        14
+      ]
+    },
+    {
+      "id": 17,
+      "op": "or",
+      "sort": "bool",
+      "vector": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "children": [
+        16,
+        15
+      ]
+    }
+  ],
+  "role_roots": {
+    "original": {
+      "output": 9,
+      "defined": 0,
+      "trace_events": [
+        {
+          "site": 0,
+          "reachable": 0,
+          "guard": 6
+        }
+      ]
+    },
+    "candidate": {
+      "output": 9,
+      "defined": 0,
+      "trace_events": [
+        {
+          "site": 0,
+          "reachable": 0,
+          "guard": 6
+        }
+      ]
+    },
+    "reference": {
+      "output": 13,
+      "defined": 0,
+      "trace_events": [
+        {
+          "site": 0,
+          "reachable": 0,
+          "guard": 11
+        }
+      ]
+    }
+  },
+  "guard_root": 14,
+  "obligation_roots": {
+    "defined": 0,
+    "repair": 17,
+    "preserve": 0
+  },
+  "certificate_sha256": "1fe4f10980a0f2d988604bcdeb75851b78eb5afd3d64808aeeca5b664b99acc5"
+}

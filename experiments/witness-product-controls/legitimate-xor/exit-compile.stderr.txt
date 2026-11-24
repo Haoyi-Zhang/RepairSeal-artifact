@@ -1,0 +1,11 @@
+In file included from exit-wrapper.c:4:
+program.c: In function ‘__repairseal_candidate’:
+program.c:28:18: warning: result of ‘2^15’ is 13; did you mean ‘1 << 15’ (32768)? [-Wxor-used-as-pow]
+   28 |   return x + (2u ^ 15u);
+      |                  ^
+      |               --
+      |               1  <<
+program.c:28:15: note: you can silence this warning by using a hexadecimal constant (0x2 rather than 2)
+   28 |   return x + (2u ^ 15u);
+      |               ^~
+      |               0x2

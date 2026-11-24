@@ -1,0 +1,17 @@
+{
+  "id": "unsigned-wrap",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      2,
+      2147483648,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned x) { return x; }",
+  "candidate": "unsigned f(unsigned x) { return (x + 1u) - 1u; }",
+  "reference": "unsigned f(unsigned x) { return x; }",
+  "repair_guard": "x == x"
+}

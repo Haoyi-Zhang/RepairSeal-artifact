@@ -1,0 +1,1 @@
+unsigned f(unsigned w) { unsigned r = 0u; if ((w > 2u) && (w % 2u == 0u)) { r = 1u; } else { r = 0u; } return r; }

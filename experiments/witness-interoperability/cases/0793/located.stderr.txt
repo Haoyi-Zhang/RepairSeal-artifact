@@ -1,0 +1,32 @@
+Detected a correctness witness and switching to config file /workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/config/correctness-witness-validation.properties (CPAMain.createNewConfigForSwitching, INFO)
+
+Using the following resource limits: CPU-time limit of 30s (ResourceLimitChecker.fromConfiguration, INFO)
+
+CPAchecker 4.3 / witnessValidation (OpenJDK 64-Bit Server VM 21.0.13) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "program.c" (CPAchecker.parse, INFO)
+
+line 46: Dead code detected: unsigned __repairseal_p = __repairseal_original(n); (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 47: Dead code detected: [!(__repairseal_q != __repairseal_p)] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 47: Dead code detected: __VERIFIER_error(); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.19 (f1f678f19b5c) (Oct  6 2026 09:55:06, gmp 6.2.0, gcc 9.4.0, 64-bit, reentrant). (PredicateCPA:PredicateCPA.<init>, INFO)
+
+The following configuration options were specified but are not used:
+ invariantGeneration.kInduction.guessCandidatesFromCFA
+ invariantGeneration.kInduction.terminateOnCounterexample
+ invariantGeneration.kInduction.async 
+ (CPAchecker.printConfigurationWarnings, WARNING)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Creating formula for program (AbstractBMCAlgorithm.run, INFO)
+
+Starting satisfiability check... (AbstractBMCAlgorithm.boundedModelCheck, INFO)
+
+Starting assertions check... (AbstractBMCAlgorithm.checkBoundingAssertions, INFO)
+
+Stopping analysis ... (CPAchecker.runAlgorithm, INFO)
+

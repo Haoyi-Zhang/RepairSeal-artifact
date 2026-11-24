@@ -1,0 +1,139 @@
+{
+  "compiler_version": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "integer_macros": [
+    "#define INT_MAX __INT_MAX__",
+    "#define __SIZEOF_INT__ 4",
+    "#define __INT_MAX__ 0x7fffffff",
+    "#define UINT_MAX (INT_MAX * 2U + 1U)"
+  ],
+  "diagnostics": [
+    {
+      "index": 1,
+      "stage": "version",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "--version"
+      ],
+      "cwd": "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native",
+      "input_bytes": 0,
+      "input_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout_seconds": 20,
+      "returncode": 0,
+      "outcome": "ok",
+      "capture_incomplete": false,
+      "stdout_path": "private-native/process-00001.stdout.bin",
+      "stdout_bytes_seen": 252,
+      "stdout_limit": 65536,
+      "stdout_truncated": false,
+      "stderr_path": "private-native/process-00001.stderr.bin",
+      "stderr_bytes_seen": 0,
+      "stderr_limit": 65536,
+      "stderr_truncated": false,
+      "elapsed_seconds": 0.0025465299986535683,
+      "process_outcome": "ok"
+    },
+    {
+      "index": 2,
+      "stage": "macros",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-dM",
+        "-E",
+        "-x",
+        "c",
+        "-"
+      ],
+      "cwd": "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native",
+      "input_bytes": 20,
+      "input_sha256": "d103e54fea2dcd6be9157554a791f876d8f41ca9ac1cb22245e33e2d18145ca3",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "outcome": "ok",
+      "capture_incomplete": false,
+      "stdout_path": "private-native/process-00002.stdout.bin",
+      "stdout_bytes_seen": 24286,
+      "stdout_limit": 65536,
+      "stdout_truncated": false,
+      "stderr_path": "private-native/process-00002.stderr.bin",
+      "stderr_bytes_seen": 0,
+      "stderr_limit": 65536,
+      "stderr_truncated": false,
+      "elapsed_seconds": 0.016501055999469827,
+      "process_outcome": "ok"
+    }
+  ],
+  "compiles": [
+    {
+      "case": "84-A",
+      "role": "buggy",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/84-A-buggy.c",
+        "-o",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/84-A-buggy"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "outcome": "ok",
+      "process_index": 3,
+      "elapsed_seconds": 0.03263161900031264
+    },
+    {
+      "case": "84-A",
+      "role": "supplied",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/84-A-supplied.c",
+        "-o",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/84-A-supplied"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "outcome": "ok",
+      "process_index": 68,
+      "elapsed_seconds": 0.06484291599917924
+    },
+    {
+      "case": "4-A",
+      "role": "supplied",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/4-A-supplied.c",
+        "-o",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/4-A-supplied"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "outcome": "ok",
+      "process_index": 133,
+      "elapsed_seconds": 0.034521101999416715
+    },
+    {
+      "case": "4-A",
+      "role": "buggy",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/4-A-buggy.c",
+        "-o",
+        "/workspace/scratch/1069ed1cc3ce/codeflaws_current_fixed/private-native/4-A-buggy"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "outcome": "ok",
+      "process_index": 198,
+      "elapsed_seconds": 0.065282131999993
+    }
+  ]
+}

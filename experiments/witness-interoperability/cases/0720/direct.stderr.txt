@@ -1,0 +1,20 @@
+Using the following resource limits: CPU-time limit of 30s (ResourceLimitChecker.fromConfiguration, INFO)
+
+CPAchecker 4.3 / predicateAnalysis (OpenJDK 64-Bit Server VM 21.0.13) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "program.c" (CPAchecker.parse, INFO)
+
+line 31: Dead code detected: r = __repairseal_shr(__repairseal_shr(__repairseal_div(z, (31u & 7u) + 1u), 1u & 31u), ((__repairseal_shr(y, y & 31u)) & r) & 31u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 56: Dead code detected: r = __repairseal_shr(__repairseal_shr(__repairseal_div(z, (31u & 7u) + 1u), 1u & 31u), ((__repairseal_shr(y, y & 31u)) & r) & 31u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 73: Dead code detected: r = __repairseal_shr(__repairseal_shr(__repairseal_div(z, (31u & 7u) + 1u), 1u & 31u), ((__repairseal_shr(y, y & 31u)) & r) & 31u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.19 (f1f678f19b5c) (Oct  6 2026 09:55:06, gmp 6.2.0, gcc 9.4.0, 64-bit, reentrant) and JFactory 1.21. (PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Stopping analysis ... (CPAchecker.runAlgorithm, INFO)
+

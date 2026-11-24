@@ -1,0 +1,523 @@
+{
+  "schema": "repairseal-natural-support-audit-v1",
+  "script_sha256": "97c45ab2f8fa1c197f4918913da9c148ab83ab706d3202afb5277b224401f43d",
+  "population": "artifact/revision_audit/round2/natural-domains-final",
+  "implementation_sha256": {
+    "artifact/src/admission_journal.py": "2591a498a13ba855e45caa3f03dbe15d82e38d553d485cd6c31c5f16fd227b81",
+    "artifact/src/budget.py": "5aa4e1931f8ad233662420ccbd3403003c5494e65a41009b05a88598aed588d7",
+    "artifact/src/checker.py": "4c1f2f43c1a11c62f7e514d1aa450882660ea41ed0410df0fbf7980522c1e051",
+    "artifact/src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "artifact/src/domain_transport.py": "1fa9dcc4e48365fd4d1037bd436aee106dc08a5b865e2ea1ada9db7e6a199f47",
+    "artifact/src/macro_bridge.py": "90cdc3fc5394dcd911c912abff9dbc6f19d955ec98b15f925754c204126a8b83",
+    "artifact/src/producer.py": "b0d342b56360f6766eb645cb5db914624c811e005dc4f5f2f7a438c59f53dfe6",
+    "artifact/src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "artifact/src/proof_dag_producer.py": "1ae8d8066d14aafd98adc8b9f0ebd676c35c98618d8e2af9996deda38234222b",
+    "artifact/src/refutation_witness_checker.py": "b07e8df91ff7a03e2f223e5f452f072542706bee1962d980219db03485d09dc8",
+    "artifact/src/refutation_witness_producer.py": "3cbbb072dccd3af4058331bfabd1bf2f9f19f3ba5acd17d6efcc85e614ec0dc9",
+    "artifact/src/reusing_checker.py": "b1f737277b3ee8c0c09ef21ba362e47c4069753130f27b63c7d52087733a4008",
+    "artifact/src/vector_stream.py": "f94dc016107cdb163c61570660b579c51173465fc3bb758d424b85af4cba33e3"
+  },
+  "request_count": 24,
+  "accepted_request_count": 15,
+  "all_axes_relevant_count": 24,
+  "accepted_all_axes_relevant_count": 15,
+  "interpretation": "For a nonempty Cartesian target and an accepted basis with every axis in the union of obligation supports, the implemented support-coverage condition is equivalent to ordinary full-domain containment. It cannot authorize a target containing a complete input point outside that basis. This audit does not estimate a deployment hit rate or test a temporal sequence of requests.",
+  "rows": [
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-combined-tests-original-part1/request.json",
+      "request_sha256": "695782663d24ea95637f803a9f7652364438c9fff59e3d99194ab27223862fe7",
+      "request_id": "4-A-combined-tests-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "w"
+      ],
+      "points": 11,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-combined-tests-supplied-part1/request.json",
+      "request_sha256": "0c3f823f14ff6a24d40d39e6cba3d7fc385182123b0b799f65ec81cac89fbc2e",
+      "request_id": "4-A-combined-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 11,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-complete-legal-original-part1/request.json",
+      "request_sha256": "bea08d1980c5d15146d8d5ac8f3a5155c70d633e1c7d60643674b7b5050d5de3",
+      "request_id": "4-A-complete-legal-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "w"
+      ],
+      "points": 64,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-complete-legal-original-part2/request.json",
+      "request_sha256": "7da859f1b202311ce5a16805f9486876873d684c08739bca0bb5d33da027eb1b",
+      "request_id": "4-A-complete-legal-original-part2",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 36,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-complete-legal-supplied-part1/request.json",
+      "request_sha256": "bb6e4c0ca54b7447cda16b58c6827e348916539e262e03e5b7b42b41a5374af0",
+      "request_id": "4-A-complete-legal-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 64,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-complete-legal-supplied-part2/request.json",
+      "request_sha256": "6dda3a6553fda78d9adddc1135cacb685556870b750220eb87b1116dd5d5001f",
+      "request_id": "4-A-complete-legal-supplied-part2",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 36,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-heldout-tests-original-part1/request.json",
+      "request_sha256": "305107cc465485b51f93e7c8042ff1614648c78795ffca3a1d9e6a3432c5b73a",
+      "request_id": "4-A-heldout-tests-original-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 8,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-heldout-tests-supplied-part1/request.json",
+      "request_sha256": "255176a3e170f8d8b9119487364e7c4824c3d2a0ea3a747ad59d03c0e634b9e4",
+      "request_id": "4-A-heldout-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 8,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-repair-tests-original-part1/request.json",
+      "request_sha256": "963683ba34398244473f93ef91d0f7265ea29f57b8dc2cee8890d187c3fc449c",
+      "request_id": "4-A-repair-tests-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "w"
+      ],
+      "points": 5,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-repair-tests-supplied-part1/request.json",
+      "request_sha256": "ad1d174389bed7ac5b74f4bf35aa57cb06d617fadcfe0a253b9cb54fe25bd5ab",
+      "request_id": "4-A-repair-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 5,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-test-boundary-closure-original-part1/request.json",
+      "request_sha256": "d082d3697bc77a1f6f152deee33fa5cbe859b4ef5c0944969580d372b00a13e1",
+      "request_id": "4-A-test-boundary-closure-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "w"
+      ],
+      "points": 13,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/4-A-test-boundary-closure-supplied-part1/request.json",
+      "request_sha256": "64a12fd032001a1330f225919eed814230a94dabb55273a00ef83f5f979a20bf",
+      "request_id": "4-A-test-boundary-closure-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "w"
+      ],
+      "points": 13,
+      "obligation_supports": [
+        [],
+        [
+          "w"
+        ],
+        [
+          "w"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-combined-tests-original-part1/request.json",
+      "request_sha256": "3df425e2755028cce5d8ba3b77581fead8776c41527a5bf1a9167cf63916f962",
+      "request_id": "84-A-combined-tests-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "n"
+      ],
+      "points": 10,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-combined-tests-supplied-part1/request.json",
+      "request_sha256": "05ae149dc1e70f89116a426e637622fecb14b42d9e89ae64d228ede28a69e1f1",
+      "request_id": "84-A-combined-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "n"
+      ],
+      "points": 10,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-heldout-tests-original-part1/request.json",
+      "request_sha256": "87b50d64cf6828804ef3221f96972af54618bc19574144503964aca6c03f1569",
+      "request_id": "84-A-heldout-tests-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "n"
+      ],
+      "points": 8,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-heldout-tests-supplied-part1/request.json",
+      "request_sha256": "f621b12372b60264db7a708b5a5d8c52c1329540bd32cf3e2028fd35f84cbe26",
+      "request_id": "84-A-heldout-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "n"
+      ],
+      "points": 8,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-repair-tests-original-part1/request.json",
+      "request_sha256": "fcfa20e762da6a43cbed013374308189f169b368ec6489dd9867595982a96c30",
+      "request_id": "84-A-repair-tests-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "n"
+      ],
+      "points": 2,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-repair-tests-supplied-part1/request.json",
+      "request_sha256": "44536c65a6e58101b6735fecdef41be35677e61f5169aac3c6d8a96f8ad57186",
+      "request_id": "84-A-repair-tests-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "n"
+      ],
+      "points": 2,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-test-boundary-closure-original-part1/request.json",
+      "request_sha256": "0c0104f2f0c9d5ffabea5cbc6446a9d9f02bfde2d520ba57e8703d41a03a8a40",
+      "request_id": "84-A-test-boundary-closure-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "n"
+      ],
+      "points": 12,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/84-A-test-boundary-closure-supplied-part1/request.json",
+      "request_sha256": "60a8016e98c38b757839f097fb4b00d7d4566aaef024987bb5b97c631c0c79bf",
+      "request_id": "84-A-test-boundary-closure-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "n"
+      ],
+      "points": 12,
+      "obligation_supports": [
+        [],
+        [
+          "n"
+        ],
+        []
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/CEIL_DIV-boundary-grid-original-part1/request.json",
+      "request_sha256": "66d72b3f485ad21c9d3a20c64bc1b6cba0b67d93b660046c99d11020371b6a88",
+      "request_id": "CEIL_DIV-boundary-grid-original-part1",
+      "status": "REFUTED",
+      "input_order": [
+        "m",
+        "n"
+      ],
+      "points": 4096,
+      "obligation_supports": [
+        [
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/CEIL_DIV-boundary-grid-supplied-part1/request.json",
+      "request_sha256": "80b1cb80c589da263a8f65607afa1355c1cf9eedb7487d67b492178df61670ea",
+      "request_id": "CEIL_DIV-boundary-grid-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "m",
+        "n"
+      ],
+      "points": 4096,
+      "obligation_supports": [
+        [
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/CEIL_DIV-low-range-grid-original-part1/request.json",
+      "request_sha256": "8d4ccd35f33ca6a9136ae9f1917381b5c08e7a6768d224c5070ea41f0da2b0e1",
+      "request_id": "CEIL_DIV-low-range-grid-original-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "m",
+        "n"
+      ],
+      "points": 1024,
+      "obligation_supports": [
+        [
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    },
+    {
+      "request_file": "artifact/revision_audit/round2/natural-domains-final/CEIL_DIV-low-range-grid-supplied-part1/request.json",
+      "request_sha256": "5c77f39f04d5f619868556f5a9696b2c4ffe3eb2ebf5a9630ffd1bc219fe3238",
+      "request_id": "CEIL_DIV-low-range-grid-supplied-part1",
+      "status": "ACCEPT",
+      "input_order": [
+        "m",
+        "n"
+      ],
+      "points": 1024,
+      "obligation_supports": [
+        [
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ],
+        [
+          "m",
+          "n"
+        ]
+      ],
+      "irrelevant_axes": [],
+      "all_axes_relevant": true
+    }
+  ]
+}

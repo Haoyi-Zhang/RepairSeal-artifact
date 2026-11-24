@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/witness_interoperability.py", line 745, in <module>
+    main()
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/witness_interoperability.py", line 717, in main
+    rows.append(future.result())
+                ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/witness_interoperability.py", line 481, in check_case
+    native = native_correspondence(request, directory, args.gcc)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/tests/witness_interoperability.py", line 435, in native_correspondence
+    raise RuntimeError(f"native product compilation failed: {text}")
+RuntimeError: native product compilation failed: 
+In file included from native-wrapper.c:2:
+program.c: In function ‘__repairseal_original’:
+program.c:35:29: error: result of ‘2^15’ is 13; did you mean ‘1 << 15’ (32768)? [-Werror=xor-used-as-pow]
+   35 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                             ^
+      |                          --
+      |                          1  <<
+program.c:35:26: note: you can silence this warning by using a hexadecimal constant (0x2 rather than 2)
+   35 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                          ^~
+      |                          0x2
+program.c: In function ‘__repairseal_candidate’:
+program.c:68:29: error: result of ‘2^15’ is 13; did you mean ‘1 << 15’ (32768)? [-Werror=xor-used-as-pow]
+   68 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                             ^
+      |                          --
+      |                          1  <<
+program.c:68:26: note: you can silence this warning by using a hexadecimal constant (0x2 rather than 2)
+   68 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                          ^~
+      |                          0x2
+program.c: In function ‘__repairseal_reference’:
+program.c:101:29: error: result of ‘2^15’ is 13; did you mean ‘1 << 15’ (32768)? [-Werror=xor-used-as-pow]
+  101 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                             ^
+      |                          --
+      |                          1  <<
+program.c:101:26: note: you can silence this warning by using a hexadecimal constant (0x2 rather than 2)
+  101 |     r = (~(15u - r)) | ((2u ^ 15u) * (a ^ 3u));
+      |                          ^~
+      |                          0x2
+cc1: all warnings being treated as errors
+

@@ -1,0 +1,3277 @@
+{
+  "outcome": "PASS_COUNTER_OVERHEAD_STUDY",
+  "requests": 1478,
+  "preflight_receiving_calls": 7390,
+  "timed_receiving_calls": 73900,
+  "repetitions_per_request": 10,
+  "canonical_disagreements": 0,
+  "value_trace_disagreements": 0,
+  "source_inputs_unchanged": true,
+  "source_bindings": {
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "tests/int32_baselines.py": "ba71a1840bf50b16c7717edb81fae97011beb7200dfe6c868164c0f2fd778f37",
+    "tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be",
+    "tests/int32_evaluator_study.py": "10885bcfa30f37fb8a21cae07aea3c57f42761235bcb13e00a681cf47b663f2e",
+    "tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+    "tests/int32_point_demand_study.py": "50031934b0dbff332eef5226939377c3d9ce109e507fa2ef9b6c73ce47122842",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "tests/counter_free_receivers.py": "1bc77dc19fc0ef3b321d2e78ce02e4d8c8f9385043b642c0508a0a386814540c",
+    "tests/counter_overhead_study.py": "c6865edbb162ef51055d52bbb1b0e457d67f20898b19f6f512d353716e7e2431"
+  },
+  "analysis": {
+    "repair": {
+      "requests": 739,
+      "problems": 35,
+      "status": {
+        "ACCEPT": 420,
+        "REFUTED": 319
+      },
+      "roles": {
+        "cross_source": 549,
+        "own_original": 95,
+        "own_reference": 95
+      },
+      "ratios": {
+        "support_over_live": {
+          "p10": 1.0436712809487323,
+          "p25": 1.1774993789027515,
+          "p50": 1.3161888365247456,
+          "p75": 1.555945176440922,
+          "p90": 1.948250689959146
+        },
+        "point_over_live": {
+          "p10": 0.9301884597892507,
+          "p25": 1.0268300903164738,
+          "p50": 1.1342589282235438,
+          "p75": 1.2816820891862906,
+          "p90": 1.4902735319567955
+        },
+        "support_uninstrumented_over_live": {
+          "p10": 0.9722058363297001,
+          "p25": 1.0686418251818823,
+          "p50": 1.1874391518275138,
+          "p75": 1.3663976163837805,
+          "p90": 1.6011801750747352
+        },
+        "point_uninstrumented_over_live": {
+          "p10": 0.87749312736404,
+          "p25": 0.9594265778638379,
+          "p50": 1.0388116153215599,
+          "p75": 1.1288338403612814,
+          "p90": 1.2644870824859076
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "p10": 0.678891023095333,
+          "p25": 0.7719673962833224,
+          "p50": 0.8628632093114726,
+          "p75": 0.9535129145828243,
+          "p90": 1.086361728467989
+        },
+        "support_over_uninstrumented": {
+          "p10": 0.9171431062809565,
+          "p25": 1.0289193174699696,
+          "p50": 1.1236916398866015,
+          "p75": 1.2309719494423337,
+          "p90": 1.3734076567012095
+        },
+        "point_over_uninstrumented": {
+          "p10": 0.8999044116027978,
+          "p25": 1.0070833390776759,
+          "p50": 1.1037281088683086,
+          "p75": 1.217595677673728,
+          "p90": 1.3541674328784055
+        },
+        "point_over_support": {
+          "p10": 0.6772210739041354,
+          "p25": 0.766609523858187,
+          "p50": 0.8436698636952684,
+          "p75": 0.936391665864398,
+          "p90": 1.046727456440683
+        }
+      },
+      "request_comparisons": {
+        "support_over_live": {
+          "lower": 46,
+          "equal": 0,
+          "higher": 693
+        },
+        "point_over_live": {
+          "lower": 151,
+          "equal": 0,
+          "higher": 588
+        },
+        "support_uninstrumented_over_live": {
+          "lower": 103,
+          "equal": 0,
+          "higher": 636
+        },
+        "point_uninstrumented_over_live": {
+          "lower": 266,
+          "equal": 0,
+          "higher": 473
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "lower": 612,
+          "equal": 0,
+          "higher": 127
+        },
+        "support_over_uninstrumented": {
+          "lower": 145,
+          "equal": 0,
+          "higher": 594
+        },
+        "point_over_uninstrumented": {
+          "lower": 179,
+          "equal": 0,
+          "higher": 560
+        },
+        "point_over_support": {
+          "lower": 634,
+          "equal": 0,
+          "higher": 105
+        }
+      },
+      "sum_request_median_ns": {
+        "support": 6420211137.5,
+        "point": 5046201443.5,
+        "support_uninstrumented": 5522245078.0,
+        "point_uninstrumented": 4334472418.5,
+        "live": 4077899055.5
+      },
+      "problem_ratios": [
+        {
+          "problem": "104-A",
+          "requests": 84,
+          "sum_request_median_ns": {
+            "support": 803265658.5,
+            "point": 616060009.0,
+            "support_uninstrumented": 662218802.5,
+            "point_uninstrumented": 514782132.0,
+            "live": 478471014.5
+          },
+          "ratios": {
+            "support_over_live": 1.6788178053782608,
+            "point_over_live": 1.2875597274032993,
+            "support_uninstrumented_over_live": 1.3840311793850577,
+            "point_uninstrumented_over_live": 1.075889900118495,
+            "point_uninstrumented_over_support_uninstrumented": 0.7773595827490869,
+            "support_over_uninstrumented": 1.2129913186812602,
+            "point_over_uninstrumented": 1.196739301355549,
+            "point_over_support": 0.7669442885812104
+          }
+        },
+        {
+          "problem": "112-B",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 227331816.0,
+            "point": 214338912.5,
+            "support_uninstrumented": 205435524.0,
+            "point_uninstrumented": 189405851.0,
+            "live": 184117311.5
+          },
+          "ratios": {
+            "support_over_live": 1.2347117940617984,
+            "point_over_live": 1.1641431799855495,
+            "support_uninstrumented_over_live": 1.1157860297129094,
+            "point_uninstrumented_over_live": 1.0287237493145776,
+            "point_uninstrumented_over_support_uninstrumented": 0.9219722437099048,
+            "support_over_uninstrumented": 1.1065847404268796,
+            "point_over_uninstrumented": 1.1316382855564477,
+            "point_over_support": 0.9428460840694644
+          }
+        },
+        {
+          "problem": "122-A",
+          "requests": 40,
+          "sum_request_median_ns": {
+            "support": 435287332.0,
+            "point": 328403506.5,
+            "support_uninstrumented": 355847239.5,
+            "point_uninstrumented": 281234254.0,
+            "live": 271624411.0
+          },
+          "ratios": {
+            "support_over_live": 1.6025339195305242,
+            "point_over_live": 1.2090353193623675,
+            "support_uninstrumented_over_live": 1.3100709107474144,
+            "point_uninstrumented_over_live": 1.0353791581714649,
+            "point_uninstrumented_over_support_uninstrumented": 0.7903229891432108,
+            "support_over_uninstrumented": 1.2232421210056907,
+            "point_over_uninstrumented": 1.1677222878405131,
+            "point_over_support": 0.754452248796434
+          }
+        },
+        {
+          "problem": "124-A",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 138096513.5,
+            "point": 117830796.0,
+            "support_uninstrumented": 130775129.0,
+            "point_uninstrumented": 112950260.5,
+            "live": 108487588.0
+          },
+          "ratios": {
+            "support_over_live": 1.2729245441423216,
+            "point_over_live": 1.0861223682104537,
+            "support_uninstrumented_over_live": 1.2054386258453824,
+            "point_uninstrumented_over_live": 1.0411353278496707,
+            "point_uninstrumented_over_support_uninstrumented": 0.8636983298253905,
+            "support_over_uninstrumented": 1.0559845328082222,
+            "point_over_uninstrumented": 1.0432095993262451,
+            "point_over_support": 0.8532496079272849
+          }
+        },
+        {
+          "problem": "151-A",
+          "requests": 6,
+          "sum_request_median_ns": {
+            "support": 73432096.0,
+            "point": 61491819.0,
+            "support_uninstrumented": 64436987.5,
+            "point_uninstrumented": 59772918.0,
+            "live": 54449412.0
+          },
+          "ratios": {
+            "support_over_live": 1.3486297335956539,
+            "point_over_live": 1.1293385316998465,
+            "support_uninstrumented_over_live": 1.1834285281170713,
+            "point_uninstrumented_over_live": 1.0977697610398438,
+            "point_uninstrumented_over_support_uninstrumented": 0.9276181323653593,
+            "support_over_uninstrumented": 1.1395954225824105,
+            "point_over_uninstrumented": 1.028757187326876,
+            "point_over_support": 0.837397028678032
+          }
+        },
+        {
+          "problem": "168-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 59803518.5,
+            "point": 50899354.0,
+            "support_uninstrumented": 52808194.0,
+            "point_uninstrumented": 44782244.0,
+            "live": 45781524.0
+          },
+          "ratios": {
+            "support_over_live": 1.306280640635729,
+            "point_over_live": 1.1117881091070712,
+            "support_uninstrumented_over_live": 1.1534826582007187,
+            "point_uninstrumented_over_live": 0.9781728541845833,
+            "point_uninstrumented_over_support_uninstrumented": 0.8480169573683963,
+            "support_over_uninstrumented": 1.1324666490204154,
+            "point_over_uninstrumented": 1.136596772595853,
+            "point_over_support": 0.8511096884709216
+          }
+        },
+        {
+          "problem": "171-B",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 5347387.5,
+            "point": 4225233.5,
+            "support_uninstrumented": 6096983.5,
+            "point_uninstrumented": 4597949.5,
+            "live": 4097481.0
+          },
+          "ratios": {
+            "support_over_live": 1.3050426591361863,
+            "point_over_live": 1.031178301986025,
+            "support_uninstrumented_over_live": 1.4879833487940517,
+            "point_uninstrumented_over_live": 1.1221405297547444,
+            "point_uninstrumented_over_support_uninstrumented": 0.7541351391224858,
+            "support_over_uninstrumented": 0.8770546123341157,
+            "point_over_uninstrumented": 0.9189386486302209,
+            "point_over_support": 0.7901491148715144
+          }
+        },
+        {
+          "problem": "194-A",
+          "requests": 18,
+          "sum_request_median_ns": {
+            "support": 100303579.5,
+            "point": 85972422.0,
+            "support_uninstrumented": 89978619.0,
+            "point_uninstrumented": 81676592.0,
+            "live": 75955979.5
+          },
+          "ratios": {
+            "support_over_live": 1.320548825257398,
+            "point_over_live": 1.1318716783844516,
+            "support_uninstrumented_over_live": 1.1846153468404683,
+            "point_uninstrumented_over_live": 1.0753148407493054,
+            "point_uninstrumented_over_support_uninstrumented": 0.9077333360717617,
+            "support_over_uninstrumented": 1.1147490438811913,
+            "point_over_uninstrumented": 1.0525956078089056,
+            "point_over_support": 0.8571221727934445
+          }
+        },
+        {
+          "problem": "197-A",
+          "requests": 45,
+          "sum_request_median_ns": {
+            "support": 334562256.0,
+            "point": 277804155.5,
+            "support_uninstrumented": 284031842.0,
+            "point_uninstrumented": 238324725.0,
+            "live": 226538104.0
+          },
+          "ratios": {
+            "support_over_live": 1.4768476035272193,
+            "point_over_live": 1.226302112513487,
+            "support_uninstrumented_over_live": 1.253792792403701,
+            "point_uninstrumented_over_live": 1.0520293089413337,
+            "point_uninstrumented_over_support_uninstrumented": 0.8390774897696154,
+            "support_over_uninstrumented": 1.1779040464061772,
+            "point_over_uninstrumented": 1.1656539433749478,
+            "point_over_support": 0.8303511544350658
+          }
+        },
+        {
+          "problem": "216-A",
+          "requests": 126,
+          "sum_request_median_ns": {
+            "support": 689211500.0,
+            "point": 557797404.5,
+            "support_uninstrumented": 610824649.0,
+            "point_uninstrumented": 514483294.0,
+            "live": 493275360.5
+          },
+          "ratios": {
+            "support_over_live": 1.3972145280100605,
+            "point_over_live": 1.130803298049589,
+            "support_uninstrumented_over_live": 1.2383035884477347,
+            "point_uninstrumented_over_live": 1.0429941067368598,
+            "point_uninstrumented_over_support_uninstrumented": 0.8422765761700622,
+            "support_over_uninstrumented": 1.1283295478143025,
+            "point_over_uninstrumented": 1.084189537357456,
+            "point_over_support": 0.8093268967508522
+          }
+        },
+        {
+          "problem": "313-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 110685536.0,
+            "point": 77921691.0,
+            "support_uninstrumented": 85357057.5,
+            "point_uninstrumented": 64158211.5,
+            "live": 56786813.5
+          },
+          "ratios": {
+            "support_over_live": 1.9491415203284825,
+            "point_over_live": 1.3721793176509192,
+            "support_uninstrumented_over_live": 1.5031140548148558,
+            "point_uninstrumented_over_live": 1.1298082696610543,
+            "point_uninstrumented_over_support_uninstrumented": 0.7516450704735224,
+            "support_over_uninstrumented": 1.296735609706321,
+            "point_over_uninstrumented": 1.214524051999174,
+            "point_over_support": 0.7039916308486774
+          }
+        },
+        {
+          "problem": "39-D",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 14332334.0,
+            "point": 14177071.5,
+            "support_uninstrumented": 13586239.0,
+            "point_uninstrumented": 12767006.0,
+            "live": 14234715.0
+          },
+          "ratios": {
+            "support_over_live": 1.006857812046114,
+            "point_over_live": 0.995950498482056,
+            "support_uninstrumented_over_live": 0.9544440475274707,
+            "point_uninstrumented_over_live": 0.8968922805971177,
+            "point_uninstrumented_over_support_uninstrumented": 0.9397012668480217,
+            "support_over_uninstrumented": 1.0549154920651698,
+            "point_over_uninstrumented": 1.1104460591621872,
+            "point_over_support": 0.9891669772697176
+          }
+        },
+        {
+          "problem": "4-A",
+          "requests": 120,
+          "sum_request_median_ns": {
+            "support": 455065810.5,
+            "point": 422965630.0,
+            "support_uninstrumented": 419681433.0,
+            "point_uninstrumented": 393071821.5,
+            "live": 382647905.0
+          },
+          "ratios": {
+            "support_over_live": 1.1892546765674832,
+            "point_over_live": 1.1053650744540207,
+            "support_uninstrumented_over_live": 1.0967822573077983,
+            "point_uninstrumented_over_live": 1.0272415355312086,
+            "point_uninstrumented_over_support_uninstrumented": 0.9365956904269339,
+            "support_over_uninstrumented": 1.0843124682620877,
+            "point_over_uninstrumented": 1.076051771877013,
+            "point_over_support": 0.9294603554929117
+          }
+        },
+        {
+          "problem": "417-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 56374445.0,
+            "point": 41197467.0,
+            "support_uninstrumented": 46767559.5,
+            "point_uninstrumented": 28523483.0,
+            "live": 25519993.5
+          },
+          "ratios": {
+            "support_over_live": 2.2090305391339538,
+            "point_over_live": 1.6143212183811881,
+            "support_uninstrumented_over_live": 1.8325850866693991,
+            "point_uninstrumented_over_live": 1.1176916248039013,
+            "point_uninstrumented_over_support_uninstrumented": 0.6098988979743534,
+            "support_over_uninstrumented": 1.205417721230461,
+            "point_over_uninstrumented": 1.4443350764701492,
+            "point_over_support": 0.7307826622505995
+          }
+        },
+        {
+          "problem": "448-A",
+          "requests": 15,
+          "sum_request_median_ns": {
+            "support": 230311330.5,
+            "point": 174964894.5,
+            "support_uninstrumented": 191986854.0,
+            "point_uninstrumented": 154431346.0,
+            "live": 159682406.0
+          },
+          "ratios": {
+            "support_over_live": 1.4423087443960483,
+            "point_over_live": 1.0957055250031742,
+            "support_uninstrumented_over_live": 1.20230436658125,
+            "point_uninstrumented_over_live": 0.9671156007005556,
+            "point_uninstrumented_over_support_uninstrumented": 0.8043850023189608,
+            "support_over_uninstrumented": 1.1996203161910242,
+            "point_over_uninstrumented": 1.1329623099963138,
+            "point_over_support": 0.7596886098489193
+          }
+        },
+        {
+          "problem": "451-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 34130803.0,
+            "point": 32848181.5,
+            "support_uninstrumented": 31784013.0,
+            "point_uninstrumented": 32286195.5,
+            "live": 32932572.5
+          },
+          "ratios": {
+            "support_over_live": 1.03638435776616,
+            "point_over_live": 0.997437461042559,
+            "support_uninstrumented_over_live": 0.9651239058230268,
+            "point_uninstrumented_over_live": 0.9803727145821967,
+            "point_uninstrumented_over_support_uninstrumented": 1.0157998456645485,
+            "support_over_uninstrumented": 1.0738355474495935,
+            "point_over_uninstrumented": 1.0174063865778178,
+            "point_over_support": 0.9624204124350664
+          }
+        },
+        {
+          "problem": "466-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 36313248.0,
+            "point": 33317439.0,
+            "support_uninstrumented": 27652432.5,
+            "point_uninstrumented": 28259148.0,
+            "live": 16567797.5
+          },
+          "ratios": {
+            "support_over_live": 2.19179694826666,
+            "point_over_live": 2.010975749794141,
+            "support_uninstrumented_over_live": 1.6690469870844329,
+            "point_uninstrumented_over_live": 1.705667153404066,
+            "point_uninstrumented_over_support_uninstrumented": 1.0219407641624294,
+            "support_over_uninstrumented": 1.313202663093021,
+            "point_over_uninstrumented": 1.178996585459689,
+            "point_over_support": 0.9175009351958823
+          }
+        },
+        {
+          "problem": "476-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 65269826.0,
+            "point": 56625257.5,
+            "support_uninstrumented": 62850778.5,
+            "point_uninstrumented": 46037420.0,
+            "live": 45848956.5
+          },
+          "ratios": {
+            "support_over_live": 1.4235836752358801,
+            "point_over_live": 1.2350391769548779,
+            "support_uninstrumented_over_live": 1.3708224417277632,
+            "point_uninstrumented_over_live": 1.0041105297565496,
+            "point_uninstrumented_over_support_uninstrumented": 0.7324876652084747,
+            "support_over_uninstrumented": 1.038488743619938,
+            "point_over_uninstrumented": 1.2299832940247304,
+            "point_over_support": 0.8675564341170452
+          }
+        },
+        {
+          "problem": "478-A",
+          "requests": 72,
+          "sum_request_median_ns": {
+            "support": 514984064.0,
+            "point": 452428048.5,
+            "support_uninstrumented": 477583872.0,
+            "point_uninstrumented": 431386851.5,
+            "live": 415793472.0
+          },
+          "ratios": {
+            "support_over_live": 1.2385573576297033,
+            "point_over_live": 1.0881076278657882,
+            "support_uninstrumented_over_live": 1.148608393736398,
+            "point_uninstrumented_over_live": 1.0375027039866562,
+            "point_uninstrumented_over_support_uninstrumented": 0.9032693036585624,
+            "support_over_uninstrumented": 1.0783112541957867,
+            "point_over_uninstrumented": 1.048775703123163,
+            "point_over_support": 0.8785282499537694
+          }
+        },
+        {
+          "problem": "501-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 19981971.5,
+            "point": 17090381.5,
+            "support_uninstrumented": 24226244.5,
+            "point_uninstrumented": 15384139.0,
+            "live": 18162980.0
+          },
+          "ratios": {
+            "support_over_live": 1.1001482961496407,
+            "point_over_live": 0.9409458965434087,
+            "support_uninstrumented_over_live": 1.333825424021829,
+            "point_uninstrumented_over_live": 0.8470052271158147,
+            "point_uninstrumented_over_support_uninstrumented": 0.635019554929366,
+            "support_over_uninstrumented": 0.8248068122981257,
+            "point_over_uninstrumented": 1.110909196803279,
+            "point_over_support": 0.8552900548376821
+          }
+        },
+        {
+          "problem": "513-A",
+          "requests": 6,
+          "sum_request_median_ns": {
+            "support": 21088583.5,
+            "point": 21538204.5,
+            "support_uninstrumented": 20905451.5,
+            "point_uninstrumented": 19663177.5,
+            "live": 19635790.0
+          },
+          "ratios": {
+            "support_over_live": 1.0739870155466116,
+            "point_over_live": 1.0968850502067908,
+            "support_uninstrumented_over_live": 1.0646605764270243,
+            "point_uninstrumented_over_live": 1.0013947745417933,
+            "point_uninstrumented_over_support_uninstrumented": 0.9405765524844082,
+            "support_over_uninstrumented": 1.0087600117127344,
+            "point_over_uninstrumented": 1.0953572737671722,
+            "point_over_support": 1.0213205879854377
+          }
+        },
+        {
+          "problem": "515-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 42208245.0,
+            "point": 22783158.5,
+            "support_uninstrumented": 26904812.5,
+            "point_uninstrumented": 20388810.0,
+            "live": 16642637.0
+          },
+          "ratios": {
+            "support_over_live": 2.5361512721812054,
+            "point_over_live": 1.3689632538401215,
+            "support_uninstrumented_over_live": 1.6166195597488546,
+            "point_uninstrumented_over_live": 1.2250949173499368,
+            "point_uninstrumented_over_support_uninstrumented": 0.7578127519007984,
+            "support_over_uninstrumented": 1.5687990763734183,
+            "point_over_uninstrumented": 1.1174344407545118,
+            "point_over_support": 0.5397798107928913
+          }
+        },
+        {
+          "problem": "546-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 9012240.5,
+            "point": 8749568.5,
+            "support_uninstrumented": 9349910.5,
+            "point_uninstrumented": 7807184.0,
+            "live": 7647522.0
+          },
+          "ratios": {
+            "support_over_live": 1.1784523797381687,
+            "point_over_live": 1.1441050447452128,
+            "support_uninstrumented_over_live": 1.2226065515077955,
+            "point_uninstrumented_over_live": 1.0208776123821546,
+            "point_uninstrumented_over_support_uninstrumented": 0.8350009339661594,
+            "support_over_uninstrumented": 0.9638852157996592,
+            "point_over_uninstrumented": 1.1207073510756247,
+            "point_over_support": 0.970853862588332
+          }
+        },
+        {
+          "problem": "560-B",
+          "requests": 15,
+          "sum_request_median_ns": {
+            "support": 1187778949.0,
+            "point": 738227386.5,
+            "support_uninstrumented": 967468380.5,
+            "point_uninstrumented": 500746177.5,
+            "live": 429698868.0
+          },
+          "ratios": {
+            "support_over_live": 2.7642124228263034,
+            "point_over_live": 1.7180110106782966,
+            "support_uninstrumented_over_live": 2.2515032096849743,
+            "point_uninstrumented_over_live": 1.1653420913829355,
+            "point_uninstrumented_over_support_uninstrumented": 0.51758402402899,
+            "support_over_uninstrumented": 1.2277186241333704,
+            "point_over_uninstrumented": 1.4742546616843621,
+            "point_over_support": 0.6215191699781505
+          }
+        },
+        {
+          "problem": "570-B",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 110105413.5,
+            "point": 82493930.0,
+            "support_uninstrumented": 86401285.5,
+            "point_uninstrumented": 67219645.0,
+            "live": 56212574.5
+          },
+          "ratios": {
+            "support_over_live": 1.9587328009678688,
+            "point_over_live": 1.4675351686658649,
+            "support_uninstrumented_over_live": 1.5370455146116817,
+            "point_uninstrumented_over_live": 1.195811535015177,
+            "point_uninstrumented_over_support_uninstrumented": 0.7779935751071667,
+            "support_over_uninstrumented": 1.2743492514356167,
+            "point_over_uninstrumented": 1.2272294803104062,
+            "point_over_support": 0.7492268307043777
+          }
+        },
+        {
+          "problem": "6-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 50739662.0,
+            "point": 31011302.5,
+            "support_uninstrumented": 34431577.0,
+            "point_uninstrumented": 27574653.0,
+            "live": 27658795.5
+          },
+          "ratios": {
+            "support_over_live": 1.8344855978995904,
+            "point_over_live": 1.1212094358917402,
+            "support_uninstrumented_over_live": 1.244868996554821,
+            "point_uninstrumented_over_live": 0.9969578393245649,
+            "point_uninstrumented_over_support_uninstrumented": 0.800853617596429,
+            "support_over_uninstrumented": 1.4736374694658918,
+            "point_over_uninstrumented": 1.1246307433134335,
+            "point_over_support": 0.6111846488058986
+          }
+        },
+        {
+          "problem": "617-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 59690249.5,
+            "point": 53006029.5,
+            "support_uninstrumented": 58334299.5,
+            "point_uninstrumented": 53504496.5,
+            "live": 45731150.0
+          },
+          "ratios": {
+            "support_over_live": 1.3052426956243173,
+            "point_over_live": 1.1590793037131146,
+            "support_uninstrumented_over_live": 1.2755922276172806,
+            "point_uninstrumented_over_live": 1.169979248280439,
+            "point_uninstrumented_over_support_uninstrumented": 0.9172047484687803,
+            "support_over_uninstrumented": 1.0232444721479856,
+            "point_over_uninstrumented": 0.9906836428224308,
+            "point_over_support": 0.8880182264944294
+          }
+        },
+        {
+          "problem": "62-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 107954036.0,
+            "point": 85522353.5,
+            "support_uninstrumented": 89746160.5,
+            "point_uninstrumented": 71985363.0,
+            "live": 64487700.0
+          },
+          "ratios": {
+            "support_over_live": 1.6740252172119645,
+            "point_over_live": 1.326180860846332,
+            "support_uninstrumented_over_live": 1.3916787309828076,
+            "point_uninstrumented_over_live": 1.116265008676073,
+            "point_uninstrumented_over_support_uninstrumented": 0.8020996396831929,
+            "support_over_uninstrumented": 1.202881943902213,
+            "point_over_uninstrumented": 1.1880519863461687,
+            "point_over_support": 0.7922108025678632
+          }
+        },
+        {
+          "problem": "638-A",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 167008173.5,
+            "point": 144261237.0,
+            "support_uninstrumented": 155066386.0,
+            "point_uninstrumented": 142565253.5,
+            "live": 130787505.0
+          },
+          "ratios": {
+            "support_over_live": 1.2769428815084438,
+            "point_over_live": 1.103020024734014,
+            "support_uninstrumented_over_live": 1.1856360896249225,
+            "point_uninstrumented_over_live": 1.0900525512739156,
+            "point_uninstrumented_over_support_uninstrumented": 0.9193820606614254,
+            "support_over_uninstrumented": 1.077010806842432,
+            "point_over_uninstrumented": 1.0118961911010105,
+            "point_over_support": 0.8637974655773359
+          }
+        },
+        {
+          "problem": "652-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 22284914.5,
+            "point": 19221221.5,
+            "support_uninstrumented": 21418414.0,
+            "point_uninstrumented": 17708756.5,
+            "live": 18356984.5
+          },
+          "ratios": {
+            "support_over_live": 1.2139746863108154,
+            "point_over_live": 1.0470794644948358,
+            "support_uninstrumented_over_live": 1.1667719172503523,
+            "point_uninstrumented_over_live": 0.9646876642511737,
+            "point_uninstrumented_over_support_uninstrumented": 0.82680055115192,
+            "support_over_uninstrumented": 1.0404558666201895,
+            "point_over_uninstrumented": 1.0854077472915729,
+            "point_over_support": 0.8625216623559404
+          }
+        },
+        {
+          "problem": "659-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 121205132.5,
+            "point": 99921319.5,
+            "support_uninstrumented": 104535471.5,
+            "point_uninstrumented": 70750984.0,
+            "live": 69177398.5
+          },
+          "ratios": {
+            "support_over_live": 1.752091508616069,
+            "point_over_live": 1.4444214680897547,
+            "support_uninstrumented_over_live": 1.5111217502635632,
+            "point_uninstrumented_over_live": 1.022747104316159,
+            "point_uninstrumented_over_support_uninstrumented": 0.676813171498442,
+            "support_over_uninstrumented": 1.1594641585368466,
+            "point_over_uninstrumented": 1.4122958275746385,
+            "point_over_support": 0.8243984181115432
+          }
+        },
+        {
+          "problem": "672-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 46942987.0,
+            "point": 39957239.5,
+            "support_uninstrumented": 37478544.0,
+            "point_uninstrumented": 32339990.0,
+            "live": 29861021.5
+          },
+          "ratios": {
+            "support_over_live": 1.572048933423125,
+            "point_over_live": 1.3381069197515565,
+            "support_uninstrumented_over_live": 1.2550991934418587,
+            "point_uninstrumented_over_live": 1.0830168686627146,
+            "point_uninstrumented_over_support_uninstrumented": 0.8628934464476529,
+            "support_over_uninstrumented": 1.2525296340220686,
+            "point_over_uninstrumented": 1.235536544692809,
+            "point_over_support": 0.8511865574297605
+          }
+        },
+        {
+          "problem": "68-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 16803328.0,
+            "point": 15025157.5,
+            "support_uninstrumented": 16250195.5,
+            "point_uninstrumented": 14255102.5,
+            "live": 13427253.5
+          },
+          "ratios": {
+            "support_over_live": 1.2514344798807888,
+            "point_over_live": 1.1190045305989047,
+            "support_uninstrumented_over_live": 1.2102397187928269,
+            "point_uninstrumented_over_live": 1.061654380771168,
+            "point_uninstrumented_over_support_uninstrumented": 0.877226523213213,
+            "support_over_uninstrumented": 1.0340385135674215,
+            "point_over_uninstrumented": 1.0540196045591395,
+            "point_over_support": 0.8941774807942807
+          }
+        },
+        {
+          "problem": "84-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 17372915.5,
+            "point": 17013009.5,
+            "support_uninstrumented": 18111041.5,
+            "point_uninstrumented": 16776493.0,
+            "live": 16920513.0
+          },
+          "ratios": {
+            "support_over_live": 1.026736925765785,
+            "point_over_live": 1.0054665304769423,
+            "support_uninstrumented_over_live": 1.070360071234247,
+            "point_uninstrumented_over_live": 0.9914884377323548,
+            "point_uninstrumented_over_support_uninstrumented": 0.9263129897858166,
+            "support_over_uninstrumented": 0.9592444200406697,
+            "point_over_uninstrumented": 1.014098089511318,
+            "point_over_support": 0.9792835002276964
+          }
+        },
+        {
+          "problem": "90-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 35925281.5,
+            "point": 29110651.0,
+            "support_uninstrumented": 31912694.5,
+            "point_uninstrumented": 22870490.5,
+            "live": 20677545.0
+          },
+          "ratios": {
+            "support_over_live": 1.73740555273849,
+            "point_over_live": 1.4078388416032948,
+            "support_uninstrumented_over_live": 1.543350262325629,
+            "point_uninstrumented_over_live": 1.1060544421496845,
+            "point_uninstrumented_over_support_uninstrumented": 0.7166580841363928,
+            "support_over_uninstrumented": 1.1257363899497737,
+            "point_over_uninstrumented": 1.2728476899085308,
+            "point_over_support": 0.8103110061921157
+          }
+        }
+      ],
+      "problem_median_ratios": {
+        "support_over_live": 1.3486297335956539,
+        "point_over_live": 1.1318716783844516,
+        "support_uninstrumented_over_live": 1.244868996554821,
+        "point_uninstrumented_over_live": 1.0429941067368598,
+        "point_uninstrumented_over_support_uninstrumented": 0.8390774897696154,
+        "support_over_uninstrumented": 1.1257363899497737,
+        "point_over_uninstrumented": 1.1207073510756247,
+        "point_over_support": 0.8511865574297605
+      },
+      "problem_comparisons": {
+        "support_over_live": {
+          "lower": 0,
+          "equal": 0,
+          "higher": 35
+        },
+        "point_over_live": {
+          "lower": 3,
+          "equal": 0,
+          "higher": 32
+        },
+        "support_uninstrumented_over_live": {
+          "lower": 2,
+          "equal": 0,
+          "higher": 33
+        },
+        "point_uninstrumented_over_live": {
+          "lower": 8,
+          "equal": 0,
+          "higher": 27
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "lower": 33,
+          "equal": 0,
+          "higher": 2
+        },
+        "support_over_uninstrumented": {
+          "lower": 4,
+          "equal": 0,
+          "higher": 31
+        },
+        "point_over_uninstrumented": {
+          "lower": 2,
+          "equal": 0,
+          "higher": 33
+        },
+        "point_over_support": {
+          "lower": 34,
+          "equal": 0,
+          "higher": 1
+        }
+      },
+      "semantic_cells": {
+        "support": 489688,
+        "point": 542611,
+        "live": 751387
+      },
+      "cross_source": {
+        "requests": 549,
+        "problems": 23,
+        "status": {
+          "ACCEPT": 325,
+          "REFUTED": 224
+        },
+        "roles": {
+          "cross_source": 549
+        },
+        "ratios": {
+          "support_over_live": {
+            "p10": 1.0625624555689444,
+            "p25": 1.1902838623659884,
+            "p50": 1.344002142830598,
+            "p75": 1.5900795849764704,
+            "p90": 1.9609432556805437
+          },
+          "point_over_live": {
+            "p10": 0.9350962826846226,
+            "p25": 1.033549992863546,
+            "p50": 1.1412694660194251,
+            "p75": 1.2816820891862906,
+            "p90": 1.4773753398750453
+          },
+          "support_uninstrumented_over_live": {
+            "p10": 0.9774062401049592,
+            "p25": 1.0773835143444885,
+            "p50": 1.1946090284515618,
+            "p75": 1.358048169222118,
+            "p90": 1.587669608672964
+          },
+          "point_uninstrumented_over_live": {
+            "p10": 0.87749312736404,
+            "p25": 0.9590843490783499,
+            "p50": 1.0408899976530268,
+            "p75": 1.1283341062408696,
+            "p90": 1.2734155501283624
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "p10": 0.678891023095333,
+            "p25": 0.7666100874799024,
+            "p50": 0.8577703063830869,
+            "p75": 0.951530680798806,
+            "p90": 1.0887749838879077
+          },
+          "support_over_uninstrumented": {
+            "p10": 0.9244836200496294,
+            "p25": 1.0379746664949823,
+            "p50": 1.1348839647569178,
+            "p75": 1.2385095022285297,
+            "p90": 1.395650236360117
+          },
+          "point_over_uninstrumented": {
+            "p10": 0.9100786567350213,
+            "p25": 1.0093587752157356,
+            "p50": 1.1022695852358568,
+            "p75": 1.219417651381508,
+            "p90": 1.3541674328784055
+          },
+          "point_over_support": {
+            "p10": 0.6722153189525566,
+            "p25": 0.7577691713632689,
+            "p50": 0.8368509264065077,
+            "p75": 0.9236399777518044,
+            "p90": 1.0161056745367103
+          }
+        },
+        "request_comparisons": {
+          "support_over_live": {
+            "lower": 32,
+            "equal": 0,
+            "higher": 517
+          },
+          "point_over_live": {
+            "lower": 109,
+            "equal": 0,
+            "higher": 440
+          },
+          "support_uninstrumented_over_live": {
+            "lower": 72,
+            "equal": 0,
+            "higher": 477
+          },
+          "point_uninstrumented_over_live": {
+            "lower": 199,
+            "equal": 0,
+            "higher": 350
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "lower": 455,
+            "equal": 0,
+            "higher": 94
+          },
+          "support_over_uninstrumented": {
+            "lower": 99,
+            "equal": 0,
+            "higher": 450
+          },
+          "point_over_uninstrumented": {
+            "lower": 129,
+            "equal": 0,
+            "higher": 420
+          },
+          "point_over_support": {
+            "lower": 483,
+            "equal": 0,
+            "higher": 66
+          }
+        },
+        "sum_request_median_ns": {
+          "support": 4592772978.0,
+          "point": 3576188720.5,
+          "support_uninstrumented": 3930356185.0,
+          "point_uninstrumented": 3076423316.5,
+          "live": 2863070673.5
+        },
+        "problem_ratios": [
+          {
+            "problem": "104-A",
+            "requests": 70,
+            "sum_request_median_ns": {
+              "support": 690985514.0,
+              "point": 517384114.5,
+              "support_uninstrumented": 567629123.0,
+              "point_uninstrumented": 431148911.5,
+              "live": 402485896.5
+            },
+            "ratios": {
+              "support_over_live": 1.7167943523208644,
+              "point_over_live": 1.2854714140275472,
+              "support_uninstrumented_over_live": 1.4103081075289305,
+              "point_uninstrumented_over_live": 1.0712149549816585,
+              "point_uninstrumented_over_support_uninstrumented": 0.759560942224594,
+              "support_over_uninstrumented": 1.217318643462203,
+              "point_over_uninstrumented": 1.20001257268627,
+              "point_over_support": 0.7487626064762914
+            }
+          },
+          {
+            "problem": "112-B",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 178693875.5,
+              "point": 166266199.5,
+              "support_uninstrumented": 161105996.5,
+              "point_uninstrumented": 148207628.0,
+              "live": 144101700.0
+            },
+            "ratios": {
+              "support_over_live": 1.2400539029032969,
+              "point_over_live": 1.1538115060405256,
+              "support_uninstrumented_over_live": 1.1180020534108897,
+              "point_uninstrumented_over_live": 1.0284932655201153,
+              "point_uninstrumented_over_support_uninstrumented": 0.9199386194169377,
+              "support_over_uninstrumented": 1.1091696112006606,
+              "point_over_uninstrumented": 1.121846437620606,
+              "point_over_support": 0.9304527031761646
+            }
+          },
+          {
+            "problem": "122-A",
+            "requests": 30,
+            "sum_request_median_ns": {
+              "support": 342465599.0,
+              "point": 254340830.0,
+              "support_uninstrumented": 275900670.0,
+              "point_uninstrumented": 215841336.0,
+              "live": 209755960.0
+            },
+            "ratios": {
+              "support_over_live": 1.6326859031800574,
+              "point_over_live": 1.2125559149785303,
+              "support_uninstrumented_over_live": 1.315341266107528,
+              "point_uninstrumented_over_live": 1.0290116953053443,
+              "point_uninstrumented_over_support_uninstrumented": 0.7823153745875282,
+              "support_over_uninstrumented": 1.24126410783997,
+              "point_over_uninstrumented": 1.1783694203968418,
+              "point_over_support": 0.7426755584872629
+            }
+          },
+          {
+            "problem": "124-A",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 106290173.0,
+              "point": 88029389.5,
+              "support_uninstrumented": 97544761.5,
+              "point_uninstrumented": 82632992.5,
+              "live": 80700017.0
+            },
+            "ratios": {
+              "support_over_live": 1.3171022380329858,
+              "point_over_live": 1.0908224405950249,
+              "support_uninstrumented_over_live": 1.2087328494614815,
+              "point_uninstrumented_over_live": 1.0239526033804924,
+              "point_uninstrumented_over_support_uninstrumented": 0.8471289614050673,
+              "support_over_uninstrumented": 1.0896553681152832,
+              "point_over_uninstrumented": 1.065305598124139,
+              "point_over_support": 0.8281987601995906
+            }
+          },
+          {
+            "problem": "151-A",
+            "requests": 2,
+            "sum_request_median_ns": {
+              "support": 23941343.0,
+              "point": 21598030.5,
+              "support_uninstrumented": 20598106.5,
+              "point_uninstrumented": 24303314.5,
+              "live": 20545596.5
+            },
+            "ratios": {
+              "support_over_live": 1.1652785549448517,
+              "point_over_live": 1.0512243097930984,
+              "support_uninstrumented_over_live": 1.0025557788015549,
+              "point_uninstrumented_over_live": 1.182896515075627,
+              "point_uninstrumented_over_support_uninstrumented": 1.1798810002268898,
+              "support_over_uninstrumented": 1.1623079529179055,
+              "point_over_uninstrumented": 0.8886866233821729,
+              "point_over_support": 0.9021227631215174
+            }
+          },
+          {
+            "problem": "168-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 33955401.5,
+              "point": 28370949.5,
+              "support_uninstrumented": 29778559.0,
+              "point_uninstrumented": 23486917.0,
+              "live": 24519263.0
+            },
+            "ratios": {
+              "support_over_live": 1.3848459270574323,
+              "point_over_live": 1.1570881840942773,
+              "support_uninstrumented_over_live": 1.2144964960814686,
+              "point_uninstrumented_over_live": 0.9578965322081663,
+              "point_uninstrumented_over_support_uninstrumented": 0.7887190578966564,
+              "support_over_uninstrumented": 1.1402634190593306,
+              "point_over_uninstrumented": 1.2079469391406288,
+              "point_over_support": 0.835535680530828
+            }
+          },
+          {
+            "problem": "194-A",
+            "requests": 12,
+            "sum_request_median_ns": {
+              "support": 69618594.5,
+              "point": 58297805.0,
+              "support_uninstrumented": 61449535.0,
+              "point_uninstrumented": 53555979.0,
+              "live": 47773866.5
+            },
+            "ratios": {
+              "support_over_live": 1.4572526697205888,
+              "point_over_live": 1.2202865137574745,
+              "support_uninstrumented_over_live": 1.286258356333792,
+              "point_uninstrumented_over_live": 1.1210308673676224,
+              "point_uninstrumented_over_support_uninstrumented": 0.8715440889829353,
+              "support_over_uninstrumented": 1.1329393216726538,
+              "point_over_uninstrumented": 1.0885396194512662,
+              "point_over_support": 0.837388422140582
+            }
+          },
+          {
+            "problem": "197-A",
+            "requests": 35,
+            "sum_request_median_ns": {
+              "support": 271092683.0,
+              "point": 220871998.5,
+              "support_uninstrumented": 228316716.0,
+              "point_uninstrumented": 189056468.0,
+              "live": 177177512.5
+            },
+            "ratios": {
+              "support_over_live": 1.5300625862438384,
+              "point_over_live": 1.246614174583809,
+              "support_uninstrumented_over_live": 1.288632585357016,
+              "point_uninstrumented_over_live": 1.0670455033056185,
+              "point_uninstrumented_over_support_uninstrumented": 0.8280447937066509,
+              "support_over_uninstrumented": 1.1873536364284427,
+              "point_over_uninstrumented": 1.1682858610264526,
+              "point_over_support": 0.8147471781818619
+            }
+          },
+          {
+            "problem": "216-A",
+            "requests": 108,
+            "sum_request_median_ns": {
+              "support": 606061488.5,
+              "point": 485205560.5,
+              "support_uninstrumented": 533295323.5,
+              "point_uninstrumented": 447567183.5,
+              "live": 428845939.5
+            },
+            "ratios": {
+              "support_over_live": 1.4132382580248262,
+              "point_over_live": 1.131421603445076,
+              "support_uninstrumented_over_live": 1.24355922343996,
+              "point_uninstrumented_over_live": 1.0436549405640345,
+              "point_uninstrumented_over_support_uninstrumented": 0.8392482809761598,
+              "support_over_uninstrumented": 1.1364462836884412,
+              "point_over_uninstrumented": 1.0840954797124889,
+              "point_over_support": 0.800588009148844
+            }
+          },
+          {
+            "problem": "313-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 63914776.0,
+              "point": 41191825.5,
+              "support_uninstrumented": 47954458.0,
+              "point_uninstrumented": 35038542.0,
+              "live": 29841957.0
+            },
+            "ratios": {
+              "support_over_live": 2.1417756214848778,
+              "point_over_live": 1.3803325800650406,
+              "support_uninstrumented_over_live": 1.6069474934234373,
+              "point_uninstrumented_over_live": 1.1741368704472028,
+              "point_uninstrumented_over_support_uninstrumented": 0.7306628718439483,
+              "support_over_uninstrumented": 1.3328224041235124,
+              "point_over_uninstrumented": 1.1756147130779586,
+              "point_over_support": 0.6444804797563556
+            }
+          },
+          {
+            "problem": "4-A",
+            "requests": 104,
+            "sum_request_median_ns": {
+              "support": 394038760.5,
+              "point": 368455126.0,
+              "support_uninstrumented": 361712899.0,
+              "point_uninstrumented": 341675774.5,
+              "live": 331393195.0
+            },
+            "ratios": {
+              "support_over_live": 1.18903697011642,
+              "point_over_live": 1.1118367291760471,
+              "support_uninstrumented_over_live": 1.0914916312629774,
+              "point_uninstrumented_over_live": 1.0310283362939905,
+              "point_uninstrumented_over_support_uninstrumented": 0.9446048936728685,
+              "support_over_uninstrumented": 1.0893688380739777,
+              "point_over_uninstrumented": 1.0783765004679897,
+              "point_over_support": 0.9350733047999221
+            }
+          },
+          {
+            "problem": "448-A",
+            "requests": 9,
+            "sum_request_median_ns": {
+              "support": 143284512.5,
+              "point": 104053919.5,
+              "support_uninstrumented": 113162094.5,
+              "point_uninstrumented": 88836510.5,
+              "live": 86836943.5
+            },
+            "ratios": {
+              "support_over_live": 1.6500409471459576,
+              "point_over_live": 1.198267872014634,
+              "support_uninstrumented_over_live": 1.3031561215647807,
+              "point_uninstrumented_over_live": 1.0230266856410026,
+              "point_uninstrumented_over_support_uninstrumented": 0.785037700941458,
+              "support_over_uninstrumented": 1.2661882331985292,
+              "point_over_uninstrumented": 1.1712967890606194,
+              "point_over_support": 0.7262049309062625
+            }
+          },
+          {
+            "problem": "451-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 15911607.5,
+              "point": 15182469.5,
+              "support_uninstrumented": 14701293.5,
+              "point_uninstrumented": 14914190.0,
+              "live": 14297039.0
+            },
+            "ratios": {
+              "support_over_live": 1.1129302717856473,
+              "point_over_live": 1.0619310404063387,
+              "support_uninstrumented_over_live": 1.0282754002419663,
+              "point_uninstrumented_over_live": 1.043166350738779,
+              "point_uninstrumented_over_support_uninstrumented": 1.0144814808302411,
+              "support_over_uninstrumented": 1.0823270414946822,
+              "point_over_uninstrumented": 1.0179882045220021,
+              "point_over_support": 0.9541757173183162
+            }
+          },
+          {
+            "problem": "476-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 37766824.5,
+              "point": 32238574.0,
+              "support_uninstrumented": 37900235.0,
+              "point_uninstrumented": 23888263.0,
+              "live": 24485072.5
+            },
+            "ratios": {
+              "support_over_live": 1.542442829197259,
+              "point_over_live": 1.31666238684815,
+              "support_uninstrumented_over_live": 1.5478914755102318,
+              "point_uninstrumented_over_live": 0.9756255775840565,
+              "point_uninstrumented_over_support_uninstrumented": 0.6302932686301286,
+              "support_over_uninstrumented": 0.9964799558630705,
+              "point_over_uninstrumented": 1.3495570607205722,
+              "point_over_support": 0.8536215164184641
+            }
+          },
+          {
+            "problem": "478-A",
+            "requests": 60,
+            "sum_request_median_ns": {
+              "support": 422416935.5,
+              "point": 377130330.5,
+              "support_uninstrumented": 398031708.0,
+              "point_uninstrumented": 357074637.0,
+              "live": 342668497.5
+            },
+            "ratios": {
+              "support_over_live": 1.232727661228911,
+              "point_over_live": 1.1005690142263516,
+              "support_uninstrumented_over_live": 1.1615649261718317,
+              "point_uninstrumented_over_live": 1.0420410385112802,
+              "point_uninstrumented_over_support_uninstrumented": 0.897100984226111,
+              "support_over_uninstrumented": 1.0612645349852379,
+              "point_over_uninstrumented": 1.0561666705552095,
+              "point_over_support": 0.8927916918236343
+            }
+          },
+          {
+            "problem": "513-A",
+            "requests": 2,
+            "sum_request_median_ns": {
+              "support": 6711472.5,
+              "point": 6628788.0,
+              "support_uninstrumented": 6680824.5,
+              "point_uninstrumented": 6852537.5,
+              "live": 5933496.5
+            },
+            "ratios": {
+              "support_over_live": 1.1311159448733137,
+              "point_over_live": 1.1171807382038568,
+              "support_uninstrumented_over_live": 1.1259506936592951,
+              "point_uninstrumented_over_live": 1.154890291078793,
+              "point_uninstrumented_over_support_uninstrumented": 1.0257023665267662,
+              "support_over_uninstrumented": 1.0045874577307037,
+              "point_over_uninstrumented": 0.9673479349802901,
+              "point_over_support": 0.9876801253376215
+            }
+          },
+          {
+            "problem": "560-B",
+            "requests": 9,
+            "sum_request_median_ns": {
+              "support": 823666313.5,
+              "point": 498695303.5,
+              "support_uninstrumented": 667666507.0,
+              "point_uninstrumented": 341332934.5,
+              "live": 261448704.5
+            },
+            "ratios": {
+              "support_over_live": 3.1503935545414032,
+              "point_over_live": 1.9074307690822772,
+              "support_uninstrumented_over_live": 2.553718934185807,
+              "point_uninstrumented_over_live": 1.3055445623751407,
+              "point_uninstrumented_over_support_uninstrumented": 0.5112326751774595,
+              "support_over_uninstrumented": 1.2336492917713484,
+              "point_over_uninstrumented": 1.4610231041153752,
+              "point_over_support": 0.605457932813711
+            }
+          },
+          {
+            "problem": "570-B",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 61929394.0,
+              "point": 44469620.5,
+              "support_uninstrumented": 43021860.0,
+              "point_uninstrumented": 33697174.5,
+              "live": 29822432.0
+            },
+            "ratios": {
+              "support_over_live": 2.076604416433911,
+              "point_over_live": 1.491146681129158,
+              "support_uninstrumented_over_live": 1.442600657116093,
+              "point_uninstrumented_over_live": 1.1299271132548814,
+              "point_uninstrumented_over_support_uninstrumented": 0.7832570349120191,
+              "support_over_uninstrumented": 1.4394866702648375,
+              "point_over_uninstrumented": 1.3196839545107855,
+              "point_over_support": 0.7180696859394425
+            }
+          },
+          {
+            "problem": "617-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 33334904.5,
+              "point": 27176502.5,
+              "support_uninstrumented": 29079420.0,
+              "point_uninstrumented": 26377798.0,
+              "live": 24374401.5
+            },
+            "ratios": {
+              "support_over_live": 1.3676194059575166,
+              "point_over_live": 1.114960812473693,
+              "support_uninstrumented_over_live": 1.193031139656906,
+              "point_uninstrumented_over_live": 1.082192643786556,
+              "point_uninstrumented_over_support_uninstrumented": 0.9070950521021396,
+              "support_over_uninstrumented": 1.1463400748708192,
+              "point_over_uninstrumented": 1.0302794228691872,
+              "point_over_support": 0.8152566478779023
+            }
+          },
+          {
+            "problem": "62-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 60105938.0,
+              "point": 43740269.5,
+              "support_uninstrumented": 46847192.5,
+              "point_uninstrumented": 36478775.5,
+              "live": 32499331.0
+            },
+            "ratios": {
+              "support_over_live": 1.849451547171848,
+              "point_over_live": 1.3458821506202696,
+              "support_uninstrumented_over_live": 1.4414817492704697,
+              "point_uninstrumented_over_live": 1.1224469666775603,
+              "point_uninstrumented_over_support_uninstrumented": 0.7786758085876758,
+              "support_over_uninstrumented": 1.283021133016669,
+              "point_over_uninstrumented": 1.1990607935839295,
+              "point_over_support": 0.7277196056735692
+            }
+          },
+          {
+            "problem": "638-A",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 128659348.5,
+              "point": 110701169.0,
+              "support_uninstrumented": 119609085.5,
+              "point_uninstrumented": 107509973.0,
+              "live": 97443171.0
+            },
+            "ratios": {
+              "support_over_live": 1.320352644312037,
+              "point_over_live": 1.136058770090723,
+              "support_uninstrumented_over_live": 1.2274752994234968,
+              "point_uninstrumented_over_live": 1.1033094663965728,
+              "point_uninstrumented_over_support_uninstrumented": 0.898844536354222,
+              "support_over_uninstrumented": 1.0756653473452065,
+              "point_over_uninstrumented": 1.0296827904514496,
+              "point_over_support": 0.8604207178928782
+            }
+          },
+          {
+            "problem": "659-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 69190398.5,
+              "point": 57603616.0,
+              "support_uninstrumented": 58966366.5,
+              "point_uninstrumented": 38231035.5,
+              "live": 37411950.5
+            },
+            "ratios": {
+              "support_over_live": 1.849419706144431,
+              "point_over_live": 1.5397116490892395,
+              "support_uninstrumented_over_live": 1.5761371891048557,
+              "point_uninstrumented_over_live": 1.0218936727182937,
+              "point_uninstrumented_over_support_uninstrumented": 0.6483532523578505,
+              "support_over_uninstrumented": 1.1733875191377106,
+              "point_over_uninstrumented": 1.5067239285213712,
+              "point_over_support": 0.8325377111392125
+            }
+          },
+          {
+            "problem": "84-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 8737120.0,
+              "point": 8556329.0,
+              "support_uninstrumented": 9403450.0,
+              "point_uninstrumented": 8714441.0,
+              "live": 8708730.5
+            },
+            "ratios": {
+              "support_over_live": 1.00325988960159,
+              "point_over_live": 0.9825001474095449,
+              "support_uninstrumented_over_live": 1.079772763665152,
+              "point_uninstrumented_over_live": 1.0006557212902616,
+              "point_uninstrumented_over_support_uninstrumented": 0.9267280625727792,
+              "support_over_uninstrumented": 0.9291398369747274,
+              "point_over_uninstrumented": 0.9818563233143698,
+              "point_over_support": 0.9793077123811965
+            }
+          }
+        ],
+        "problem_median_ratios": {
+          "support_over_live": 1.4132382580248262,
+          "point_over_live": 1.1570881840942773,
+          "support_uninstrumented_over_live": 1.24355922343996,
+          "point_uninstrumented_over_live": 1.0436549405640345,
+          "point_uninstrumented_over_support_uninstrumented": 0.8392482809761598,
+          "support_over_uninstrumented": 1.1402634190593306,
+          "point_over_uninstrumented": 1.121846437620606,
+          "point_over_support": 0.8325377111392125
+        },
+        "problem_comparisons": {
+          "support_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_over_live": {
+            "lower": 1,
+            "equal": 0,
+            "higher": 22
+          },
+          "support_uninstrumented_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_uninstrumented_over_live": {
+            "lower": 2,
+            "equal": 0,
+            "higher": 21
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "lower": 20,
+            "equal": 0,
+            "higher": 3
+          },
+          "support_over_uninstrumented": {
+            "lower": 2,
+            "equal": 0,
+            "higher": 21
+          },
+          "point_over_uninstrumented": {
+            "lower": 3,
+            "equal": 0,
+            "higher": 20
+          },
+          "point_over_support": {
+            "lower": 23,
+            "equal": 0,
+            "higher": 0
+          }
+        }
+      }
+    },
+    "union": {
+      "requests": 739,
+      "problems": 35,
+      "status": {
+        "ACCEPT": 328,
+        "REFUTED": 411
+      },
+      "roles": {
+        "cross_source": 549,
+        "own_original": 95,
+        "own_reference": 95
+      },
+      "ratios": {
+        "support_over_live": {
+          "p10": 1.5790402136659365,
+          "p25": 1.8345367302765545,
+          "p50": 2.255461938619649,
+          "p75": 2.9046209126645954,
+          "p90": 3.451972136216182
+        },
+        "point_over_live": {
+          "p10": 1.1942732778434055,
+          "p25": 1.3714439933329325,
+          "p50": 1.614538952753059,
+          "p75": 2.0073850234119206,
+          "p90": 2.3348848941158287
+        },
+        "support_uninstrumented_over_live": {
+          "p10": 1.2901874128611734,
+          "p25": 1.4590448291502873,
+          "p50": 1.730102797664843,
+          "p75": 2.152919975565968,
+          "p90": 2.51186502928585
+        },
+        "point_uninstrumented_over_live": {
+          "p10": 0.9741444665516796,
+          "p25": 1.0811006185619574,
+          "p50": 1.2007685728522701,
+          "p75": 1.3871260111262962,
+          "p90": 1.5701466136246782
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "p10": 0.5311438959829843,
+          "p25": 0.606288991203855,
+          "p50": 0.6936840566970783,
+          "p75": 0.781001508033647,
+          "p90": 0.8814883948987893
+        },
+        "support_over_uninstrumented": {
+          "p10": 1.0430951929186145,
+          "p25": 1.170133558315945,
+          "p50": 1.2966278244605836,
+          "p75": 1.4553811480753238,
+          "p90": 1.609782018255672
+        },
+        "point_over_uninstrumented": {
+          "p10": 1.0594045950561568,
+          "p25": 1.1974778849023793,
+          "p50": 1.3530274819444796,
+          "p75": 1.5450298217134488,
+          "p90": 1.7410307932939415
+        },
+        "point_over_support": {
+          "p10": 0.5653310246697758,
+          "p25": 0.6436485682240651,
+          "p50": 0.72026079829382,
+          "p75": 0.7987580065381791,
+          "p90": 0.9031937616265638
+        }
+      },
+      "request_comparisons": {
+        "support_over_live": {
+          "lower": 4,
+          "equal": 0,
+          "higher": 735
+        },
+        "point_over_live": {
+          "lower": 13,
+          "equal": 0,
+          "higher": 726
+        },
+        "support_uninstrumented_over_live": {
+          "lower": 9,
+          "equal": 0,
+          "higher": 730
+        },
+        "point_uninstrumented_over_live": {
+          "lower": 96,
+          "equal": 0,
+          "higher": 643
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "lower": 707,
+          "equal": 0,
+          "higher": 32
+        },
+        "support_over_uninstrumented": {
+          "lower": 49,
+          "equal": 0,
+          "higher": 690
+        },
+        "point_over_uninstrumented": {
+          "lower": 42,
+          "equal": 0,
+          "higher": 697
+        },
+        "point_over_support": {
+          "lower": 705,
+          "equal": 0,
+          "higher": 34
+        }
+      },
+      "sum_request_median_ns": {
+        "support": 17154211059.5,
+        "point": 11508268026.5,
+        "support_uninstrumented": 12791880920.0,
+        "point_uninstrumented": 8034042987.0,
+        "live": 6439326651.0
+      },
+      "problem_ratios": [
+        {
+          "problem": "104-A",
+          "requests": 84,
+          "sum_request_median_ns": {
+            "support": 1055759988.5,
+            "point": 760430746.5,
+            "support_uninstrumented": 848092131.5,
+            "point_uninstrumented": 589896401.0,
+            "live": 535354774.0
+          },
+          "ratios": {
+            "support_over_live": 1.9720754157316995,
+            "point_over_live": 1.4204239570300348,
+            "support_uninstrumented_over_live": 1.584168429401173,
+            "point_uninstrumented_over_live": 1.1018794071686002,
+            "point_uninstrumented_over_support_uninstrumented": 0.6955569791181349,
+            "support_over_uninstrumented": 1.244864737316573,
+            "point_over_uninstrumented": 1.2890920256690972,
+            "point_over_support": 0.7202685788276584
+          }
+        },
+        {
+          "problem": "112-B",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 481026041.0,
+            "point": 412967501.5,
+            "support_uninstrumented": 351765948.0,
+            "point_uninstrumented": 289998781.5,
+            "live": 258704690.5
+          },
+          "ratios": {
+            "support_over_live": 1.8593634312169536,
+            "point_over_live": 1.5962891925223908,
+            "support_uninstrumented_over_live": 1.359720024094422,
+            "point_uninstrumented_over_live": 1.1209645288592092,
+            "point_uninstrumented_over_support_uninstrumented": 0.8244083406845281,
+            "support_over_uninstrumented": 1.3674605053016673,
+            "point_over_uninstrumented": 1.4240318506303793,
+            "point_over_support": 0.8585138148477081
+          }
+        },
+        {
+          "problem": "122-A",
+          "requests": 40,
+          "sum_request_median_ns": {
+            "support": 846599461.0,
+            "point": 572540911.0,
+            "support_uninstrumented": 643854400.0,
+            "point_uninstrumented": 428896075.0,
+            "live": 355645412.0
+          },
+          "ratios": {
+            "support_over_live": 2.3804593913895338,
+            "point_over_live": 1.6098644652275171,
+            "support_uninstrumented_over_live": 1.810382977750884,
+            "point_uninstrumented_over_live": 1.2059654378445912,
+            "point_uninstrumented_over_support_uninstrumented": 0.6661382992800857,
+            "support_over_uninstrumented": 1.3148927164278135,
+            "point_over_uninstrumented": 1.3349175811413057,
+            "point_over_support": 0.6762831036104333
+          }
+        },
+        {
+          "problem": "124-A",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 586048693.0,
+            "point": 366462908.0,
+            "support_uninstrumented": 433066344.0,
+            "point_uninstrumented": 264013494.5,
+            "live": 190911764.0
+          },
+          "ratios": {
+            "support_over_live": 3.0697358859457187,
+            "point_over_live": 1.9195407361067598,
+            "support_uninstrumented_over_live": 2.2684109922110407,
+            "point_uninstrumented_over_live": 1.3829084649807122,
+            "point_uninstrumented_over_support_uninstrumented": 0.6096375258844866,
+            "support_over_uninstrumented": 1.3532538400167158,
+            "point_over_uninstrumented": 1.388046125043809,
+            "point_over_support": 0.6253113646991787
+          }
+        },
+        {
+          "problem": "151-A",
+          "requests": 6,
+          "sum_request_median_ns": {
+            "support": 168085284.5,
+            "point": 109126331.5,
+            "support_uninstrumented": 113042941.5,
+            "point_uninstrumented": 83812659.0,
+            "live": 70446788.5
+          },
+          "ratios": {
+            "support_over_live": 2.385989313054349,
+            "point_over_live": 1.5490604160046273,
+            "support_uninstrumented_over_live": 1.6046571306795625,
+            "point_uninstrumented_over_live": 1.189730018707666,
+            "point_uninstrumented_over_support_uninstrumented": 0.7414231962461805,
+            "support_over_uninstrumented": 1.4869153462359257,
+            "point_over_uninstrumented": 1.3020268394062047,
+            "point_over_support": 0.6492319171462032
+          }
+        },
+        {
+          "problem": "168-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 229451057.5,
+            "point": 133755619.5,
+            "support_uninstrumented": 156248973.0,
+            "point_uninstrumented": 92869864.0,
+            "live": 68878334.5
+          },
+          "ratios": {
+            "support_over_live": 3.3312515345445814,
+            "point_over_live": 1.9419113494969888,
+            "support_uninstrumented_over_live": 2.2684778041489957,
+            "point_uninstrumented_over_live": 1.3483175032346346,
+            "point_uninstrumented_over_support_uninstrumented": 0.5943710362819473,
+            "support_over_uninstrumented": 1.4684964201332702,
+            "point_over_uninstrumented": 1.4402478235566276,
+            "point_over_support": 0.5829374724062887
+          }
+        },
+        {
+          "problem": "171-B",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 21019280.0,
+            "point": 16556359.5,
+            "support_uninstrumented": 16733580.0,
+            "point_uninstrumented": 11535627.5,
+            "live": 7621871.5
+          },
+          "ratios": {
+            "support_over_live": 2.7577583799464476,
+            "point_over_live": 2.1722170860529464,
+            "support_uninstrumented_over_live": 2.1954686588457966,
+            "point_uninstrumented_over_live": 1.5134901578962594,
+            "point_uninstrumented_over_support_uninstrumented": 0.6893699674546631,
+            "support_over_uninstrumented": 1.2561137544984398,
+            "point_over_uninstrumented": 1.4352370081298136,
+            "point_over_support": 0.7876749108437587
+          }
+        },
+        {
+          "problem": "194-A",
+          "requests": 18,
+          "sum_request_median_ns": {
+            "support": 268279642.0,
+            "point": 182748297.0,
+            "support_uninstrumented": 207527586.0,
+            "point_uninstrumented": 141644058.5,
+            "live": 109526172.5
+          },
+          "ratios": {
+            "support_over_live": 2.4494569277493925,
+            "point_over_live": 1.6685354087398607,
+            "support_uninstrumented_over_live": 1.8947762097684917,
+            "point_uninstrumented_over_live": 1.2932439367403257,
+            "point_uninstrumented_over_support_uninstrumented": 0.6825312298481611,
+            "support_over_uninstrumented": 1.292742074299462,
+            "point_over_uninstrumented": 1.290193877069683,
+            "point_over_support": 0.6811858538263593
+          }
+        },
+        {
+          "problem": "197-A",
+          "requests": 45,
+          "sum_request_median_ns": {
+            "support": 1551966824.5,
+            "point": 1151344879.5,
+            "support_uninstrumented": 1128942075.0,
+            "point_uninstrumented": 753216755.0,
+            "live": 490103805.5
+          },
+          "ratios": {
+            "support_over_live": 3.1666083941476355,
+            "point_over_live": 2.349185757342584,
+            "support_uninstrumented_over_live": 2.3034754317980908,
+            "point_uninstrumented_over_live": 1.53685147217246,
+            "point_uninstrumented_over_support_uninstrumented": 0.6671881327480863,
+            "support_over_uninstrumented": 1.3747089942590722,
+            "point_over_uninstrumented": 1.5285704571189471,
+            "point_over_support": 0.7418617855255578
+          }
+        },
+        {
+          "problem": "216-A",
+          "requests": 126,
+          "sum_request_median_ns": {
+            "support": 3375361969.0,
+            "point": 2364074879.0,
+            "support_uninstrumented": 2459158277.5,
+            "point_uninstrumented": 1516309587.5,
+            "live": 1061133998.5
+          },
+          "ratios": {
+            "support_over_live": 3.1809007851707243,
+            "point_over_live": 2.227875916087708,
+            "support_uninstrumented_over_live": 2.317481374620191,
+            "point_uninstrumented_over_live": 1.4289520358818284,
+            "point_uninstrumented_over_support_uninstrumented": 0.6165969882351341,
+            "support_over_uninstrumented": 1.3725680042162312,
+            "point_over_uninstrumented": 1.5590977584582475,
+            "point_over_support": 0.7003915137730818
+          }
+        },
+        {
+          "problem": "313-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 192915779.0,
+            "point": 131515070.0,
+            "support_uninstrumented": 145128211.0,
+            "point_uninstrumented": 86527221.5,
+            "live": 75706170.0
+          },
+          "ratios": {
+            "support_over_live": 2.5482173909999672,
+            "point_over_live": 1.7371776963489238,
+            "support_uninstrumented_over_live": 1.916993172419104,
+            "point_uninstrumented_over_live": 1.1429348691130459,
+            "point_uninstrumented_over_support_uninstrumented": 0.5962122794995385,
+            "support_over_uninstrumented": 1.3292782820839706,
+            "point_over_uninstrumented": 1.5199271133420134,
+            "point_over_support": 0.6817227221211387
+          }
+        },
+        {
+          "problem": "39-D",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 29476993.5,
+            "point": 27502964.0,
+            "support_uninstrumented": 23809749.0,
+            "point_uninstrumented": 19800745.0,
+            "live": 15366311.5
+          },
+          "ratios": {
+            "support_over_live": 1.918286864092271,
+            "point_over_live": 1.789822105324365,
+            "support_uninstrumented_over_live": 1.549477179347822,
+            "point_uninstrumented_over_live": 1.2885815180825926,
+            "point_uninstrumented_over_support_uninstrumented": 0.8316234245056511,
+            "support_over_uninstrumented": 1.2380220177877557,
+            "point_over_uninstrumented": 1.3889863234943938,
+            "point_over_support": 0.9330315182923931
+          }
+        },
+        {
+          "problem": "4-A",
+          "requests": 120,
+          "sum_request_median_ns": {
+            "support": 741941103.5,
+            "point": 570977615.5,
+            "support_uninstrumented": 610753635.0,
+            "point_uninstrumented": 492486344.0,
+            "live": 438753828.5
+          },
+          "ratios": {
+            "support_over_live": 1.691019098423662,
+            "point_over_live": 1.3013621270315594,
+            "support_uninstrumented_over_live": 1.3920189302690038,
+            "point_uninstrumented_over_live": 1.1224662031638546,
+            "point_uninstrumented_over_support_uninstrumented": 0.8063584328892287,
+            "support_over_uninstrumented": 1.2147960502928485,
+            "point_over_uninstrumented": 1.159377559309543,
+            "point_over_support": 0.7695726962780409
+          }
+        },
+        {
+          "problem": "417-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 72631398.0,
+            "point": 57631717.0,
+            "support_uninstrumented": 66048889.0,
+            "point_uninstrumented": 37499366.0,
+            "live": 31337731.5
+          },
+          "ratios": {
+            "support_over_live": 2.3176980120593607,
+            "point_over_live": 1.8390519747736047,
+            "support_uninstrumented_over_live": 2.107647421766952,
+            "point_uninstrumented_over_live": 1.1966203105671513,
+            "point_uninstrumented_over_support_uninstrumented": 0.5677516543843758,
+            "support_over_uninstrumented": 1.0996611615980398,
+            "point_over_uninstrumented": 1.5368717700453922,
+            "point_over_support": 0.7934821383997042
+          }
+        },
+        {
+          "problem": "448-A",
+          "requests": 15,
+          "sum_request_median_ns": {
+            "support": 531442103.5,
+            "point": 362677376.0,
+            "support_uninstrumented": 414260863.5,
+            "point_uninstrumented": 271976029.0,
+            "live": 216076099.5
+          },
+          "ratios": {
+            "support_over_live": 2.459513591414121,
+            "point_over_live": 1.6784705797597943,
+            "support_uninstrumented_over_live": 1.9171989149128452,
+            "point_uninstrumented_over_live": 1.2587048249637625,
+            "point_uninstrumented_over_support_uninstrumented": 0.6565332450237602,
+            "support_over_uninstrumented": 1.2828682367191562,
+            "point_over_uninstrumented": 1.3334902246109344,
+            "point_over_support": 0.6824400505933945
+          }
+        },
+        {
+          "problem": "451-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 67583451.0,
+            "point": 57097143.0,
+            "support_uninstrumented": 54379891.0,
+            "point_uninstrumented": 44281717.0,
+            "live": 38450001.0
+          },
+          "ratios": {
+            "support_over_live": 1.7576969893966974,
+            "point_over_live": 1.4849711707419722,
+            "support_uninstrumented_over_live": 1.4143014196540593,
+            "point_uninstrumented_over_live": 1.1516701130905043,
+            "point_uninstrumented_over_support_uninstrumented": 0.8143031584965847,
+            "support_over_uninstrumented": 1.2428022520309943,
+            "point_over_uninstrumented": 1.2894067093197854,
+            "point_over_support": 0.8448391160137709
+          }
+        },
+        {
+          "problem": "466-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 37549455.5,
+            "point": 29590078.5,
+            "support_uninstrumented": 31897542.0,
+            "point_uninstrumented": 23088474.5,
+            "live": 21285443.5
+          },
+          "ratios": {
+            "support_over_live": 1.7640908210345723,
+            "point_over_live": 1.3901556009392053,
+            "support_uninstrumented_over_live": 1.4985613055231854,
+            "point_uninstrumented_over_live": 1.0847072319634778,
+            "point_uninstrumented_over_support_uninstrumented": 0.7238324037632743,
+            "support_over_uninstrumented": 1.177189624830653,
+            "point_over_uninstrumented": 1.2815952175619052,
+            "point_over_support": 0.7880294961933603
+          }
+        },
+        {
+          "problem": "476-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 173754790.5,
+            "point": 132502561.5,
+            "support_uninstrumented": 127754122.5,
+            "point_uninstrumented": 91420165.0,
+            "live": 74342647.5
+          },
+          "ratios": {
+            "support_over_live": 2.3372155329819266,
+            "point_over_live": 1.7823223406188218,
+            "support_uninstrumented_over_live": 1.7184499987036377,
+            "point_uninstrumented_over_live": 1.2297136041597119,
+            "point_uninstrumented_over_support_uninstrumented": 0.7155946376603228,
+            "support_over_uninstrumented": 1.3600718873083724,
+            "point_over_uninstrumented": 1.4493800301060493,
+            "point_over_support": 0.7625836451398443
+          }
+        },
+        {
+          "problem": "478-A",
+          "requests": 72,
+          "sum_request_median_ns": {
+            "support": 985889994.5,
+            "point": 684132145.0,
+            "support_uninstrumented": 784867579.5,
+            "point_uninstrumented": 578756384.0,
+            "live": 506040868.5
+          },
+          "ratios": {
+            "support_over_live": 1.9482418434352204,
+            "point_over_live": 1.351930619809218,
+            "support_uninstrumented_over_live": 1.5509964280681412,
+            "point_uninstrumented_over_live": 1.143694946448777,
+            "point_uninstrumented_over_support_uninstrumented": 0.7373936688386299,
+            "support_over_uninstrumented": 1.2561227145196407,
+            "point_over_uninstrumented": 1.1820727406438423,
+            "point_over_support": 0.6939234081049395
+          }
+        },
+        {
+          "problem": "501-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 111914178.5,
+            "point": 74278616.0,
+            "support_uninstrumented": 62380711.0,
+            "point_uninstrumented": 42405095.5,
+            "live": 47942101.5
+          },
+          "ratios": {
+            "support_over_live": 2.3343611355876837,
+            "point_over_live": 1.5493400096364154,
+            "support_uninstrumented_over_live": 1.3011676386359492,
+            "point_uninstrumented_over_live": 0.8845063977848363,
+            "point_uninstrumented_over_support_uninstrumented": 0.6797789704577109,
+            "support_over_uninstrumented": 1.7940510248432404,
+            "point_over_uninstrumented": 1.751643643863507,
+            "point_over_support": 0.6637105056353516
+          }
+        },
+        {
+          "problem": "513-A",
+          "requests": 6,
+          "sum_request_median_ns": {
+            "support": 31383785.0,
+            "point": 28473853.5,
+            "support_uninstrumented": 27340046.0,
+            "point_uninstrumented": 26681071.0,
+            "live": 22461753.0
+          },
+          "ratios": {
+            "support_over_live": 1.3972099595254208,
+            "point_over_live": 1.26765945204722,
+            "support_uninstrumented_over_live": 1.2171822030097117,
+            "point_uninstrumented_over_live": 1.1878445551422456,
+            "point_uninstrumented_over_support_uninstrumented": 0.9758970778615369,
+            "support_over_uninstrumented": 1.1479053473428684,
+            "point_over_uninstrumented": 1.0671930485848937,
+            "point_over_support": 0.907279141123354
+          }
+        },
+        {
+          "problem": "515-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 55067328.5,
+            "point": 41406484.0,
+            "support_uninstrumented": 41645892.5,
+            "point_uninstrumented": 30836435.5,
+            "live": 21971292.0
+          },
+          "ratios": {
+            "support_over_live": 2.506330920366449,
+            "point_over_live": 1.884572104362365,
+            "support_uninstrumented_over_live": 1.8954685277497563,
+            "point_uninstrumented_over_live": 1.4034875827966784,
+            "point_uninstrumented_over_support_uninstrumented": 0.7404436223812468,
+            "support_over_uninstrumented": 1.3222751439412663,
+            "point_over_uninstrumented": 1.3427778966216766,
+            "point_over_support": 0.751924691607293
+          }
+        },
+        {
+          "problem": "546-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 18643643.5,
+            "point": 16692782.5,
+            "support_uninstrumented": 14142778.0,
+            "point_uninstrumented": 12659582.0,
+            "live": 10157779.5
+          },
+          "ratios": {
+            "support_over_live": 1.8354054151303443,
+            "point_over_live": 1.6433495627661538,
+            "support_uninstrumented_over_live": 1.3923100023976698,
+            "point_uninstrumented_over_live": 1.2462942319234238,
+            "point_uninstrumented_over_support_uninstrumented": 0.8951269686903096,
+            "support_over_uninstrumented": 1.3182447960365353,
+            "point_over_uninstrumented": 1.3185887575118989,
+            "point_over_support": 0.895360528643449
+          }
+        },
+        {
+          "problem": "560-B",
+          "requests": 15,
+          "sum_request_median_ns": {
+            "support": 3074560946.5,
+            "point": 1615956662.0,
+            "support_uninstrumented": 2330604485.5,
+            "point_uninstrumented": 1049688186.5,
+            "live": 849663072.0
+          },
+          "ratios": {
+            "support_over_live": 3.6185648733242815,
+            "point_over_live": 1.9018793628352486,
+            "support_uninstrumented_over_live": 2.7429749065285964,
+            "point_uninstrumented_over_live": 1.235416980085019,
+            "point_uninstrumented_over_support_uninstrumented": 0.45039310317589276,
+            "support_over_uninstrumented": 1.31921180347355,
+            "point_over_uninstrumented": 1.5394635119102582,
+            "point_over_support": 0.5255894061360413
+          }
+        },
+        {
+          "problem": "570-B",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 257592052.5,
+            "point": 171755286.5,
+            "support_uninstrumented": 172916268.5,
+            "point_uninstrumented": 118173538.0,
+            "live": 90367445.0
+          },
+          "ratios": {
+            "support_over_live": 2.8504961327610845,
+            "point_over_live": 1.900632318419537,
+            "support_uninstrumented_over_live": 1.9134796662669837,
+            "point_uninstrumented_over_live": 1.3077003338978987,
+            "point_uninstrumented_over_support_uninstrumented": 0.6834148054727425,
+            "support_over_uninstrumented": 1.489692408554375,
+            "point_over_uninstrumented": 1.453415793474847,
+            "point_over_support": 0.6667724599150822
+          }
+        },
+        {
+          "problem": "6-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 203505100.5,
+            "point": 115116896.5,
+            "support_uninstrumented": 131140423.0,
+            "point_uninstrumented": 67996659.0,
+            "live": 55687212.5
+          },
+          "ratios": {
+            "support_over_live": 3.654431445998487,
+            "point_over_live": 2.067205222383864,
+            "support_uninstrumented_over_live": 2.3549468021944895,
+            "point_uninstrumented_over_live": 1.221046196198095,
+            "point_uninstrumented_over_support_uninstrumented": 0.5185026664127811,
+            "support_over_uninstrumented": 1.5518106152517137,
+            "point_over_uninstrumented": 1.6929787167925412,
+            "point_over_support": 0.5656708171793463
+          }
+        },
+        {
+          "problem": "617-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 168878381.0,
+            "point": 122078658.5,
+            "support_uninstrumented": 129671152.0,
+            "point_uninstrumented": 81736080.5,
+            "live": 74376530.0
+          },
+          "ratios": {
+            "support_over_live": 2.270586984899672,
+            "point_over_live": 1.6413599626118616,
+            "support_uninstrumented_over_live": 1.7434418088609405,
+            "point_uninstrumented_over_live": 1.0989499039549169,
+            "point_uninstrumented_over_support_uninstrumented": 0.630333572574415,
+            "support_over_uninstrumented": 1.302358916345557,
+            "point_over_uninstrumented": 1.4935712325966009,
+            "point_over_support": 0.7228791380940583
+          }
+        },
+        {
+          "problem": "62-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 426274862.5,
+            "point": 267537217.5,
+            "support_uninstrumented": 288894604.0,
+            "point_uninstrumented": 182285021.5,
+            "live": 147967486.5
+          },
+          "ratios": {
+            "support_over_live": 2.8808684433522496,
+            "point_over_live": 1.8080811117920828,
+            "support_uninstrumented_over_live": 1.9524194864254858,
+            "point_uninstrumented_over_live": 1.231926187379009,
+            "point_uninstrumented_over_support_uninstrumented": 0.6309741302748597,
+            "support_over_uninstrumented": 1.4755376410561134,
+            "point_over_uninstrumented": 1.46768623827932,
+            "point_over_support": 0.6276166882817305
+          }
+        },
+        {
+          "problem": "638-A",
+          "requests": 32,
+          "sum_request_median_ns": {
+            "support": 830742714.0,
+            "point": 533442987.0,
+            "support_uninstrumented": 570405674.0,
+            "point_uninstrumented": 333514343.5,
+            "live": 311150757.5
+          },
+          "ratios": {
+            "support_over_live": 2.6699041990923003,
+            "point_over_live": 1.7144196957322206,
+            "support_uninstrumented_over_live": 1.833213194089685,
+            "point_uninstrumented_over_live": 1.0718737957756699,
+            "point_uninstrumented_over_support_uninstrumented": 0.5846967495277755,
+            "support_over_uninstrumented": 1.4564068203851703,
+            "point_over_uninstrumented": 1.5994604052164252,
+            "point_over_support": 0.6421277948156642
+          }
+        },
+        {
+          "problem": "652-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 97691739.5,
+            "point": 59553911.5,
+            "support_uninstrumented": 71975636.0,
+            "point_uninstrumented": 43196922.5,
+            "live": 38548786.5
+          },
+          "ratios": {
+            "support_over_live": 2.5342364408799223,
+            "point_over_live": 1.5448971785402377,
+            "support_uninstrumented_over_live": 1.8671310444493499,
+            "point_uninstrumented_over_live": 1.12057801093168,
+            "point_uninstrumented_over_support_uninstrumented": 0.6001603445365874,
+            "support_over_uninstrumented": 1.3572890067966887,
+            "point_over_uninstrumented": 1.378660979841793,
+            "point_over_support": 0.6096105136913853
+          }
+        },
+        {
+          "problem": "659-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 263712499.0,
+            "point": 183223654.5,
+            "support_uninstrumented": 170066364.0,
+            "point_uninstrumented": 107754390.0,
+            "live": 94989243.5
+          },
+          "ratios": {
+            "support_over_live": 2.7762353850096724,
+            "point_over_live": 1.9288884483009912,
+            "support_uninstrumented_over_live": 1.7903749701933356,
+            "point_uninstrumented_over_live": 1.1343851790966206,
+            "point_uninstrumented_over_support_uninstrumented": 0.6336020096249015,
+            "support_over_uninstrumented": 1.550644658928558,
+            "point_over_uninstrumented": 1.7003822721283095,
+            "point_over_support": 0.6947856290270109
+          }
+        },
+        {
+          "problem": "672-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 49743288.5,
+            "point": 41952422.5,
+            "support_uninstrumented": 47556830.5,
+            "point_uninstrumented": 31899574.5,
+            "live": 35294870.5
+          },
+          "ratios": {
+            "support_over_live": 1.409363111277034,
+            "point_over_live": 1.1886266164370825,
+            "support_uninstrumented_over_live": 1.3474147893530308,
+            "point_uninstrumented_over_live": 0.9038019986502005,
+            "point_uninstrumented_over_support_uninstrumented": 0.6707674620998975,
+            "support_over_uninstrumented": 1.0459756879718887,
+            "point_over_uninstrumented": 1.3151405044603337,
+            "point_over_support": 0.8433785494499424
+          }
+        },
+        {
+          "problem": "68-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 38757066.0,
+            "point": 32540882.0,
+            "support_uninstrumented": 41625514.0,
+            "point_uninstrumented": 25821065.0,
+            "live": 22105877.0
+          },
+          "ratios": {
+            "support_over_live": 1.7532471568533563,
+            "point_over_live": 1.4720466417143279,
+            "support_uninstrumented_over_live": 1.883006677364576,
+            "point_uninstrumented_over_live": 1.168063361611937,
+            "point_uninstrumented_over_support_uninstrumented": 0.6203182259803447,
+            "support_over_uninstrumented": 0.9310891872710568,
+            "point_over_uninstrumented": 1.2602455398334653,
+            "point_over_support": 0.8396115949540659
+          }
+        },
+        {
+          "problem": "84-A",
+          "requests": 8,
+          "sum_request_median_ns": {
+            "support": 35038308.0,
+            "point": 25970657.5,
+            "support_uninstrumented": 27496726.0,
+            "point_uninstrumented": 22266705.0,
+            "live": 19114095.5
+          },
+          "ratios": {
+            "support_over_live": 1.8331135784060513,
+            "point_over_live": 1.3587175757283414,
+            "support_uninstrumented_over_live": 1.4385575294420812,
+            "point_uninstrumented_over_live": 1.164936368555865,
+            "point_uninstrumented_over_support_uninstrumented": 0.8097947733850205,
+            "support_over_uninstrumented": 1.2742719987826914,
+            "point_over_uninstrumented": 1.166344885783505,
+            "point_over_support": 0.7412075234911457
+          }
+        },
+        {
+          "problem": "90-A",
+          "requests": 2,
+          "sum_request_median_ns": {
+            "support": 73921856.0,
+            "point": 54651951.0,
+            "support_uninstrumented": 46685076.0,
+            "point_uninstrumented": 39098567.5,
+            "live": 31841635.5
+          },
+          "ratios": {
+            "support_over_live": 2.3215470825925384,
+            "point_over_live": 1.7163675841964838,
+            "support_uninstrumented_over_live": 1.4661645128121639,
+            "point_uninstrumented_over_live": 1.227907011874437,
+            "point_uninstrumented_over_support_uninstrumented": 0.8374960661946872,
+            "support_over_uninstrumented": 1.583415136777329,
+            "point_over_uninstrumented": 1.3977993183509856,
+            "point_over_support": 0.7393206009329636
+          }
+        }
+      ],
+      "problem_median_ratios": {
+        "support_over_live": 2.3804593913895338,
+        "point_over_live": 1.6784705797597943,
+        "support_uninstrumented_over_live": 1.810382977750884,
+        "point_uninstrumented_over_live": 1.1966203105671513,
+        "point_uninstrumented_over_support_uninstrumented": 0.6797789704577109,
+        "support_over_uninstrumented": 1.31921180347355,
+        "point_over_uninstrumented": 1.3889863234943938,
+        "point_over_support": 0.7202685788276584
+      },
+      "problem_comparisons": {
+        "support_over_live": {
+          "lower": 0,
+          "equal": 0,
+          "higher": 35
+        },
+        "point_over_live": {
+          "lower": 0,
+          "equal": 0,
+          "higher": 35
+        },
+        "support_uninstrumented_over_live": {
+          "lower": 0,
+          "equal": 0,
+          "higher": 35
+        },
+        "point_uninstrumented_over_live": {
+          "lower": 2,
+          "equal": 0,
+          "higher": 33
+        },
+        "point_uninstrumented_over_support_uninstrumented": {
+          "lower": 35,
+          "equal": 0,
+          "higher": 0
+        },
+        "support_over_uninstrumented": {
+          "lower": 1,
+          "equal": 0,
+          "higher": 34
+        },
+        "point_over_uninstrumented": {
+          "lower": 0,
+          "equal": 0,
+          "higher": 35
+        },
+        "point_over_support": {
+          "lower": 35,
+          "equal": 0,
+          "higher": 0
+        }
+      },
+      "semantic_cells": {
+        "support": 2175382,
+        "point": 2639026,
+        "live": 3416866
+      },
+      "cross_source": {
+        "requests": 549,
+        "problems": 23,
+        "status": {
+          "ACCEPT": 233,
+          "REFUTED": 316
+        },
+        "roles": {
+          "cross_source": 549
+        },
+        "ratios": {
+          "support_over_live": {
+            "p10": 1.5811263923463232,
+            "p25": 1.8505844185969962,
+            "p50": 2.3351482325639363,
+            "p75": 3.0167694753046836,
+            "p90": 3.566471188688006
+          },
+          "point_over_live": {
+            "p10": 1.1942732778434055,
+            "p25": 1.368116518751755,
+            "p50": 1.6417178248989586,
+            "p75": 2.070169042413269,
+            "p90": 2.403684716527536
+          },
+          "support_uninstrumented_over_live": {
+            "p10": 1.2968280976074773,
+            "p25": 1.4627771019401958,
+            "p50": 1.7667271687178059,
+            "p75": 2.2049872437340334,
+            "p90": 2.5561397735196434
+          },
+          "point_uninstrumented_over_live": {
+            "p10": 0.9797412522535345,
+            "p25": 1.0811006185619574,
+            "p50": 1.2040998111189953,
+            "p75": 1.4028365245842391,
+            "p90": 1.5827343549068487
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "p10": 0.5275018719232392,
+            "p25": 0.5977385291571834,
+            "p50": 0.687444364921202,
+            "p75": 0.7705709446829044,
+            "p90": 0.8716263537245657
+          },
+          "support_over_uninstrumented": {
+            "p10": 1.0518762977379392,
+            "p25": 1.1741025986645612,
+            "p50": 1.315763063443407,
+            "p75": 1.4688755032526766,
+            "p90": 1.6538591373583098
+          },
+          "point_over_uninstrumented": {
+            "p10": 1.0611480726262428,
+            "p25": 1.2026797523653499,
+            "p50": 1.3596979531672462,
+            "p75": 1.5509378866795283,
+            "p90": 1.7565318711636484
+          },
+          "point_over_support": {
+            "p10": 0.5622334693424114,
+            "p25": 0.6357584238137313,
+            "p50": 0.7113987097795593,
+            "p75": 0.7798976657506997,
+            "p90": 0.8802333587041312
+          }
+        },
+        "request_comparisons": {
+          "support_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 549
+          },
+          "point_over_live": {
+            "lower": 10,
+            "equal": 0,
+            "higher": 539
+          },
+          "support_uninstrumented_over_live": {
+            "lower": 5,
+            "equal": 0,
+            "higher": 544
+          },
+          "point_uninstrumented_over_live": {
+            "lower": 71,
+            "equal": 0,
+            "higher": 478
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "lower": 525,
+            "equal": 0,
+            "higher": 24
+          },
+          "support_over_uninstrumented": {
+            "lower": 37,
+            "equal": 0,
+            "higher": 512
+          },
+          "point_over_uninstrumented": {
+            "lower": 32,
+            "equal": 0,
+            "higher": 517
+          },
+          "point_over_support": {
+            "lower": 523,
+            "equal": 0,
+            "higher": 26
+          }
+        },
+        "sum_request_median_ns": {
+          "support": 12860231288.5,
+          "point": 8552364457.5,
+          "support_uninstrumented": 9592569570.5,
+          "point_uninstrumented": 5939248378.5,
+          "live": 4678571142.0
+        },
+        "problem_ratios": [
+          {
+            "problem": "104-A",
+            "requests": 70,
+            "sum_request_median_ns": {
+              "support": 920151214.5,
+              "point": 654388027.0,
+              "support_uninstrumented": 728000583.5,
+              "point_uninstrumented": 505456967.5,
+              "live": 453159409.0
+            },
+            "ratios": {
+              "support_over_live": 2.0305243502071915,
+              "point_over_live": 1.444057022768339,
+              "support_uninstrumented_over_live": 1.6064999844238035,
+              "point_uninstrumented_over_live": 1.1154065378790359,
+              "point_uninstrumented_over_support_uninstrumented": 0.6943084647953445,
+              "support_over_uninstrumented": 1.2639429628973642,
+              "point_over_uninstrumented": 1.2946463676949909,
+              "point_over_support": 0.7111744425133288
+            }
+          },
+          {
+            "problem": "112-B",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 381961794.0,
+              "point": 326168933.5,
+              "support_uninstrumented": 266877934.5,
+              "point_uninstrumented": 229056780.0,
+              "live": 200755778.5
+            },
+            "ratios": {
+              "support_over_live": 1.902619176662952,
+              "point_over_live": 1.6247050816522326,
+              "support_uninstrumented_over_live": 1.3293661407609245,
+              "point_uninstrumented_over_live": 1.1409722883767452,
+              "point_uninstrumented_over_support_uninstrumented": 0.8582829465805837,
+              "support_over_uninstrumented": 1.431222834947413,
+              "point_over_uninstrumented": 1.4239654180941512,
+              "point_over_support": 0.8539307821451901
+            }
+          },
+          {
+            "problem": "122-A",
+            "requests": 30,
+            "sum_request_median_ns": {
+              "support": 677143867.0,
+              "point": 449411484.0,
+              "support_uninstrumented": 515073451.5,
+              "point_uninstrumented": 330176329.5,
+              "live": 275177584.5
+            },
+            "ratios": {
+              "support_over_live": 2.4607522746824606,
+              "point_over_live": 1.6331689400377014,
+              "support_uninstrumented_over_live": 1.8717856413918772,
+              "point_uninstrumented_over_live": 1.1998663702929626,
+              "point_uninstrumented_over_support_uninstrumented": 0.6410276603044838,
+              "support_over_uninstrumented": 1.3146549584879934,
+              "point_over_uninstrumented": 1.3611256890539756,
+              "point_over_support": 0.6636868557800879
+            }
+          },
+          {
+            "problem": "124-A",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 474358593.0,
+              "point": 295716512.0,
+              "support_uninstrumented": 350965520.0,
+              "point_uninstrumented": 210103239.5,
+              "live": 145494164.5
+            },
+            "ratios": {
+              "support_over_live": 3.2603272758750403,
+              "point_over_live": 2.0324974064509647,
+              "support_uninstrumented_over_live": 2.4122309042848245,
+              "point_uninstrumented_over_live": 1.4440664353930153,
+              "point_uninstrumented_over_support_uninstrumented": 0.5986435348406874,
+              "support_over_uninstrumented": 1.3515817536719847,
+              "point_over_uninstrumented": 1.4074819250942583,
+              "point_over_support": 0.623402877830865
+            }
+          },
+          {
+            "problem": "151-A",
+            "requests": 2,
+            "sum_request_median_ns": {
+              "support": 59223318.0,
+              "point": 34020373.5,
+              "support_uninstrumented": 36282799.0,
+              "point_uninstrumented": 25371193.0,
+              "live": 22799692.5
+            },
+            "ratios": {
+              "support_over_live": 2.5975489801013762,
+              "point_over_live": 1.4921417690172796,
+              "support_uninstrumented_over_live": 1.591372295920219,
+              "point_uninstrumented_over_live": 1.1127866307846037,
+              "point_uninstrumented_over_support_uninstrumented": 0.6992622867932543,
+              "support_over_uninstrumented": 1.6322698257099735,
+              "point_over_uninstrumented": 1.3409055498493903,
+              "point_over_support": 0.5744422070374375
+            }
+          },
+          {
+            "problem": "168-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 146130308.0,
+              "point": 82960343.0,
+              "support_uninstrumented": 95905942.0,
+              "point_uninstrumented": 55764413.5,
+              "live": 39174686.0
+            },
+            "ratios": {
+              "support_over_live": 3.7302228280783156,
+              "point_over_live": 2.1177028196218344,
+              "support_uninstrumented_over_live": 2.4481610905573055,
+              "point_uninstrumented_over_live": 1.4234808033943145,
+              "point_uninstrumented_over_support_uninstrumented": 0.5814489940571148,
+              "support_over_uninstrumented": 1.5236835690535213,
+              "point_over_uninstrumented": 1.4876932759276666,
+              "point_over_support": 0.5677148302458926
+            }
+          },
+          {
+            "problem": "194-A",
+            "requests": 12,
+            "sum_request_median_ns": {
+              "support": 199485115.5,
+              "point": 134076522.0,
+              "support_uninstrumented": 152878770.0,
+              "point_uninstrumented": 100327191.0,
+              "live": 77963681.0
+            },
+            "ratios": {
+              "support_over_live": 2.558692880342579,
+              "point_over_live": 1.7197305242680885,
+              "support_uninstrumented_over_live": 1.960897279850088,
+              "point_uninstrumented_over_live": 1.2868452298962128,
+              "point_uninstrumented_over_support_uninstrumented": 0.656253258709499,
+              "support_over_uninstrumented": 1.304858192540403,
+              "point_over_uninstrumented": 1.3363926634804317,
+              "point_over_support": 0.6721129126047503
+            }
+          },
+          {
+            "problem": "197-A",
+            "requests": 35,
+            "sum_request_median_ns": {
+              "support": 1318734445.5,
+              "point": 962863948.5,
+              "support_uninstrumented": 945983652.5,
+              "point_uninstrumented": 622758105.0,
+              "live": 404509219.5
+            },
+            "ratios": {
+              "support_over_live": 3.260085016430633,
+              "point_over_live": 2.3803263364186438,
+              "support_uninstrumented_over_live": 2.338596024261939,
+              "point_uninstrumented_over_live": 1.5395399535510463,
+              "point_uninstrumented_over_support_uninstrumented": 0.6583180410720681,
+              "support_over_uninstrumented": 1.394035131595469,
+              "point_over_uninstrumented": 1.5461283293936416,
+              "point_over_support": 0.7301424117536635
+            }
+          },
+          {
+            "problem": "216-A",
+            "requests": 108,
+            "sum_request_median_ns": {
+              "support": 3006217824.5,
+              "point": 2092502766.5,
+              "support_uninstrumented": 2197137208.5,
+              "point_uninstrumented": 1345698347.5,
+              "live": 937330309.0
+            },
+            "ratios": {
+              "support_over_live": 3.207212863635246,
+              "point_over_live": 2.232407024939167,
+              "support_uninstrumented_over_live": 2.344037301902717,
+              "point_uninstrumented_over_live": 1.4356714325557993,
+              "point_uninstrumented_over_support_uninstrumented": 0.6124780656819867,
+              "support_over_uninstrumented": 1.3682430996434514,
+              "point_over_uninstrumented": 1.5549567779342168,
+              "point_over_support": 0.6960582661198309
+            }
+          },
+          {
+            "problem": "313-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 119820565.5,
+              "point": 76731742.5,
+              "support_uninstrumented": 86731303.0,
+              "point_uninstrumented": 51242574.0,
+              "live": 42185849.5
+            },
+            "ratios": {
+              "support_over_live": 2.8403023032640364,
+              "point_over_live": 1.818897649554266,
+              "support_uninstrumented_over_live": 2.05593354235998,
+              "point_uninstrumented_over_live": 1.2146863132387555,
+              "point_uninstrumented_over_support_uninstrumented": 0.5908198335265412,
+              "support_over_uninstrumented": 1.381514647600763,
+              "point_over_uninstrumented": 1.4974217044600453,
+              "point_over_support": 0.6403887527971982
+            }
+          },
+          {
+            "problem": "4-A",
+            "requests": 104,
+            "sum_request_median_ns": {
+              "support": 657316503.5,
+              "point": 500662201.0,
+              "support_uninstrumented": 536472391.0,
+              "point_uninstrumented": 428539105.5,
+              "live": 380799246.5
+            },
+            "ratios": {
+              "support_over_live": 1.7261496957820268,
+              "point_over_live": 1.3147667848654738,
+              "support_uninstrumented_over_live": 1.408806335440057,
+              "point_uninstrumented_over_live": 1.1253675248540702,
+              "point_uninstrumented_over_support_uninstrumented": 0.7988092447799424,
+              "support_over_uninstrumented": 1.2252569088872274,
+              "point_over_uninstrumented": 1.1682999160971554,
+              "point_over_support": 0.7616759937322949
+            }
+          },
+          {
+            "problem": "448-A",
+            "requests": 9,
+            "sum_request_median_ns": {
+              "support": 347859585.5,
+              "point": 228576335.5,
+              "support_uninstrumented": 271917482.0,
+              "point_uninstrumented": 167352175.5,
+              "live": 133693598.0
+            },
+            "ratios": {
+              "support_over_live": 2.6019165517559038,
+              "point_over_live": 1.7097029245932929,
+              "support_uninstrumented_over_live": 2.033885586653147,
+              "point_uninstrumented_over_live": 1.2517590819868578,
+              "point_uninstrumented_over_support_uninstrumented": 0.6154520638728186,
+              "support_over_uninstrumented": 1.2792836376000274,
+              "point_over_uninstrumented": 1.3658402397045624,
+              "point_over_support": 0.6570936809789305
+            }
+          },
+          {
+            "problem": "451-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 34033675.5,
+              "point": 28693561.5,
+              "support_uninstrumented": 28931413.5,
+              "point_uninstrumented": 23270031.0,
+              "live": 19991769.0
+            },
+            "ratios": {
+              "support_over_live": 1.702384391296238,
+              "point_over_live": 1.4352687598581195,
+              "support_uninstrumented_over_live": 1.447166256272769,
+              "point_uninstrumented_over_live": 1.1639805862102548,
+              "point_uninstrumented_over_support_uninstrumented": 0.8043171136453461,
+              "support_over_uninstrumented": 1.176357162777408,
+              "point_over_uninstrumented": 1.2330693285281829,
+              "point_over_support": 0.8430932327600056
+            }
+          },
+          {
+            "problem": "476-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 95458646.0,
+              "point": 74400434.0,
+              "support_uninstrumented": 72229905.0,
+              "point_uninstrumented": 54995535.0,
+              "live": 42041302.0
+            },
+            "ratios": {
+              "support_over_live": 2.270592047791479,
+              "point_over_live": 1.769698616850639,
+              "support_uninstrumented_over_live": 1.7180701254209492,
+              "point_uninstrumented_over_live": 1.3081311087844045,
+              "point_uninstrumented_over_support_uninstrumented": 0.761395643535735,
+              "support_over_uninstrumented": 1.3215945113038705,
+              "point_over_uninstrumented": 1.3528449900523742,
+              "point_over_support": 0.7793996365714218
+            }
+          },
+          {
+            "problem": "478-A",
+            "requests": 60,
+            "sum_request_median_ns": {
+              "support": 845673746.0,
+              "point": 583166885.0,
+              "support_uninstrumented": 671140824.0,
+              "point_uninstrumented": 494725820.5,
+              "live": 432852586.0
+            },
+            "ratios": {
+              "support_over_live": 1.9537222910342045,
+              "point_over_live": 1.3472644125545319,
+              "support_uninstrumented_over_live": 1.550506675267963,
+              "point_uninstrumented_over_live": 1.1429429706583756,
+              "point_uninstrumented_over_support_uninstrumented": 0.7371415995102691,
+              "support_over_uninstrumented": 1.260054098571718,
+              "point_over_uninstrumented": 1.178767836315105,
+              "point_over_support": 0.6895884940952157
+            }
+          },
+          {
+            "problem": "513-A",
+            "requests": 2,
+            "sum_request_median_ns": {
+              "support": 11822203.5,
+              "point": 10643567.0,
+              "support_uninstrumented": 9831174.5,
+              "point_uninstrumented": 9286124.5,
+              "live": 8048524.5
+            },
+            "ratios": {
+              "support_over_live": 1.4688659393408072,
+              "point_over_live": 1.3224246257807875,
+              "support_uninstrumented_over_live": 1.2214878018946205,
+              "point_uninstrumented_over_live": 1.1537673147419754,
+              "point_uninstrumented_over_support_uninstrumented": 0.9445590147952312,
+              "support_over_uninstrumented": 1.202521987581443,
+              "point_over_uninstrumented": 1.1461796576171255,
+              "point_over_support": 0.9003031456868426
+            }
+          },
+          {
+            "problem": "560-B",
+            "requests": 9,
+            "sum_request_median_ns": {
+              "support": 2174998602.5,
+              "point": 1149293425.0,
+              "support_uninstrumented": 1715155065.0,
+              "point_uninstrumented": 740351426.0,
+              "live": 577775200.0
+            },
+            "ratios": {
+              "support_over_live": 3.764437453355561,
+              "point_over_live": 1.9891705718763977,
+              "support_uninstrumented_over_live": 2.9685508568038226,
+              "point_uninstrumented_over_live": 1.281383185017287,
+              "point_uninstrumented_over_support_uninstrumented": 0.4316527648769763,
+              "support_over_uninstrumented": 1.268106101240473,
+              "point_over_uninstrumented": 1.5523620062562018,
+              "point_over_support": 0.5284111096342647
+            }
+          },
+          {
+            "problem": "570-B",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 147573638.0,
+              "point": 101763750.0,
+              "support_uninstrumented": 96644601.0,
+              "point_uninstrumented": 66217643.5,
+              "live": 49173250.0
+            },
+            "ratios": {
+              "support_over_live": 3.001095880382118,
+              "point_over_live": 2.069494084690355,
+              "support_uninstrumented_over_live": 1.9653897393399866,
+              "point_uninstrumented_over_live": 1.3466192187825698,
+              "point_uninstrumented_over_support_uninstrumented": 0.6851665050590876,
+              "support_over_uninstrumented": 1.526972396523216,
+              "point_over_uninstrumented": 1.5368071804004926,
+              "point_over_support": 0.689579462695092
+            }
+          },
+          {
+            "problem": "617-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 100949008.0,
+              "point": 69334218.5,
+              "support_uninstrumented": 75279156.5,
+              "point_uninstrumented": 47288149.0,
+              "live": 42978454.0
+            },
+            "ratios": {
+              "support_over_live": 2.3488282756750625,
+              "point_over_live": 1.613232027843533,
+              "support_uninstrumented_over_live": 1.7515557097516816,
+              "point_uninstrumented_over_live": 1.1002757102430907,
+              "point_uninstrumented_over_support_uninstrumented": 0.6281705481118136,
+              "support_over_uninstrumented": 1.3409954719670643,
+              "point_over_uninstrumented": 1.4662070723047333,
+              "point_over_support": 0.6868241686931683
+            }
+          },
+          {
+            "problem": "62-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 273673249.5,
+              "point": 150306993.5,
+              "support_uninstrumented": 177509396.5,
+              "point_uninstrumented": 100221474.5,
+              "live": 82466616.0
+            },
+            "ratios": {
+              "support_over_live": 3.318594393396717,
+              "point_over_live": 1.8226404912746754,
+              "support_uninstrumented_over_live": 2.152500067421222,
+              "point_uninstrumented_over_live": 1.215297527183606,
+              "point_uninstrumented_over_support_uninstrumented": 0.5645981366400511,
+              "support_over_uninstrumented": 1.5417395072941955,
+              "point_over_uninstrumented": 1.4997483747856852,
+              "point_over_support": 0.5492206263294287
+            }
+          },
+          {
+            "problem": "638-A",
+            "requests": 24,
+            "sum_request_median_ns": {
+              "support": 668957386.5,
+              "point": 418995098.0,
+              "support_uninstrumented": 445143385.5,
+              "point_uninstrumented": 257694713.0,
+              "live": 244027948.0
+            },
+            "ratios": {
+              "support_over_live": 2.741314640321444,
+              "point_over_live": 1.716996358138454,
+              "support_uninstrumented_over_live": 1.8241491974517607,
+              "point_uninstrumented_over_live": 1.0560049171089207,
+              "point_uninstrumented_over_support_uninstrumented": 0.5789027117870091,
+              "support_over_uninstrumented": 1.502790804694547,
+              "point_over_uninstrumented": 1.6259359500324713,
+              "point_over_support": 0.6263404911218512
+            }
+          },
+          {
+            "problem": "659-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 179981866.0,
+              "point": 115064811.5,
+              "support_uninstrumented": 102125166.0,
+              "point_uninstrumented": 61456092.0,
+              "live": 56265636.5
+            },
+            "ratios": {
+              "support_over_live": 3.1987884114667398,
+              "point_over_live": 2.045028167414404,
+              "support_uninstrumented_over_live": 1.8150539539350985,
+              "point_uninstrumented_over_live": 1.0922491208288383,
+              "point_uninstrumented_over_support_uninstrumented": 0.601772260521956,
+              "support_over_uninstrumented": 1.7623654682725314,
+              "point_over_uninstrumented": 1.8723092822107856,
+              "point_over_support": 0.6393133600470616
+            }
+          },
+          {
+            "problem": "84-A",
+            "requests": 4,
+            "sum_request_median_ns": {
+              "support": 18706132.5,
+              "point": 12622524.5,
+              "support_uninstrumented": 14352445.5,
+              "point_uninstrumented": 11894948.0,
+              "live": 9906637.5
+            },
+            "ratios": {
+              "support_over_live": 1.8882423526650693,
+              "point_over_live": 1.274148216284284,
+              "support_uninstrumented_over_live": 1.4487706348395204,
+              "point_uninstrumented_over_live": 1.20070488094472,
+              "point_uninstrumented_over_support_uninstrumented": 0.8287749986578943,
+              "support_over_uninstrumented": 1.3033411274754536,
+              "point_over_uninstrumented": 1.0611668499937956,
+              "point_over_support": 0.6747800220061523
+            }
+          }
+        ],
+        "problem_median_ratios": {
+          "support_over_live": 2.5975489801013762,
+          "point_over_live": 1.716996358138454,
+          "support_uninstrumented_over_live": 1.8241491974517607,
+          "point_uninstrumented_over_live": 1.20070488094472,
+          "point_uninstrumented_over_support_uninstrumented": 0.656253258709499,
+          "support_over_uninstrumented": 1.3409954719670643,
+          "point_over_uninstrumented": 1.4074819250942583,
+          "point_over_support": 0.6747800220061523
+        },
+        "problem_comparisons": {
+          "support_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "support_uninstrumented_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_uninstrumented_over_live": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_uninstrumented_over_support_uninstrumented": {
+            "lower": 23,
+            "equal": 0,
+            "higher": 0
+          },
+          "support_over_uninstrumented": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_over_uninstrumented": {
+            "lower": 0,
+            "equal": 0,
+            "higher": 23
+          },
+          "point_over_support": {
+            "lower": 23,
+            "equal": 0,
+            "higher": 0
+          }
+        }
+      }
+    }
+  },
+  "blocks": [
+    {
+      "repetition": 0,
+      "wall_seconds": 181.09897559800447,
+      "load_average": [
+        22.09765625,
+        18.66357421875,
+        16.59033203125
+      ]
+    },
+    {
+      "repetition": 1,
+      "wall_seconds": 122.28870033500425,
+      "load_average": [
+        20.11279296875,
+        18.740234375,
+        16.853515625
+      ]
+    },
+    {
+      "repetition": 2,
+      "wall_seconds": 119.97151993300213,
+      "load_average": [
+        17.38671875,
+        18.19580078125,
+        16.87939453125
+      ]
+    },
+    {
+      "repetition": 3,
+      "wall_seconds": 98.64132437200169,
+      "load_average": [
+        18.6279296875,
+        17.9384765625,
+        16.890625
+      ]
+    },
+    {
+      "repetition": 4,
+      "wall_seconds": 149.55226031599886,
+      "load_average": [
+        21.07861328125,
+        18.92529296875,
+        17.3935546875
+      ]
+    },
+    {
+      "repetition": 5,
+      "wall_seconds": 151.34275144200365,
+      "load_average": [
+        18.08154296875,
+        18.859375,
+        17.60107421875
+      ]
+    },
+    {
+      "repetition": 6,
+      "wall_seconds": 68.49485980600002,
+      "load_average": [
+        10.05712890625,
+        16.3525390625,
+        16.818359375
+      ]
+    },
+    {
+      "repetition": 7,
+      "wall_seconds": 72.43712440699892,
+      "load_average": [
+        7.67138671875,
+        14.17919921875,
+        16.01806640625
+      ]
+    },
+    {
+      "repetition": 8,
+      "wall_seconds": 82.72422633800306,
+      "load_average": [
+        5.9775390625,
+        12.0712890625,
+        15.12109375
+      ]
+    },
+    {
+      "repetition": 9,
+      "wall_seconds": 72.19266432999575,
+      "load_average": [
+        5.8173828125,
+        10.67333984375,
+        14.39404296875
+      ]
+    }
+  ],
+  "records": {
+    "protocol.json": "47d5d6962ac171e356a5d115fafb371bb97a7affe9748a9fd68dc306698be5a4",
+    "work.json": "b6e89e990b728596e46fcac4b707144ce2225c6cc8b0b8a6197ac373ca4b3e42",
+    "timings.jsonl": "f8b214571cb46418bbbb575cfd8d10909389159f83879826c48c4560ab663270",
+    "request-timing-summary.json": "fffc06da22e75f6d260fd6c43d71575664050616b167ade299f9bfe364406b99",
+    "analysis.json": "3abbf5449a0674bcebf3b38941642fcc7fe6a3d6f01810b100a8d160fe80736a",
+    "derived/receivers.py": "0b2d7ff31a3ef7caacd3b8ed80169a444f68da7c3484921f45eb9d15584be9d3",
+    "derived/manifest.json": "83e45191b19979a30b66dc97e19f60292836446fce8bc48bff57f707d46abbaa",
+    "executed-sources/src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "executed-sources/src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "executed-sources/src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "executed-sources/src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "executed-sources/tests/int32_baselines.py": "ba71a1840bf50b16c7717edb81fae97011beb7200dfe6c868164c0f2fd778f37",
+    "executed-sources/tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be",
+    "executed-sources/tests/int32_evaluator_study.py": "10885bcfa30f37fb8a21cae07aea3c57f42761235bcb13e00a681cf47b663f2e",
+    "executed-sources/tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+    "executed-sources/tests/int32_point_demand_study.py": "50031934b0dbff332eef5226939377c3d9ce109e507fa2ef9b6c73ce47122842",
+    "executed-sources/tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "executed-sources/tests/counter_free_receivers.py": "1bc77dc19fc0ef3b321d2e78ce02e4d8c8f9385043b642c0508a0a386814540c",
+    "executed-sources/tests/counter_overhead_study.py": "c6865edbb162ef51055d52bbb1b0e457d67f20898b19f6f512d353716e7e2431"
+  }
+}

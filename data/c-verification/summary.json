@@ -1,0 +1,56 @@
+{
+  "schema": "repairseal-cbmc-comparison-summary-v1",
+  "requests": 804,
+  "populations": {
+    "core": {
+      "requests": 380,
+      "direct_statuses": {
+        "ACCEPT": 95,
+        "REFUTED": 285
+      },
+      "cbmc_statuses": {
+        "ACCEPT": 95,
+        "REFUTED": 285
+      },
+      "status_agreements": 380,
+      "status_disagreements": 0,
+      "unresolved": 0
+    },
+    "grammar": {
+      "requests": 400,
+      "direct_statuses": {
+        "ACCEPT": 100,
+        "REFUTED": 300
+      },
+      "cbmc_statuses": {
+        "ACCEPT": 100,
+        "REFUTED": 300
+      },
+      "status_agreements": 400,
+      "status_disagreements": 0,
+      "unresolved": 0
+    },
+    "natural": {
+      "requests": 24,
+      "direct_statuses": {
+        "REFUTED": 9,
+        "ACCEPT": 15
+      },
+      "cbmc_statuses": {
+        "REFUTED": 9,
+        "ACCEPT": 15
+      },
+      "status_agreements": 24,
+      "status_disagreements": 0,
+      "unresolved": 0
+    }
+  },
+  "source_and_inputs_stable": true,
+  "disagreement_indices": [],
+  "complete_decisions": 804,
+  "status_agreements": 804,
+  "unresolved_indices": [],
+  "interpretation": "Only ACCEPT/REFUTED are compared. No CBMC canonical diagnostic or standard witness validation is claimed.",
+  "protocol_sha256": "f1bd73548438fa887d9b72993495f7d556431a328a7a67992819f789883e4bf0",
+  "tool_profile_sha256": "e2c6bc71935cf5985367ab76dba14ec5a9cf7408151728d0f7a6de831af9a2f0"
+}

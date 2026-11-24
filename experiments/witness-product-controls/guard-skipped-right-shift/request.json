@@ -1,0 +1,15 @@
+{
+  "id": "guard-skipped-right-shift",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned x) { return x; }",
+  "candidate": "unsigned f(unsigned x) { return x; }",
+  "reference": "unsigned f(unsigned x) { return x + 1u; }",
+  "repair_guard": "(x != x) && (1u >> 32u > 0u)"
+}

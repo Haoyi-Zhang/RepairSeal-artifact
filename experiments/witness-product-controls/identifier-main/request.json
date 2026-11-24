@@ -1,0 +1,15 @@
+{
+  "id": "identifier-main",
+  "word_bits": 32,
+  "inputs": {
+    "main": [
+      0,
+      1,
+      4294967295
+    ]
+  },
+  "original": "unsigned f(unsigned main) { return main; }",
+  "candidate": "unsigned f(unsigned main) { return main; }",
+  "reference": "unsigned f(unsigned main) { return main; }",
+  "repair_guard": "main == main"
+}

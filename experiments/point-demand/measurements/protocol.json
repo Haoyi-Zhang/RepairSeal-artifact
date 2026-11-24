@@ -1,0 +1,97 @@
+{
+  "schema": "repairseal-point-demand-study",
+  "source_bindings": {
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "src/int32_circuit.py": "192b996fd40251a5ab46ddea03a1c03b86c7145519c281e37751b7f4d7a73cf3",
+    "src/codeflaws_int32_bridge.py": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+    "tests/int32_baselines.py": "ba71a1840bf50b16c7717edb81fae97011beb7200dfe6c868164c0f2fd778f37",
+    "tests/int32_contract_study.py": "5c59af712d900ac011d0935848966e882fe882bf4e63ed09d75cacce62f4c2be",
+    "tests/int32_evaluator_study.py": "10885bcfa30f37fb8a21cae07aea3c57f42761235bcb13e00a681cf47b663f2e",
+    "tests/int32_point_demand.py": "84a1403a27044fc4d892d86cf97923887eb3edef52cecbf73b3112b59050c8cc",
+    "tests/int32_point_demand_study.py": "50031934b0dbff332eef5226939377c3d9ce109e507fa2ef9b6c73ce47122842",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb"
+  },
+  "corpus_identity": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+  "prior_summary_identity": "e4f38b28e1ddcdbe2167e1dc1676755953e924d70ffe917483e726b74092ba3e",
+  "prior_records": {
+    "requests.json": "1870224417ead612fb93ac18083e1351af0b6d57999b85fbfdb3c41dc3f6828e",
+    "stages.json": "21f87befbca8e6b14dd758cac48740c5e6fdc3c175dd9a5b99b76d8eabb31af1",
+    "source-observations.json": "4f8f284be5bc7ce85a7b421eb74f5453acce79a2b0ddde9f0dbef97812151a25",
+    "oracle-audit.json": "f546f248e6786c614846e9faf60e8970556020955dad232dda94b60f3551fa19"
+  },
+  "requests": 1478,
+  "arms": [
+    "full",
+    "live",
+    "support_demand",
+    "point_demand"
+  ],
+  "repetitions_per_request": 12,
+  "seed": 20261120,
+  "orders": [
+    [
+      "full",
+      "live",
+      "point_demand",
+      "support_demand"
+    ],
+    [
+      "live",
+      "support_demand",
+      "full",
+      "point_demand"
+    ],
+    [
+      "support_demand",
+      "point_demand",
+      "live",
+      "full"
+    ],
+    [
+      "point_demand",
+      "full",
+      "support_demand",
+      "live"
+    ]
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "pycparser": "3.00",
+    "processor": "AMD EPYC 9V74 80-Core Processor",
+    "affinity": [
+      8
+    ],
+    "clock": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-09
+    },
+    "gc_enabled": true,
+    "gc_threshold": [
+      700,
+      10,
+      10
+    ],
+    "process_workers": 1
+  },
+  "measurement": "perf_counter_ns around complete receiving call; canonical and work checks outside interval",
+  "included": [
+    "fresh admission and lowering",
+    "semantic evaluation",
+    "released traversal counters",
+    "full packet integrity checks",
+    "normal garbage collection"
+  ],
+  "excluded": [
+    "packet creation",
+    "transport decoding",
+    "cross-arm comparisons"
+  ],
+  "design": "Four-arm Williams design repeated three times per request; independent shuffled request order in each repetition",
+  "counter_scope": "Support and point demand share counter categories and conditional traversal; live/full retain aggregate counters",
+  "comparison_scope": "Removing support sharing also changes analysis, projection and memo addressing; whole-call ratios cannot assign separate elapsed contributions",
+  "population": "Complete original-source request set used in the previous signed study; no selection by speed or new candidate generation"
+}

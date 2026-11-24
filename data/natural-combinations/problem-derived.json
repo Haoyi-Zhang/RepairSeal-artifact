@@ -1,0 +1,6040 @@
+[
+  {
+    "problem": "104-A",
+    "combinations": {
+      "combinations": 84,
+      "subjects": 7,
+      "problems": 1,
+      "candidate_sources": 12,
+      "repair_accept": 49,
+      "union_accept": 35,
+      "repair_accept_union_refute": 14,
+      "reversal_fraction_of_repair_acceptances": 0.2857142857142857,
+      "reversal_subjects": 3,
+      "reversal_candidate_sources": 6,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 35,
+        "ACCEPT/REFUTED": 14,
+        "REFUTED/REFUTED": 35
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 70,
+      "own_original": 7,
+      "own_reference": 7
+    },
+    "requests": {
+      "repair": {
+        "requests": 84,
+        "problems": 1,
+        "subjects": 7,
+        "candidate_sources": 12,
+        "statuses": {
+          "ACCEPT": 49,
+          "REFUTED": 35
+        },
+        "candidate_classes": {
+          "cross_source": 70,
+          "own_original": 7,
+          "own_reference": 7
+        },
+        "full_cells": 163092,
+        "demand_cells": 76803,
+        "pooled_cell_reduction_fraction": 0.5290817452726069,
+        "request_cell_reduction_fraction": {
+          "n": 84,
+          "min": 0.3897136797454931,
+          "q25": 0.4854191650351381,
+          "median": 0.519700738763896,
+          "q75": 0.5497727225999233,
+          "max": 0.6672967863894139
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5290817452726069,
+          "q25": 0.5290817452726069,
+          "median": 0.5290817452726069,
+          "q75": 0.5290817452726069,
+          "max": 0.5290817452726069
+        },
+        "domain_points": {
+          "n": 84,
+          "min": 4,
+          "q25": 7.0,
+          "median": 23.0,
+          "q75": 23.0,
+          "max": 23
+        },
+        "constructed_nodes": {
+          "n": 84,
+          "min": 68,
+          "q25": 104.0,
+          "median": 125.5,
+          "q75": 137.25,
+          "max": 165
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 84,
+          "min": 1.735042735042735,
+          "q25": 1.8173594784710059,
+          "median": 1.8381789170844798,
+          "q75": 1.8563367303050107,
+          "max": 1.8844483058210253
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 84,
+            "min": 0.8243517871639182,
+            "q25": 1.0742613196905961,
+            "median": 1.2232797870028018,
+            "q75": 1.398608167735503,
+            "max": 1.860544067244262
+          },
+          "demand_slower_than_full_requests": 72,
+          "full_total_ms": 445.11184999282705,
+          "demand_total_ms": 563.8682460266864,
+          "direct_record_total_ms": 413.73495594598353
+        }
+      },
+      "union": {
+        "requests": 84,
+        "problems": 1,
+        "subjects": 7,
+        "candidate_sources": 12,
+        "statuses": {
+          "ACCEPT": 35,
+          "REFUTED": 49
+        },
+        "candidate_classes": {
+          "cross_source": 70,
+          "own_original": 7,
+          "own_reference": 7
+        },
+        "full_cells": 253450,
+        "demand_cells": 119598,
+        "pooled_cell_reduction_fraction": 0.5281199447622805,
+        "request_cell_reduction_fraction": {
+          "n": 84,
+          "min": 0.39463414634146343,
+          "q25": 0.5008654402406572,
+          "median": 0.5221329561527581,
+          "q75": 0.5519189238100983,
+          "max": 0.6776470588235295
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5281199447622805,
+          "q25": 0.5281199447622805,
+          "median": 0.5281199447622805,
+          "q75": 0.5281199447622805,
+          "max": 0.5281199447622805
+        },
+        "domain_points": {
+          "n": 84,
+          "min": 25,
+          "q25": 25.0,
+          "median": 25.0,
+          "q75": 25.0,
+          "max": 25
+        },
+        "constructed_nodes": {
+          "n": 84,
+          "min": 68,
+          "q25": 104.0,
+          "median": 125.5,
+          "q75": 137.25,
+          "max": 165
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 84,
+          "min": 1.792929292929293,
+          "q25": 1.8396946309473354,
+          "median": 1.8548148941997402,
+          "q75": 1.8621042306639497,
+          "max": 1.8836363636363636
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 84,
+            "min": 0.11892722160724825,
+            "q25": 1.3115930671344744,
+            "median": 1.42691992787825,
+            "q75": 1.5109361537026005,
+            "max": 9.176696477094188
+          },
+          "demand_slower_than_full_requests": 83,
+          "full_total_ms": 586.3329010244342,
+          "demand_total_ms": 759.7990849681082,
+          "direct_record_total_ms": 421.0722510179039
+        }
+      }
+    }
+  },
+  {
+    "problem": "112-B",
+    "combinations": {
+      "combinations": 32,
+      "subjects": 4,
+      "problems": 1,
+      "candidate_sources": 8,
+      "repair_accept": 21,
+      "union_accept": 16,
+      "repair_accept_union_refute": 5,
+      "reversal_fraction_of_repair_acceptances": 0.23809523809523808,
+      "reversal_subjects": 3,
+      "reversal_candidate_sources": 2,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 16,
+        "ACCEPT/REFUTED": 5,
+        "REFUTED/REFUTED": 11
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 24,
+      "own_original": 4,
+      "own_reference": 4
+    },
+    "requests": {
+      "repair": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 21,
+          "REFUTED": 11
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 21756,
+        "demand_cells": 10363,
+        "pooled_cell_reduction_fraction": 0.523671630814488,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.27710843373493976,
+          "q25": 0.4128348417663852,
+          "median": 0.48553459119496856,
+          "q75": 0.5399648962148962,
+          "max": 0.6565656565656566
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.523671630814488,
+          "q25": 0.523671630814488,
+          "median": 0.523671630814488,
+          "q75": 0.523671630814488,
+          "max": 0.523671630814488
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 3,
+          "q25": 3.0,
+          "median": 4.0,
+          "q75": 6.0,
+          "max": 9
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 77,
+          "q25": 93.5,
+          "median": 109.0,
+          "q75": 163.0,
+          "max": 183
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.7894736842105263,
+          "q25": 1.835,
+          "median": 1.85,
+          "q75": 1.8901515151515151,
+          "max": 1.9191176470588236
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 0.7734581762635491,
+            "q25": 1.0008008298675075,
+            "median": 1.0264124031207253,
+            "q75": 1.096450927006864,
+            "max": 1.329908044616425
+          },
+          "demand_slower_than_full_requests": 24,
+          "full_total_ms": 145.47681100521004,
+          "demand_total_ms": 151.53051200468326,
+          "direct_record_total_ms": 127.10354002774693
+        }
+      },
+      "union": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 16,
+          "REFUTED": 16
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 131736,
+        "demand_cells": 49714,
+        "pooled_cell_reduction_fraction": 0.6226240359506893,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.49361080686381886,
+          "q25": 0.599444072171345,
+          "median": 0.6284052288974357,
+          "q75": 0.6411781365052394,
+          "max": 0.7831562377016923
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.6226240359506893,
+          "q25": 0.6226240359506893,
+          "median": 0.6226240359506893,
+          "q75": 0.6226240359506893,
+          "max": 0.6226240359506893
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 33,
+          "q25": 33.0,
+          "median": 33.0,
+          "q75": 33.0,
+          "max": 33
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 77,
+          "q25": 93.5,
+          "median": 109.0,
+          "q75": 163.0,
+          "max": 183
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.8957345971563981,
+          "q25": 1.9170203697705746,
+          "median": 1.923241048230294,
+          "q75": 1.9342010122921185,
+          "max": 1.9565916398713827
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 1.0456847321894285,
+            "q25": 1.231549186225023,
+            "median": 1.311984211623046,
+            "q75": 1.477237744075415,
+            "max": 12.441158667031186
+          },
+          "demand_slower_than_full_requests": 32,
+          "full_total_ms": 232.71521998685785,
+          "demand_total_ms": 427.4612330045784,
+          "direct_record_total_ms": 182.16182898322586
+        }
+      }
+    }
+  },
+  {
+    "problem": "122-A",
+    "combinations": {
+      "combinations": 40,
+      "subjects": 5,
+      "problems": 1,
+      "candidate_sources": 8,
+      "repair_accept": 22,
+      "union_accept": 15,
+      "repair_accept_union_refute": 7,
+      "reversal_fraction_of_repair_acceptances": 0.3181818181818182,
+      "reversal_subjects": 4,
+      "reversal_candidate_sources": 4,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 15,
+        "ACCEPT/REFUTED": 7,
+        "REFUTED/REFUTED": 18
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 30,
+      "own_original": 5,
+      "own_reference": 5
+    },
+    "requests": {
+      "repair": {
+        "requests": 40,
+        "problems": 1,
+        "subjects": 5,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 22,
+          "REFUTED": 18
+        },
+        "candidate_classes": {
+          "cross_source": 30,
+          "own_original": 5,
+          "own_reference": 5
+        },
+        "full_cells": 70602,
+        "demand_cells": 36555,
+        "pooled_cell_reduction_fraction": 0.4822384634996175,
+        "request_cell_reduction_fraction": {
+          "n": 40,
+          "min": 0.3388157894736842,
+          "q25": 0.4601957330293062,
+          "median": 0.4920671327480219,
+          "q75": 0.5111559575045964,
+          "max": 0.592741935483871
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4822384634996175,
+          "q25": 0.4822384634996175,
+          "median": 0.4822384634996175,
+          "q75": 0.4822384634996175,
+          "max": 0.4822384634996175
+        },
+        "domain_points": {
+          "n": 40,
+          "min": 3,
+          "q25": 8.0,
+          "median": 8.0,
+          "q75": 8.0,
+          "max": 26
+        },
+        "constructed_nodes": {
+          "n": 40,
+          "min": 102,
+          "q25": 127.75,
+          "median": 180.5,
+          "q75": 209.5,
+          "max": 250
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 40,
+          "min": 1.757936507936508,
+          "q25": 1.8390170730854005,
+          "median": 1.862251655629139,
+          "q75": 1.8810810810810812,
+          "max": 1.9054586381541925
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 40,
+            "min": 0.08081706280381332,
+            "q25": 1.027194490571422,
+            "median": 1.1292142575053712,
+            "q75": 1.2604138611740898,
+            "max": 2.240733445366101
+          },
+          "demand_slower_than_full_requests": 31,
+          "full_total_ms": 303.9809079855331,
+          "demand_total_ms": 298.53076500148745,
+          "direct_record_total_ms": 210.71640100126388
+        }
+      },
+      "union": {
+        "requests": 40,
+        "problems": 1,
+        "subjects": 5,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 15,
+          "REFUTED": 25
+        },
+        "candidate_classes": {
+          "cross_source": 30,
+          "own_original": 5,
+          "own_reference": 5
+        },
+        "full_cells": 241920,
+        "demand_cells": 121345,
+        "pooled_cell_reduction_fraction": 0.49840856481481477,
+        "request_cell_reduction_fraction": {
+          "n": 40,
+          "min": 0.33492063492063495,
+          "q25": 0.4923660254437949,
+          "median": 0.5039174498305143,
+          "q75": 0.5228784631699881,
+          "max": 0.6027649769585253
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.49840856481481477,
+          "q25": 0.49840856481481477,
+          "median": 0.49840856481481477,
+          "q75": 0.49840856481481477,
+          "max": 0.49840856481481477
+        },
+        "domain_points": {
+          "n": 40,
+          "min": 35,
+          "q25": 35.0,
+          "median": 35.0,
+          "q75": 35.0,
+          "max": 35
+        },
+        "constructed_nodes": {
+          "n": 40,
+          "min": 102,
+          "q25": 127.75,
+          "median": 180.5,
+          "q75": 209.5,
+          "max": 250
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 40,
+          "min": 1.8573373264361557,
+          "q25": 1.8809466889792015,
+          "median": 1.891015745600494,
+          "q75": 1.902511961722488,
+          "max": 1.9072363356428021
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 40,
+            "min": 0.2784767982573666,
+            "q25": 1.4656970011122907,
+            "median": 1.5652372703734783,
+            "q75": 1.7813463247256998,
+            "max": 2.1311607670323105
+          },
+          "demand_slower_than_full_requests": 39,
+          "full_total_ms": 486.757654005487,
+          "demand_total_ms": 654.1563879800378,
+          "direct_record_total_ms": 320.8059050448355
+        }
+      }
+    }
+  },
+  {
+    "problem": "124-A",
+    "combinations": {
+      "combinations": 32,
+      "subjects": 4,
+      "problems": 1,
+      "candidate_sources": 8,
+      "repair_accept": 19,
+      "union_accept": 16,
+      "repair_accept_union_refute": 3,
+      "reversal_fraction_of_repair_acceptances": 0.15789473684210525,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 3,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 16,
+        "ACCEPT/REFUTED": 3,
+        "REFUTED/REFUTED": 13
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 24,
+      "own_original": 4,
+      "own_reference": 4
+    },
+    "requests": {
+      "repair": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 19,
+          "REFUTED": 13
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 9545,
+        "demand_cells": 6814,
+        "pooled_cell_reduction_fraction": 0.28611838658983757,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.21204819277108433,
+          "q25": 0.2496220797068255,
+          "median": 0.27755710029791464,
+          "q75": 0.3456993413405657,
+          "max": 0.5
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.28611838658983757,
+          "q25": 0.28611838658983757,
+          "median": 0.28611838658983757,
+          "q75": 0.28611838658983757,
+          "max": 0.28611838658983757
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 2,
+          "q25": 4.25,
+          "median": 5.0,
+          "q75": 5.0,
+          "max": 5
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 50,
+          "q25": 58.25,
+          "median": 75.0,
+          "q75": 82.25,
+          "max": 95
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.5806451612903225,
+          "q25": 1.714076858813701,
+          "median": 1.7323852617970266,
+          "q75": 1.7572254335260116,
+          "max": 1.8095238095238095
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 0.9166732382273853,
+            "q25": 1.0154956162937423,
+            "median": 1.1043670622534203,
+            "q75": 1.2028793859437341,
+            "max": 1.4309684725028176
+          },
+          "demand_slower_than_full_requests": 26,
+          "full_total_ms": 106.84197299269726,
+          "demand_total_ms": 118.34908901073504,
+          "direct_record_total_ms": 99.75606100488221
+        }
+      },
+      "union": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 16,
+          "REFUTED": 16
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 113900,
+        "demand_cells": 75356,
+        "pooled_cell_reduction_fraction": 0.3384021071115013,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.23590361445783137,
+          "q25": 0.2716514770584538,
+          "median": 0.3132644110275689,
+          "q75": 0.3992727272727272,
+          "max": 0.5664516129032258
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.3384021071115013,
+          "q25": 0.3384021071115013,
+          "median": 0.3384021071115013,
+          "q75": 0.3384021071115013,
+          "max": 0.3384021071115013
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 50,
+          "q25": 50.0,
+          "median": 50.0,
+          "q75": 50.0,
+          "max": 50
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 50,
+          "q25": 58.25,
+          "median": 75.0,
+          "q75": 82.25,
+          "max": 95
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.679137603043754,
+          "q25": 1.7461368653421634,
+          "median": 1.7776275768840823,
+          "q75": 1.7944258498900543,
+          "max": 1.8507185906351413
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 0.7994506800319926,
+            "q25": 1.8983029122580213,
+            "median": 2.178509385340591,
+            "q75": 2.278649537792277,
+            "max": 12.362897438781744
+          },
+          "demand_slower_than_full_requests": 31,
+          "full_total_ms": 212.04207200207748,
+          "demand_total_ms": 487.3256929931813,
+          "direct_record_total_ms": 172.7625890271156
+        }
+      }
+    }
+  },
+  {
+    "problem": "151-A",
+    "combinations": {
+      "combinations": 6,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 3,
+      "repair_accept": 3,
+      "union_accept": 2,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.3333333333333333,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 2,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 2,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 6,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 3,
+        "statuses": {
+          "ACCEPT": 3,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 2,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 5377,
+        "demand_cells": 3257,
+        "pooled_cell_reduction_fraction": 0.3942718988283429,
+        "request_cell_reduction_fraction": {
+          "n": 6,
+          "min": 0.2887931034482759,
+          "q25": 0.3229910714285714,
+          "median": 0.4252865720524017,
+          "q75": 0.4497632184586333,
+          "max": 0.47658402203856753
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.3942718988283429,
+          "q25": 0.3942718988283429,
+          "median": 0.3942718988283429,
+          "q75": 0.3942718988283429,
+          "max": 0.3942718988283429
+        },
+        "domain_points": {
+          "n": 6,
+          "min": 3,
+          "q25": 3.0,
+          "median": 3.5,
+          "q75": 4.0,
+          "max": 4
+        },
+        "constructed_nodes": {
+          "n": 6,
+          "min": 229,
+          "q25": 234.5,
+          "median": 243.5,
+          "q75": 283.25,
+          "max": 296
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 6,
+          "min": 1.7736842105263158,
+          "q25": 1.7831224811705524,
+          "median": 1.7993342044676748,
+          "q75": 1.816862641862642,
+          "max": 1.8221906116642959
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 6,
+            "min": 0.9644360671910999,
+            "q25": 1.110665833897761,
+            "median": 1.1453935165702167,
+            "q75": 1.1615144800814539,
+            "max": 1.190349640049099
+          },
+          "demand_slower_than_full_requests": 5,
+          "full_total_ms": 41.56918499938911,
+          "demand_total_ms": 46.27113499736879,
+          "direct_record_total_ms": 37.75063200009754
+        }
+      },
+      "union": {
+        "requests": 6,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 3,
+        "statuses": {
+          "ACCEPT": 2,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 2,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 41580,
+        "demand_cells": 18374,
+        "pooled_cell_reduction_fraction": 0.5581048581048581,
+        "request_cell_reduction_fraction": {
+          "n": 6,
+          "min": 0.4693486590038314,
+          "q25": 0.4926774989274989,
+          "median": 0.5726351351351351,
+          "q75": 0.6102374208269404,
+          "max": 0.6394245485154576
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5581048581048581,
+          "q25": 0.5581048581048581,
+          "median": 0.5581048581048581,
+          "q75": 0.5581048581048581,
+          "max": 0.5581048581048581
+        },
+        "domain_points": {
+          "n": 6,
+          "min": 27,
+          "q25": 27.0,
+          "median": 27.0,
+          "q75": 27.0,
+          "max": 27
+        },
+        "constructed_nodes": {
+          "n": 6,
+          "min": 229,
+          "q25": 234.5,
+          "median": 243.5,
+          "q75": 283.25,
+          "max": 296
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 6,
+          "min": 1.8289473684210527,
+          "q25": 1.834406073848882,
+          "median": 1.8507821901323707,
+          "q75": 1.8600437083543073,
+          "max": 1.863130881094953
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 6,
+            "min": 0.278672840403315,
+            "q25": 1.0689369100461559,
+            "median": 1.2831493317298701,
+            "q75": 1.632147968319109,
+            "max": 1.728800331368769
+          },
+          "demand_slower_than_full_requests": 5,
+          "full_total_ms": 130.82592099090107,
+          "demand_total_ms": 104.0679690122488,
+          "direct_record_total_ms": 57.91451699769823
+        }
+      }
+    }
+  },
+  {
+    "problem": "168-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 4,
+      "union_accept": 4,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "REFUTED/REFUTED": 4
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 4064,
+        "demand_cells": 2958,
+        "pooled_cell_reduction_fraction": 0.27214566929133854,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.25898203592814373,
+          "q25": 0.25989857020652574,
+          "median": 0.261437908496732,
+          "q75": 0.283276740237691,
+          "max": 0.3277777777777777
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.27214566929133854,
+          "q25": 0.27214566929133854,
+          "median": 0.27214566929133854,
+          "q75": 0.27214566929133854,
+          "max": 0.27214566929133854
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 4,
+          "q25": 4.0,
+          "median": 4.0,
+          "q75": 4.0,
+          "max": 4
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 90,
+          "q25": 94.5,
+          "median": 125.5,
+          "q75": 156.5,
+          "max": 167
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.7442748091603053,
+          "q25": 1.7802579082359646,
+          "median": 1.801010101010101,
+          "q75": 1.8028425851434702,
+          "max": 1.8053097345132743
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.982359553040805,
+            "q25": 1.01093353074871,
+            "median": 1.0669978568729255,
+            "q75": 1.1062328675853772,
+            "max": 1.16781130613638
+          },
+          "demand_slower_than_full_requests": 6,
+          "full_total_ms": 33.06192299351096,
+          "demand_total_ms": 35.06920799554791,
+          "direct_record_total_ms": 29.44560399191687
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 42672,
+        "demand_cells": 30444,
+        "pooled_cell_reduction_fraction": 0.2865579302587177,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.2690333618477331,
+          "q25": 0.27010614625091556,
+          "median": 0.2763883331110222,
+          "q75": 0.3044526639178592,
+          "max": 0.35105820105820107
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.2865579302587177,
+          "q25": 0.2865579302587177,
+          "median": 0.2865579302587177,
+          "q75": 0.2865579302587177,
+          "max": 0.2865579302587177
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 42,
+          "q25": 42.0,
+          "median": 42.0,
+          "q75": 42.0,
+          "max": 42
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 90,
+          "q25": 94.5,
+          "median": 125.5,
+          "q75": 156.5,
+          "max": 167
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.7950169875424689,
+          "q25": 1.823381087808967,
+          "median": 1.8329778156996588,
+          "q75": 1.8332358104154476,
+          "max": 1.8459028281363308
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.9219571856739972,
+            "q25": 2.052188770126042,
+            "median": 2.1309366181778033,
+            "q75": 2.371856801455718,
+            "max": 2.656587545349994
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 58.91356700158212,
+          "demand_total_ms": 131.96087098913267,
+          "direct_record_total_ms": 48.072484009026084
+        }
+      }
+    }
+  },
+  {
+    "problem": "171-B",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 125,
+        "demand_cells": 94,
+        "pooled_cell_reduction_fraction": 0.248,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.15625,
+          "q25": 0.20325307377049182,
+          "median": 0.25025614754098363,
+          "q75": 0.2972592213114754,
+          "max": 0.34426229508196726
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.248,
+          "q25": 0.248,
+          "median": 0.248,
+          "q75": 0.248,
+          "max": 0.248
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 1,
+          "q25": 1.0,
+          "median": 1.0,
+          "q75": 1.0,
+          "max": 1
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 61,
+          "q25": 61.75,
+          "median": 62.5,
+          "q75": 63.25,
+          "max": 64
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.6,
+          "q25": 1.6166666666666667,
+          "median": 1.6333333333333333,
+          "q75": 1.6500000000000001,
+          "max": 1.6666666666666667
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.9586901078795723,
+            "q25": 1.0105196716152576,
+            "median": 1.0623492353509427,
+            "q75": 1.1141787990866279,
+            "max": 1.166008362822313
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 3.280073004134465,
+          "demand_total_ms": 3.4841200031223707,
+          "direct_record_total_ms": 2.9817049944540486
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 5000,
+        "demand_cells": 3214,
+        "pooled_cell_reduction_fraction": 0.35719999999999996,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.26289062500000004,
+          "q25": 0.3112048539959017,
+          "median": 0.3595190829918033,
+          "q75": 0.4078333119877049,
+          "max": 0.45614754098360655
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.35719999999999996,
+          "q25": 0.35719999999999996,
+          "median": 0.35719999999999996,
+          "q75": 0.35719999999999996,
+          "max": 0.35719999999999996
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 40,
+          "q25": 40.0,
+          "median": 40.0,
+          "q75": 40.0,
+          "max": 40
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 61,
+          "q25": 61.75,
+          "median": 62.5,
+          "q75": 63.25,
+          "max": 64
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.8876523582405935,
+          "q25": 1.8906827502177475,
+          "median": 1.8937131421949012,
+          "q75": 1.8967435341720549,
+          "max": 1.8997739261492088
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.8666292134899423,
+            "q25": 2.0867969097588475,
+            "median": 2.306964606027753,
+            "q75": 2.5271323022966588,
+            "max": 2.747299998565564
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 6.398223005817272,
+          "demand_total_ms": 14.82347500132164,
+          "direct_record_total_ms": 5.782737003755756
+        }
+      }
+    }
+  },
+  {
+    "problem": "194-A",
+    "combinations": {
+      "combinations": 18,
+      "subjects": 3,
+      "problems": 1,
+      "candidate_sources": 6,
+      "repair_accept": 11,
+      "union_accept": 9,
+      "repair_accept_union_refute": 2,
+      "reversal_fraction_of_repair_acceptances": 0.18181818181818182,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 2,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 9,
+        "ACCEPT/REFUTED": 2,
+        "REFUTED/REFUTED": 7
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 12,
+      "own_original": 3,
+      "own_reference": 3
+    },
+    "requests": {
+      "repair": {
+        "requests": 18,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 6,
+        "statuses": {
+          "ACCEPT": 11,
+          "REFUTED": 7
+        },
+        "candidate_classes": {
+          "cross_source": 12,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 10015,
+        "demand_cells": 5713,
+        "pooled_cell_reduction_fraction": 0.4295556665002497,
+        "request_cell_reduction_fraction": {
+          "n": 18,
+          "min": 0.3280141843971631,
+          "q25": 0.3549394073201845,
+          "median": 0.4199892147653342,
+          "q75": 0.4720154845154845,
+          "max": 0.601980198019802
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4295556665002497,
+          "q25": 0.4295556665002497,
+          "median": 0.4295556665002497,
+          "q75": 0.4295556665002497,
+          "max": 0.4295556665002497
+        },
+        "domain_points": {
+          "n": 18,
+          "min": 5,
+          "q25": 5.0,
+          "median": 6.0,
+          "q75": 6.0,
+          "max": 6
+        },
+        "constructed_nodes": {
+          "n": 18,
+          "min": 39,
+          "q25": 80.75,
+          "median": 101.0,
+          "q75": 118.75,
+          "max": 154
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 18,
+          "min": 1.691542288557214,
+          "q25": 1.7471889400921659,
+          "median": 1.7722488700885046,
+          "q75": 1.7843655319907326,
+          "max": 1.8060606060606061
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 18,
+            "min": 0.7703764309058518,
+            "q25": 1.0106323770554873,
+            "median": 1.044651655983724,
+            "q75": 1.1551185959488555,
+            "max": 1.569340687218317
+          },
+          "demand_slower_than_full_requests": 14,
+          "full_total_ms": 71.08508297096705,
+          "demand_total_ms": 74.83747802325524,
+          "direct_record_total_ms": 62.33297298604157
+        }
+      },
+      "union": {
+        "requests": 18,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 6,
+        "statuses": {
+          "ACCEPT": 9,
+          "REFUTED": 9
+        },
+        "candidate_classes": {
+          "cross_source": 12,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 59103,
+        "demand_cells": 35906,
+        "pooled_cell_reduction_fraction": 0.3924843070571714,
+        "request_cell_reduction_fraction": {
+          "n": 18,
+          "min": 0.303030303030303,
+          "q25": 0.3341387294875667,
+          "median": 0.37857791360710463,
+          "q75": 0.42766702993975725,
+          "max": 0.5475547554755475
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.3924843070571714,
+          "q25": 0.3924843070571714,
+          "median": 0.3924843070571714,
+          "q75": 0.3924843070571714,
+          "max": 0.3924843070571714
+        },
+        "domain_points": {
+          "n": 18,
+          "min": 33,
+          "q25": 33.0,
+          "median": 33.0,
+          "q75": 33.0,
+          "max": 33
+        },
+        "constructed_nodes": {
+          "n": 18,
+          "min": 39,
+          "q25": 80.75,
+          "median": 101.0,
+          "q75": 118.75,
+          "max": 154
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 18,
+          "min": 1.7639939485627836,
+          "q25": 1.7974874622282162,
+          "median": 1.804425164552352,
+          "q75": 1.808973172987974,
+          "max": 1.8501240694789083
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 18,
+            "min": 0.1904984269656891,
+            "q25": 1.491814934663457,
+            "median": 1.7072905135823242,
+            "q75": 1.913105123546169,
+            "max": 2.2296980308792573
+          },
+          "demand_slower_than_full_requests": 16,
+          "full_total_ms": 193.7989679936436,
+          "demand_total_ms": 199.86349099781364,
+          "direct_record_total_ms": 92.12544101319509
+        }
+      }
+    }
+  },
+  {
+    "problem": "197-A",
+    "combinations": {
+      "combinations": 45,
+      "subjects": 5,
+      "problems": 1,
+      "candidate_sources": 9,
+      "repair_accept": 29,
+      "union_accept": 20,
+      "repair_accept_union_refute": 9,
+      "reversal_fraction_of_repair_acceptances": 0.3103448275862069,
+      "reversal_subjects": 4,
+      "reversal_candidate_sources": 4,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 20,
+        "ACCEPT/REFUTED": 9,
+        "REFUTED/REFUTED": 16
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 35,
+      "own_original": 5,
+      "own_reference": 5
+    },
+    "requests": {
+      "repair": {
+        "requests": 45,
+        "problems": 1,
+        "subjects": 5,
+        "candidate_sources": 9,
+        "statuses": {
+          "ACCEPT": 29,
+          "REFUTED": 16
+        },
+        "candidate_classes": {
+          "cross_source": 35,
+          "own_original": 5,
+          "own_reference": 5
+        },
+        "full_cells": 40950,
+        "demand_cells": 21734,
+        "pooled_cell_reduction_fraction": 0.4692551892551893,
+        "request_cell_reduction_fraction": {
+          "n": 45,
+          "min": 0.2789473684210526,
+          "q25": 0.3486842105263158,
+          "median": 0.40909090909090906,
+          "q75": 0.4805555555555555,
+          "max": 0.6784313725490196
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4692551892551893,
+          "q25": 0.4692551892551893,
+          "median": 0.4692551892551893,
+          "q75": 0.4692551892551893,
+          "max": 0.4692551892551893
+        },
+        "domain_points": {
+          "n": 45,
+          "min": 2,
+          "q25": 3.0,
+          "median": 10,
+          "q75": 10.0,
+          "max": 15
+        },
+        "constructed_nodes": {
+          "n": 45,
+          "min": 52,
+          "q25": 94.0,
+          "median": 110,
+          "q75": 136.0,
+          "max": 168
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 45,
+          "min": 1.625,
+          "q25": 1.7851851851851852,
+          "median": 1.8451492537313432,
+          "q75": 1.8689407540394973,
+          "max": 1.909438775510204
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 45,
+            "min": 0.10025121792989472,
+            "q25": 1.0127516222416215,
+            "median": 1.0952893775871644,
+            "q75": 1.354560682991669,
+            "max": 19.425157237691437
+          },
+          "demand_slower_than_full_requests": 36,
+          "full_total_ms": 248.60076898767147,
+          "demand_total_ms": 313.8974840185256,
+          "direct_record_total_ms": 205.93827700213296
+        }
+      },
+      "union": {
+        "requests": 45,
+        "problems": 1,
+        "subjects": 5,
+        "candidate_sources": 9,
+        "statuses": {
+          "ACCEPT": 20,
+          "REFUTED": 25
+        },
+        "candidate_classes": {
+          "cross_source": 35,
+          "own_original": 5,
+          "own_reference": 5
+        },
+        "full_cells": 481080,
+        "demand_cells": 217644,
+        "pooled_cell_reduction_fraction": 0.547592915939137,
+        "request_cell_reduction_fraction": {
+          "n": 45,
+          "min": 0.464936990363232,
+          "q25": 0.5197368421052632,
+          "median": 0.5420578473210051,
+          "q75": 0.5776092774308653,
+          "max": 0.7310216718266254
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.547592915939137,
+          "q25": 0.547592915939137,
+          "median": 0.547592915939137,
+          "q75": 0.547592915939137,
+          "max": 0.547592915939137
+        },
+        "domain_points": {
+          "n": 45,
+          "min": 95,
+          "q25": 95.0,
+          "median": 95,
+          "q75": 95.0,
+          "max": 95
+        },
+        "constructed_nodes": {
+          "n": 45,
+          "min": 52,
+          "q25": 94.0,
+          "median": 110,
+          "q75": 136.0,
+          "max": 168
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 45,
+          "min": 1.8605491329479769,
+          "q25": 1.8906697195191757,
+          "median": 1.91129883843717,
+          "q75": 1.9350828729281768,
+          "max": 1.9625595643294758
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 45,
+            "min": 0.4909707754910615,
+            "q25": 1.8373769310796784,
+            "median": 1.98956173447722,
+            "q75": 2.2267519905092144,
+            "max": 5.019125005421106
+          },
+          "demand_slower_than_full_requests": 43,
+          "full_total_ms": 556.1342890214291,
+          "demand_total_ms": 1121.6977379954187,
+          "direct_record_total_ms": 585.3541999895242
+        }
+      }
+    }
+  },
+  {
+    "problem": "216-A",
+    "combinations": {
+      "combinations": 126,
+      "subjects": 9,
+      "problems": 1,
+      "candidate_sources": 14,
+      "repair_accept": 68,
+      "union_accept": 45,
+      "repair_accept_union_refute": 23,
+      "reversal_fraction_of_repair_acceptances": 0.3382352941176471,
+      "reversal_subjects": 4,
+      "reversal_candidate_sources": 8,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 45,
+        "ACCEPT/REFUTED": 23,
+        "REFUTED/REFUTED": 58
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 108,
+      "own_original": 9,
+      "own_reference": 9
+    },
+    "requests": {
+      "repair": {
+        "requests": 126,
+        "problems": 1,
+        "subjects": 9,
+        "candidate_sources": 14,
+        "statuses": {
+          "ACCEPT": 68,
+          "REFUTED": 58
+        },
+        "candidate_classes": {
+          "cross_source": 108,
+          "own_original": 9,
+          "own_reference": 9
+        },
+        "full_cells": 50477,
+        "demand_cells": 33880,
+        "pooled_cell_reduction_fraction": 0.3288032173068922,
+        "request_cell_reduction_fraction": {
+          "n": 126,
+          "min": 0.09219858156028371,
+          "q25": 0.25402399765876493,
+          "median": 0.32097455209403175,
+          "q75": 0.4243589743589744,
+          "max": 0.6439909297052154
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.3288032173068922,
+          "q25": 0.3288032173068922,
+          "median": 0.3288032173068922,
+          "q75": 0.3288032173068922,
+          "max": 0.3288032173068922
+        },
+        "domain_points": {
+          "n": 126,
+          "min": 1,
+          "q25": 2.0,
+          "median": 3.0,
+          "q75": 3.0,
+          "max": 3
+        },
+        "constructed_nodes": {
+          "n": 126,
+          "min": 89,
+          "q25": 147.0,
+          "median": 168.0,
+          "q75": 188.0,
+          "max": 244
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 126,
+          "min": 1.6440677966101696,
+          "q25": 1.78617657230374,
+          "median": 1.8076923076923077,
+          "q75": 1.8181818181818181,
+          "max": 1.8461538461538463
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 126,
+            "min": 0.33949540705617554,
+            "q25": 0.904276301321304,
+            "median": 1.0176805447780461,
+            "q75": 1.0890823824266616,
+            "max": 15.563226118912421
+          },
+          "demand_slower_than_full_requests": 67,
+          "full_total_ms": 693.8289230020018,
+          "demand_total_ms": 616.5194710265496,
+          "direct_record_total_ms": 698.3425519792945
+        }
+      },
+      "union": {
+        "requests": 126,
+        "problems": 1,
+        "subjects": 9,
+        "candidate_sources": 14,
+        "statuses": {
+          "ACCEPT": 45,
+          "REFUTED": 81
+        },
+        "candidate_classes": {
+          "cross_source": 108,
+          "own_original": 9,
+          "own_reference": 9
+        },
+        "full_cells": 834000,
+        "demand_cells": 469626,
+        "pooled_cell_reduction_fraction": 0.4368992805755396,
+        "request_cell_reduction_fraction": {
+          "n": 126,
+          "min": 0.2443478260869565,
+          "q25": 0.3618232484076433,
+          "median": 0.4200990711039829,
+          "q75": 0.5079122340425533,
+          "max": 0.7042517006802721
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4368992805755396,
+          "q25": 0.4368992805755396,
+          "median": 0.4368992805755396,
+          "q75": 0.4368992805755396,
+          "max": 0.4368992805755396
+        },
+        "domain_points": {
+          "n": 126,
+          "min": 40,
+          "q25": 40.0,
+          "median": 40.0,
+          "q75": 40.0,
+          "max": 40
+        },
+        "constructed_nodes": {
+          "n": 126,
+          "min": 89,
+          "q25": 147.0,
+          "median": 168.0,
+          "q75": 188.0,
+          "max": 244
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 126,
+          "min": 1.828099838969404,
+          "q25": 1.8487508600717306,
+          "median": 1.864310565830434,
+          "q75": 1.8731152204836414,
+          "max": 1.8861613164283788
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 126,
+            "min": 0.4028084253567381,
+            "q25": 1.7143252435402974,
+            "median": 1.99501191827029,
+            "q75": 2.203512329558284,
+            "max": 10.489614998260825
+          },
+          "demand_slower_than_full_requests": 124,
+          "full_total_ms": 1340.0550929654855,
+          "demand_total_ms": 2850.6735740229487,
+          "direct_record_total_ms": 999.662075919332
+        }
+      }
+    }
+  },
+  {
+    "problem": "313-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 5,
+      "union_accept": 4,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.2,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 5,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 20065,
+        "demand_cells": 10997,
+        "pooled_cell_reduction_fraction": 0.4519312235235484,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.38557993730407525,
+          "q25": 0.4469417077175698,
+          "median": 0.4608692197679962,
+          "q75": 0.5000792769938164,
+          "max": 0.6851595006934812
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4519312235235484,
+          "q25": 0.4519312235235484,
+          "median": 0.4519312235235484,
+          "q75": 0.4519312235235484,
+          "max": 0.4519312235235484
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 7,
+          "q25": 7.0,
+          "median": 18.0,
+          "q75": 29.0,
+          "max": 29
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 103,
+          "q25": 115.0,
+          "median": 138.0,
+          "q75": 159.0,
+          "max": 170
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.8237885462555066,
+          "q25": 1.8869822779769017,
+          "median": 1.9037331376569941,
+          "q75": 1.923262108472606,
+          "max": 1.9424860853432282
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.9353618450847428,
+            "q25": 1.0399572979837692,
+            "median": 1.2818180010602265,
+            "q75": 1.6781719846448735,
+            "max": 1.7378600466475171
+          },
+          "demand_slower_than_full_requests": 6,
+          "full_total_ms": 49.46009398554452,
+          "demand_total_ms": 66.93735800217837,
+          "direct_record_total_ms": 41.443195012107026
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 51559,
+        "demand_cells": 26579,
+        "pooled_cell_reduction_fraction": 0.4844934928916387,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.3986284508528223,
+          "q25": 0.4495752474475879,
+          "median": 0.47000080746093903,
+          "q75": 0.4997490967482938,
+          "max": 0.6851890105350134
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4844934928916387,
+          "q25": 0.4844934928916387,
+          "median": 0.4844934928916387,
+          "q75": 0.4844934928916387,
+          "max": 0.4844934928916387
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 47,
+          "q25": 47.0,
+          "median": 47.0,
+          "q75": 47.0,
+          "max": 47
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 103,
+          "q25": 115.0,
+          "median": 138.0,
+          "q75": 159.0,
+          "max": 170
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.8700787401574803,
+          "q25": 1.9083951207845014,
+          "median": 1.9131625485264174,
+          "q75": 1.9208051278424263,
+          "max": 1.941812865497076
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.15733907586583,
+            "q25": 1.6899385753271914,
+            "median": 1.7359296801172843,
+            "q75": 1.8807191474687892,
+            "max": 2.1127562755656863
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 74.09022700448986,
+          "demand_total_ms": 128.822542996204,
+          "direct_record_total_ms": 60.91770799685037
+        }
+      }
+    }
+  },
+  {
+    "problem": "39-D",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 955,
+        "demand_cells": 499,
+        "pooled_cell_reduction_fraction": 0.47748691099476437,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4185567010309278,
+          "q25": 0.4484919938583022,
+          "median": 0.47842728668567663,
+          "q75": 0.5083625795130511,
+          "max": 0.5382978723404255
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.47748691099476437,
+          "q25": 0.47748691099476437,
+          "median": 0.47748691099476437,
+          "q75": 0.47748691099476437,
+          "max": 0.47748691099476437
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 5,
+          "q25": 5.0,
+          "median": 5.0,
+          "q75": 5.0,
+          "max": 5
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 94,
+          "q25": 94.75,
+          "median": 95.5,
+          "q75": 96.25,
+          "max": 97
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.728110599078341,
+          "q25": 1.749097133705919,
+          "median": 1.7700836683334966,
+          "q75": 1.7910702029610746,
+          "max": 1.8120567375886525
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.7316648882034329,
+            "q25": 0.8054460359874056,
+            "median": 0.8792271837713784,
+            "q75": 0.9530083315553513,
+            "max": 1.026789479339324
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 10.222053002507892,
+          "demand_total_ms": 8.852954997564666,
+          "direct_record_total_ms": 8.485703001497313
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 10696,
+        "demand_cells": 3451,
+        "pooled_cell_reduction_fraction": 0.6773560209424083,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.615979381443299,
+          "q25": 0.6471574084228998,
+          "median": 0.6783354354025006,
+          "q75": 0.7095134623821013,
+          "max": 0.7406914893617021
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.6773560209424083,
+          "q25": 0.6773560209424083,
+          "median": 0.6773560209424083,
+          "q75": 0.6773560209424083,
+          "max": 0.6773560209424083
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 56,
+          "q25": 56.0,
+          "median": 56.0,
+          "q75": 56.0,
+          "max": 56
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 94,
+          "q25": 94.75,
+          "median": 95.5,
+          "q75": 96.25,
+          "max": 97
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.8586080586080587,
+          "q25": 1.890001106276274,
+          "median": 1.9213941539444894,
+          "q75": 1.952787201612705,
+          "max": 1.9841802492809204
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.1840025166341945,
+            "q25": 1.3093214315679218,
+            "median": 1.434640346501649,
+            "q75": 1.5599592614353766,
+            "max": 1.6852781763691038
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 14.451063005253673,
+          "demand_total_ms": 20.615453999198508,
+          "direct_record_total_ms": 12.01793400105089
+        }
+      }
+    }
+  },
+  {
+    "problem": "4-A",
+    "combinations": {
+      "combinations": 120,
+      "subjects": 8,
+      "problems": 1,
+      "candidate_sources": 15,
+      "repair_accept": 63,
+      "union_accept": 56,
+      "repair_accept_union_refute": 7,
+      "reversal_fraction_of_repair_acceptances": 0.1111111111111111,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 7,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 56,
+        "ACCEPT/REFUTED": 7,
+        "REFUTED/REFUTED": 57
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 104,
+      "own_original": 8,
+      "own_reference": 8
+    },
+    "requests": {
+      "repair": {
+        "requests": 120,
+        "problems": 1,
+        "subjects": 8,
+        "candidate_sources": 15,
+        "statuses": {
+          "ACCEPT": 63,
+          "REFUTED": 57
+        },
+        "candidate_classes": {
+          "cross_source": 104,
+          "own_original": 8,
+          "own_reference": 8
+        },
+        "full_cells": 30572,
+        "demand_cells": 15863,
+        "pooled_cell_reduction_fraction": 0.4811265209996075,
+        "request_cell_reduction_fraction": {
+          "n": 120,
+          "min": 0.29508196721311475,
+          "q25": 0.41538461538461535,
+          "median": 0.4423076923076923,
+          "q75": 0.5614766081871345,
+          "max": 0.6935064935064935
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4811265209996075,
+          "q25": 0.4811265209996075,
+          "median": 0.4811265209996075,
+          "q75": 0.4811265209996075,
+          "max": 0.4811265209996075
+        },
+        "domain_points": {
+          "n": 120,
+          "min": 2,
+          "q25": 5.0,
+          "median": 5.0,
+          "q75": 5.0,
+          "max": 5
+        },
+        "constructed_nodes": {
+          "n": 120,
+          "min": 36,
+          "q25": 39.0,
+          "median": 52.0,
+          "q75": 71.0,
+          "max": 103
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 120,
+          "min": 1.6363636363636365,
+          "q25": 1.8181818181818181,
+          "median": 1.8323353293413174,
+          "q75": 1.8771929824561404,
+          "max": 1.9125683060109289
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 120,
+            "min": 0.04446802187314173,
+            "q25": 0.9206155011626485,
+            "median": 0.9832953731531431,
+            "q75": 1.074882292634824,
+            "max": 24.991487171009233
+          },
+          "demand_slower_than_full_requests": 50,
+          "full_total_ms": 432.0221549787675,
+          "demand_total_ms": 436.69458600197686,
+          "direct_record_total_ms": 389.76231499691494
+        }
+      },
+      "union": {
+        "requests": 120,
+        "problems": 1,
+        "subjects": 8,
+        "candidate_sources": 15,
+        "statuses": {
+          "ACCEPT": 56,
+          "REFUTED": 64
+        },
+        "candidate_classes": {
+          "cross_source": 104,
+          "own_original": 8,
+          "own_reference": 8
+        },
+        "full_cells": 129221,
+        "demand_cells": 63612,
+        "pooled_cell_reduction_fraction": 0.5077270722251027,
+        "request_cell_reduction_fraction": {
+          "n": 120,
+          "min": 0.35163934426229504,
+          "q25": 0.43846153846153846,
+          "median": 0.4619409894135169,
+          "q75": 0.5837242224475997,
+          "max": 0.6905172413793104
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5077270722251027,
+          "q25": 0.5077270722251027,
+          "median": 0.5077270722251027,
+          "q75": 0.5077270722251027,
+          "max": 0.5077270722251027
+        },
+        "domain_points": {
+          "n": 120,
+          "min": 13,
+          "q25": 20.0,
+          "median": 20.0,
+          "q75": 20.0,
+          "max": 20
+        },
+        "constructed_nodes": {
+          "n": 120,
+          "min": 36,
+          "q25": 39.0,
+          "median": 52.0,
+          "q75": 71.0,
+          "max": 103
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 120,
+          "min": 1.8398268398268398,
+          "q25": 1.888558692421991,
+          "median": 1.9027777777777777,
+          "q75": 1.9220252775879318,
+          "max": 1.9358437935843793
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 120,
+            "min": 0.23614016909669885,
+            "q25": 1.174238444545392,
+            "median": 1.2831106088353015,
+            "q75": 1.4163906815275622,
+            "max": 43.18439926986841
+          },
+          "demand_slower_than_full_requests": 112,
+          "full_total_ms": 427.48790301266126,
+          "demand_total_ms": 745.2784589695511,
+          "direct_record_total_ms": 411.8097079990548
+        }
+      }
+    }
+  },
+  {
+    "problem": "417-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 13950,
+        "demand_cells": 7690,
+        "pooled_cell_reduction_fraction": 0.4487455197132616,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4145299145299145,
+          "q25": 0.4317488067488067,
+          "median": 0.44896769896769895,
+          "q75": 0.46618659118659117,
+          "max": 0.4834054834054834
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4487455197132616,
+          "q25": 0.4487455197132616,
+          "median": 0.4487455197132616,
+          "q75": 0.4487455197132616,
+          "max": 0.4487455197132616
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 30,
+          "q25": 30.0,
+          "median": 30.0,
+          "q75": 30.0,
+          "max": 30
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 231,
+          "q25": 231.75,
+          "median": 232.5,
+          "q75": 233.25,
+          "max": 234
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7988826815642458,
+          "q25": 1.8033590914651552,
+          "median": 1.8078355013660645,
+          "q75": 1.8123119112669739,
+          "max": 1.8167883211678832
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.4918071013207725,
+            "q25": 1.5817189834381882,
+            "median": 1.671630865555604,
+            "q75": 1.7615427476730199,
+            "max": 1.8514546297904355
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 22.46032900438877,
+          "demand_total_ms": 37.52202999748988,
+          "direct_record_total_ms": 20.213682000758126
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 22320,
+        "demand_cells": 10665,
+        "pooled_cell_reduction_fraction": 0.5221774193548387,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4843304843304843,
+          "q25": 0.5033768315018314,
+          "median": 0.5224231786731787,
+          "q75": 0.5414695258445259,
+          "max": 0.560515873015873
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5221774193548387,
+          "q25": 0.5221774193548387,
+          "median": 0.5221774193548387,
+          "q75": 0.5221774193548387,
+          "max": 0.5221774193548387
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 48,
+          "q25": 48.0,
+          "median": 48.0,
+          "q75": 48.0,
+          "max": 48
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 231,
+          "q25": 231.75,
+          "median": 232.5,
+          "q75": 233.25,
+          "max": 234
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7869895341678637,
+          "q25": 1.794230410294406,
+          "median": 1.8014712864209486,
+          "q75": 1.808712162547491,
+          "max": 1.8159530386740332
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.5991746851213635,
+            "q25": 2.731890573679885,
+            "median": 3.8646064622384064,
+            "q75": 4.997322350796928,
+            "max": 6.130038239355449
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 29.323330003535375,
+          "demand_total_ms": 116.53846700210124,
+          "direct_record_total_ms": 24.045846999797504
+        }
+      }
+    }
+  },
+  {
+    "problem": "448-A",
+    "combinations": {
+      "combinations": 15,
+      "subjects": 3,
+      "problems": 1,
+      "candidate_sources": 5,
+      "repair_accept": 9,
+      "union_accept": 6,
+      "repair_accept_union_refute": 3,
+      "reversal_fraction_of_repair_acceptances": 0.3333333333333333,
+      "reversal_subjects": 2,
+      "reversal_candidate_sources": 2,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 6,
+        "ACCEPT/REFUTED": 3,
+        "REFUTED/REFUTED": 6
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 9,
+      "own_original": 3,
+      "own_reference": 3
+    },
+    "requests": {
+      "repair": {
+        "requests": 15,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 5,
+        "statuses": {
+          "ACCEPT": 9,
+          "REFUTED": 6
+        },
+        "candidate_classes": {
+          "cross_source": 9,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 21870,
+        "demand_cells": 12859,
+        "pooled_cell_reduction_fraction": 0.4120256058527664,
+        "request_cell_reduction_fraction": {
+          "n": 15,
+          "min": 0.1917808219178082,
+          "q25": 0.38930903659562643,
+          "median": 0.4112554112554112,
+          "q75": 0.4526675585651847,
+          "max": 0.5185643564356436
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4120256058527664,
+          "q25": 0.4120256058527664,
+          "median": 0.4120256058527664,
+          "q75": 0.4120256058527664,
+          "max": 0.4120256058527664
+        },
+        "domain_points": {
+          "n": 15,
+          "min": 3,
+          "q25": 3.0,
+          "median": 4,
+          "q75": 8.0,
+          "max": 8
+        },
+        "constructed_nodes": {
+          "n": 15,
+          "min": 202,
+          "q25": 250.5,
+          "median": 292,
+          "q75": 356.0,
+          "max": 385
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 15,
+          "min": 1.7580993520518358,
+          "q25": 1.7972132721647285,
+          "median": 1.8088235294117647,
+          "q75": 1.8140347894654982,
+          "max": 1.8250484183344093
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 15,
+            "min": 0.1513466784184498,
+            "q25": 1.01073955197349,
+            "median": 1.1422889458547083,
+            "q75": 1.2329253982124297,
+            "max": 1.715676458993913
+          },
+          "demand_slower_than_full_requests": 11,
+          "full_total_ms": 174.48942000919487,
+          "demand_total_ms": 142.99090198619524,
+          "direct_record_total_ms": 111.1116100291838
+        }
+      },
+      "union": {
+        "requests": 15,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 5,
+        "statuses": {
+          "ACCEPT": 6,
+          "REFUTED": 9
+        },
+        "candidate_classes": {
+          "cross_source": 9,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 113100,
+        "demand_cells": 58681,
+        "pooled_cell_reduction_fraction": 0.48115826702033604,
+        "request_cell_reduction_fraction": {
+          "n": 15,
+          "min": 0.3285853658536585,
+          "q25": 0.4507995788430571,
+          "median": 0.4813597733711048,
+          "q75": 0.5265902018773306,
+          "max": 0.6139792387543253
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.48115826702033604,
+          "q25": 0.48115826702033604,
+          "median": 0.48115826702033604,
+          "q75": 0.48115826702033604,
+          "max": 0.48115826702033604
+        },
+        "domain_points": {
+          "n": 15,
+          "min": 25,
+          "q25": 25.0,
+          "median": 25,
+          "q75": 25.0,
+          "max": 25
+        },
+        "constructed_nodes": {
+          "n": 15,
+          "min": 202,
+          "q25": 250.5,
+          "median": 292,
+          "q75": 356.0,
+          "max": 385
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 15,
+          "min": 1.800420168067227,
+          "q25": 1.8186968146703624,
+          "median": 1.8234651518461875,
+          "q75": 1.8284604861235372,
+          "max": 1.8347056401811446
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 15,
+            "min": 1.3769703362128234,
+            "q25": 1.6107108180779925,
+            "median": 1.7116312801930447,
+            "q75": 1.9628679083771856,
+            "max": 5.665666458624557
+          },
+          "demand_slower_than_full_requests": 15,
+          "full_total_ms": 185.87525899056345,
+          "demand_total_ms": 390.4899239933002,
+          "direct_record_total_ms": 155.18593001615955
+        }
+      }
+    }
+  },
+  {
+    "problem": "451-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 4,
+      "union_accept": 4,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "REFUTED/REFUTED": 4
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 1788,
+        "demand_cells": 758,
+        "pooled_cell_reduction_fraction": 0.5760626398210291,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.381578947368421,
+          "q25": 0.48958333333333337,
+          "median": 0.6325427275898152,
+          "q75": 0.6489258178007336,
+          "max": 0.6940639269406392
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5760626398210291,
+          "q25": 0.5760626398210291,
+          "median": 0.5760626398210291,
+          "q75": 0.5760626398210291,
+          "max": 0.5760626398210291
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 3,
+          "q25": 3.0,
+          "median": 3.0,
+          "q75": 3.0,
+          "max": 3
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 61,
+          "q25": 63.25,
+          "median": 73.0,
+          "q75": 80.5,
+          "max": 94
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.7761194029850746,
+          "q25": 1.7761194029850746,
+          "median": 1.8348682121308353,
+          "q75": 1.8937704582651391,
+          "max": 1.8942307692307692
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.8446627811965275,
+            "q25": 0.9428735517855363,
+            "median": 0.9713952671283312,
+            "q75": 1.0516243628403434,
+            "max": 1.4907577581832214
+          },
+          "demand_slower_than_full_requests": 3,
+          "full_total_ms": 26.761789005831815,
+          "demand_total_ms": 28.78141400287859,
+          "direct_record_total_ms": 33.59593399363803
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 16092,
+        "demand_cells": 6322,
+        "pooled_cell_reduction_fraction": 0.6071339796172011,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.41471734892787526,
+          "q25": 0.5203839144996061,
+          "median": 0.6635145784081955,
+          "q75": 0.6803652968036531,
+          "max": 0.7214611872146119
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.6071339796172011,
+          "q25": 0.6071339796172011,
+          "median": 0.6071339796172011,
+          "q75": 0.6071339796172011,
+          "max": 0.6071339796172011
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 27,
+          "q25": 27.0,
+          "median": 27.0,
+          "q75": 27.0,
+          "max": 27
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 61,
+          "q25": 63.25,
+          "median": 73.0,
+          "q75": 80.5,
+          "max": 94
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.9052823315118397,
+          "q25": 1.9052823315118397,
+          "median": 1.9318251790781513,
+          "q75": 1.9592052543220944,
+          "max": 1.9617169373549883
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.20262219612809285,
+            "q25": 1.0446327037810366,
+            "median": 1.1185876361486893,
+            "q75": 1.270059584553103,
+            "max": 1.77083908022257
+          },
+          "demand_slower_than_full_requests": 7,
+          "full_total_ms": 65.97820099705132,
+          "demand_total_ms": 43.59977199783316,
+          "direct_record_total_ms": 27.44523100409424
+        }
+      }
+    }
+  },
+  {
+    "problem": "466-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 6062,
+        "demand_cells": 3123,
+        "pooled_cell_reduction_fraction": 0.4848234905971627,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4485583224115334,
+          "q25": 0.46681741290499557,
+          "median": 0.4850765033984577,
+          "q75": 0.5033355938919198,
+          "max": 0.521594684385382
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4848234905971627,
+          "q25": 0.4848234905971627,
+          "median": 0.4848234905971627,
+          "q75": 0.4848234905971627,
+          "max": 0.4848234905971627
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 14,
+          "q25": 14.0,
+          "median": 14.0,
+          "q75": 14.0,
+          "max": 14
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 215,
+          "q25": 215.75,
+          "median": 216.5,
+          "q75": 217.25,
+          "max": 218
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.770138888888889,
+          "q25": 1.7766534833630423,
+          "median": 1.7831680778371957,
+          "q75": 1.7896826723113488,
+          "max": 1.7961972667855022
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.2615019512350081,
+            "q25": 0.5127640826553572,
+            "median": 0.7640262140757064,
+            "q75": 1.0152883454960555,
+            "max": 1.2665504769164047
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 45.97422500955872,
+          "demand_total_ms": 19.43728299374925,
+          "direct_record_total_ms": 13.143127005605493
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 8227,
+        "demand_cells": 4334,
+        "pooled_cell_reduction_fraction": 0.47319800656375355,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4377112506035732,
+          "q25": 0.45557841959282674,
+          "median": 0.47344558858208036,
+          "q75": 0.49131275757133397,
+          "max": 0.5091799265605875
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.47319800656375355,
+          "q25": 0.47319800656375355,
+          "median": 0.47319800656375355,
+          "q75": 0.47319800656375355,
+          "max": 0.47319800656375355
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 19,
+          "q25": 19.0,
+          "median": 19.0,
+          "q75": 19.0,
+          "max": 19
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 215,
+          "q25": 215.75,
+          "median": 216.5,
+          "q75": 217.25,
+          "max": 218
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.776558603491272,
+          "q25": 1.782397484177063,
+          "median": 1.7882363648628536,
+          "q75": 1.7940752455486444,
+          "max": 1.7999141262344354
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.30768082987287,
+            "q25": 1.345167921967309,
+            "median": 1.382655014061748,
+            "q75": 1.4201421061561872,
+            "max": 1.4576291982506262
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 16.743501997552812,
+          "demand_total_ms": 23.167733001173474,
+          "direct_record_total_ms": 14.560889998392668
+        }
+      }
+    }
+  },
+  {
+    "problem": "476-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 5,
+      "union_accept": 4,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.2,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 5,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 5204,
+        "demand_cells": 2880,
+        "pooled_cell_reduction_fraction": 0.44657955418908535,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.20408163265306123,
+          "q25": 0.42747589833479405,
+          "median": 0.46337210020124203,
+          "q75": 0.49414226712884435,
+          "max": 0.5947368421052632
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.44657955418908535,
+          "q25": 0.44657955418908535,
+          "median": 0.44657955418908535,
+          "q75": 0.44657955418908535,
+          "max": 0.44657955418908535
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 2,
+          "q25": 2.0,
+          "median": 4.5,
+          "q75": 7.0,
+          "max": 7
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 95,
+          "q25": 122.0,
+          "median": 141.0,
+          "q75": 164.75,
+          "max": 174
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.6883116883116882,
+          "q25": 1.7458237220031252,
+          "median": 1.8044311947150375,
+          "q75": 1.8246898382182177,
+          "max": 1.8441176470588236
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.06630577293232968,
+            "q25": 0.8860519758179513,
+            "median": 0.9471359414089285,
+            "q75": 1.0336327165317594,
+            "max": 1.190599514210168
+          },
+          "demand_slower_than_full_requests": 3,
+          "full_total_ms": 127.48770000325749,
+          "demand_total_ms": 39.2513079859782,
+          "direct_record_total_ms": 31.56570501596434
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 38920,
+        "demand_cells": 21930,
+        "pooled_cell_reduction_fraction": 0.4365364850976362,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.3224489795918367,
+          "q25": 0.414255492761945,
+          "median": 0.4379868655339211,
+          "q75": 0.4848933419521655,
+          "max": 0.5052631578947369
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4365364850976362,
+          "q25": 0.4365364850976362,
+          "median": 0.4365364850976362,
+          "q75": 0.4365364850976362,
+          "max": 0.4365364850976362
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 35,
+          "q25": 35.0,
+          "median": 35.0,
+          "q75": 35.0,
+          "max": 35
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 95,
+          "q25": 122.0,
+          "median": 141.0,
+          "q75": 164.75,
+          "max": 174
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.8397271952259164,
+          "q25": 1.8643101482326112,
+          "median": 1.87525979089419,
+          "q75": 1.8841142249672274,
+          "max": 1.9165232358003443
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.6039277168710562,
+            "q25": 1.6684961397998188,
+            "median": 1.7463432364073788,
+            "q75": 1.8986000055969392,
+            "max": 2.23786575628088
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 62.4771899820189,
+          "demand_total_ms": 112.04509300296195,
+          "direct_record_total_ms": 54.953402002865914
+        }
+      }
+    }
+  },
+  {
+    "problem": "478-A",
+    "combinations": {
+      "combinations": 72,
+      "subjects": 6,
+      "problems": 1,
+      "candidate_sources": 12,
+      "repair_accept": 41,
+      "union_accept": 36,
+      "repair_accept_union_refute": 5,
+      "reversal_fraction_of_repair_acceptances": 0.12195121951219512,
+      "reversal_subjects": 5,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 36,
+        "ACCEPT/REFUTED": 5,
+        "REFUTED/REFUTED": 31
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 60,
+      "own_original": 6,
+      "own_reference": 6
+    },
+    "requests": {
+      "repair": {
+        "requests": 72,
+        "problems": 1,
+        "subjects": 6,
+        "candidate_sources": 12,
+        "statuses": {
+          "ACCEPT": 41,
+          "REFUTED": 31
+        },
+        "candidate_classes": {
+          "cross_source": 60,
+          "own_original": 6,
+          "own_reference": 6
+        },
+        "full_cells": 32744,
+        "demand_cells": 19872,
+        "pooled_cell_reduction_fraction": 0.3931101881260689,
+        "request_cell_reduction_fraction": {
+          "n": 72,
+          "min": 0.2831541218637993,
+          "q25": 0.35051406926406925,
+          "median": 0.37092731829573933,
+          "q75": 0.4242760617760618,
+          "max": 0.4941520467836257
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.3931101881260689,
+          "q25": 0.3931101881260689,
+          "median": 0.3931101881260689,
+          "q75": 0.3931101881260689,
+          "max": 0.3931101881260689
+        },
+        "domain_points": {
+          "n": 72,
+          "min": 3,
+          "q25": 3.0,
+          "median": 3.0,
+          "q75": 3.0,
+          "max": 7
+        },
+        "constructed_nodes": {
+          "n": 72,
+          "min": 89,
+          "q25": 102.0,
+          "median": 116.0,
+          "q75": 135.25,
+          "max": 163
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 72,
+          "min": 1.716867469879518,
+          "q25": 1.7641697458291343,
+          "median": 1.775,
+          "q75": 1.783237755982237,
+          "max": 1.8290155440414508
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 72,
+            "min": 0.2367313746123009,
+            "q25": 0.9799477288729731,
+            "median": 1.0222051944846733,
+            "q75": 1.1029863919496494,
+            "max": 1.6922169441952
+          },
+          "demand_slower_than_full_requests": 45,
+          "full_total_ms": 337.8891820102581,
+          "demand_total_ms": 337.11662604036974,
+          "direct_record_total_ms": 407.2602829473908
+        }
+      },
+      "union": {
+        "requests": 72,
+        "problems": 1,
+        "subjects": 6,
+        "candidate_sources": 12,
+        "statuses": {
+          "ACCEPT": 36,
+          "REFUTED": 36
+        },
+        "candidate_classes": {
+          "cross_source": 60,
+          "own_original": 6,
+          "own_reference": 6
+        },
+        "full_cells": 163020,
+        "demand_cells": 91247,
+        "pooled_cell_reduction_fraction": 0.4402711323763955,
+        "request_cell_reduction_fraction": {
+          "n": 72,
+          "min": 0.35993208828522916,
+          "q25": 0.4086640308265459,
+          "median": 0.4317001385041552,
+          "q75": 0.4732646834477498,
+          "max": 0.5641735918744228
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4402711323763955,
+          "q25": 0.4402711323763955,
+          "median": 0.4402711323763955,
+          "q75": 0.4402711323763955,
+          "max": 0.4402711323763955
+        },
+        "domain_points": {
+          "n": 72,
+          "min": 19,
+          "q25": 19.0,
+          "median": 19.0,
+          "q75": 19.0,
+          "max": 19
+        },
+        "constructed_nodes": {
+          "n": 72,
+          "min": 89,
+          "q25": 102.0,
+          "median": 116.0,
+          "q75": 135.25,
+          "max": 163
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 72,
+          "min": 1.8076923076923077,
+          "q25": 1.8419395465994963,
+          "median": 1.8524871355060035,
+          "q75": 1.855108877721943,
+          "max": 1.859577922077922
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 72,
+            "min": 0.776837422968266,
+            "q25": 1.3827321257050333,
+            "median": 1.4836111624580273,
+            "q75": 1.5563071729950044,
+            "max": 2.128760276469
+          },
+          "demand_slower_than_full_requests": 71,
+          "full_total_ms": 431.63876600010553,
+          "demand_total_ms": 612.832600978436,
+          "direct_record_total_ms": 455.93025504786056
+        }
+      }
+    }
+  },
+  {
+    "problem": "501-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 1419,
+        "demand_cells": 815,
+        "pooled_cell_reduction_fraction": 0.42565186751233264,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.33193277310924374,
+          "q25": 0.379091423803564,
+          "median": 0.42625007449788427,
+          "q75": 0.47340872519220456,
+          "max": 0.5205673758865248
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.42565186751233264,
+          "q25": 0.42565186751233264,
+          "median": 0.42565186751233264,
+          "q75": 0.42565186751233264,
+          "max": 0.42565186751233264
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 3,
+          "q25": 3.0,
+          "median": 3.0,
+          "q75": 3.0,
+          "max": 3
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 235,
+          "q25": 235.75,
+          "median": 236.5,
+          "q75": 237.25,
+          "max": 238
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.819526627218935,
+          "q25": 1.832150211504348,
+          "median": 1.844773795789761,
+          "q75": 1.857397380075174,
+          "max": 1.870020964360587
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.9340039869092082,
+            "q25": 0.9764348483199472,
+            "median": 1.0188657097306864,
+            "q75": 1.0612965711414253,
+            "max": 1.1037274325521644
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 13.74682300229324,
+          "demand_total_ms": 13.916580006480217,
+          "direct_record_total_ms": 11.724963995220605
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 18920,
+        "demand_cells": 8972,
+        "pooled_cell_reduction_fraction": 0.5257928118393235,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4389705882352941,
+          "q25": 0.4826587922403004,
+          "median": 0.5263469962453067,
+          "q75": 0.5700352002503128,
+          "max": 0.6137234042553191
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5257928118393235,
+          "q25": 0.5257928118393235,
+          "median": 0.5257928118393235,
+          "q75": 0.5257928118393235,
+          "max": 0.5257928118393235
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 40,
+          "q25": 40.0,
+          "median": 40.0,
+          "q75": 40.0,
+          "max": 40
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 235,
+          "q25": 235.75,
+          "median": 236.5,
+          "q75": 237.25,
+          "max": 238
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.875240980446158,
+          "q25": 1.8821843395285898,
+          "median": 1.8891276986110213,
+          "q75": 1.896071057693453,
+          "max": 1.9030144167758847
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 2.125816720665982,
+            "q25": 2.6703799836155246,
+            "median": 3.214943246565068,
+            "q75": 3.7595065095146105,
+            "max": 4.304069772464153
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 29.60269100003643,
+          "demand_total_ms": 101.04604999651201,
+          "direct_record_total_ms": 26.595297000312712
+        }
+      }
+    }
+  },
+  {
+    "problem": "513-A",
+    "combinations": {
+      "combinations": 6,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 3,
+      "repair_accept": 3,
+      "union_accept": 2,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.3333333333333333,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 2,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 2,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 6,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 3,
+        "statuses": {
+          "ACCEPT": 3,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 2,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 815,
+        "demand_cells": 379,
+        "pooled_cell_reduction_fraction": 0.5349693251533743,
+        "request_cell_reduction_fraction": {
+          "n": 6,
+          "min": 0.29824561403508776,
+          "q25": 0.3664546899841017,
+          "median": 0.5245098039215685,
+          "q75": 0.6556372549019608,
+          "max": 0.7901234567901234
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5349693251533743,
+          "q25": 0.5349693251533743,
+          "median": 0.5349693251533743,
+          "q75": 0.5349693251533743,
+          "max": 0.5349693251533743
+        },
+        "domain_points": {
+          "n": 6,
+          "min": 2,
+          "q25": 2.0,
+          "median": 2.5,
+          "q75": 3.0,
+          "max": 3
+        },
+        "constructed_nodes": {
+          "n": 6,
+          "min": 34,
+          "q25": 41.25,
+          "median": 55.5,
+          "q75": 65.25,
+          "max": 68
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 6,
+          "min": 1.565217391304348,
+          "q25": 1.644485294117647,
+          "median": 1.7625000000000002,
+          "q75": 1.808108108108108,
+          "max": 1.8125
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 6,
+            "min": 0.8810737851992385,
+            "q25": 0.9102118871109603,
+            "median": 0.9860974373914402,
+            "q75": 1.0324269393139582,
+            "max": 1.071348546260322
+          },
+          "demand_slower_than_full_requests": 3,
+          "full_total_ms": 15.03418799256906,
+          "demand_total_ms": 14.64461400610162,
+          "direct_record_total_ms": 13.838821003446355
+        }
+      },
+      "union": {
+        "requests": 6,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 3,
+        "statuses": {
+          "ACCEPT": 2,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 2,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 6360,
+        "demand_cells": 2186,
+        "pooled_cell_reduction_fraction": 0.6562893081761006,
+        "request_cell_reduction_fraction": {
+          "n": 6,
+          "min": 0.4236842105263158,
+          "q25": 0.532954093799682,
+          "median": 0.6765699523052464,
+          "q75": 0.8040441176470589,
+          "max": 0.8833333333333333
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.6562893081761006,
+          "q25": 0.6562893081761006,
+          "median": 0.6562893081761006,
+          "q75": 0.6562893081761006,
+          "max": 0.6562893081761006
+        },
+        "domain_points": {
+          "n": 6,
+          "min": 20,
+          "q25": 20.0,
+          "median": 20.0,
+          "q75": 20.0,
+          "max": 20
+        },
+        "constructed_nodes": {
+          "n": 6,
+          "min": 34,
+          "q25": 41.25,
+          "median": 55.5,
+          "q75": 65.25,
+          "max": 68
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 6,
+          "min": 1.8650793650793651,
+          "q25": 1.866465535986084,
+          "median": 1.8706240487062404,
+          "q75": 1.9023334315313987,
+          "max": 1.9129032258064516
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 6,
+            "min": 0.8277855291201893,
+            "q25": 0.9833744716545402,
+            "median": 1.1118696640596464,
+            "q75": 1.295013064102152,
+            "max": 1.3761200623348862
+          },
+          "demand_slower_than_full_requests": 4,
+          "full_total_ms": 22.273645001405384,
+          "demand_total_ms": 24.93329600110883,
+          "direct_record_total_ms": 15.976295995642431
+        }
+      }
+    }
+  },
+  {
+    "problem": "515-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 6375,
+        "demand_cells": 2904,
+        "pooled_cell_reduction_fraction": 0.544470588235294,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.41806853582554515,
+          "q25": 0.481718858425241,
+          "median": 0.5453691810249368,
+          "q75": 0.6090195036246328,
+          "max": 0.6726698262243286
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.544470588235294,
+          "q25": 0.544470588235294,
+          "median": 0.544470588235294,
+          "q75": 0.544470588235294,
+          "max": 0.544470588235294
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 15,
+          "q25": 15.0,
+          "median": 15.0,
+          "q75": 15.0,
+          "max": 15
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 211,
+          "q25": 211.75,
+          "median": 212.5,
+          "q75": 213.25,
+          "max": 214
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7886100386100385,
+          "q25": 1.7943483212487494,
+          "median": 1.8000866038874603,
+          "q75": 1.8058248865261712,
+          "max": 1.8115631691648821
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.166347057111326,
+            "q25": 1.252826741365749,
+            "median": 1.339306425620172,
+            "q75": 1.425786109874595,
+            "max": 1.512265794129018
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 19.92514500307152,
+          "demand_total_ms": 26.28520000143908,
+          "direct_record_total_ms": 18.226542000775225
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 17000,
+        "demand_cells": 8434,
+        "pooled_cell_reduction_fraction": 0.5038823529411764,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.3684579439252337,
+          "q25": 0.4366515148159632,
+          "median": 0.5048450857066926,
+          "q75": 0.5730386565974221,
+          "max": 0.6412322274881517
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5038823529411764,
+          "q25": 0.5038823529411764,
+          "median": 0.5038823529411764,
+          "q75": 0.5038823529411764,
+          "max": 0.5038823529411764
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 40,
+          "q25": 40.0,
+          "median": 40.0,
+          "q75": 40.0,
+          "max": 40
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 211,
+          "q25": 211.75,
+          "median": 212.5,
+          "q75": 213.25,
+          "max": 214
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.8015191545574636,
+          "q25": 1.8058193511197256,
+          "median": 1.8101195476819876,
+          "q75": 1.8144197442442493,
+          "max": 1.8187199408065113
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.2770880088222791,
+            "q25": 1.4875972279728222,
+            "median": 1.6981064471233656,
+            "q75": 1.9086156662739087,
+            "max": 2.1191248854244518
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 24.83567099989159,
+          "demand_total_ms": 41.71792499982985,
+          "direct_record_total_ms": 26.558872006717138
+        }
+      }
+    }
+  },
+  {
+    "problem": "546-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 366,
+        "demand_cells": 265,
+        "pooled_cell_reduction_fraction": 0.27595628415300544,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.20967741935483875,
+          "q25": 0.24336917562724017,
+          "median": 0.2770609318996416,
+          "q75": 0.31075268817204305,
+          "max": 0.34444444444444444
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.27595628415300544,
+          "q25": 0.27595628415300544,
+          "median": 0.27595628415300544,
+          "q75": 0.27595628415300544,
+          "max": 0.27595628415300544
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 2,
+          "q25": 2.0,
+          "median": 2.0,
+          "q75": 2.0,
+          "max": 2
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 90,
+          "q25": 90.75,
+          "median": 91.5,
+          "q75": 92.25,
+          "max": 93
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7372881355932204,
+          "q25": 1.7468436527153235,
+          "median": 1.7563991698374264,
+          "q75": 1.7659546869595295,
+          "max": 1.7755102040816326
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.9672858713484492,
+            "q25": 0.9828296104648592,
+            "median": 0.998373349581269,
+            "q75": 1.013917088697679,
+            "max": 1.0294608278140889
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 6.155406998004764,
+          "demand_total_ms": 6.1363369968603365,
+          "direct_record_total_ms": 28.5058480076259
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 2745,
+        "demand_cells": 1429,
+        "pooled_cell_reduction_fraction": 0.4794171220400728,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.41003584229390677,
+          "q25": 0.44530465949820786,
+          "median": 0.48057347670250894,
+          "q75": 0.51584229390681,
+          "max": 0.5511111111111111
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4794171220400728,
+          "q25": 0.4794171220400728,
+          "median": 0.4794171220400728,
+          "q75": 0.4794171220400728,
+          "max": 0.4794171220400728
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 15,
+          "q25": 15.0,
+          "median": 15.0,
+          "q75": 15.0,
+          "max": 15
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 90,
+          "q25": 90.75,
+          "median": 91.5,
+          "q75": 92.25,
+          "max": 93
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.811881188118812,
+          "q25": 1.8182061523284772,
+          "median": 1.8245311165381422,
+          "q75": 1.8308560807478074,
+          "max": 1.8371810449574726
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.339816486471374,
+            "q25": 1.3871080935290991,
+            "median": 1.4343997005868245,
+            "q75": 1.4816913076445497,
+            "max": 1.5289829147022749
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 7.7162439993117005,
+          "demand_total_ms": 11.068396001064684,
+          "direct_record_total_ms": 7.4647750006988645
+        }
+      }
+    }
+  },
+  {
+    "problem": "560-B",
+    "combinations": {
+      "combinations": 15,
+      "subjects": 3,
+      "problems": 1,
+      "candidate_sources": 5,
+      "repair_accept": 8,
+      "union_accept": 6,
+      "repair_accept_union_refute": 2,
+      "reversal_fraction_of_repair_acceptances": 0.25,
+      "reversal_subjects": 2,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 6,
+        "ACCEPT/REFUTED": 2,
+        "REFUTED/REFUTED": 7
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 9,
+      "own_original": 3,
+      "own_reference": 3
+    },
+    "requests": {
+      "repair": {
+        "requests": 15,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 5,
+        "statuses": {
+          "ACCEPT": 8,
+          "REFUTED": 7
+        },
+        "candidate_classes": {
+          "cross_source": 9,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 283816,
+        "demand_cells": 159265,
+        "pooled_cell_reduction_fraction": 0.4388441807368154,
+        "request_cell_reduction_fraction": {
+          "n": 15,
+          "min": 0.33658854166666663,
+          "q25": 0.41105732558821806,
+          "median": 0.4418519123896698,
+          "q75": 0.45672771612503993,
+          "max": 0.5926318267419962
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4388441807368154,
+          "q25": 0.4388441807368154,
+          "median": 0.4388441807368154,
+          "q75": 0.4388441807368154,
+          "max": 0.4388441807368154
+        },
+        "domain_points": {
+          "n": 15,
+          "min": 24,
+          "q25": 24.0,
+          "median": 24,
+          "q75": 76.0,
+          "max": 76
+        },
+        "constructed_nodes": {
+          "n": 15,
+          "min": 317,
+          "q25": 335.0,
+          "median": 357,
+          "q75": 615.0,
+          "max": 635
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 15,
+          "min": 1.7333140710777233,
+          "q25": 1.8255450017156798,
+          "median": 1.8387665198237886,
+          "q75": 1.8742681952922227,
+          "max": 1.892639842983317
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 15,
+            "min": 1.183760602422737,
+            "q25": 1.4247633122327021,
+            "median": 1.7116057647777947,
+            "q75": 2.5157366093359474,
+            "max": 5.705719844223246
+          },
+          "demand_slower_than_full_requests": 15,
+          "full_total_ms": 443.9604540239088,
+          "demand_total_ms": 1187.9775129855261,
+          "direct_record_total_ms": 383.20813699101564
+        }
+      },
+      "union": {
+        "requests": 15,
+        "problems": 1,
+        "subjects": 3,
+        "candidate_sources": 5,
+        "statuses": {
+          "ACCEPT": 6,
+          "REFUTED": 9
+        },
+        "candidate_classes": {
+          "cross_source": 9,
+          "own_original": 3,
+          "own_reference": 3
+        },
+        "full_cells": 707707,
+        "demand_cells": 401922,
+        "pooled_cell_reduction_fraction": 0.4320785296740035,
+        "request_cell_reduction_fraction": {
+          "n": 15,
+          "min": 0.3992567323959286,
+          "q25": 0.4222812973044442,
+          "median": 0.42836252856054835,
+          "q75": 0.45484848855205096,
+          "max": 0.4672763886558148
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4320785296740035,
+          "q25": 0.4320785296740035,
+          "median": 0.4320785296740035,
+          "q75": 0.4320785296740035,
+          "max": 0.4320785296740035
+        },
+        "domain_points": {
+          "n": 15,
+          "min": 101,
+          "q25": 101.0,
+          "median": 101,
+          "q75": 101.0,
+          "max": 101
+        },
+        "constructed_nodes": {
+          "n": 15,
+          "min": 317,
+          "q25": 335.0,
+          "median": 357,
+          "q75": 615.0,
+          "max": 635
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 15,
+          "min": 1.7740851577676275,
+          "q25": 1.8264444688082446,
+          "median": 1.837261698440208,
+          "q75": 1.8598496728747802,
+          "max": 1.8762029288702928
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 15,
+            "min": 2.06049886032257,
+            "q25": 2.356390427668315,
+            "median": 2.5451074812514105,
+            "q75": 4.054247601887864,
+            "max": 5.317180070989017
+          },
+          "demand_slower_than_full_requests": 15,
+          "full_total_ms": 791.1700229815324,
+          "demand_total_ms": 2461.808383006428,
+          "direct_record_total_ms": 600.5933369960985
+        }
+      }
+    }
+  },
+  {
+    "problem": "570-B",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 4,
+      "union_accept": 4,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "REFUTED/REFUTED": 4
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 21471,
+        "demand_cells": 11697,
+        "pooled_cell_reduction_fraction": 0.4552186670392623,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.36125319693094626,
+          "q25": 0.37734002960063906,
+          "median": 0.44806361458610594,
+          "q75": 0.5006208160292568,
+          "max": 0.5905102372440689
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4552186670392623,
+          "q25": 0.4552186670392623,
+          "median": 0.4552186670392623,
+          "q75": 0.4552186670392623,
+          "max": 0.4552186670392623
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 17,
+          "q25": 17.0,
+          "median": 17.0,
+          "q75": 17.0,
+          "max": 17
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 65,
+          "q25": 137.75,
+          "median": 179.0,
+          "q75": 190.0,
+          "max": 219
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.753968253968254,
+          "q25": 1.7719903531850434,
+          "median": 1.7849165498004282,
+          "q75": 1.788850080182704,
+          "max": 1.8116788321167883
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.2409857491024696,
+            "q25": 1.3226801214747468,
+            "median": 1.3996981093380891,
+            "q75": 1.5044079817281715,
+            "max": 1.5794074744806383
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 49.88654000044335,
+          "demand_total_ms": 69.9047610105481,
+          "direct_record_total_ms": 41.005590981512796
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 68202,
+        "demand_cells": 36575,
+        "pooled_cell_reduction_fraction": 0.4637254039470984,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.37620772946859904,
+          "q25": 0.38562246318325905,
+          "median": 0.45607926931456344,
+          "q75": 0.5064953240252899,
+          "max": 0.5971966441579701
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4637254039470984,
+          "q25": 0.4637254039470984,
+          "median": 0.4637254039470984,
+          "q75": 0.4637254039470984,
+          "max": 0.4637254039470984
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 54,
+          "q25": 54.0,
+          "median": 54.0,
+          "q75": 54.0,
+          "max": 54
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 65,
+          "q25": 137.75,
+          "median": 179.0,
+          "q75": 190.0,
+          "max": 219
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.7508255016510033,
+          "q25": 1.7734951742470186,
+          "median": 1.7833090586058922,
+          "q75": 1.7867036240241079,
+          "max": 1.8178005591798696
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.1913879905001534,
+            "q25": 1.669659704170044,
+            "median": 1.8001022970366907,
+            "q75": 2.1542099721945327,
+            "max": 2.804180710928278
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 91.32786098780343,
+          "demand_total_ms": 165.13694801687961,
+          "direct_record_total_ms": 70.8755079904222
+        }
+      }
+    }
+  },
+  {
+    "problem": "6-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 6090,
+        "demand_cells": 3451,
+        "pooled_cell_reduction_fraction": 0.43333333333333335,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.3947712418300654,
+          "q25": 0.41414773830324214,
+          "median": 0.4335242347764188,
+          "q75": 0.4529007312495955,
+          "max": 0.47227722772277225
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.43333333333333335,
+          "q25": 0.43333333333333335,
+          "median": 0.43333333333333335,
+          "q75": 0.43333333333333335,
+          "max": 0.43333333333333335
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 10,
+          "q25": 10.0,
+          "median": 10.0,
+          "q75": 10.0,
+          "max": 10
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 303,
+          "q25": 303.75,
+          "median": 304.5,
+          "q75": 305.25,
+          "max": 306
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.9030644152595373,
+          "q25": 1.903810190494329,
+          "median": 1.9045559657291207,
+          "q75": 1.9053017409639124,
+          "max": 1.906047516198704
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.1539260044872515,
+            "q25": 1.2132615325796365,
+            "median": 1.2725970606720218,
+            "q75": 1.331932588764407,
+            "max": 1.391268116856792
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 30.212247002054937,
+          "demand_total_ms": 37.85014399909414,
+          "direct_record_total_ms": 25.23696499702055
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 49938,
+        "demand_cells": 30124,
+        "pooled_cell_reduction_fraction": 0.39677199727662305,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.36366172485254267,
+          "q25": 0.38029881718444447,
+          "median": 0.3969359095163462,
+          "q75": 0.41357300184824797,
+          "max": 0.43021009418014977
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.39677199727662305,
+          "q25": 0.39677199727662305,
+          "median": 0.39677199727662305,
+          "q75": 0.39677199727662305,
+          "max": 0.39677199727662305
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 82,
+          "q25": 82.0,
+          "median": 82.0,
+          "q75": 82.0,
+          "max": 82
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 303,
+          "q25": 303.75,
+          "median": 304.5,
+          "q75": 305.25,
+          "max": 306
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.9217761633368824,
+          "q25": 1.9221719897061653,
+          "median": 1.9225678160754485,
+          "q75": 1.9229636424447314,
+          "max": 1.9233594688140143
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 2.248398401038379,
+            "q25": 2.2972135830104694,
+            "median": 2.3460287649825595,
+            "q75": 2.39484394695465,
+            "max": 2.4436591289267406
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 70.84792000387097,
+          "demand_total_ms": 165.07243600062793,
+          "direct_record_total_ms": 51.815290993545204
+        }
+      }
+    }
+  },
+  {
+    "problem": "617-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 5,
+      "union_accept": 4,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.2,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 5,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 4931,
+        "demand_cells": 2559,
+        "pooled_cell_reduction_fraction": 0.48103832893936316,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.36979166666666663,
+          "q25": 0.45930287329251057,
+          "median": 0.4794668381932533,
+          "q75": 0.49695258192651437,
+          "max": 0.6557377049180328
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.48103832893936316,
+          "q25": 0.48103832893936316,
+          "median": 0.48103832893936316,
+          "q75": 0.48103832893936316,
+          "max": 0.48103832893936316
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 3,
+          "q25": 3.0,
+          "median": 3.5,
+          "q75": 4.0,
+          "max": 4
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 61,
+          "q25": 158.5,
+          "median": 202.5,
+          "q75": 214.0,
+          "max": 220
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.746031746031746,
+          "q25": 1.8015209077643033,
+          "median": 1.812840093583239,
+          "q75": 1.8252812465868131,
+          "max": 1.844943820224719
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.931885301346994,
+            "q25": 0.982657448341306,
+            "median": 1.0253137297011865,
+            "q75": 1.0575531316493778,
+            "max": 1.1676187417530857
+          },
+          "demand_slower_than_full_requests": 5,
+          "full_total_ms": 37.26443101186305,
+          "demand_total_ms": 38.52311699301936,
+          "direct_record_total_ms": 33.749503003491554
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 46648,
+        "demand_cells": 23915,
+        "pooled_cell_reduction_fraction": 0.487330646544332,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.3524816176470589,
+          "q25": 0.4708999473552964,
+          "median": 0.4865477751992735,
+          "q75": 0.5006878322331911,
+          "max": 0.660559305689489
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.487330646544332,
+          "q25": 0.487330646544332,
+          "median": 0.487330646544332,
+          "q75": 0.487330646544332,
+          "max": 0.487330646544332
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 34,
+          "q25": 34.0,
+          "median": 34.0,
+          "q75": 34.0,
+          "max": 34
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 61,
+          "q25": 158.5,
+          "median": 202.5,
+          "q75": 214.0,
+          "max": 220
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.8299228446829923,
+          "q25": 1.846070460704607,
+          "median": 1.8581335851371201,
+          "q75": 1.8768855591311344,
+          "max": 1.914833215046132
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.178551403238236,
+            "q25": 1.5810513366302157,
+            "median": 1.7155702650338718,
+            "q75": 1.790045366741873,
+            "max": 5.982989184515905
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 68.51174400799209,
+          "demand_total_ms": 160.31717199803097,
+          "direct_record_total_ms": 53.91945000155829
+        }
+      }
+    }
+  },
+  {
+    "problem": "62-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 5,
+      "union_accept": 4,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.2,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 5,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 22885,
+        "demand_cells": 9827,
+        "pooled_cell_reduction_fraction": 0.5705920908892288,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.4923922231614539,
+          "q25": 0.5094850793287129,
+          "median": 0.537250519647554,
+          "q75": 0.6174863387978142,
+          "max": 0.7536036036036036
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5705920908892288,
+          "q25": 0.5705920908892288,
+          "median": 0.5705920908892288,
+          "q75": 0.5705920908892288,
+          "max": 0.5705920908892288
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 12,
+          "q25": 12.0,
+          "median": 12.5,
+          "q75": 13.0,
+          "max": 13
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 179,
+          "q25": 184.25,
+          "median": 212.5,
+          "q75": 267.5,
+          "max": 305
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.78690036900369,
+          "q25": 1.8093190927121976,
+          "median": 1.8205078413966564,
+          "q75": 1.8242857142857143,
+          "max": 1.8524590163934427
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.052490927251221,
+            "q25": 1.1155278294950712,
+            "median": 1.1799797713911149,
+            "q75": 1.2567362238387818,
+            "max": 12.409735077694572
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 64.12985500355717,
+          "demand_total_ms": 149.7284610013594,
+          "direct_record_total_ms": 55.03303499426693
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 110160,
+        "demand_cells": 48212,
+        "pooled_cell_reduction_fraction": 0.5623456790123457,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.4769934640522876,
+          "q25": 0.49972381342062194,
+          "median": 0.5140248214411993,
+          "q75": 0.6140983606557378,
+          "max": 0.7526126126126126
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5623456790123457,
+          "q25": 0.5623456790123457,
+          "median": 0.5623456790123457,
+          "q75": 0.5623456790123457,
+          "max": 0.5623456790123457
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 60,
+          "q25": 60.0,
+          "median": 60.0,
+          "q75": 60.0,
+          "max": 60
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 179,
+          "q25": 184.25,
+          "median": 212.5,
+          "q75": 267.5,
+          "max": 305
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.8017629774730657,
+          "q25": 1.8304417304857052,
+          "median": 1.834732799382992,
+          "q75": 1.8359883885584822,
+          "max": 1.8628744650499287
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.080370080140353,
+            "q25": 1.2050568693935169,
+            "median": 1.8150684047322612,
+            "q75": 2.01748027203303,
+            "max": 2.0467574966548465
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 134.02607598982286,
+          "demand_total_ms": 215.1091180057847,
+          "direct_record_total_ms": 99.97662700334331
+        }
+      }
+    }
+  },
+  {
+    "problem": "638-A",
+    "combinations": {
+      "combinations": 32,
+      "subjects": 4,
+      "problems": 1,
+      "candidate_sources": 8,
+      "repair_accept": 21,
+      "union_accept": 16,
+      "repair_accept_union_refute": 5,
+      "reversal_fraction_of_repair_acceptances": 0.23809523809523808,
+      "reversal_subjects": 3,
+      "reversal_candidate_sources": 2,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 16,
+        "ACCEPT/REFUTED": 5,
+        "REFUTED/REFUTED": 11
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 24,
+      "own_original": 4,
+      "own_reference": 4
+    },
+    "requests": {
+      "repair": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 21,
+          "REFUTED": 11
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 14378,
+        "demand_cells": 5882,
+        "pooled_cell_reduction_fraction": 0.5909027681179579,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.41891891891891897,
+          "q25": 0.5019775678866587,
+          "median": 0.5491321528611445,
+          "q75": 0.6123084291187739,
+          "max": 0.7614035087719299
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5909027681179579,
+          "q25": 0.5909027681179579,
+          "median": 0.5909027681179579,
+          "q75": 0.5909027681179579,
+          "max": 0.5909027681179579
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 2,
+          "q25": 2.0,
+          "median": 3.0,
+          "q75": 4.5,
+          "max": 6
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 71,
+          "q25": 102.0,
+          "median": 130.0,
+          "q75": 143.25,
+          "max": 165
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.6956521739130435,
+          "q25": 1.7572815533980584,
+          "median": 1.777884398284037,
+          "q75": 1.7979852403343783,
+          "max": 1.853846153846154
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 0.379128345836936,
+            "q25": 0.894663723795958,
+            "median": 0.9283552265827292,
+            "q75": 0.94029950690247,
+            "max": 1.1374333613942238
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 152.66180699836696,
+          "demand_total_ms": 129.15712001995416,
+          "direct_record_total_ms": 118.50176900043152
+        }
+      },
+      "union": {
+        "requests": 32,
+        "problems": 1,
+        "subjects": 4,
+        "candidate_sources": 8,
+        "statuses": {
+          "ACCEPT": 16,
+          "REFUTED": 16
+        },
+        "candidate_classes": {
+          "cross_source": 24,
+          "own_original": 4,
+          "own_reference": 4
+        },
+        "full_cells": 272481,
+        "demand_cells": 118412,
+        "pooled_cell_reduction_fraction": 0.5654302501825815,
+        "request_cell_reduction_fraction": {
+          "n": 32,
+          "min": 0.4735385116430548,
+          "q25": 0.522016858306384,
+          "median": 0.5699548266757029,
+          "q75": 0.5945803140096618,
+          "max": 0.7376048817696415
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5654302501825815,
+          "q25": 0.5654302501825815,
+          "median": 0.5654302501825815,
+          "q75": 0.5654302501825815,
+          "max": 0.5654302501825815
+        },
+        "domain_points": {
+          "n": 32,
+          "min": 69,
+          "q25": 69.0,
+          "median": 69.0,
+          "q75": 69.0,
+          "max": 69
+        },
+        "constructed_nodes": {
+          "n": 32,
+          "min": 71,
+          "q25": 102.0,
+          "median": 130.0,
+          "q75": 143.25,
+          "max": 165
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 32,
+          "min": 1.7728310502283104,
+          "q25": 1.8137733752191583,
+          "median": 1.8389015670839766,
+          "q75": 1.8569271373370329,
+          "max": 1.8981968444778363
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 32,
+            "min": 0.9117024472317522,
+            "q25": 1.5675406081858543,
+            "median": 1.6753002911997819,
+            "q75": 1.9144272000117923,
+            "max": 7.303226142346592
+          },
+          "demand_slower_than_full_requests": 31,
+          "full_total_ms": 388.6714899854269,
+          "demand_total_ms": 765.4822260228684,
+          "direct_record_total_ms": 327.4610360022052
+        }
+      }
+    }
+  },
+  {
+    "problem": "652-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 1732,
+        "demand_cells": 846,
+        "pooled_cell_reduction_fraction": 0.5115473441108545,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4575688073394495,
+          "q25": 0.48474637294644757,
+          "median": 0.5119239385534456,
+          "q75": 0.5391015041604437,
+          "max": 0.5662790697674418
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5115473441108545,
+          "q25": 0.5115473441108545,
+          "median": 0.5115473441108545,
+          "q75": 0.5115473441108545,
+          "max": 0.5115473441108545
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 4,
+          "q25": 4.0,
+          "median": 4.0,
+          "q75": 4.0,
+          "max": 4
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 215,
+          "q25": 215.75,
+          "median": 216.5,
+          "q75": 217.25,
+          "max": 218
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7024128686327078,
+          "q25": 1.720255740269457,
+          "median": 1.738098611906206,
+          "q75": 1.755941483542955,
+          "max": 1.7737843551797041
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.9248947509428187,
+            "q25": 0.9417123889015542,
+            "median": 0.9585300268602895,
+            "q75": 0.9753476648190249,
+            "max": 0.9921653027777604
+          },
+          "demand_slower_than_full_requests": 0,
+          "full_total_ms": 13.888937006413471,
+          "demand_total_ms": 13.301132996275555,
+          "direct_record_total_ms": 12.382803004584275
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 32908,
+        "demand_cells": 12682,
+        "pooled_cell_reduction_fraction": 0.614622584174061,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.5665137614678899,
+          "q25": 0.5907359942955319,
+          "median": 0.6149582271231738,
+          "q75": 0.6391804599508157,
+          "max": 0.6634026927784578
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.614622584174061,
+          "q25": 0.614622584174061,
+          "median": 0.614622584174061,
+          "q75": 0.614622584174061,
+          "max": 0.614622584174061
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 76,
+          "q25": 76.0,
+          "median": 76.0,
+          "q75": 76.0,
+          "max": 76
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 215,
+          "q25": 215.75,
+          "median": 216.5,
+          "q75": 217.25,
+          "max": 218
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7205454545454546,
+          "q25": 1.7372901825270246,
+          "median": 1.7540349105085946,
+          "q75": 1.7707796384901648,
+          "max": 1.7875243664717348
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.2641481915114035,
+            "q25": 1.3423650756182008,
+            "median": 1.4205819597249982,
+            "q75": 1.4987988438317956,
+            "max": 1.577015727938593
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 37.64397100167116,
+          "demand_total_ms": 53.45026999566471,
+          "direct_record_total_ms": 27.354757003195118
+        }
+      }
+    }
+  },
+  {
+    "problem": "659-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 5,
+      "union_accept": 4,
+      "repair_accept_union_refute": 1,
+      "reversal_fraction_of_repair_acceptances": 0.2,
+      "reversal_subjects": 1,
+      "reversal_candidate_sources": 1,
+      "reversal_problems": 1,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "ACCEPT/REFUTED": 1,
+        "REFUTED/REFUTED": 3
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 5,
+          "REFUTED": 3
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 26300,
+        "demand_cells": 12107,
+        "pooled_cell_reduction_fraction": 0.5396577946768061,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.3307692307692308,
+          "q25": 0.5127798404282388,
+          "median": 0.516452902169249,
+          "q75": 0.5359777985400518,
+          "max": 0.6495040151157299
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.5396577946768061,
+          "q25": 0.5396577946768061,
+          "median": 0.5396577946768061,
+          "q75": 0.5396577946768061,
+          "max": 0.5396577946768061
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 7,
+          "q25": 7.0,
+          "median": 18.0,
+          "q75": 29.0,
+          "max": 29
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 127,
+          "q25": 142.0,
+          "median": 180.5,
+          "q75": 220.25,
+          "max": 239
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.6981132075471699,
+          "q25": 1.740272900204858,
+          "median": 1.7473120654078806,
+          "q75": 1.7583637413688775,
+          "max": 1.7898193760262726
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.1045655249296564,
+            "q25": 1.2309169981458052,
+            "median": 1.5204630994228228,
+            "q75": 1.7309324960624695,
+            "max": 2.35578245024953
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 68.52605399762979,
+          "demand_total_ms": 118.95146600727458,
+          "direct_record_total_ms": 78.67201199405827
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 72200,
+        "demand_cells": 31987,
+        "pooled_cell_reduction_fraction": 0.55696675900277,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.42153846153846153,
+          "q25": 0.5288320649938297,
+          "median": 0.566673640167364,
+          "q75": 0.5908434180626749,
+          "max": 0.6657534246575343
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.55696675900277,
+          "q25": 0.55696675900277,
+          "median": 0.55696675900277,
+          "q75": 0.55696675900277,
+          "max": 0.55696675900277
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 50,
+          "q25": 50.0,
+          "median": 50.0,
+          "q75": 50.0,
+          "max": 50
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 127,
+          "q25": 142.0,
+          "median": 180.5,
+          "q75": 220.25,
+          "max": 239
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.70327868852459,
+          "q25": 1.7533537753928707,
+          "median": 1.7568168032378,
+          "q75": 1.7749540837181852,
+          "max": 1.7861702127659576
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.8292334244143872,
+            "q25": 1.3649931876036296,
+            "median": 1.6854217028728464,
+            "q75": 1.8885795084311432,
+            "max": 4.848238977879012
+          },
+          "demand_slower_than_full_requests": 7,
+          "full_total_ms": 188.15044399525505,
+          "demand_total_ms": 367.9637660025037,
+          "direct_record_total_ms": 111.41882900847122
+        }
+      }
+    }
+  },
+  {
+    "problem": "672-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 14910,
+        "demand_cells": 4414,
+        "pooled_cell_reduction_fraction": 0.7039570757880618,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.6712,
+          "q25": 0.6876780026990553,
+          "median": 0.7041560053981106,
+          "q75": 0.7206340080971659,
+          "max": 0.7371120107962212
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.7039570757880618,
+          "q25": 0.7039570757880618,
+          "median": 0.7039570757880618,
+          "q75": 0.7039570757880618,
+          "max": 0.7039570757880618
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 30,
+          "q25": 30.0,
+          "median": 30.0,
+          "q75": 30.0,
+          "max": 30
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 247,
+          "q25": 247.75,
+          "median": 248.5,
+          "q75": 249.25,
+          "max": 250
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.6658110882956878,
+          "q25": 1.6852869455810522,
+          "median": 1.7047628028664166,
+          "q75": 1.7242386601517807,
+          "max": 1.7437145174371451
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.093807473987184,
+            "q25": 1.2124767718951492,
+            "median": 1.3311460698031143,
+            "q75": 1.4498153677110797,
+            "max": 1.568484665619045
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 40.07206799724372,
+          "demand_total_ms": 55.68952399335103,
+          "direct_record_total_ms": 119.84931700862944
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 17892,
+        "demand_cells": 5172,
+        "pooled_cell_reduction_fraction": 0.7109322602280348,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.6784444444444444,
+          "q25": 0.6947869995501574,
+          "median": 0.7111295546558705,
+          "q75": 0.7274721097615835,
+          "max": 0.7438146648672965
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.7109322602280348,
+          "q25": 0.7109322602280348,
+          "median": 0.7109322602280348,
+          "q75": 0.7109322602280348,
+          "max": 0.7109322602280348
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 36,
+          "q25": 36.0,
+          "median": 36.0,
+          "q75": 36.0,
+          "max": 36
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 247,
+          "q25": 247.75,
+          "median": 248.5,
+          "q75": 249.25,
+          "max": 250
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.6602282704126428,
+          "q25": 1.6811594543644233,
+          "median": 1.702090638316204,
+          "q75": 1.7230218222679845,
+          "max": 1.743953006219765
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 0.2145406529858042,
+            "q25": 0.4306694657210406,
+            "median": 0.646798278456277,
+            "q75": 0.8629270911915133,
+            "max": 1.0790559039267498
+          },
+          "demand_slower_than_full_requests": 1,
+          "full_total_ms": 110.23159199976362,
+          "demand_total_ms": 38.43185499863466,
+          "direct_record_total_ms": 31.336477004515473
+        }
+      }
+    }
+  },
+  {
+    "problem": "68-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 964,
+        "demand_cells": 645,
+        "pooled_cell_reduction_fraction": 0.33091286307053946,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.2704918032786885,
+          "q25": 0.3010831381733021,
+          "median": 0.3316744730679157,
+          "q75": 0.3622658079625293,
+          "max": 0.3928571428571429
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.33091286307053946,
+          "q25": 0.33091286307053946,
+          "median": 0.33091286307053946,
+          "q75": 0.33091286307053946,
+          "max": 0.33091286307053946
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 4,
+          "q25": 4.0,
+          "median": 4.0,
+          "q75": 4.0,
+          "max": 4
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 119,
+          "q25": 119.75,
+          "median": 120.5,
+          "q75": 121.25,
+          "max": 122
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.6920415224913494,
+          "q25": 1.7030199059134559,
+          "median": 1.7139982893355623,
+          "q75": 1.7249766727576687,
+          "max": 1.7359550561797752
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.0118356994368203,
+            "q25": 1.018971492381327,
+            "median": 1.0261072853258335,
+            "q75": 1.0332430782703401,
+            "max": 1.0403788712148467
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 15.985211997758597,
+          "demand_total_ms": 16.384130001824815,
+          "direct_record_total_ms": 14.505685998301487
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 9881,
+        "demand_cells": 5218,
+        "pooled_cell_reduction_fraction": 0.47191579799615424,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.41423430627748903,
+          "q25": 0.44343859095017457,
+          "median": 0.4726428756228601,
+          "q75": 0.5018471602955457,
+          "max": 0.5310514449682312
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.47191579799615424,
+          "q25": 0.47191579799615424,
+          "median": 0.47191579799615424,
+          "q75": 0.47191579799615424,
+          "max": 0.47191579799615424
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 41,
+          "q25": 41.0,
+          "median": 41.0,
+          "q75": 41.0,
+          "max": 41
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 119,
+          "q25": 119.75,
+          "median": 120.5,
+          "q75": 121.25,
+          "max": 122
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.7093531468531469,
+          "q25": 1.7209227099692117,
+          "median": 1.7324922730852765,
+          "q75": 1.7440618362013414,
+          "max": 1.7556313993174062
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.331887391411668,
+            "q25": 1.4232247101872009,
+            "median": 1.514562028962734,
+            "q75": 1.605899347738267,
+            "max": 1.6972366665138
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 24.806077002722304,
+          "demand_total_ms": 37.43964500608854,
+          "direct_record_total_ms": 20.513211995421443
+        }
+      }
+    }
+  },
+  {
+    "problem": "84-A",
+    "combinations": {
+      "combinations": 8,
+      "subjects": 2,
+      "problems": 1,
+      "candidate_sources": 4,
+      "repair_accept": 4,
+      "union_accept": 4,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 4,
+        "REFUTED/REFUTED": 4
+      }
+    },
+    "candidate_classes": {
+      "cross_source": 4,
+      "own_original": 2,
+      "own_reference": 2
+    },
+    "requests": {
+      "repair": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 568,
+        "demand_cells": 324,
+        "pooled_cell_reduction_fraction": 0.4295774647887324,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.31081081081081086,
+          "q25": 0.31081081081081086,
+          "median": 0.4348171701112878,
+          "q75": 0.5588235294117647,
+          "max": 0.5588235294117647
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4295774647887324,
+          "q25": 0.4295774647887324,
+          "median": 0.4295774647887324,
+          "q75": 0.4295774647887324,
+          "max": 0.4295774647887324
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 2,
+          "q25": 2.0,
+          "median": 2.0,
+          "q75": 2.0,
+          "max": 2
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 34,
+          "q25": 34.0,
+          "median": 35.5,
+          "q75": 37.0,
+          "max": 37
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.7,
+          "q25": 1.7,
+          "median": 1.742156862745098,
+          "q75": 1.7843137254901962,
+          "max": 1.7843137254901962
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 0.7889241400089879,
+            "q25": 0.9487950421032749,
+            "median": 1.0973401536568446,
+            "q75": 1.3489087932795805,
+            "max": 1.9847706601980808
+          },
+          "demand_slower_than_full_requests": 5,
+          "full_total_ms": 14.181289006955922,
+          "demand_total_ms": 17.148529994301498,
+          "direct_record_total_ms": 14.714502009155694
+        }
+      },
+      "union": {
+        "requests": 8,
+        "problems": 1,
+        "subjects": 2,
+        "candidate_sources": 4,
+        "statuses": {
+          "ACCEPT": 4,
+          "REFUTED": 4
+        },
+        "candidate_classes": {
+          "cross_source": 4,
+          "own_original": 2,
+          "own_reference": 2
+        },
+        "full_cells": 6532,
+        "demand_cells": 3348,
+        "pooled_cell_reduction_fraction": 0.4874464176362523,
+        "request_cell_reduction_fraction": {
+          "n": 8,
+          "min": 0.37250293772032905,
+          "q25": 0.37250293772032905,
+          "median": 0.49251745351489595,
+          "q75": 0.6125319693094629,
+          "max": 0.6125319693094629
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.4874464176362523,
+          "q25": 0.4874464176362523,
+          "median": 0.4874464176362523,
+          "q75": 0.4874464176362523,
+          "max": 0.4874464176362523
+        },
+        "domain_points": {
+          "n": 8,
+          "min": 23,
+          "q25": 23.0,
+          "median": 23.0,
+          "q75": 23.0,
+          "max": 23
+        },
+        "constructed_nodes": {
+          "n": 8,
+          "min": 34,
+          "q25": 34.0,
+          "median": 35.5,
+          "q75": 37.0,
+          "max": 37
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 8,
+          "min": 1.900990099009901,
+          "q25": 1.900990099009901,
+          "median": 1.920532502688471,
+          "q75": 1.9400749063670413,
+          "max": 1.9400749063670413
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 8,
+            "min": 1.1534471798808639,
+            "q25": 1.2738849396703056,
+            "median": 1.3694845291868774,
+            "q75": 1.5598684431040666,
+            "max": 1.6647812383845482
+          },
+          "demand_slower_than_full_requests": 8,
+          "full_total_ms": 18.554115013103,
+          "demand_total_ms": 25.90107400465058,
+          "direct_record_total_ms": 17.098924989113584
+        }
+      }
+    }
+  },
+  {
+    "problem": "90-A",
+    "combinations": {
+      "combinations": 2,
+      "subjects": 1,
+      "problems": 1,
+      "candidate_sources": 2,
+      "repair_accept": 1,
+      "union_accept": 1,
+      "repair_accept_union_refute": 0,
+      "reversal_fraction_of_repair_acceptances": 0.0,
+      "reversal_subjects": 0,
+      "reversal_candidate_sources": 0,
+      "reversal_problems": 0,
+      "joint_decisions": {
+        "ACCEPT/ACCEPT": 1,
+        "REFUTED/REFUTED": 1
+      }
+    },
+    "candidate_classes": {
+      "own_original": 1,
+      "own_reference": 1
+    },
+    "requests": {
+      "repair": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 2933,
+        "demand_cells": 1596,
+        "pooled_cell_reduction_fraction": 0.45584725536992843,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.4014895057549086,
+          "q25": 0.4288643820634342,
+          "median": 0.4562392583719598,
+          "q75": 0.48361413468048536,
+          "max": 0.510989010989011
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.45584725536992843,
+          "q25": 0.45584725536992843,
+          "median": 0.45584725536992843,
+          "q75": 0.45584725536992843,
+          "max": 0.45584725536992843
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 7,
+          "q25": 7.0,
+          "median": 7.0,
+          "q75": 7.0,
+          "max": 7
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 208,
+          "q25": 208.75,
+          "median": 209.5,
+          "q75": 210.25,
+          "max": 211
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.8469101123595506,
+          "q25": 1.855205208704052,
+          "median": 1.8635003050485537,
+          "q75": 1.8717954013930551,
+          "max": 1.8800904977375565
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.123269901723223,
+            "q25": 1.123562307985101,
+            "median": 1.1238547142469786,
+            "q75": 1.1241471205088565,
+            "max": 1.1244395267707343
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 14.65089300472755,
+          "demand_total_ms": 16.46516299661016,
+          "direct_record_total_ms": 12.1236039994983
+        }
+      },
+      "union": {
+        "requests": 2,
+        "problems": 1,
+        "subjects": 1,
+        "candidate_sources": 2,
+        "statuses": {
+          "ACCEPT": 1,
+          "REFUTED": 1
+        },
+        "candidate_classes": {
+          "own_original": 1,
+          "own_reference": 1
+        },
+        "full_cells": 23045,
+        "demand_cells": 8752,
+        "pooled_cell_reduction_fraction": 0.6202213061401606,
+        "request_cell_reduction_fraction": {
+          "n": 2,
+          "min": 0.5666523050409307,
+          "q25": 0.5936299630464323,
+          "median": 0.6206076210519339,
+          "q75": 0.6475852790574355,
+          "max": 0.6745629370629371
+        },
+        "equal_problem_aggregate_cell_reduction_fraction": {
+          "n": 1,
+          "min": 0.6202213061401606,
+          "q25": 0.6202213061401606,
+          "median": 0.6202213061401606,
+          "q75": 0.6202213061401606,
+          "max": 0.6202213061401606
+        },
+        "domain_points": {
+          "n": 2,
+          "min": 55,
+          "q25": 55.0,
+          "median": 55.0,
+          "q75": 55.0,
+          "max": 55
+        },
+        "constructed_nodes": {
+          "n": 2,
+          "min": 208,
+          "q25": 208.75,
+          "median": 209.5,
+          "q75": 210.25,
+          "max": 211
+        },
+        "memo_queries_per_semantic_value": {
+          "n": 2,
+          "min": 1.890679559495031,
+          "q25": 1.8960868221366838,
+          "median": 1.9014940847783368,
+          "q75": 1.9069013474199896,
+          "max": 1.9123086100616424
+        },
+        "existing_one_order_timing_only": {
+          "scope": "One retained ordered observation per arm; descriptive only, not a stable speedup estimate.",
+          "demand_over_full_ratio": {
+            "n": 2,
+            "min": 1.5459579574841706,
+            "q25": 1.5974513951569371,
+            "median": 1.6489448328297036,
+            "q75": 1.7004382705024703,
+            "max": 1.7519317081752368
+          },
+          "demand_slower_than_full_requests": 2,
+          "full_total_ms": 28.552632000355516,
+          "demand_total_ms": 47.023450999404304,
+          "direct_record_total_ms": 24.697824999748264
+        }
+      }
+    }
+  }
+]

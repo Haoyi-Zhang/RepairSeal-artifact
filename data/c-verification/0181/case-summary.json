@@ -1,0 +1,32 @@
+{
+  "index": 181,
+  "population": "core",
+  "request_id": "stress-102-overfit",
+  "input_file": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/proof-data/stress-inputs/stress-102-overfit.json",
+  "input_file_sha256": "7d1cfd94f3df1656f11472a8d4313be66417522f5c2332a7d18595e85f5811f8",
+  "input_order": [
+    "x",
+    "y",
+    "z",
+    "t"
+  ],
+  "domain_size": 81,
+  "case_directory": "0181",
+  "source_sha256": {
+    "original": "359f7fa3b6c193bf5712a8c2e6e0505864b59a6dd5ce96d5f79f0aa2f28e996b",
+    "candidate": "96868325bdd3583d112c5056645054d68f6ede5f565cfabe28cf4b860ac44bfd",
+    "reference": "55213aa063ebf1b9bbea8ea6d4dadcffc60e822aacff21a6796d768f7fc62378",
+    "repair_guard": "e9acd5d5ab2be963345fd4e64fb9dbdc08b45a39b1200514f58bca3f95db7427"
+  },
+  "harness_sha256": "ca2205020ebd0996936ae710d185c2bce23470e024c4b694d581a2f3105d62ff",
+  "direct_status": "REFUTED",
+  "direct_checked_cells": 119,
+  "direct_wall_seconds": 0.0016100940010801423,
+  "cbmc_status": "REFUTED",
+  "cbmc_exit_code": 10,
+  "cbmc_wall_seconds": 0.05462460400303826,
+  "status_agreement": true,
+  "failed_property_categories": {
+    "repair-equality": 1
+  }
+}

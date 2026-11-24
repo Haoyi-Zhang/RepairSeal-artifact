@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "/workspace/scratch/1069ed1cc3ce/tools/witness-validator/CPAchecker-4.3-unix/bin/cpachecker",
+    "--heap",
+    "768M",
+    "--32",
+    "--stats",
+    "--no-output-files",
+    "--timelimit",
+    "30s",
+    "--output-path",
+    "located-output",
+    "--spec",
+    "property.prp",
+    "--witnessValidation",
+    "--witness",
+    "located.graphml",
+    "program.c"
+  ],
+  "cwd": ".",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 42.761827839000034,
+  "wall_limit_seconds": 45.0,
+  "status": "UNKNOWN",
+  "outcome": "UNKNOWN",
+  "witness_type": "correctness_witness",
+  "terminal_results": [
+    "UNKNOWN"
+  ],
+  "warnings": [
+    " (CPAchecker.printConfigurationWarnings, WARNING)",
+    "Shutdown requested (The CPU-time limit of 30s has elapsed.), waiting for termination. (ForceTerminationOnShutdown$1.shutdownRequested, WARNING)",
+    "Warning: Analysis interrupted (The CPU-time limit of 30s has elapsed.) (ShutdownNotifier.shutdownIfNecessary, WARNING)"
+  ],
+  "ignored_semantic_annotations": []
+}

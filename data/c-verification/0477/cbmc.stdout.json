@@ -1,0 +1,1545 @@
+[
+  {
+    "program": "CBMC 6.6.0 (cbmc-6.6.0)"
+  },
+  {
+    "messageText": "CBMC version 6.6.0 (cbmc-6.6.0) 64-bit x86_64 linux",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Type-checking harness",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generating GOTO Program",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding CPROVER library (x86_64)",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Removal of function pointers and virtual functions",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generic Property Instrumentation",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Starting Bounded Model Checking",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Passing problem to propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "converting SSA",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "SAT checker: instance is SATISFIABLE",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Building error trace",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "SAT checker inconsistent: instance is UNSATISFIABLE",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "result": [
+      {
+        "description": "repairseal.repair",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "31",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "FAILURE",
+        "trace": [
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "24",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_dead_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "8",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_deallocated",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "7",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_max_malloc_size",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "12",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000100000000000000000000000",
+              "data": "8388608u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_memory_leak",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "9",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "16",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "24",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "16",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "main",
+              "identifier": "main",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "16",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "16",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "x",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "11111111111111111111111111111111",
+              "data": "4294967295u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "x",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "11111111111111111111111111111111",
+              "data": "4294967295u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "19",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "y",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "20",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$0",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "20",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$0",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "20",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000011",
+              "data": "3u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "y",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "20",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000011",
+              "data": "3u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "21",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "z",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "22",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$1",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "22",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$1",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "22",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "z",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "22",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "23",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$2",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___VERIFIER_nondet_uint$2",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "24",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "25",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__repairseal_q",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___repairseal_candidate",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__repairseal_candidate",
+              "identifier": "__repairseal_candidate",
+              "sourceLocation": {
+                "file": "candidate.c",
+                "line": "1",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "x",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "11111111111111111111111111111111",
+              "data": "4294967295u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "y",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000011",
+              "data": "3u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "z",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "a",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "2",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "a",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "2",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000001",
+              "data": "1u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "b",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "3",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "b",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "3",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "r",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "4",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "r",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "4",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000110",
+              "data": "6u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "5",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "r",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "6",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000111",
+              "data": "7u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "7",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "goto_symex$$return_value$$__repairseal_candidate",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "10",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000111",
+              "data": "7u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__repairseal_candidate",
+              "identifier": "__repairseal_candidate",
+              "sourceLocation": {
+                "file": "candidate.c",
+                "line": "1",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "candidate.c",
+              "function": "__repairseal_candidate",
+              "line": "11",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___repairseal_candidate",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000111",
+              "data": "7u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "__repairseal_q",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000111",
+              "data": "7u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__repairseal_t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "return_value___repairseal_reference",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__repairseal_reference",
+              "identifier": "__repairseal_reference",
+              "sourceLocation": {
+                "file": "reference.c",
+                "line": "1",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "x",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "11111111111111111111111111111111",
+              "data": "4294967295u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "y",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000011",
+              "data": "3u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "z",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "a",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "2",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "a",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "2",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000001",
+              "data": "1u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "b",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "3",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "b",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "3",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "r",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "4",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "r",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "4",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000110",
+              "data": "6u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "goto_symex$$return_value$$__repairseal_reference",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "5",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000110",
+              "data": "6u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__repairseal_reference",
+              "identifier": "__repairseal_reference",
+              "sourceLocation": {
+                "file": "reference.c",
+                "line": "1",
+                "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "reference.c",
+              "function": "__repairseal_reference",
+              "line": "6",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "return_value___repairseal_reference",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000110",
+              "data": "6u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "__repairseal_t",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "30",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000110",
+              "data": "6u",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "internal": false,
+            "property": "main.assertion.1",
+            "reason": "repairseal.repair",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "31",
+              "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+            },
+            "stepType": "failure",
+            "thread": 0
+          }
+        ]
+      },
+      {
+        "description": "repairseal.preserve",
+        "property": "main.assertion.2",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "34",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in ~z >> (x & 31u)",
+        "property": "__repairseal_original.undefined-shift.1",
+        "sourceLocation": {
+          "file": "original.c",
+          "function": "__repairseal_original",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in (~z >> (x & 31u)) << ((3u ^ 3u) & 31u)",
+        "property": "__repairseal_original.undefined-shift.2",
+        "sourceLocation": {
+          "file": "original.c",
+          "function": "__repairseal_original",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in ~z >> (x & 31u)",
+        "property": "__repairseal_candidate.undefined-shift.1",
+        "sourceLocation": {
+          "file": "candidate.c",
+          "function": "__repairseal_candidate",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in (~z >> (x & 31u)) << ((3u ^ 3u) & 31u)",
+        "property": "__repairseal_candidate.undefined-shift.2",
+        "sourceLocation": {
+          "file": "candidate.c",
+          "function": "__repairseal_candidate",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in ~z >> (x & 31u)",
+        "property": "__repairseal_reference.undefined-shift.1",
+        "sourceLocation": {
+          "file": "reference.c",
+          "function": "__repairseal_reference",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "shift distance too large in (~z >> (x & 31u)) << ((3u ^ 3u) & 31u)",
+        "property": "__repairseal_reference.undefined-shift.2",
+        "sourceLocation": {
+          "file": "reference.c",
+          "function": "__repairseal_reference",
+          "line": "2",
+          "workingDirectory": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/revision_audit/round3/cbmc-comparison-final/0477"
+        },
+        "status": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "messageText": "VERIFICATION FAILED",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "cProverStatus": "failure"
+  }
+]

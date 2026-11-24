@@ -1,0 +1,32 @@
+{
+  "index": 689,
+  "population": "grammar",
+  "request_id": "holdout-53958c0b-repair",
+  "input_file": "/workspace/scratch/1069ed1cc3ce/work/RepairSeal_TOSEM/artifact/proof-data/holdout-differential/inputs/holdout-53958c0b-repair.json",
+  "input_file_sha256": "8aaba73ade3b7535a5bd264c9ce7b461ef879137c1422c5f64ef0d3c456ae40e",
+  "input_order": [
+    "x",
+    "y",
+    "z",
+    "t"
+  ],
+  "domain_size": 4096,
+  "case_directory": "0689",
+  "source_sha256": {
+    "original": "8589c15ea333ff72440bfd5f35df7838d712da07d1709c291fd80fc0d8d65af8",
+    "candidate": "aed743e00727025b083a5a31e4f2b3862aed2e94c67abfe801eeea4043df4107",
+    "reference": "403d8f2ce167473a7b7aa0b7378e6d5f53b23000572b104dcc2bb2b584fda4f5",
+    "repair_guard": "9a47fbf7bb8f13fe76b4cc190ee9fdea7dc18288f4e76314326e22a82966ce8a"
+  },
+  "harness_sha256": "e3c8d97c797aed5c8a09344e995a68356915529b22ce7e90952838b6ee6c69b4",
+  "direct_status": "REFUTED",
+  "direct_checked_cells": 65624,
+  "direct_wall_seconds": 0.3383254090003902,
+  "cbmc_status": "REFUTED",
+  "cbmc_exit_code": 10,
+  "cbmc_wall_seconds": 0.2427791400004935,
+  "status_agreement": true,
+  "failed_property_categories": {
+    "repair-equality": 1
+  }
+}

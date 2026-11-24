@@ -1,0 +1,77 @@
+[
+  {
+    "id": "gcc",
+    "executable": "/usr/bin/x86_64-linux-gnu-gcc-14",
+    "executable_sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+    "version": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "flags": [
+      "-std=c99",
+      "-O1",
+      "-fno-omit-frame-pointer",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all"
+    ],
+    "sanitizer": "undefined/halt",
+    "integer_model": "32-bit two's-complement int, compile-time asserted",
+    "target_probe_command": [
+      "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "-std=c99",
+      "-O1",
+      "-fno-omit-frame-pointer",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-1/target-probe.c",
+      "-o",
+      "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-1/target-probe"
+    ],
+    "compiled_source_units": 176,
+    "ubsan_positive_control": {
+      "command": [
+        "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-1/ubsan-control"
+      ],
+      "outcome": "nonzero",
+      "returncode": 1,
+      "elapsed_seconds": 0.012467247994209174,
+      "wall_seconds_limit": 2.0,
+      "stream_bytes_limit": 4096,
+      "stdout_bytes_seen": 0,
+      "stderr_bytes_seen": 181,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5385c57213e512a1cc29aed674b0052372776ee9dd68a2053f279d6630aa1705",
+      "stdout": "",
+      "stderr": "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-1/ubsan-control.c:2:47: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'\n",
+      "truncated": false
+    }
+  },
+  {
+    "id": "clang",
+    "executable": "/workspace/scratch/1069ed1cc3ce/tools/clang/sysroot/usr/lib/llvm-19/bin/clang",
+    "executable_sha256": "0a3c55936ac43954fbe4914e6e73b577ca9e35e75d89ef13d3e28c187f41ca1a",
+    "version": "Debian clang version 19.1.7 (3+b1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /workspace/scratch/1069ed1cc3ce/tools/clang/sysroot/usr/lib/llvm-19/bin",
+    "flags": [
+      "-std=c99",
+      "-O1",
+      "-fno-omit-frame-pointer",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format"
+    ],
+    "sanitizer": "none",
+    "integer_model": "32-bit two's-complement int, compile-time asserted",
+    "target_probe_command": [
+      "/workspace/scratch/1069ed1cc3ce/tools/clang/sysroot/usr/lib/llvm-19/bin/clang",
+      "-std=c99",
+      "-O1",
+      "-fno-omit-frame-pointer",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-2/target-probe.c",
+      "-o",
+      "/workspace/scratch/1069ed1cc3ce/audit/round4/native-work/compiler-2/target-probe"
+    ],
+    "compiled_source_units": 176
+  }
+]

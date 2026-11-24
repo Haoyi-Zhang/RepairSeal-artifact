@@ -1,0 +1,44 @@
+Using the following resource limits: CPU-time limit of 30s (ResourceLimitChecker.fromConfiguration, INFO)
+
+CPAchecker 4.3 / predicateAnalysis (OpenJDK 64-Bit Server VM 21.0.13) started (CPAchecker.run, INFO)
+
+Parsing CFA from file(s) "program.c" (CPAchecker.parse, INFO)
+
+lines 25-32: Dead code detected: ((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u) (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 25: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 25: Dead code detected: [((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u)] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 25: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 27: Dead code detected: r = __repairseal_rem((2u + r) | (x ^ y), (r & 7u) + 1u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+lines 59-66: Dead code detected: ((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u) (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 59: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 59: Dead code detected: [((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u)] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 59: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 61: Dead code detected: r = __repairseal_rem((2u + r) | (x ^ y), (r & 7u) + 1u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+lines 84-91: Dead code detected: ((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u) (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 84: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 84: Dead code detected: [((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u)] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 84: Dead code detected: [!(((x > x) && (((b + a) ^ x) >= ((__repairseal_div(a, (x & 7u) + 1u)) - 2147483647u))) && (y <= 0u))] (CFACreationUtils.addEdgeToCFA, INFO)
+
+line 86: Dead code detected: r = __repairseal_rem((2u + r) | (x ^ y), (r & 7u) + 1u); (CFACreationUtils.addEdgeToCFA, INFO)
+
+Using predicate analysis with MathSAT5 version 5.6.19 (f1f678f19b5c) (Oct  6 2026 09:55:06, gmp 6.2.0, gcc 9.4.0, 64-bit, reentrant) and JFactory 1.21. (PredicateCPA:PredicateCPA.<init>, INFO)
+
+Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy. (PredicateCPA:PredicateCPARefiner.<init>, INFO)
+
+Starting analysis ... (CPAchecker.runAlgorithm, INFO)
+
+Stopping analysis ... (CPAchecker.runAlgorithm, INFO)
+

@@ -1,0 +1,21 @@
+{
+  "id": "selected-statement-fault",
+  "word_bits": 32,
+  "inputs": {
+    "x": [
+      0,
+      1,
+      4294967295
+    ],
+    "y": [
+      0,
+      1,
+      31,
+      32
+    ]
+  },
+  "original": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "candidate": "unsigned f(unsigned x, unsigned y) { unsigned r = 0u; if (x == 0u) { r = 1u / y; } else { r = x; } r = x; return r; }",
+  "reference": "unsigned f(unsigned x, unsigned y) { return x; }",
+  "repair_guard": "x == x"
+}

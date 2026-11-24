@@ -1,0 +1,1 @@
+unsigned f(unsigned m, unsigned n) { unsigned rs_generated0 = 0u; if (((m % n) != 0u)) { rs_generated0 = 1u; } else { rs_generated0 = 0u; } return ((m / n) + rs_generated0); }
