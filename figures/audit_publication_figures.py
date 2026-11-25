@@ -18,20 +18,26 @@ from pathlib import Path
 
 import fitz
 
+# Figures consumed by the current manuscript (paper/figures): five mechanism
+# diagrams from publication_figures.py and five statistical figures from the
+# paper's figure-source/make_figures.py.
 FORMAL_FIGURES = (
     "repairseal-overview.pdf",
-    "ceil-obligations.pdf",
+    "ceil-domain.pdf",
+    "value-definedness.pdf",
     "support-demand-overview.pdf",
     "acceptance-transport.pdf",
-    "point-demand-comparison.pdf",
-    "witness-search-work.pdf",
+    "work-time.pdf",
+    "point-demand-ablation.pdf",
+    "witness-search.pdf",
+    "coverage-gap.pdf",
     "trust-boundary.pdf",
 )
 
+# Additional outputs of publication_figures.py that the manuscript does not consume.
 ARTIFACT_ONLY_FIGURES = (
-    "value-definedness.pdf",
+    "ceil-obligations.pdf",
     "demand-work.pdf",
-    "natural-evaluator-comparison.pdf",
 )
 
 

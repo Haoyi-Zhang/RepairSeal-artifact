@@ -55,8 +55,9 @@ coverage check is `no conclusion`, not a refutation.
   and `external-inputs.json`). None of these is bundled; see
   [Installing the external tools](#installing-the-external-tools).
 - **Paper build only** (`paper` mode, paper step of `core`): `pdflatex`/`bibtex` with
-  the acmart dependencies, `pdffonts`/`pdfinfo` (poppler), and the Liberation Sans 2.1.5
-  font for byte-identical figures (see `figures/README.md`).
+  the acmart dependencies, `pdffonts`/`pdfinfo` (poppler), and an installed Times New
+  Roman face for the figures (STIX mathematics is bundled with matplotlib; see
+  `figures/README.md`).
 - **Hardware/disk:** any recent laptop; about 0.7 GB for the repository plus a few
   hundred MB for outputs. The external tools add about 0.8 GB (CBMC 6.11.0, CPAchecker,
   Codeflaws archive) and an external run writes about 0.5 GB; the TeX/font packages
@@ -85,9 +86,10 @@ an official Debian 13 root filesystem can be imported as a per-user WSL distribu
 with `wsl --import`):
 
 ```sh
-# Debian 13 packages: GCC 14.2.0, Clang 19.1.7, CBMC 6.6.0, Java 21, TeX Live 2024, poppler, Liberation 2.1.5
+# Debian 13 packages: GCC 14.2.0, Clang 19.1.7, CBMC 6.6.0, Java 21, TeX Live 2024, poppler
+# (figure text: Times New Roman, e.g. contrib's ttf-mscorefonts-installer; see figures/README.md)
 sudo apt-get install --no-install-recommends gcc-14 gcc clang-19 clang libc6-dev cbmc \
-  openjdk-21-jre-headless util-linux unzip python3-venv poppler-utils fonts-liberation \
+  openjdk-21-jre-headless util-linux unzip python3-venv poppler-utils fontconfig \
   texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended \
   texlive-fonts-extra texlive-bibtex-extra texlive-science texlive-pictures texlive-plain-generic
 # CPython 3.12.14 (historical receipt replay)
@@ -153,11 +155,14 @@ delivery audit. Figure regeneration is described in `figures/README.md`.
 The paper build needs the TeX/poppler/font packages listed under
 [Installing the external tools](#installing-the-external-tools); it rewrites the
 PDFs inside `../paper`, so run it on a copy if the delivered PDFs must stay
-untouched. With Debian 13's TeX Live 2024 the rebuilt figures and
-`figure-atlas.pdf` are byte-identical to the delivered ones, and `main.pdf` (36
-pages) and `supplementary.pdf` (18 pages) have identical page counts and
-identical extracted text on every page (their bytes differ, e.g. in the pdfTeX
-producer string).
+untouched. The build produces `main.pdf` (38 pages, nine figures: five statistical
+figures generated from the retained records and four mechanism diagrams) and
+`supplementary.pdf` (17 pages, one mechanism diagram, ten figures in total). All
+figure text is Times New Roman with STIX mathematics; the figure atlas and
+`figure-manifest.json` bind each figure to its generator and source records. A
+rebuild keeps the page counts and the manuscript text; bytes and extracted-text
+details depend on the installed TeX release (review line-number placement, math
+glyph extraction) and font files.
 
 `reproduce.py --help` lists all stages; `docs/reproduction.md` describes each
 stage, its inputs, and its completion criteria.
@@ -189,7 +194,9 @@ apart from `timing_ms`), coverage and union outcomes (739), and the work records
 of all three timing campaigns are identical. The witness campaign is complete
 with no producer or validator disagreement, but CPAchecker outcomes that hit the
 30 s CPU limit are host- and load-dependent: in each of four fresh runs on the
-test host, 5-12 of the 5,628 arm runs (all on requests 644, 656, 696, 733 and 801)
+test host, 5-12 of the 5,418 CPAchecker validator runs (the 5,628 arm records
+minus the 210 input arms that are not applicable to accepted requests; all on
+requests 644, 656, 696, 733 and 801)
 that were `UNKNOWN` in the retained run finished within the limit with a definite
 `TRUE`/`FALSE`; no definite retained outcome changed. In one run the witness search
 statistics were identical to the retained ones (594 planned refutations, 593 matched

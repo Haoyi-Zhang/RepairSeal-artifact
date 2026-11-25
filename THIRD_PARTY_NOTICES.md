@@ -18,8 +18,9 @@ redistributed.
 - **ACM acmart.** Used only by the companion paper sources (not part of this
   repository), which carry the class, bibliography style, and `acmart-LICENSE.txt`.
 - **Fonts.** No font binaries are distributed in this delivery.  Figure scripts
-  use an installed Liberation Sans face (the retained figures embed Liberation
-  Sans 2.1.5, SIL OFL 1.1) and a documented installed fallback; see
+  use an installed Times New Roman face (the delivered figures embed Times New
+  Roman subsets) with matplotlib's bundled STIX fonts for mathematics, and a
+  documented installed fallback (Liberation Serif, then DejaVu Serif); see
   `figures/README.md`.  `fonts/OFL-1.1.txt` (Linux Libertine) is retained only
   as provenance for earlier builds.
 

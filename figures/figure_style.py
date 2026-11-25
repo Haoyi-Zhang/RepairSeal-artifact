@@ -81,19 +81,22 @@ def frozen_records(directory):
 
 
 def publication_font_family():
-    """Use a compact installed sans face for diagrams; font binaries are not distributed."""
-    for candidate in ("Liberation Sans", "Linux Biolinum O", "Libertinus Sans", "DejaVu Sans"):
+    """Use the manuscript's Times New Roman face for diagrams; font binaries are not distributed.
+
+    Liberation Serif is metric-compatible with Times New Roman and is the first fallback.
+    """
+    for candidate in ("Times New Roman", "Liberation Serif", "DejaVu Serif"):
         try:
             path = font_manager.findfont(candidate, fallback_to_default=False)
         except ValueError:
             continue
         return font_manager.FontProperties(fname=path).get_name()
-    return "DejaVu Sans"
+    return "DejaVu Serif"
 
 
 def style():
     family = publication_font_family()
-    plt.rcParams.update({"font.family": family, "font.size": 9.7,
+    plt.rcParams.update({"font.family": "serif", "font.serif": [family], "font.size": 9.7,
         "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "path",
         "svg.hashsalt": "repairseal-tosem-v2",
         "mathtext.fontset": "stix", "axes.unicode_minus": False,

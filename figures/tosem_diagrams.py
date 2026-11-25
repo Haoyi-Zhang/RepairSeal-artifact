@@ -231,9 +231,9 @@ def overview(style, output: Path, name="repairseal-overview", variant=5):
     small_label(c,290,30,"no",color=GRAY,size=6.4)
     icon_open(c,318,15,edge=GRAY,r=4.5)
     c.text(328,15,"no conclusion",size=7.0,ha="left",weight="bold",color=GRAY)
-    c.arrow((387,15),(400,15),color=GRAY)
-    icon_refresh(c,410,15,edge=GRAY)
-    small_label(c,404,5,"complete check",color=GRAY,size=5.9)
+    c.arrow((387,17),(399,17),color=GRAY)
+    icon_refresh(c,410,19,edge=GRAY)
+    small_label(c,406,4,"complete check",color=GRAY,size=6.2)
     style.save_figure(c.figure, output, name)
 
 
@@ -291,6 +291,9 @@ def ceil_obligations(style, root: Path, output: Path, name="ceil-obligations", v
 def support_demand(style, output: Path, name="support-demand-overview", variant=5):
     """One continuous support-keyed evaluation path with explicit short-circuiting."""
     c = Canvas(style, height=148)
+    # Trim the empty vertical margin of the 148-pt layout grid to the drawn band.
+    c.figure.set_size_inches(c.width / 72, 86 / 72)
+    c.ax.set_position([0, 0, 1, 1]); c.ax.set_ylim(37, 123)
     y=78
     icon_document(c,18,y,19,24,edge=INK,code=True)
     small_label(c,18,52,"request",color=GRAY,size=6.7)
@@ -375,7 +378,7 @@ def acceptance_transport(style, output: Path, name="acceptance-transport", varia
     c.arrow((196,72),(220,72),color=INK)
     c.text(242,108,"coverage",size=7.5,weight="bold")
     c.diamond(242,72,40,30,edge=INK,face="white",lw=.85)
-    c.text(242,76,"all j",size=6.8,weight="bold")
+    c.text(242,76,r"all $j$",size=6.8,weight="bold")
     c.text(242,66,r"$\subseteq$",size=8.5,weight="bold")
 
     c.arrow((262,81),(296,101),color=GREEN)
@@ -441,9 +444,9 @@ def trust_boundary(style, output: Path, name="trust-boundary", variant=5):
     c.arrow((300,89),(329,89),color=INK)
     icon_magnifier(c,342,89,r=5.2,edge=BLUE)
     c.text(342,68,"evaluate",size=6.7,color=GRAY)
-    c.arrow((355,89),(382,89),color=INK)
-    icon_shield(c,375,89,edge=GREEN,scale=.58)
-    c.text(387,89,"verdict",size=7.4,ha="left",weight="bold",color=GREEN)
+    c.arrow((355,89),(368,89),color=INK)
+    icon_shield(c,376,89,edge=GREEN,scale=.58)
+    c.text(386,89,"verdict",size=7.4,ha="left",weight="bold",color=GREEN)
     style.save_figure(c.figure, output, name)
 
 
