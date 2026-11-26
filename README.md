@@ -155,11 +155,12 @@ delivery audit. Figure regeneration is described in `figures/README.md`.
 The paper build needs the TeX/poppler/font packages listed under
 [Installing the external tools](#installing-the-external-tools); it rewrites the
 PDFs inside `../paper`, so run it on a copy if the delivered PDFs must stay
-untouched. The build produces `main.pdf` (38 pages, nine figures: five statistical
-figures generated from the retained records and four mechanism diagrams) and
-`supplementary.pdf` (17 pages, one mechanism diagram, ten figures in total). All
-figure text is Times New Roman with STIX mathematics; the figure atlas and
-`figure-manifest.json` bind each figure to its generator and source records. A
+untouched. The build produces `main.pdf` (39 pages, nine figures: five statistical
+figures generated from the retained records and four conceptual figures reserved as
+framed slots of their final size) and `supplementary.pdf` (18 pages, one conceptual
+figure slot). All statistical-figure text is Times New Roman with STIX mathematics;
+the figure atlas and `figure-manifest.json` bind each figure to its generator and
+source records. A
 rebuild keeps the page counts and the manuscript text; bytes and extracted-text
 details depend on the installed TeX release (review line-number placement, math
 glyph extraction) and font files.
