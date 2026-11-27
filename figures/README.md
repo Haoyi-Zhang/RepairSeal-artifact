@@ -2,8 +2,11 @@
 
 The manuscript's conceptual figures (overview, definedness, support-keyed
 demand, acceptance transport, and the supplement's replay comparison) are drawn
-separately and enter the manuscript as framed slots of their final size; the
-paper build no longer consumes the mechanism diagrams of this directory. They
+separately from the briefs in `paper/figure-prompts.md`; four of them enter the
+manuscript as delivered PDFs and acceptance transport still as a framed slot of its
+final size. The paper build no longer consumes the mechanism diagrams of this
+directory, and the drawn PDFs in `paper/figures/` overwrite its older outputs of
+the same names. They
 can still be generated for reference by:
 
 ```sh

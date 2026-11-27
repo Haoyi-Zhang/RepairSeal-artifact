@@ -235,9 +235,9 @@ The paper build needs the TeX/poppler/font packages listed under
 [Installing the external tools](#installing-the-external-tools); it rewrites the
 PDFs inside `../paper`, so run it on a copy if the delivered PDFs must stay
 untouched. The build produces `main.pdf` (40 pages, nine figures: five statistical
-figures generated from the retained records and four conceptual figures reserved as
-framed slots of their final size) and `supplementary.pdf` (22 pages, one conceptual
-figure slot). Its tables for the released-patch study, the source-bound cases, and
+figures generated from the retained records, three drawn conceptual figures, and one
+conceptual figure still reserved as a framed slot of its final size) and
+`supplementary.pdf` (22 pages, one drawn conceptual figure). Its tables for the released-patch study, the source-bound cases, and
 the observed-domain scale come from `paper/generate_review_tables.py`, which reads
 the records of `experiments/real-patches`, `natural-expansion`,
 `introclass-certificates`, `natural-domains-review`, and `deep-review` and asserts
