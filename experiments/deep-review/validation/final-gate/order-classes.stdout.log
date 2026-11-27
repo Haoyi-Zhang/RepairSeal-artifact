@@ -1,0 +1,144 @@
+{
+  "schema": "repairseal-order-type-summary-v1",
+  "status": "PASS",
+  "patches": 6,
+  "original_subjects": 5,
+  "families": 2,
+  "admitted_source_identities": 13,
+  "order_type_counts": {
+    "median": 13,
+    "smallest": 75
+  },
+  "source_order_class_observations": 417,
+  "defined_classes": 417,
+  "independent_branch_model_agreements": 417,
+  "computational_ast_correspondences": 13,
+  "distinct_candidate_output_behaviors": 2,
+  "candidate_behavior_groups": [
+    [
+      "apr-043",
+      "apr-046",
+      "apr-069",
+      "apr-070"
+    ],
+    [
+      "apr-072",
+      "apr-073"
+    ]
+  ],
+  "native_unique_points_per_family": {
+    "median": 59,
+    "smallest": 309
+  },
+  "native_source_input_pairs": 1767,
+  "native_compilations": 78,
+  "native_process_executions": 10602,
+  "native_correspondence_agreements": 10602,
+  "native_correspondence_disagreements": 0,
+  "compiler_families": [
+    "gcc"
+  ],
+  "compiler_modes": [
+    "O0",
+    "O2",
+    "ubsan-O1"
+  ],
+  "named_given_test_candidate_mode_checks": 252,
+  "provided_tests_native_pass": true,
+  "cases": [
+    {
+      "case_id": "apr-043",
+      "family": "median",
+      "subject": "median/h29/000",
+      "order_types": 13,
+      "given_test_order_types": 9,
+      "wrong_order_types": 1,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 11,
+        "fixed": 1,
+        "still-wrong": 1
+      },
+      "output_behavior_sha256": "c3d66b6d1b370f605d8f99ab4b4e580bb6cc8b5d03ef3a778bcfc1d5c8840368"
+    },
+    {
+      "case_id": "apr-046",
+      "family": "median",
+      "subject": "median/h3/000",
+      "order_types": 13,
+      "given_test_order_types": 9,
+      "wrong_order_types": 1,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 11,
+        "fixed": 1,
+        "still-wrong": 1
+      },
+      "output_behavior_sha256": "c3d66b6d1b370f605d8f99ab4b4e580bb6cc8b5d03ef3a778bcfc1d5c8840368"
+    },
+    {
+      "case_id": "apr-069",
+      "family": "median",
+      "subject": "median/h5/000",
+      "order_types": 13,
+      "given_test_order_types": 9,
+      "wrong_order_types": 1,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 11,
+        "fixed": 1,
+        "still-wrong": 1
+      },
+      "output_behavior_sha256": "c3d66b6d1b370f605d8f99ab4b4e580bb6cc8b5d03ef3a778bcfc1d5c8840368"
+    },
+    {
+      "case_id": "apr-070",
+      "family": "median",
+      "subject": "median/h7/000",
+      "order_types": 13,
+      "given_test_order_types": 9,
+      "wrong_order_types": 1,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 11,
+        "fixed": 1,
+        "still-wrong": 1
+      },
+      "output_behavior_sha256": "c3d66b6d1b370f605d8f99ab4b4e580bb6cc8b5d03ef3a778bcfc1d5c8840368"
+    },
+    {
+      "case_id": "apr-072",
+      "family": "smallest",
+      "subject": "smallest/h1/001",
+      "order_types": 75,
+      "given_test_order_types": 15,
+      "wrong_order_types": 17,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 51,
+        "fixed": 7,
+        "regressed": 1,
+        "still-wrong": 16
+      },
+      "output_behavior_sha256": "ecc7ccdf96d34aeb1d9d6cf76b81c3ff46fdc5f3c9fe0016205b98cd9053af4d"
+    },
+    {
+      "case_id": "apr-073",
+      "family": "smallest",
+      "subject": "smallest/h1/001",
+      "order_types": 75,
+      "given_test_order_types": 15,
+      "wrong_order_types": 17,
+      "covered_wrong_order_types": 0,
+      "transitions": {
+        "correct-preserved": 51,
+        "fixed": 7,
+        "regressed": 1,
+        "still-wrong": 16
+      },
+      "output_behavior_sha256": "ecc7ccdf96d34aeb1d9d6cf76b81c3ff46fdc5f3c9fe0016205b98cd9053af4d"
+    }
+  ],
+  "human_annotators": 0,
+  "limits": "All signed-int32 tuples for the admitted normalized comparison/copy computational fragment, under complete successful in-range decimal input and ordinary successful numeric output. This is an additional quotient analysis, not an expansion of RepairSeal's finite-domain acceptance contract. Raw/normalized computational AST correspondence and fresh boundary runs support the I/O adaptation; arbitrary C, arithmetic, malformed input, resource/environment failures and library implementations are excluded."
+}

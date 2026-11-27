@@ -1,0 +1,78 @@
+{
+  "schema": "repairseal-update-baseline-summary-v1",
+  "input_archive_sha256": "9481ba49b8d3f122f590606914a136839b0e484e2f8798fd8a6fdc554f4b4b1d",
+  "baseline_code_changed": false,
+  "delivery_paper_built_in_place": false,
+  "retained_result_checks": {
+    "checks": 36,
+    "failures": 0,
+    "status": "PASS_KEY_RESULT_SOURCE_TRACE"
+  },
+  "core": {
+    "overall_status": "FAIL",
+    "steps": [
+      {
+        "name": "verify-packaged-results",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "name": "audit-delivery",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "name": "fresh-core-reproduction",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "name": "complete-unit-suite",
+        "status": "PASS",
+        "returncode": 0,
+        "test_summary": {
+          "tests": 366,
+          "skipped": 1,
+          "ok": true,
+          "skip_reasons": [
+            "set CBMC_BINARY for independent external execution"
+          ]
+        }
+      },
+      {
+        "name": "verify-fresh-results",
+        "status": "PASS",
+        "returncode": 0
+      },
+      {
+        "name": "paper-build",
+        "status": "FAIL",
+        "returncode": 1
+      }
+    ],
+    "paper_failure_reason": "The core process started before the user-local TeX/font environment was ready. Its paper subprocess could not find pdflatex.fmt or Times New Roman; all preceding scientific and unit-test steps passed.",
+    "fresh_result_checks": {
+      "checks": 55,
+      "failures": 0,
+      "status": "PASS_KEY_RESULT_SOURCE_TRACE"
+    }
+  },
+  "paper_separate_complete_environment": {
+    "status": "PASS",
+    "exit_code": 0,
+    "pages": {
+      "main manuscript": 39,
+      "supplementary material": 18
+    },
+    "record": "paper-ready/evaluation/evaluation.json"
+  },
+  "environment_remediations": [
+    "Pinned PyMuPDF 1.26.7 and Pillow 12.3.0 in a separate environment.",
+    "Official Debian Clang 19.1.7 with the exact retained executable SHA-256.",
+    "Explicit writable TMPDIR outside the artifact prevents tempfile fallback into its source tree.",
+    "User-local Debian TeX packages, format and font maps; Times New Roman verified against Debian installer hashes.",
+    "CBMC 6.6.0 with the exact retained executable SHA-256 installed after the baseline core launch; available for the final regression."
+  ],
+  "retained_products": "Evaluator reports, command logs, fresh result verification, reproduction reports and deterministic summaries are included. Large duplicate regenerated certificate bodies remain reproducible through the original driver and are not copied into this baseline log bundle.",
+  "not_executed": "No full external CBMC/CPAchecker campaign is represented by these baseline checks."
+}

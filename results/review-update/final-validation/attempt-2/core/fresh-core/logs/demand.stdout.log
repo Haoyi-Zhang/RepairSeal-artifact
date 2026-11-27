@@ -1,0 +1,830 @@
+{
+  "schema": "demand-comparison-v1",
+  "outcome": "PASS",
+  "corpora": {
+    "core": {
+      "requests": 380,
+      "statuses": {
+        "ACCEPT": 95,
+        "REFUTED": 285
+      },
+      "input_points": 30780,
+      "full_cells": 1179684,
+      "cells": {
+        "pruned": 934011,
+        "projected_live": 126999,
+        "demand": 50338
+      },
+      "strictly_less_than_pruned": {
+        "projected_live": 380,
+        "demand": 380
+      },
+      "demand_strictly_less_than_projected_live": 380,
+      "accepted_with_truth_irrelevant_axis": 95,
+      "work_counts": {
+        "full": {
+          "proof_cells": 1179684
+        },
+        "pruned": {
+          "pruned_cells": 934011
+        },
+        "projected_live": {
+          "semantic_cells": 126999,
+          "cache_queries": 378272,
+          "cache_hits": 251273,
+          "cache_writes": 126999,
+          "key_coordinates": 817960,
+          "support_nodes": 14564,
+          "support_edges": 20724,
+          "support_coordinate_visits": 25346,
+          "axis_values_copied": 4560,
+          "axes_copied": 1520,
+          "projected_point_visits": 150695,
+          "point_coordinates_filled": 1039808,
+          "root_predicate_tests": 23696,
+          "conditional_choices": 56184,
+          "trace_events_examined": 3393,
+          "diagnostic_points": 14031,
+          "diagnostic_candidates": 1737,
+          "diagnostic_key_comparisons": 1452
+        },
+        "demand": {
+          "semantic_cells": 50338,
+          "cache_queries": 113375,
+          "cache_hits": 63037,
+          "cache_writes": 50338,
+          "key_coordinates": 203557,
+          "support_nodes": 14564,
+          "support_edges": 20724,
+          "support_coordinate_visits": 25346,
+          "axis_values_copied": 4560,
+          "axes_copied": 1520,
+          "projected_point_visits": 23696,
+          "point_coordinates_filled": 175682,
+          "root_predicate_tests": 23696,
+          "conditional_choices": 18980,
+          "trace_events_examined": 3393,
+          "diagnostic_points": 14031,
+          "diagnostic_candidates": 1737,
+          "diagnostic_key_comparisons": 1452
+        }
+      }
+    },
+    "grammar": {
+      "requests": 400,
+      "statuses": {
+        "ACCEPT": 100,
+        "REFUTED": 300
+      },
+      "input_points": 657728,
+      "full_cells": 47327168,
+      "cells": {
+        "pruned": 38342272,
+        "projected_live": 9707232,
+        "demand": 5257792
+      },
+      "strictly_less_than_pruned": {
+        "projected_live": 400,
+        "demand": 400
+      },
+      "demand_strictly_less_than_projected_live": 400,
+      "accepted_with_truth_irrelevant_axis": 28,
+      "work_counts": {
+        "full": {
+          "proof_cells": 47327168
+        },
+        "pruned": {
+          "pruned_cells": 38342272
+        },
+        "projected_live": {
+          "semantic_cells": 9707232,
+          "cache_queries": 29511408,
+          "cache_hits": 19804176,
+          "cache_writes": 9707232,
+          "key_coordinates": 90153102,
+          "support_nodes": 28196,
+          "support_edges": 45126,
+          "support_coordinate_visits": 68260,
+          "axis_values_copied": 9736,
+          "axes_copied": 1217,
+          "projected_point_visits": 10788785,
+          "point_coordinates_filled": 81104262,
+          "root_predicate_tests": 1081553,
+          "conditional_choices": 5479912,
+          "trace_events_examined": 26018,
+          "diagnostic_points": 375864,
+          "diagnostic_candidates": 15301,
+          "diagnostic_key_comparisons": 15001
+        },
+        "demand": {
+          "semantic_cells": 5257792,
+          "cache_queries": 11104125,
+          "cache_hits": 5846333,
+          "cache_writes": 5257792,
+          "key_coordinates": 30107417,
+          "support_nodes": 28196,
+          "support_edges": 45126,
+          "support_coordinate_visits": 68260,
+          "axis_values_copied": 9736,
+          "axes_copied": 1217,
+          "projected_point_visits": 1081553,
+          "point_coordinates_filled": 8275486,
+          "root_predicate_tests": 1081553,
+          "conditional_choices": 3149225,
+          "trace_events_examined": 26018,
+          "diagnostic_points": 375864,
+          "diagnostic_candidates": 15301,
+          "diagnostic_key_comparisons": 15001
+        }
+      }
+    }
+  },
+  "canonical_corpus_results": 780,
+  "canonical_target_results": 285,
+  "transport_targets": {
+    "covered": {
+      "requests": 190,
+      "statuses": {
+        "ACCEPT": 190
+      },
+      "input_points": 164255,
+      "full_cells": 5413499,
+      "cells": {
+        "pruned": 4350164,
+        "projected_live": 41057,
+        "demand": 18705
+      },
+      "strictly_less_than_pruned": {
+        "projected_live": 95,
+        "demand": 190
+      },
+      "demand_strictly_less_than_projected_live": 190,
+      "accepted_with_truth_irrelevant_axis": 190,
+      "work_counts": {
+        "full": {
+          "proof_cells": 5413499
+        },
+        "pruned": {
+          "pruned_cells": 4350164
+        },
+        "projected_live": {
+          "semantic_cells": 41057,
+          "cache_queries": 109549,
+          "cache_hits": 68492,
+          "cache_writes": 41057,
+          "key_coordinates": 174656,
+          "support_nodes": 6262,
+          "support_edges": 8388,
+          "support_coordinate_visits": 9880,
+          "axis_values_copied": 7315,
+          "axes_copied": 760,
+          "projected_point_visits": 45837,
+          "point_coordinates_filled": 273943,
+          "root_predicate_tests": 4780,
+          "conditional_choices": 7220
+        },
+        "demand": {
+          "semantic_cells": 18705,
+          "cache_queries": 35830,
+          "cache_hits": 17125,
+          "cache_writes": 18705,
+          "key_coordinates": 62974,
+          "support_nodes": 6262,
+          "support_edges": 8388,
+          "support_coordinate_visits": 9880,
+          "axis_values_copied": 7315,
+          "axes_copied": 760,
+          "projected_point_visits": 4780,
+          "point_coordinates_filled": 32524,
+          "root_predicate_tests": 4780,
+          "conditional_choices": 6274
+        }
+      }
+    },
+    "uncovered": {
+      "requests": 95,
+      "statuses": {
+        "ACCEPT": 95
+      },
+      "input_points": 7695,
+      "full_cells": 253611,
+      "cells": {
+        "pruned": 203796,
+        "projected_live": 22986,
+        "demand": 16861
+      },
+      "strictly_less_than_pruned": {
+        "projected_live": 95,
+        "demand": 95
+      },
+      "demand_strictly_less_than_projected_live": 95,
+      "accepted_with_truth_irrelevant_axis": 95,
+      "work_counts": {
+        "full": {
+          "proof_cells": 253611
+        },
+        "pruned": {
+          "pruned_cells": 203796
+        },
+        "projected_live": {
+          "semantic_cells": 22986,
+          "cache_queries": 67897,
+          "cache_hits": 44911,
+          "cache_writes": 22986,
+          "key_coordinates": 141224,
+          "support_nodes": 3131,
+          "support_edges": 4194,
+          "support_coordinate_visits": 4940,
+          "axis_values_copied": 1140,
+          "axes_copied": 380,
+          "projected_point_visits": 27481,
+          "point_coordinates_filled": 180892,
+          "root_predicate_tests": 4495,
+          "conditional_choices": 6909
+        },
+        "demand": {
+          "semantic_cells": 16861,
+          "cache_queries": 33365,
+          "cache_hits": 16504,
+          "cache_writes": 16861,
+          "key_coordinates": 60122,
+          "support_nodes": 3131,
+          "support_edges": 4194,
+          "support_coordinate_visits": 4940,
+          "axis_values_copied": 1140,
+          "axes_copied": 380,
+          "projected_point_visits": 4495,
+          "point_coordinates_filled": 30859,
+          "root_predicate_tests": 4495,
+          "conditional_choices": 6076
+        }
+      }
+    },
+    "by_kind": {
+      "axis-subset": {
+        "requests": 95,
+        "statuses": {
+          "ACCEPT": 95
+        },
+        "input_points": 95,
+        "full_cells": 3131,
+        "cells": {
+          "pruned": 2516,
+          "projected_live": 2516,
+          "demand": 1844
+        },
+        "strictly_less_than_pruned": {
+          "projected_live": 0,
+          "demand": 95
+        },
+        "demand_strictly_less_than_projected_live": 95,
+        "accepted_with_truth_irrelevant_axis": 95,
+        "work_counts": {
+          "full": {
+            "proof_cells": 3131
+          },
+          "pruned": {
+            "pruned_cells": 2516
+          },
+          "projected_live": {
+            "semantic_cells": 2516,
+            "cache_queries": 5967,
+            "cache_hits": 3451,
+            "cache_writes": 2516,
+            "key_coordinates": 7810,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 380,
+            "axes_copied": 380,
+            "projected_point_visits": 2801,
+            "point_coordinates_filled": 15276,
+            "root_predicate_tests": 285,
+            "conditional_choices": 311
+          },
+          "demand": {
+            "semantic_cells": 1844,
+            "cache_queries": 2465,
+            "cache_hits": 621,
+            "cache_writes": 1844,
+            "key_coordinates": 2850,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 380,
+            "axes_copied": 380,
+            "projected_point_visits": 285,
+            "point_coordinates_filled": 1665,
+            "root_predicate_tests": 285,
+            "conditional_choices": 198
+          }
+        }
+      },
+      "irrelevant-axis-replacement": {
+        "requests": 95,
+        "statuses": {
+          "ACCEPT": 95
+        },
+        "input_points": 164160,
+        "full_cells": 5410368,
+        "cells": {
+          "pruned": 4347648,
+          "projected_live": 38541,
+          "demand": 16861
+        },
+        "strictly_less_than_pruned": {
+          "projected_live": 95,
+          "demand": 95
+        },
+        "demand_strictly_less_than_projected_live": 95,
+        "accepted_with_truth_irrelevant_axis": 95,
+        "work_counts": {
+          "full": {
+            "proof_cells": 5410368
+          },
+          "pruned": {
+            "pruned_cells": 4347648
+          },
+          "projected_live": {
+            "semantic_cells": 38541,
+            "cache_queries": 103582,
+            "cache_hits": 65041,
+            "cache_writes": 38541,
+            "key_coordinates": 166846,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 6935,
+            "axes_copied": 380,
+            "projected_point_visits": 43036,
+            "point_coordinates_filled": 258667,
+            "root_predicate_tests": 4495,
+            "conditional_choices": 6909
+          },
+          "demand": {
+            "semantic_cells": 16861,
+            "cache_queries": 33365,
+            "cache_hits": 16504,
+            "cache_writes": 16861,
+            "key_coordinates": 60124,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 6935,
+            "axes_copied": 380,
+            "projected_point_visits": 4495,
+            "point_coordinates_filled": 30859,
+            "root_predicate_tests": 4495,
+            "conditional_choices": 6076
+          }
+        }
+      },
+      "uncovered-relevant-value": {
+        "requests": 95,
+        "statuses": {
+          "ACCEPT": 95
+        },
+        "input_points": 7695,
+        "full_cells": 253611,
+        "cells": {
+          "pruned": 203796,
+          "projected_live": 22986,
+          "demand": 16861
+        },
+        "strictly_less_than_pruned": {
+          "projected_live": 95,
+          "demand": 95
+        },
+        "demand_strictly_less_than_projected_live": 95,
+        "accepted_with_truth_irrelevant_axis": 95,
+        "work_counts": {
+          "full": {
+            "proof_cells": 253611
+          },
+          "pruned": {
+            "pruned_cells": 203796
+          },
+          "projected_live": {
+            "semantic_cells": 22986,
+            "cache_queries": 67897,
+            "cache_hits": 44911,
+            "cache_writes": 22986,
+            "key_coordinates": 141224,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 1140,
+            "axes_copied": 380,
+            "projected_point_visits": 27481,
+            "point_coordinates_filled": 180892,
+            "root_predicate_tests": 4495,
+            "conditional_choices": 6909
+          },
+          "demand": {
+            "semantic_cells": 16861,
+            "cache_queries": 33365,
+            "cache_hits": 16504,
+            "cache_writes": 16861,
+            "key_coordinates": 60122,
+            "support_nodes": 3131,
+            "support_edges": 4194,
+            "support_coordinate_visits": 4940,
+            "axis_values_copied": 1140,
+            "axes_copied": 380,
+            "projected_point_visits": 4495,
+            "point_coordinates_filled": 30859,
+            "root_predicate_tests": 4495,
+            "conditional_choices": 6076
+          }
+        }
+      }
+    },
+    "interpretation": "The 190 covered targets were constructed from accepted bases to satisfy coverage. Their cold costs are baseline comparisons, not natural reuse frequencies."
+  },
+  "axis_scaling": {
+    "requests": 28,
+    "literal_oracle_points": 13716,
+    "groups": {
+      "correct:t": [
+        {
+          "size": 1,
+          "points": 27,
+          "full_cells": 648,
+          "cells": {
+            "pruned": 459,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 10
+        },
+        {
+          "size": 2,
+          "points": 54,
+          "full_cells": 1296,
+          "cells": {
+            "pruned": 918,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 11
+        },
+        {
+          "size": 4,
+          "points": 108,
+          "full_cells": 2592,
+          "cells": {
+            "pruned": 1836,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 13
+        },
+        {
+          "size": 8,
+          "points": 216,
+          "full_cells": 5184,
+          "cells": {
+            "pruned": 3672,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 17
+        },
+        {
+          "size": 16,
+          "points": 432,
+          "full_cells": 10368,
+          "cells": {
+            "pruned": 7344,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 25
+        },
+        {
+          "size": 32,
+          "points": 864,
+          "full_cells": 20736,
+          "cells": {
+            "pruned": 14688,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 41
+        },
+        {
+          "size": 64,
+          "points": 1728,
+          "full_cells": 41472,
+          "cells": {
+            "pruned": 29376,
+            "projected_live": 93,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 73
+        }
+      ],
+      "correct:z": [
+        {
+          "size": 1,
+          "points": 27,
+          "full_cells": 648,
+          "cells": {
+            "pruned": 459,
+            "projected_live": 89,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 10
+        },
+        {
+          "size": 2,
+          "points": 54,
+          "full_cells": 1296,
+          "cells": {
+            "pruned": 918,
+            "projected_live": 91,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 11
+        },
+        {
+          "size": 4,
+          "points": 108,
+          "full_cells": 2592,
+          "cells": {
+            "pruned": 1836,
+            "projected_live": 95,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 13
+        },
+        {
+          "size": 8,
+          "points": 216,
+          "full_cells": 5184,
+          "cells": {
+            "pruned": 3672,
+            "projected_live": 103,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 17
+        },
+        {
+          "size": 16,
+          "points": 432,
+          "full_cells": 10368,
+          "cells": {
+            "pruned": 7344,
+            "projected_live": 119,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 25
+        },
+        {
+          "size": 32,
+          "points": 864,
+          "full_cells": 20736,
+          "cells": {
+            "pruned": 14688,
+            "projected_live": 151,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 41
+        },
+        {
+          "size": 64,
+          "points": 1728,
+          "full_cells": 41472,
+          "cells": {
+            "pruned": 29376,
+            "projected_live": 215,
+            "demand": 65
+          },
+          "demand_cache_queries": 121,
+          "diagnostic_points": 0,
+          "axis_values_copied": 73
+        }
+      ],
+      "overfit:t": [
+        {
+          "size": 1,
+          "points": 27,
+          "full_cells": 810,
+          "cells": {
+            "pruned": 594,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 10
+        },
+        {
+          "size": 2,
+          "points": 54,
+          "full_cells": 1620,
+          "cells": {
+            "pruned": 1188,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 11
+        },
+        {
+          "size": 4,
+          "points": 108,
+          "full_cells": 3240,
+          "cells": {
+            "pruned": 2376,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 13
+        },
+        {
+          "size": 8,
+          "points": 216,
+          "full_cells": 6480,
+          "cells": {
+            "pruned": 4752,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 17
+        },
+        {
+          "size": 16,
+          "points": 432,
+          "full_cells": 12960,
+          "cells": {
+            "pruned": 9504,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 25
+        },
+        {
+          "size": 32,
+          "points": 864,
+          "full_cells": 25920,
+          "cells": {
+            "pruned": 19008,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 41
+        },
+        {
+          "size": 64,
+          "points": 1728,
+          "full_cells": 51840,
+          "cells": {
+            "pruned": 38016,
+            "projected_live": 124,
+            "demand": 50
+          },
+          "demand_cache_queries": 108,
+          "diagnostic_points": 27,
+          "axis_values_copied": 73
+        }
+      ],
+      "overfit:z": [
+        {
+          "size": 1,
+          "points": 27,
+          "full_cells": 810,
+          "cells": {
+            "pruned": 594,
+            "projected_live": 120,
+            "demand": 46
+          },
+          "demand_cache_queries": 78,
+          "diagnostic_points": 9,
+          "axis_values_copied": 10
+        },
+        {
+          "size": 2,
+          "points": 54,
+          "full_cells": 1620,
+          "cells": {
+            "pruned": 1188,
+            "projected_live": 122,
+            "demand": 48
+          },
+          "demand_cache_queries": 93,
+          "diagnostic_points": 18,
+          "axis_values_copied": 11
+        },
+        {
+          "size": 4,
+          "points": 108,
+          "full_cells": 3240,
+          "cells": {
+            "pruned": 2376,
+            "projected_live": 126,
+            "demand": 52
+          },
+          "demand_cache_queries": 123,
+          "diagnostic_points": 36,
+          "axis_values_copied": 13
+        },
+        {
+          "size": 8,
+          "points": 216,
+          "full_cells": 6480,
+          "cells": {
+            "pruned": 4752,
+            "projected_live": 134,
+            "demand": 60
+          },
+          "demand_cache_queries": 183,
+          "diagnostic_points": 72,
+          "axis_values_copied": 17
+        },
+        {
+          "size": 16,
+          "points": 432,
+          "full_cells": 12960,
+          "cells": {
+            "pruned": 9504,
+            "projected_live": 150,
+            "demand": 76
+          },
+          "demand_cache_queries": 303,
+          "diagnostic_points": 144,
+          "axis_values_copied": 25
+        },
+        {
+          "size": 32,
+          "points": 864,
+          "full_cells": 25920,
+          "cells": {
+            "pruned": 19008,
+            "projected_live": 182,
+            "demand": 108
+          },
+          "demand_cache_queries": 543,
+          "diagnostic_points": 288,
+          "axis_values_copied": 41
+        },
+        {
+          "size": 64,
+          "points": 1728,
+          "full_cells": 51840,
+          "cells": {
+            "pruned": 38016,
+            "projected_live": 246,
+            "demand": 172
+          },
+          "demand_cache_queries": 1023,
+          "diagnostic_points": 576,
+          "axis_values_copied": 73
+        }
+      ]
+    },
+    "interpretation": "Unused coordinates increase full-product work but not projected semantic cells. Acceptance requires no candidate trace evaluation. Refutation retains trace-dependent diagnostic work; input copying and key/query work are separately counted."
+  },
+  "records": {
+    "protocol.json": "ca88c37b5110660f294557cbc66cb8b9f34e51c24acc6716a12e9d603e176ab0",
+    "corpus-bindings.json": "79c3450db54ca7700855264a0e105d1403ed53a6cffd4b15dbfc2f2b07f9cff9",
+    "decisions.json": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+    "transport.json": "3e5d1b0d3f595f4ce9d8cda05395b35cc16c564b3c079f786bcce2b974190ad7",
+    "axis-scaling.json": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d"
+  }
+}

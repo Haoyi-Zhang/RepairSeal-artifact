@@ -1,0 +1,56 @@
+{
+  "schema": "repairseal-observed-domain-scale-v1",
+  "outcome": "PASS",
+  "data_origin": "recomputed-from-retained-delivered-census-not-fresh-execution",
+  "admission_point_cap": 4096,
+  "source_bindings": {
+    "data/source-programs/source-admission.json": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344",
+    "data/source-programs/normalized-corpus.json": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa"
+  },
+  "script_sha256": "f7606990559bf81cdc6bfac19f6a6d4937e867c7f43b6693ab3a8742206cf515",
+  "source_occurrences": 7806,
+  "distinct_source_sha256": 7425,
+  "known_arity_occurrences": 223,
+  "unknown_arity_occurrences": 7583,
+  "known_arity_distribution": {
+    "1": 69,
+    "2": 28,
+    "3": 69,
+    "4": 20,
+    "5": 14,
+    "6": 12,
+    "7": 7,
+    "8": 4
+  },
+  "eight_values_per_coordinate_exceeding_cap_occurrences": 37,
+  "complete_io_subjects": 100,
+  "all_defined_subjects": 95,
+  "cartesian_projection_product_above_cap": 50,
+  "all_defined_cartesian_projection_product_above_cap": 46,
+  "cartesian_projection_product_bins": {
+    "1-64": 30,
+    "4097-1000000": 38,
+    "65-4096": 20,
+    "above-1000000": 12
+  },
+  "all_defined_cartesian_projection_product_bins": {
+    "1-64": 29,
+    "4097-1000000": 35,
+    "65-4096": 20,
+    "above-1000000": 11
+  },
+  "minimum_retained_point_set_size": 13,
+  "maximum_retained_point_set_size": 172,
+  "maximum_cartesian_projection_product": 50056151040,
+  "scope": [
+    "Every one of the 7,806 indexed source occurrences is represented; unsupported source arities are explicitly unknown.",
+    "Coordinate projection cardinalities use every given repair and held-out input of each of the 100 complete-I/O subjects.",
+    "The product measures Cartesian expansion of observed coordinate values only; it is not a claim that all products are legal, defined, independent, or verified.",
+    "Eight values per coordinate is a declared scaling scenario, not an inferred distribution of real input domains.",
+    "Repeated source hashes and same-problem subjects are dependent; no population prevalence or confidence interval is inferred."
+  ],
+  "records": {
+    "source-arity-census.csv": "044eaf0f4a4965253a7bcbf344551239d94b61a31c1af91e7f39f965da1367b9",
+    "test-projection-scale.csv": "3eeff294e78eb610366fbf86ac0d67fee903e16ec5c4b33bfeeec2daf1ea0a6a"
+  }
+}

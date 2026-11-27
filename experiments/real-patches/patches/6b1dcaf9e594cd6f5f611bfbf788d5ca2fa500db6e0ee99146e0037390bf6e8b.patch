@@ -1,0 +1,19 @@
+--- a/median.c
++++ b/median.c
+@@ -13,14 +13,14 @@
+  	num1 = atoi(argv[1]);
+   	num2 = atoi(argv[2]);
+   	num3 = atoi(argv[3]);
+-	if((((num1 > num2) && (num1 < num3))) || ((num1 > num3) && (num1 < num2)))
++	if((num3 <= num2))
+ 	{
+ 		printf("%d\n", ANGELIX_OUTPUT(int, num1, "stdout"));
+ 
+ 		return 0;
+ 	}
+ 
+-	else if((((num2 > num1) && (num2 < num3))) || ((num2 > num3) && (num2 < num1)))
++	else if((num1 <= num3))
+ 
+         {
+                 printf("%d\n", ANGELIX_OUTPUT(int, num2, "stdout"));

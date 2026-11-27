@@ -1,0 +1,11 @@
+--- a/median.c
++++ b/median.c
+@@ -10,7 +10,7 @@
+ 	a = atoi(argv[1]);
+ 	b = atoi(argv[2]);
+ 	c = atoi(argv[3]);
+-	if ((a>=b && a<=c) || (a>=c && a<=b))
++	if ((b < b))
+ 		m = b;
+ 	else if ((b>=a && b<=c) || (b>=c && b<=a))
+ 		m = b;

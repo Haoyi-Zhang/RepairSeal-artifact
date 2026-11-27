@@ -1,0 +1,11 @@
+--- a/smallest.c
++++ b/smallest.c
+@@ -20,7 +20,7 @@
+ else if(c<a && c<b && c<d)
+ r=c;
+ else
+-r=d;
++r=(c + (c - b));
+ printf("%d\n",ANGELIX_OUTPUT(int,(int)r, "stdout"));
+ return 0;
+ }

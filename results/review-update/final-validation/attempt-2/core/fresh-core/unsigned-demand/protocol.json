@@ -1,0 +1,57 @@
+{
+  "schema": "demand-comparison-protocol-v1",
+  "source_bindings": {
+    "src/proof_dag_checker.py": "9eae2fbaebc3209cc4d0ab63950f9a9206e3f2c48d0654557c4692ac950e0aad",
+    "src/producer.py": "b0d342b56360f6766eb645cb5db914624c811e005dc4f5f2f7a438c59f53dfe6",
+    "src/proof_dag_producer.py": "1ae8d8066d14aafd98adc8b9f0ebd676c35c98618d8e2af9996deda38234222b",
+    "src/domain_transport.py": "1fa9dcc4e48365fd4d1037bd436aee106dc08a5b865e2ea1ada9db7e6a199f47",
+    "src/demand_evaluator.py": "75d42a9c723b5ed43dbae95c97cf324426882457e1d1b21b1dbc35d4a104fda0",
+    "tests/fixture_oracle.py": "a09d3dbb99c6a4ec3d235eb6cf9fa753ab00487ffd14a37ac0476f6b338fda73",
+    "tests/scientific_driver.py": "1a12f73813056ce2c4d4da2acd8741fe24863d1314c3338e427453f3db0cd6fb",
+    "tests/demand_comparison.py": "d48ed51786ff41f583df516936156db6db889d55234982481ba54b3b2067e31a"
+  },
+  "python_implementation": "CPython",
+  "python_version": "3.12.14",
+  "populations": {
+    "core": 380,
+    "grammar": 400,
+    "retained_transport_targets": 285,
+    "axis_controls": 28
+  },
+  "canonical_contract": "exact typed status plus first failed obligation, then lexicographically least candidate trace and input",
+  "full_control": "fresh receiver check of retained core packets or newly produced grammar/target/control packets",
+  "direct_baselines": {
+    "pruned": "all live nodes times the complete Cartesian domain",
+    "projected_live": "all live nodes on their respective global syntactic support projections",
+    "demand": "support-keyed demand memoization; obligation priority; conditional local rules; diagnostics only after the earliest failed obligation"
+  },
+  "counter_scope": "semantic node/key values and explicitly named logical visits/queries; parsing, reconstruction, allocation and elapsed time remain additional costs",
+  "transport_scope": "cold re-evaluation of the exact retained targets, without a history advantage in any arm; the old coverage designation is a constructed control, not a measured natural hit rate",
+  "axis_control": {
+    "fixture": "literal fixture 01",
+    "variants": [
+      "correct",
+      "overfit"
+    ],
+    "axes": {
+      "t": "wholly unused by obligations and candidate trace",
+      "z": "candidate trace only"
+    },
+    "sizes": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "values": "range(size)",
+    "other_axes": "retained three-value axes",
+    "selection": "authored scaling control fixed before outcomes"
+  },
+  "oracle_scope": "retained independently generated core/grammar outcomes; the 28 axis controls additionally use the literal fixture arithmetic oracle on every new point",
+  "performance_claim": "operation counts only; no elapsed-time speedup or optimality claim",
+  "input_files": 1449,
+  "input_manifest_sha256": "33354975f74ffa714de655d3c9f47cb6019efb7ebaf7d8df6f4a1a0112a63675"
+}

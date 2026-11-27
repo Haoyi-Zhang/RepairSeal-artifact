@@ -1,0 +1,207 @@
+{
+  "schema": "repairseal-artifact-evaluation-v1",
+  "mode": "paper",
+  "started_utc": "2026-11-26T17:31:13+00:00",
+  "project_root": "/workspace/scratch/a88b4d734b38/baseline-paper",
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "verify-packaged-results",
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "/workspace/scratch/a88b4d734b38/baseline-paper/artifact/verify_expected_results.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/paper-ready/evaluation/key-result-trace"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-paper",
+      "stdout": "logs/verify-packaged-results.stdout.log",
+      "stderr": "logs/verify-packaged-results.stderr.log",
+      "started_utc": "2026-11-26T17:31:16+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-26T17:31:16+00:00",
+      "elapsed_seconds": 0.21804552300000068
+    },
+    {
+      "name": "audit-delivery",
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "/workspace/scratch/a88b4d734b38/baseline-paper/artifact/audit_delivery.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/paper-ready/evaluation/delivery-audit.json"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-paper",
+      "stdout": "logs/audit-delivery.stdout.log",
+      "stderr": "logs/audit-delivery.stderr.log",
+      "started_utc": "2026-11-26T17:31:16+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-26T17:31:21+00:00",
+      "elapsed_seconds": 5.220275958999991
+    },
+    {
+      "name": "paper-build",
+      "command": [
+        "sh",
+        "build.sh"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-paper/paper",
+      "stdout": "logs/paper-build.stdout.log",
+      "stderr": "logs/paper-build.stderr.log",
+      "started_utc": "2026-11-26T17:31:21+00:00",
+      "timeout_seconds": 3600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-26T17:34:25+00:00",
+      "elapsed_seconds": 183.9936394870001
+    }
+  ],
+  "interpretation": "Local fresh execution, retained-output recomputation, and external-only campaigns are distinct states. A missing external prerequisite starts zero scientific studies and is not a negative result.",
+  "paper_companion": "PRESENT",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_count": 9,
+    "packages": {
+      "pycparser": {
+        "expected": "3.0",
+        "actual": "3.0",
+        "status": "PASS"
+      },
+      "matplotlib": {
+        "expected": "3.10.8",
+        "actual": "3.10.8",
+        "status": "PASS"
+      },
+      "numpy": {
+        "expected": "2.3.5",
+        "actual": "2.3.5",
+        "status": "PASS"
+      },
+      "PyMuPDF": {
+        "expected": "1.26.7",
+        "actual": "1.26.7",
+        "status": "PASS"
+      },
+      "pillow": {
+        "expected": "12.3.0",
+        "actual": "12.3.0",
+        "status": "PASS"
+      }
+    },
+    "gcc": {
+      "status": "READY",
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+      "returncode": 0,
+      "version_output": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "clang": {
+      "status": "READY",
+      "path": "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "sha256": "0a3c55936ac43954fbe4914e6e73b577ca9e35e75d89ef13d3e28c187f41ca1a",
+      "returncode": 0,
+      "version_output": "Debian clang version 19.1.7 (3+b1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin"
+    },
+    "java": {
+      "status": "READY",
+      "path": "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+      "sha256": "4b384afb65f3d79edb5b8d0a089e7d50073c954e7a0b2775fc4c47ca50355d70",
+      "returncode": 0,
+      "version_output": "openjdk 21.0.13.1 2026-11-17\nOpenJDK Runtime Environment (build 21.0.13.1+2-1-deb13u1-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.13.1+2-1-deb13u1-Debian, mixed mode, sharing)"
+    }
+  },
+  "required_files": [
+    {
+      "path": "artifact/LICENSE",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/reproduce.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/verify_expected_results.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/expected-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/main.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/supplementary.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/build.sh",
+      "status": "PASS"
+    }
+  ],
+  "path_hygiene": {
+    "status": "PASS",
+    "documentation_hits": [],
+    "cache_files": []
+  },
+  "external_preconditions": {
+    "status": "FAILED_PRECONDITION",
+    "scientific_studies_started": 0,
+    "requirements": {
+      "historical_python": {
+        "status": "MISSING"
+      },
+      "boolean_cbmc": {
+        "status": "MISSING"
+      },
+      "witness_cbmc": {
+        "status": "MISSING"
+      },
+      "cpachecker": {
+        "status": "MISSING"
+      },
+      "codeflaws_archive": {
+        "status": "MISSING"
+      },
+      "upstream_vulkan": {
+        "status": "MISSING",
+        "note": "A source checkout alone is not proof of application-level execution; the external mode records the command separately."
+      }
+    }
+  },
+  "paper_outputs": {
+    "main.pdf": {
+      "status": "PASS",
+      "bytes": 869099,
+      "sha256": "f445d62e1db3161b1737184d9e03a4d40c0ff2d8978082c1996fd8c6b32bc019"
+    },
+    "supplementary.pdf": {
+      "status": "PASS",
+      "bytes": 502233,
+      "sha256": "532669da712bc8124e7da898e80d09657c95b74e5498ee62992845b01db3a19f"
+    },
+    "figure-atlas.pdf": {
+      "status": "PASS",
+      "bytes": 1438250,
+      "sha256": "7272afd65d4c513169398a37b418367cdba45fe7f8d6f7950ac690e38d52c228"
+    }
+  },
+  "ended_utc": "2026-11-26T17:34:25+00:00",
+  "exit_code": 0
+}

@@ -1,0 +1,2399 @@
+{
+  "schema": "repairseal-key-result-audit-v2",
+  "status": "PASS_KEY_RESULT_SOURCE_TRACE",
+  "checks": 222,
+  "failures": [],
+  "records": [
+    {
+      "name": "complete_decision_requests",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "canonical_corpus_results",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "pruned_live_node_semantic_values",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.pruned)",
+      "expected": 39276283,
+      "actual": 39276283,
+      "status": "PASS"
+    },
+    {
+      "name": "support_keyed_semantic_values",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.demand)",
+      "expected": 5308130,
+      "actual": 5308130,
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/protocol.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.protocol.json",
+      "expected": "2978adbe4a060ff336c53525ff8d1aba012b9d8d460b24e342ad0246e8dbbf5a",
+      "actual": "2978adbe4a060ff336c53525ff8d1aba012b9d8d460b24e342ad0246e8dbbf5a",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/corpus-bindings.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.corpus-bindings.json",
+      "expected": "4892023c590d274a33a6d0ac58cd226413cdccb8803a9607b2a87876d5bf5dfc",
+      "actual": "4892023c590d274a33a6d0ac58cd226413cdccb8803a9607b2a87876d5bf5dfc",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/decisions.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.decisions.json",
+      "expected": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "actual": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/transport.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.transport.json",
+      "expected": "d0212036aa8fe0ba3941b73d9204d7b3c37db499f013bef46de3fc35b2ba15e9",
+      "actual": "d0212036aa8fe0ba3941b73d9204d7b3c37db499f013bef46de3fc35b2ba15e9",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/axis-scaling.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.axis-scaling.json",
+      "expected": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "actual": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "status": "PASS"
+    },
+    {
+      "name": "controlled_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.new_requests",
+      "expected": 285,
+      "actual": 285,
+      "status": "PASS"
+    },
+    {
+      "name": "covered_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.covered_requests",
+      "expected": 190,
+      "actual": 190,
+      "status": "PASS"
+    },
+    {
+      "name": "fallback_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.fallback_requests",
+      "expected": 95,
+      "actual": 95,
+      "status": "PASS"
+    },
+    {
+      "name": "covered_new_semantic_cells_per_arm",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.covered_new_semantic_cells_per_arm",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "contract_same_canonical_results",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "same_canonical_results",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/protocol.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.protocol.json",
+      "expected": "458b3744d93660a141d797df3b9fed7647f50464d34440fca930ca118b435167",
+      "actual": "458b3744d93660a141d797df3b9fed7647f50464d34440fca930ca118b435167",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/corpus-bindings.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.corpus-bindings.json",
+      "expected": "b02e6af66eea60fa455fa630fc0a772952388197cda6e15ef090ab24a5726454",
+      "actual": "b02e6af66eea60fa455fa630fc0a772952388197cda6e15ef090ab24a5726454",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/decisions.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.decisions.json",
+      "expected": "c350dff81f2516eba53dbda69722bc4618fc9290913c84bc8fd752b02214e407",
+      "actual": "c350dff81f2516eba53dbda69722bc4618fc9290913c84bc8fd752b02214e407",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/transport.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.transport.json",
+      "expected": "14bc9baa5fdca510265b4dffbbc87463ab4627ffdb2d44e98347381942004c86",
+      "actual": "14bc9baa5fdca510265b4dffbbc87463ab4627ffdb2d44e98347381942004c86",
+      "status": "PASS"
+    },
+    {
+      "name": "witness_planned_refutations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.planned_refutations",
+      "expected": 594,
+      "actual": 594,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_matched_confirmations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.both_confirmed",
+      "expected": 593,
+      "actual": 593,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_iterations_lower",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.iterations.input_lower",
+      "expected": 585,
+      "actual": 585,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_iterations_equal",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.iterations.equal",
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_abstractions_lower",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.abstraction_computations.input_lower",
+      "expected": 585,
+      "actual": 585,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_abstractions_equal",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.abstraction_computations.equal",
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "signed_combinations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.combinations",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "repair_accepted",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.accepted_repair",
+      "expected": 420,
+      "actual": 420,
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_authorized",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.covered_accepted",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "union_accepted",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.union_status.ACCEPT",
+      "expected": 328,
+      "actual": 328,
+      "status": "PASS"
+    },
+    {
+      "name": "repair_accept_union_refute",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.uncovered_accepted_union_status.REFUTED",
+      "expected": 92,
+      "actual": 92,
+      "status": "PASS"
+    },
+    {
+      "name": "receiving_time_repair_requests",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.requests",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "demand_slower_than_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.demand_slower_than_live",
+      "expected": 730,
+      "actual": 730,
+      "status": "PASS"
+    },
+    {
+      "name": "median_demand_over_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.demand_over_live.p50",
+      "expected": 1.297816140061079,
+      "actual": 1.297816140061079,
+      "status": "PASS"
+    },
+    {
+      "name": "receiving_time_union_requests",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.requests",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "demand_slower_than_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.demand_slower_than_live",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "median_demand_over_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.demand_over_live.p50",
+      "expected": 2.188666174775451,
+      "actual": 2.188666174775451,
+      "status": "PASS"
+    },
+    {
+      "name": "median_uninstrumented_support_over_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/counter-overhead/analysis.json",
+      "field": "repair.ratios.support_uninstrumented_over_live.p50",
+      "expected": 1.1874391518275138,
+      "actual": 1.1874391518275138,
+      "status": "PASS"
+    },
+    {
+      "name": "median_uninstrumented_support_over_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/counter-overhead/analysis.json",
+      "field": "union.ratios.support_uninstrumented_over_live.p50",
+      "expected": 1.730102797664843,
+      "actual": 1.730102797664843,
+      "status": "PASS"
+    },
+    {
+      "name": "update:driver-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update_driver_sha256",
+      "expected": "7536aea2e52a57ebfcafa786bd073453a3231a9b1a8c75860a6f44380c920e51",
+      "actual": "7536aea2e52a57ebfcafa786bd073453a3231a9b1a8c75860a6f44380c920e51",
+      "status": "PASS"
+    },
+    {
+      "name": "update:study-coverage",
+      "provenance": "new-experiment-coverage",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.keys",
+      "expected": [
+        "domain_scale",
+        "fresh_census",
+        "independent_definedness_review",
+        "independent_normalization_review",
+        "independent_patch_review",
+        "introclass_certificates",
+        "natural_expansion",
+        "real_patches"
+      ],
+      "actual": [
+        "domain_scale",
+        "fresh_census",
+        "independent_definedness_review",
+        "independent_normalization_review",
+        "independent_patch_review",
+        "introclass_certificates",
+        "natural_expansion",
+        "real_patches"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.real_patches.summary_sha256",
+      "expected": "b61d108a6f04e3fae9358d14cc856f052aef30584e731ecedc2a2d1d793d97aa",
+      "actual": "b61d108a6f04e3fae9358d14cc856f052aef30584e731ecedc2a2d1d793d97aa",
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.real_patches.inventory_sha256",
+      "expected": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "actual": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.real_patches.verifier_sha256",
+      "expected": "9d749341b9690c329e03a03dd3ac80305f1fd885126b26d7d9d64094204f282b",
+      "actual": "9d749341b9690c329e03a03dd3ac80305f1fd885126b26d7d9d64094204f282b",
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:selected_patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "selected_patches",
+      "expected": 127,
+      "actual": 127,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:unique_original_sources",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "unique_original_sources",
+      "expected": 67,
+      "actual": 67,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:unique_candidate_sources",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "unique_candidate_sources",
+      "expected": 127,
+      "actual": 127,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:sampling_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "sampling_counts",
+      "expected": {
+        "application_successes": 939,
+        "raw_patch_occurrences": 3209,
+        "selected": 127,
+        "unique_applied_candidates": 519,
+        "unique_originals": 67
+      },
+      "actual": {
+        "raw_patch_occurrences": 3209,
+        "application_successes": 939,
+        "unique_applied_candidates": 519,
+        "unique_originals": 67,
+        "selected": 127
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:strict_application_exclusion_reasons",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "strict_application_exclusion_reasons",
+      "expected": {
+        "exact old context mismatch": 2270
+      },
+      "actual": {
+        "exact old context mismatch": 2270
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:primary_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "primary_counts",
+      "expected": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 8,
+        "repair-region": 95
+      },
+      "actual": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 8,
+        "repair-region": 95
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:nonexclusive_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "nonexclusive_counts",
+      "expected": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 81,
+        "repair-region": 99
+      },
+      "actual": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 81,
+        "repair-region": 99
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:by_source_tool_family",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "by_source_tool_family",
+      "expected": [
+        {
+          "all_given_tests_pass": 6,
+          "family": "median",
+          "nonexclusive_counts": {
+            "definedness": 3,
+            "other": 4,
+            "preservation": 49,
+            "repair-region": 58
+          },
+          "patches": 72,
+          "primary_counts": {
+            "definedness": 3,
+            "other": 4,
+            "preservation": 8,
+            "repair-region": 57
+          },
+          "repair_tool": "Angelix (published patch inventory)",
+          "source": "IntroClass / Zenodo 1012686",
+          "tests_pass_but_wrong": 5
+        },
+        {
+          "all_given_tests_pass": 8,
+          "family": "smallest",
+          "nonexclusive_counts": {
+            "correct": 1,
+            "definedness": 6,
+            "other": 10,
+            "preservation": 32,
+            "repair-region": 41
+          },
+          "patches": 55,
+          "primary_counts": {
+            "correct": 1,
+            "definedness": 6,
+            "other": 10,
+            "repair-region": 38
+          },
+          "repair_tool": "Angelix (published patch inventory)",
+          "source": "IntroClass / Zenodo 1012686",
+          "tests_pass_but_wrong": 6
+        }
+      ],
+      "actual": [
+        {
+          "source": "IntroClass / Zenodo 1012686",
+          "repair_tool": "Angelix (published patch inventory)",
+          "family": "median",
+          "patches": 72,
+          "primary_counts": {
+            "definedness": 3,
+            "other": 4,
+            "preservation": 8,
+            "repair-region": 57
+          },
+          "nonexclusive_counts": {
+            "definedness": 3,
+            "other": 4,
+            "preservation": 49,
+            "repair-region": 58
+          },
+          "all_given_tests_pass": 6,
+          "tests_pass_but_wrong": 5
+        },
+        {
+          "source": "IntroClass / Zenodo 1012686",
+          "repair_tool": "Angelix (published patch inventory)",
+          "family": "smallest",
+          "patches": 55,
+          "primary_counts": {
+            "correct": 1,
+            "definedness": 6,
+            "other": 10,
+            "repair-region": 38
+          },
+          "nonexclusive_counts": {
+            "correct": 1,
+            "definedness": 6,
+            "other": 10,
+            "preservation": 32,
+            "repair-region": 41
+          },
+          "all_given_tests_pass": 8,
+          "tests_pass_but_wrong": 6
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:all_given_tests_pass",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "all_given_tests_pass",
+      "expected": 14,
+      "actual": 14,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:all_given_test_passing_primary_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "all_given_test_passing_primary_counts",
+      "expected": {
+        "correct": 1,
+        "other": 2,
+        "repair-region": 11
+      },
+      "actual": {
+        "correct": 1,
+        "other": 2,
+        "repair-region": 11
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:tests_pass_but_wrong",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "tests_pass_but_wrong",
+      "expected": 11,
+      "actual": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:tests_pass_but_wrong_fraction_all_selected",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "tests_pass_but_wrong_fraction_all_selected",
+      "expected": {
+        "denominator": 127,
+        "numerator": 11
+      },
+      "actual": {
+        "numerator": 11,
+        "denominator": 127
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:tests_pass_but_wrong_fraction_all_test_passing",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "tests_pass_but_wrong_fraction_all_test_passing",
+      "expected": {
+        "denominator": 14,
+        "numerator": 11
+      },
+      "actual": {
+        "numerator": 11,
+        "denominator": 14
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:semantic_observations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "semantic_observations",
+      "expected": 32375,
+      "actual": 32375,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:semantic_replayed",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "semantic_replayed",
+      "expected": 32375,
+      "actual": 32375,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:native_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "native_executions",
+      "expected": 130772,
+      "actual": 130772,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:compiled_artifacts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "compiled_artifacts",
+      "expected": 784,
+      "actual": 784,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:successful_compilations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "successful_compilations",
+      "expected": 784,
+      "actual": 784,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:defined_native_correspondence_checks",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "defined_native_correspondence_checks",
+      "expected": 126696,
+      "actual": 126696,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:source_admission_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "source_admission_counts",
+      "expected": {
+        "admitted": 175,
+        "unsupported": 21
+      },
+      "actual": {
+        "admitted": 175,
+        "unsupported": 21
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:source_correspondence_pass",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "source_correspondence_pass",
+      "expected": 175,
+      "actual": 175,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:source_correspondence_total",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "source_correspondence_total",
+      "expected": 196,
+      "actual": 196,
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:finite_input_points",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "finite_input_points",
+      "expected": {
+        "median": 133,
+        "smallest": 263
+      },
+      "actual": {
+        "median": 133,
+        "smallest": 263
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:given_test_cases",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "given_test_cases",
+      "expected": {
+        "median": 13,
+        "smallest": 16
+      },
+      "actual": {
+        "median": 13,
+        "smallest": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:real_patches:review",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/summary.json",
+      "field": "review",
+      "expected": {
+        "human_agreement": null,
+        "human_annotators": 0,
+        "kind": "rule-based labels with independent replay; human agreement not measured"
+      },
+      "actual": {
+        "kind": "rule-based labels with independent replay; human agreement not measured",
+        "human_annotators": 0,
+        "human_agreement": null
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_patch_review.summary_sha256",
+      "expected": "d7958521cd694de5161345380eb876d4b3106a21660b8a074ab3597f1055c567",
+      "actual": "d7958521cd694de5161345380eb876d4b3106a21660b8a074ab3597f1055c567",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_patch_review.inventory_sha256",
+      "expected": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "actual": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_patch_review.verifier_sha256",
+      "expected": "921c3c0938e547255a00aa5263639420ff19cbb6ddb6bf75d092ca45e61c4ece",
+      "actual": "921c3c0938e547255a00aa5263639420ff19cbb6ddb6bf75d092ca45e61c4ece",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:status",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "status",
+      "expected": "PASS_INDEPENDENT_LABEL_REVIEW",
+      "actual": "PASS_INDEPENDENT_LABEL_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:reviewed_patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "reviewed_patches",
+      "expected": 127,
+      "actual": 127,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:agreed_patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "agreed_patches",
+      "expected": 127,
+      "actual": 127,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:agreement_fraction",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "agreement_fraction",
+      "expected": {
+        "denominator": 127,
+        "numerator": 127
+      },
+      "actual": {
+        "numerator": 127,
+        "denominator": 127
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:disagreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "disagreements",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:primary_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "primary_counts",
+      "expected": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 8,
+        "repair-region": 95
+      },
+      "actual": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 8,
+        "repair-region": 95
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:nonexclusive_counts",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "nonexclusive_counts",
+      "expected": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 81,
+        "repair-region": 99
+      },
+      "actual": {
+        "correct": 1,
+        "definedness": 9,
+        "other": 14,
+        "preservation": 81,
+        "repair-region": 99
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:all_given_tests_pass",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "all_given_tests_pass",
+      "expected": 14,
+      "actual": 14,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:tests_pass_but_wrong",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "tests_pass_but_wrong",
+      "expected": 11,
+      "actual": 11,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:native_receipts_checked",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "native_receipts_checked",
+      "expected": 130772,
+      "actual": 130772,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:defined_native_correspondence_checks",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "defined_native_correspondence_checks",
+      "expected": 126696,
+      "actual": 126696,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:mathematical_reference_native_checks",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "mathematical_reference_native_checks",
+      "expected": 1584,
+      "actual": 1584,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:candidate_undefined_observation_reasons",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "candidate_undefined_observation_reasons",
+      "expected": {
+        "uninitialized-read:Small": 29,
+        "uninitialized-read:e": 69,
+        "uninitialized-read:m": 36,
+        "uninitialized-read:median": 20,
+        "uninitialized-read:smallest": 157
+      },
+      "actual": {
+        "uninitialized-read:Small": 29,
+        "uninitialized-read:e": 69,
+        "uninitialized-read:m": 36,
+        "uninitialized-read:median": 20,
+        "uninitialized-read:smallest": 157
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:human_annotators",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "human_annotators",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_patch_review:human_agreement",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-review.json",
+      "field": "human_agreement",
+      "expected": null,
+      "actual": null,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_definedness_review.summary_sha256",
+      "expected": "42582c5c4298b98f8895e4a7e3723ae361a4e2c15e082a82daee294e06c2b2db",
+      "actual": "42582c5c4298b98f8895e4a7e3723ae361a4e2c15e082a82daee294e06c2b2db",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_definedness_review.inventory_sha256",
+      "expected": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "actual": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_definedness_review.verifier_sha256",
+      "expected": "3a29e90753a404ceef232fdf5eedddc35c3750bcbb9f0070c5e619e641f07bed",
+      "actual": "3a29e90753a404ceef232fdf5eedddc35c3750bcbb9f0070c5e619e641f07bed",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:status",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "status",
+      "expected": "PASS_INDEPENDENT_DEFINEDNESS_WITNESSES",
+      "actual": "PASS_INDEPENDENT_DEFINEDNESS_WITNESSES",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:reviewed_patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "reviewed_patches",
+      "expected": 9,
+      "actual": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:confirmed_uninitialized_read_witnesses",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "confirmed_uninitialized_read_witnesses",
+      "expected": 9,
+      "actual": 9,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:human_annotators",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "human_annotators",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_definedness_review:human_agreement",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/real-patches/independent-definedness.json",
+      "field": "human_agreement",
+      "expected": null,
+      "actual": null,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.natural_expansion.summary_sha256",
+      "expected": "92906764ded55d44901c1df08718173544663ec9a1302756aee55fbab9d2b29b",
+      "actual": "92906764ded55d44901c1df08718173544663ec9a1302756aee55fbab9d2b29b",
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.natural_expansion.inventory_sha256",
+      "expected": "ce2373b9ddc965b0864caea5a67109b3abc9b4e30db9fe973e2b8a85f74d2c25",
+      "actual": "ce2373b9ddc965b0864caea5a67109b3abc9b4e30db9fe973e2b8a85f74d2c25",
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.natural_expansion.verifier_sha256",
+      "expected": "cc6dcd8249133ac0a5ff4818ae4f7a36729ba1914b0b4f3dfe73437ca295fcfd",
+      "actual": "cc6dcd8249133ac0a5ff4818ae4f7a36729ba1914b0b4f3dfe73437ca295fcfd",
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:outcome",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "outcome",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:selection_pairs",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "selection_pairs",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:targeted_definedness_pairs",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "targeted_definedness_pairs",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:total_pairs",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "total_pairs",
+      "expected": 22,
+      "actual": 22,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:distinct_problems",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "distinct_problems",
+      "expected": 21,
+      "actual": 21,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:source_versions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "source_versions",
+      "expected": 44,
+      "actual": 44,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:requests",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "requests",
+      "expected": 44,
+      "actual": 44,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:statuses",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "statuses",
+      "expected": {
+        "REFUTED": 22,
+        "ACCEPT": 22
+      },
+      "actual": {
+        "REFUTED": 22,
+        "ACCEPT": 22
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:failure_obligations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "failure_obligations",
+      "expected": {
+        "repair": 20,
+        "defined": 2
+      },
+      "actual": {
+        "repair": 20,
+        "defined": 2
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:full_direct_concrete_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "full_direct_concrete_agreements",
+      "expected": 44,
+      "actual": 44,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:identical_complete_records",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "identical_complete_records",
+      "expected": 44,
+      "actual": 44,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:compact_confirmations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "compact_confirmations",
+      "expected": 22,
+      "actual": 22,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:source_input_observations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "source_input_observations",
+      "expected": 16878,
+      "actual": 16878,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:concrete_symbolic_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "concrete_symbolic_agreements",
+      "expected": 16878,
+      "actual": 16878,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:undefined_source_input_observations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "undefined_source_input_observations",
+      "expected": 257,
+      "actual": 257,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:given_test_occurrences_per_compiler",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "given_test_occurrences_per_compiler",
+      "expected": 2602,
+      "actual": 2602,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:native_process_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "native_process_executions",
+      "expected": 34474,
+      "actual": 34474,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:ordinary_process_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "ordinary_process_executions",
+      "expected": 33960,
+      "actual": 33960,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:defined_native_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "defined_native_agreements",
+      "expected": 33446,
+      "actual": 33446,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:defined_native_disagreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "defined_native_disagreements",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:ubsan_process_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "ubsan_process_executions",
+      "expected": 514,
+      "actual": 514,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:ubsan_confirmations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "ubsan_confirmations",
+      "expected": 514,
+      "actual": 514,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:all_given_tests_pass_both_compilers",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "all_given_tests_pass_both_compilers",
+      "expected": 22,
+      "actual": 22,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:tests_pass_but_wrong",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "tests_pass_but_wrong",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:pairs_with_undefined_reference_on_declared_domain",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "pairs_with_undefined_reference_on_declared_domain",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:natural_expansion:computational_annotation_agreement",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-expansion/records/summary.json",
+      "field": "computational_annotation_agreement",
+      "expected": {
+        "compared": 16878,
+        "agreed": 16878,
+        "human_raters": 0,
+        "scope": "Independent concrete interpreter versus symbolic compiler; source grammar is shared. Native checks compare defined output observations; no native trace is claimed."
+      },
+      "actual": {
+        "compared": 16878,
+        "agreed": 16878,
+        "human_raters": 0,
+        "scope": "Independent concrete interpreter versus symbolic compiler; source grammar is shared. Native checks compare defined output observations; no native trace is claimed."
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.introclass_certificates.summary_sha256",
+      "expected": "1374cf43e2db0a53016240b2cf5c9ac0cfca523adfb08cebcf7cfe0421445b65",
+      "actual": "1374cf43e2db0a53016240b2cf5c9ac0cfca523adfb08cebcf7cfe0421445b65",
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.introclass_certificates.inventory_sha256",
+      "expected": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "actual": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.introclass_certificates.verifier_sha256",
+      "expected": "2bab69f591fbb0aa85a55671a573f74b6039d63cdb93b702a959aab53e79a92d",
+      "actual": "2bab69f591fbb0aa85a55671a573f74b6039d63cdb93b702a959aab53e79a92d",
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:outcome",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "outcome",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "patches",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:original_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "original_subjects",
+      "expected": 5,
+      "actual": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:families",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "families",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:normalized_sources",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "normalized_sources",
+      "expected": 13,
+      "actual": 13,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:source_input_observations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "source_input_observations",
+      "expected": 2249,
+      "actual": 2249,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:native_process_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "native_process_executions",
+      "expected": 8996,
+      "actual": 8996,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:native_correspondence_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "native_correspondence_agreements",
+      "expected": 8996,
+      "actual": 8996,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:native_correspondence_disagreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "native_correspondence_disagreements",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:compilations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "compilations",
+      "expected": 52,
+      "actual": 52,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:complete_receiver_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "complete_receiver_agreements",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:compact_confirmations",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "compact_confirmations",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:given_test_compiler_checks",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "given_test_compiler_checks",
+      "expected": 168,
+      "actual": 168,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:tests_pass_but_wrong",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "tests_pass_but_wrong",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:reference_math_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "reference_math_agreements",
+      "expected": 396,
+      "actual": 396,
+      "status": "PASS"
+    },
+    {
+      "name": "update:introclass_certificates:human_annotators",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/records/summary.json",
+      "field": "human_annotators",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_normalization_review.summary_sha256",
+      "expected": "e6cc0e2d599295c093ec52a9d349b105e66f94cef7336314cf857d357521d1df",
+      "actual": "e6cc0e2d599295c093ec52a9d349b105e66f94cef7336314cf857d357521d1df",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_normalization_review.inventory_sha256",
+      "expected": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "actual": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.independent_normalization_review.verifier_sha256",
+      "expected": "f67083717087e983ca6b47c15098bc2199351e6c1ae587f6e1e23aa9059cc95e",
+      "actual": "f67083717087e983ca6b47c15098bc2199351e6c1ae587f6e1e23aa9059cc95e",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:status",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "status",
+      "expected": "PASS_INDEPENDENT_NORMALIZATION_REVIEW",
+      "actual": "PASS_INDEPENDENT_NORMALIZATION_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:reviewed_patches",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "reviewed_patches",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:reviewed_sources",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "reviewed_sources",
+      "expected": 13,
+      "actual": 13,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:structural_correspondence_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "structural_correspondence_agreements",
+      "expected": 13,
+      "actual": 13,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:independent_value_and_trace_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "independent_value_and_trace_agreements",
+      "expected": 2249,
+      "actual": 2249,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:independent_native_output_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "independent_native_output_agreements",
+      "expected": 8996,
+      "actual": 8996,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:canonical_counterexample_agreements",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "canonical_counterexample_agreements",
+      "expected": 6,
+      "actual": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:given_test_compiler_checks",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "given_test_compiler_checks",
+      "expected": 168,
+      "actual": 168,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:human_annotators",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "human_annotators",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "update:independent_normalization_review:human_agreement",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/introclass-certificates/independent-review.json",
+      "field": "human_agreement",
+      "expected": null,
+      "actual": null,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.domain_scale.summary_sha256",
+      "expected": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "actual": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.domain_scale.inventory_sha256",
+      "expected": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "actual": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.domain_scale.verifier_sha256",
+      "expected": "f7606990559bf81cdc6bfac19f6a6d4937e867c7f43b6693ab3a8742206cf515",
+      "actual": "f7606990559bf81cdc6bfac19f6a6d4937e867c7f43b6693ab3a8742206cf515",
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:outcome",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "outcome",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:admission_point_cap",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "admission_point_cap",
+      "expected": 4096,
+      "actual": 4096,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:source_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "source_occurrences",
+      "expected": 7806,
+      "actual": 7806,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:distinct_source_sha256",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "distinct_source_sha256",
+      "expected": 7425,
+      "actual": 7425,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:known_arity_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "known_arity_occurrences",
+      "expected": 223,
+      "actual": 223,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:unknown_arity_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "unknown_arity_occurrences",
+      "expected": 7583,
+      "actual": 7583,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:known_arity_distribution",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "known_arity_distribution",
+      "expected": {
+        "1": 69,
+        "2": 28,
+        "3": 69,
+        "4": 20,
+        "5": 14,
+        "6": 12,
+        "7": 7,
+        "8": 4
+      },
+      "actual": {
+        "1": 69,
+        "2": 28,
+        "3": 69,
+        "4": 20,
+        "5": 14,
+        "6": 12,
+        "7": 7,
+        "8": 4
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:eight_values_per_coordinate_exceeding_cap_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "eight_values_per_coordinate_exceeding_cap_occurrences",
+      "expected": 37,
+      "actual": 37,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:complete_io_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "complete_io_subjects",
+      "expected": 100,
+      "actual": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:all_defined_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "all_defined_subjects",
+      "expected": 95,
+      "actual": 95,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:cartesian_projection_product_above_cap",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "cartesian_projection_product_above_cap",
+      "expected": 50,
+      "actual": 50,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:all_defined_cartesian_projection_product_above_cap",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "all_defined_cartesian_projection_product_above_cap",
+      "expected": 46,
+      "actual": 46,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:cartesian_projection_product_bins",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "cartesian_projection_product_bins",
+      "expected": {
+        "1-64": 30,
+        "4097-1000000": 38,
+        "65-4096": 20,
+        "above-1000000": 12
+      },
+      "actual": {
+        "1-64": 30,
+        "4097-1000000": 38,
+        "65-4096": 20,
+        "above-1000000": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:all_defined_cartesian_projection_product_bins",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "all_defined_cartesian_projection_product_bins",
+      "expected": {
+        "1-64": 29,
+        "4097-1000000": 35,
+        "65-4096": 20,
+        "above-1000000": 11
+      },
+      "actual": {
+        "1-64": 29,
+        "4097-1000000": 35,
+        "65-4096": 20,
+        "above-1000000": 11
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:minimum_retained_point_set_size",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "minimum_retained_point_set_size",
+      "expected": 13,
+      "actual": 13,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:maximum_retained_point_set_size",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "maximum_retained_point_set_size",
+      "expected": 172,
+      "actual": 172,
+      "status": "PASS"
+    },
+    {
+      "name": "update:domain_scale:maximum_cartesian_projection_product",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/summary.json",
+      "field": "maximum_cartesian_projection_product",
+      "expected": 50056151040,
+      "actual": 50056151040,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:summary-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.fresh_census.summary_sha256",
+      "expected": "6173668338932424c65511b4fd61016077310b64ef28050149a1b28c451f14d8",
+      "actual": "6173668338932424c65511b4fd61016077310b64ef28050149a1b28c451f14d8",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:inventory-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.fresh_census.inventory_sha256",
+      "expected": "c860233967da6835a2d230c6d8e39c412f62fb6aa0acd80e1f347b5f766f4244",
+      "actual": "c860233967da6835a2d230c6d8e39c412f62fb6aa0acd80e1f347b5f766f4244",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:verifier-hash",
+      "provenance": "new-experiment-content-binding",
+      "source": "artifact/expected-results.json",
+      "field": "review_update.fresh_census.verifier_sha256",
+      "expected": "f5cdb35819f591f7b3038ac5e305fe3bb1f41b64cb89fc16b0317919cf6889dc",
+      "actual": "f5cdb35819f591f7b3038ac5e305fe3bb1f41b64cb89fc16b0317919cf6889dc",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:offline-replay",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "independent-offline-reduction.status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:offline-errors",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "independent-offline-reduction.errors",
+      "expected": [],
+      "actual": [],
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:status",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "status",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:archive_sha256",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "archive_sha256",
+      "expected": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+      "actual": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:archive_bytes",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "archive_bytes",
+      "expected": 265695532,
+      "actual": 265695532,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:comparisons",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "comparisons",
+      "expected": [
+        {
+          "file": "archive-provenance.json",
+          "json_equal": true,
+          "fresh_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3",
+          "retained_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3"
+        },
+        {
+          "file": "source-admission.json",
+          "json_equal": true,
+          "fresh_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344",
+          "retained_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344"
+        },
+        {
+          "file": "test-admission.json",
+          "json_equal": true,
+          "fresh_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433",
+          "retained_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433"
+        },
+        {
+          "file": "normalized-corpus.json",
+          "json_equal": true,
+          "fresh_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+          "retained_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa"
+        },
+        {
+          "file": "concrete-observations.json",
+          "json_equal": true,
+          "fresh_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e",
+          "retained_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e"
+        },
+        {
+          "file": "staged-requests.json",
+          "json_equal": true,
+          "fresh_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64",
+          "retained_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64"
+        }
+      ],
+      "actual": [
+        {
+          "file": "archive-provenance.json",
+          "json_equal": true,
+          "fresh_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3",
+          "retained_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3"
+        },
+        {
+          "file": "source-admission.json",
+          "json_equal": true,
+          "fresh_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344",
+          "retained_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344"
+        },
+        {
+          "file": "test-admission.json",
+          "json_equal": true,
+          "fresh_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433",
+          "retained_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433"
+        },
+        {
+          "file": "normalized-corpus.json",
+          "json_equal": true,
+          "fresh_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+          "retained_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa"
+        },
+        {
+          "file": "concrete-observations.json",
+          "json_equal": true,
+          "fresh_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e",
+          "retained_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e"
+        },
+        {
+          "file": "staged-requests.json",
+          "json_equal": true,
+          "fresh_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64",
+          "retained_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:indexed_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "indexed_subjects",
+      "expected": 3903,
+      "actual": 3903,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:indexed_source_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "indexed_source_occurrences",
+      "expected": 7806,
+      "actual": 7806,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:syntactically_admitted_source_occurrences",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "syntactically_admitted_source_occurrences",
+      "expected": 223,
+      "actual": 223,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:compatible_syntactic_pairs",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "compatible_syntactic_pairs",
+      "expected": 101,
+      "actual": 101,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:complete_io_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "complete_io_subjects",
+      "expected": 100,
+      "actual": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:all_defined_subjects",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "all_defined_subjects",
+      "expected": 95,
+      "actual": 95,
+      "status": "PASS"
+    },
+    {
+      "name": "update:fresh_census:fresh_native_executions",
+      "provenance": "new-record-recomputation",
+      "source": "artifact/experiments/natural-domains-review/fresh-census/recollection.json",
+      "field": "fresh_native_executions",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:complete_decision_requests",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "canonical_corpus_results",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:pruned_live_node_semantic_values",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.pruned)",
+      "expected": 39276283,
+      "actual": 39276283,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:support_keyed_semantic_values",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.demand)",
+      "expected": 5308130,
+      "actual": 5308130,
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/protocol.json",
+      "provenance": "record-binding",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "records.protocol.json",
+      "expected": "ca88c37b5110660f294557cbc66cb8b9f34e51c24acc6716a12e9d603e176ab0",
+      "actual": "ca88c37b5110660f294557cbc66cb8b9f34e51c24acc6716a12e9d603e176ab0",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/corpus-bindings.json",
+      "provenance": "record-binding",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "records.corpus-bindings.json",
+      "expected": "79c3450db54ca7700855264a0e105d1403ed53a6cffd4b15dbfc2f2b07f9cff9",
+      "actual": "79c3450db54ca7700855264a0e105d1403ed53a6cffd4b15dbfc2f2b07f9cff9",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/decisions.json",
+      "provenance": "record-binding",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "records.decisions.json",
+      "expected": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "actual": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/transport.json",
+      "provenance": "record-binding",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "records.transport.json",
+      "expected": "3e5d1b0d3f595f4ce9d8cda05395b35cc16c564b3c079f786bcce2b974190ad7",
+      "actual": "3e5d1b0d3f595f4ce9d8cda05395b35cc16c564b3c079f786bcce2b974190ad7",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/axis-scaling.json",
+      "provenance": "record-binding",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/unsigned-demand/summary.json",
+      "field": "records.axis-scaling.json",
+      "expected": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "actual": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional_core_outcome",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "core_outcome",
+      "expected": "PASS_COMPLETE_REPRODUCTION",
+      "actual": "PASS_COMPLETE_REPRODUCTION",
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:disk_requests_reloaded",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "disk_requests_reloaded",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:disk_full_certificates_validated",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "disk_full_certificates_validated",
+      "expected": 380,
+      "actual": 380,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:disk_compact_certificates_validated",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "disk_compact_certificates_validated",
+      "expected": 285,
+      "actual": 285,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:disk_grammar_results_validated",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "disk_grammar_results_validated",
+      "expected": 400,
+      "actual": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:full_vector_tamper_controls",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "full_vector_tamper_controls",
+      "expected": 6000,
+      "actual": 6000,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:functional:full_vector_tamper_rejections",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/functional/complete-reproduction.json",
+      "field": "full_vector_tamper_rejections",
+      "expected": 6000,
+      "actual": 6000,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:headers:case_count",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/header-admission/report.json",
+      "field": "case_count",
+      "expected": 30,
+      "actual": 30,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:headers:compiler_count",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/header-admission/report.json",
+      "field": "compiler_count",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:headers:native_compilations",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/header-admission/report.json",
+      "field": "native_compilations",
+      "expected": 60,
+      "actual": 60,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh:headers:native_executions",
+      "provenance": "fresh-current-execution",
+      "source": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core/fresh-core/header-admission/report.json",
+      "field": "native_executions",
+      "expected": 42,
+      "actual": 42,
+      "status": "PASS"
+    }
+  ],
+  "external_only": {
+    "historical_python": {
+      "implementation": "CPython",
+      "version": "3.12.14",
+      "purpose": "exact historical admission-receipt compatibility"
+    },
+    "boolean_cbmc": {
+      "version": "6.6.0",
+      "purpose": "fresh 804-request Boolean comparison"
+    },
+    "witness_cbmc": {
+      "version": "6.11.0",
+      "purpose": "fresh witness producer campaign"
+    },
+    "cpachecker": {
+      "version": "4.3",
+      "purpose": "fresh witness receiver campaign"
+    },
+    "codeflaws_archive": {
+      "bytes": 265695532,
+      "sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+      "purpose": "fresh native, signed, coverage, and timing campaigns"
+    },
+    "upstream_vulkan": {
+      "purpose": "application-level CEIL_DIV build and execution",
+      "bundled": false
+    }
+  },
+  "interpretation": "PASS binds exact named fields and record inventories. It does not convert retained-output recomputation or unavailable external campaigns into fresh execution."
+}

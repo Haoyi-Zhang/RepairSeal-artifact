@@ -56,5 +56,16 @@ for p in root.rglob('*'):
         if 'CHECK' not in text: raise ValueError('property lacks CHECK')
         counts['property']+=1
     except Exception as e: errors.append({'path':rel,'error':repr(e)})
-print(json.dumps({'counts':counts,'intentional_malformed_graphml':malformed,'errors':errors},indent=2))
+# Keep every existing parse/integrity check and add semantic/receipt closure for
+# the empirical update. A parseable summary alone is not sufficient evidence.
+from verify_update_results import verify as verify_update
+update=verify_update(root)
+if update['status']!='PASS':
+    errors.append({'path':'review-update','error':update.get('errors', ['update verification failed'])})
+for name, result in update['studies'].items():
+    if result['status']!='PASS':
+        errors.append({'path':'review-update/'+name,'error':result['errors']})
+print(json.dumps({'counts':counts,'intentional_malformed_graphml':malformed,
+                  'review_update':{name:result['status'] for name,result in update['studies'].items()},
+                  'errors':errors},indent=2))
 raise SystemExit(1 if errors else 0)

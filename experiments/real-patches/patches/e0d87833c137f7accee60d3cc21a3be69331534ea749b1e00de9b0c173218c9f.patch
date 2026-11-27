@@ -1,0 +1,11 @@
+--- a/median.c
++++ b/median.c
+@@ -17,7 +17,7 @@
+ 		d=b;
+ 	if ((c<a && a<b) || (b<a && a<c))
+ 		d=a;
+-	if ((b<c && c<a) || (a<c && c<b))
++	if ((((b < c) && (c < a)) || 1))
+ 		d=c;
+ 
+ 	printf("%d\n", ANGELIX_OUTPUT(int, d, "stdout"));

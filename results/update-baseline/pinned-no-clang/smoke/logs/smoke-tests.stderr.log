@@ -1,0 +1,47 @@
+test_actual_pre_fix_false_acceptance_cannot_survive_upgrade (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_actual_pre_fix_false_acceptance_cannot_survive_upgrade) ... ok
+test_journal_implementation_also_belongs_to_identity (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_journal_implementation_also_belongs_to_identity) ... ok
+test_receipt_replay_and_approval_check_current_body_integrity (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_receipt_replay_and_approval_check_current_body_integrity) ... ok
+test_unchanged_receiver_is_relocatable_and_reopens_idempotently (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_unchanged_receiver_is_relocatable_and_reopens_idempotently) ... ok
+test_unversioned_valid_receipt_requires_successful_rechecking (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_unversioned_valid_receipt_requires_successful_rechecking) ... ok
+test_versioned_core_change_requires_rechecking (tests.test_receiving_boundaries.ReceiverUpgradeTests.test_versioned_core_change_requires_rechecking) ... ok
+test_global_support_not_observed_constant_on_old_domain (tests.test_domain_transport.DomainTransportTests.test_global_support_not_observed_constant_on_old_domain) ... ok
+test_input_order_is_bound_even_when_dictionary_encoding_is_sorted (tests.test_domain_transport.DomainTransportTests.test_input_order_is_bound_even_when_dictionary_encoding_is_sorted) ... ok
+test_irrelevant_axis_changes_with_identical_full_and_direct_history (tests.test_domain_transport.DomainTransportTests.test_irrelevant_axis_changes_with_identical_full_and_direct_history) ... ok
+test_new_relevant_value_is_checked_and_finds_real_failure (tests.test_domain_transport.DomainTransportTests.test_new_relevant_value_is_checked_and_finds_real_failure) ... ok
+test_no_packet_can_be_silently_ignored_in_direct_mode (tests.test_domain_transport.DomainTransportTests.test_no_packet_can_be_silently_ignored_in_direct_mode) ... ok
+test_packet_staleness_is_not_waived_by_acceptance_history (tests.test_domain_transport.DomainTransportTests.test_packet_staleness_is_not_waived_by_acceptance_history) ... ok
+test_pruned_keeps_trace_and_exact_diagnostic (tests.test_domain_transport.DomainTransportTests.test_pruned_keeps_trace_and_exact_diagnostic) ... ok
+test_refutation_is_not_an_acceptance_basis_or_a_reused_trace (tests.test_domain_transport.DomainTransportTests.test_refutation_is_not_an_acceptance_basis_or_a_reused_trace) ... ok
+test_request_mutation_and_failed_calls_leave_owned_basis_unchanged (tests.test_domain_transport.DomainTransportTests.test_request_mutation_and_failed_calls_leave_owned_basis_unchanged) ... ok
+test_source_and_policy_changes_require_new_check (tests.test_domain_transport.DomainTransportTests.test_source_and_policy_changes_require_new_check) ... ok
+test_unused_value_still_contributes_definedness (tests.test_domain_transport.DomainTransportTests.test_unused_value_still_contributes_definedness) ... ok
+test_header_and_predefined_identifiers_are_rejected (tests.test_codeflaws_header_admission.HeaderAdmissionTests.test_header_and_predefined_identifiers_are_rejected) ... ok
+test_header_macro_exclusion_covers_all_declared_macro_names (tests.test_codeflaws_header_admission.HeaderAdmissionTests.test_header_macro_exclusion_covers_all_declared_macro_names) ... ok
+test_positive_sources_keep_bytes_and_math (tests.test_codeflaws_header_admission.HeaderAdmissionTests.test_positive_sources_keep_bytes_and_math) ... ok
+test_public_symbolic_request_readmits_macro_source (tests.test_codeflaws_header_admission.HeaderAdmissionTests.test_public_symbolic_request_readmits_macro_source) ... ok
+setUpClass (tests.test_current_admission_report.CurrentAdmissionEvidenceTests) ... ERROR
+test_retained_receipts_match_this_receiver_or_are_explicitly_skipped (tests.test_current_admission_report.HistoricalAdmissionReceiptCompatibility.test_retained_receipts_match_this_receiver_or_are_explicitly_skipped) ... ok
+test_ceil_evidence_uses_existing_artifact_inputs (tests.test_claim_ledger.ClaimLedgerPaths.test_ceil_evidence_uses_existing_artifact_inputs) ... ok
+test_paper_companion_is_explicitly_optional (tests.test_claim_ledger.ClaimLedgerPaths.test_paper_companion_is_explicitly_optional) ... ok
+
+======================================================================
+ERROR: setUpClass (tests.test_current_admission_report.CurrentAdmissionEvidenceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact/tests/test_current_admission_report.py", line 61, in setUpClass
+    raise RuntimeError(
+RuntimeError: fresh current-runtime admission study failed
+Traceback (most recent call last):
+  File "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact/tests/admission_journal_study.py", line 91, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);run(p.parse_args().output)
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact/tests/admission_journal_study.py", line 18, in run
+    if out.exists() or out.resolve().is_relative_to(ROOT.resolve()):raise ValueError('new output outside artifact required')
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: new output outside artifact required
+
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.249s
+
+FAILED (errors=1)

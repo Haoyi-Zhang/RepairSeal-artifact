@@ -63,5 +63,386 @@
       "purpose": "application-level CEIL_DIV build and execution",
       "bundled": false
     }
+  },
+  "review_update_driver_sha256": "7536aea2e52a57ebfcafa786bd073453a3231a9b1a8c75860a6f44380c920e51",
+  "review_update": {
+    "real_patches": {
+      "summary_file": "experiments/real-patches/summary.json",
+      "summary_sha256": "b61d108a6f04e3fae9358d14cc856f052aef30584e731ecedc2a2d1d793d97aa",
+      "inventory_file": "experiments/real-patches/hash-inventory.json",
+      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "verifier_file": "experiments/real-patches/verify.py",
+      "verifier_sha256": "9d749341b9690c329e03a03dd3ac80305f1fd885126b26d7d9d64094204f282b",
+      "fields": {
+        "selected_patches": 127,
+        "unique_original_sources": 67,
+        "unique_candidate_sources": 127,
+        "sampling_counts": {
+          "application_successes": 939,
+          "raw_patch_occurrences": 3209,
+          "selected": 127,
+          "unique_applied_candidates": 519,
+          "unique_originals": 67
+        },
+        "strict_application_exclusion_reasons": {
+          "exact old context mismatch": 2270
+        },
+        "primary_counts": {
+          "correct": 1,
+          "definedness": 9,
+          "other": 14,
+          "preservation": 8,
+          "repair-region": 95
+        },
+        "nonexclusive_counts": {
+          "correct": 1,
+          "definedness": 9,
+          "other": 14,
+          "preservation": 81,
+          "repair-region": 99
+        },
+        "by_source_tool_family": [
+          {
+            "all_given_tests_pass": 6,
+            "family": "median",
+            "nonexclusive_counts": {
+              "definedness": 3,
+              "other": 4,
+              "preservation": 49,
+              "repair-region": 58
+            },
+            "patches": 72,
+            "primary_counts": {
+              "definedness": 3,
+              "other": 4,
+              "preservation": 8,
+              "repair-region": 57
+            },
+            "repair_tool": "Angelix (published patch inventory)",
+            "source": "IntroClass / Zenodo 1012686",
+            "tests_pass_but_wrong": 5
+          },
+          {
+            "all_given_tests_pass": 8,
+            "family": "smallest",
+            "nonexclusive_counts": {
+              "correct": 1,
+              "definedness": 6,
+              "other": 10,
+              "preservation": 32,
+              "repair-region": 41
+            },
+            "patches": 55,
+            "primary_counts": {
+              "correct": 1,
+              "definedness": 6,
+              "other": 10,
+              "repair-region": 38
+            },
+            "repair_tool": "Angelix (published patch inventory)",
+            "source": "IntroClass / Zenodo 1012686",
+            "tests_pass_but_wrong": 6
+          }
+        ],
+        "all_given_tests_pass": 14,
+        "all_given_test_passing_primary_counts": {
+          "correct": 1,
+          "other": 2,
+          "repair-region": 11
+        },
+        "tests_pass_but_wrong": 11,
+        "tests_pass_but_wrong_fraction_all_selected": {
+          "denominator": 127,
+          "numerator": 11
+        },
+        "tests_pass_but_wrong_fraction_all_test_passing": {
+          "denominator": 14,
+          "numerator": 11
+        },
+        "semantic_observations": 32375,
+        "semantic_replayed": 32375,
+        "native_executions": 130772,
+        "compiled_artifacts": 784,
+        "successful_compilations": 784,
+        "defined_native_correspondence_checks": 126696,
+        "source_admission_counts": {
+          "admitted": 175,
+          "unsupported": 21
+        },
+        "source_correspondence_pass": 175,
+        "source_correspondence_total": 196,
+        "finite_input_points": {
+          "median": 133,
+          "smallest": 263
+        },
+        "given_test_cases": {
+          "median": 13,
+          "smallest": 16
+        },
+        "review": {
+          "human_agreement": null,
+          "human_annotators": 0,
+          "kind": "rule-based labels with independent replay; human agreement not measured"
+        }
+      }
+    },
+    "independent_patch_review": {
+      "summary_file": "experiments/real-patches/independent-review.json",
+      "summary_sha256": "d7958521cd694de5161345380eb876d4b3106a21660b8a074ab3597f1055c567",
+      "inventory_file": "experiments/real-patches/hash-inventory.json",
+      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "verifier_file": "experiments/real-patches/independent_review.py",
+      "verifier_sha256": "921c3c0938e547255a00aa5263639420ff19cbb6ddb6bf75d092ca45e61c4ece",
+      "fields": {
+        "status": "PASS_INDEPENDENT_LABEL_REVIEW",
+        "reviewed_patches": 127,
+        "agreed_patches": 127,
+        "agreement_fraction": {
+          "denominator": 127,
+          "numerator": 127
+        },
+        "disagreements": [],
+        "primary_counts": {
+          "correct": 1,
+          "definedness": 9,
+          "other": 14,
+          "preservation": 8,
+          "repair-region": 95
+        },
+        "nonexclusive_counts": {
+          "correct": 1,
+          "definedness": 9,
+          "other": 14,
+          "preservation": 81,
+          "repair-region": 99
+        },
+        "all_given_tests_pass": 14,
+        "tests_pass_but_wrong": 11,
+        "native_receipts_checked": 130772,
+        "defined_native_correspondence_checks": 126696,
+        "mathematical_reference_native_checks": 1584,
+        "candidate_undefined_observation_reasons": {
+          "uninitialized-read:Small": 29,
+          "uninitialized-read:e": 69,
+          "uninitialized-read:m": 36,
+          "uninitialized-read:median": 20,
+          "uninitialized-read:smallest": 157
+        },
+        "human_annotators": 0,
+        "human_agreement": null
+      }
+    },
+    "independent_definedness_review": {
+      "summary_file": "experiments/real-patches/independent-definedness.json",
+      "summary_sha256": "42582c5c4298b98f8895e4a7e3723ae361a4e2c15e082a82daee294e06c2b2db",
+      "inventory_file": "experiments/real-patches/hash-inventory.json",
+      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
+      "verifier_file": "experiments/real-patches/independent_definedness.py",
+      "verifier_sha256": "3a29e90753a404ceef232fdf5eedddc35c3750bcbb9f0070c5e619e641f07bed",
+      "fields": {
+        "status": "PASS_INDEPENDENT_DEFINEDNESS_WITNESSES",
+        "reviewed_patches": 9,
+        "confirmed_uninitialized_read_witnesses": 9,
+        "human_annotators": 0,
+        "human_agreement": null
+      }
+    },
+    "natural_expansion": {
+      "summary_file": "experiments/natural-expansion/records/summary.json",
+      "summary_sha256": "92906764ded55d44901c1df08718173544663ec9a1302756aee55fbab9d2b29b",
+      "inventory_file": "experiments/natural-expansion/records/manifest.json",
+      "inventory_sha256": "ce2373b9ddc965b0864caea5a67109b3abc9b4e30db9fe973e2b8a85f74d2c25",
+      "verifier_file": "experiments/natural-expansion/verify.py",
+      "verifier_sha256": "cc6dcd8249133ac0a5ff4818ae4f7a36729ba1914b0b4f3dfe73437ca295fcfd",
+      "fields": {
+        "outcome": "PASS",
+        "selection_pairs": 20,
+        "targeted_definedness_pairs": 2,
+        "total_pairs": 22,
+        "distinct_problems": 21,
+        "source_versions": 44,
+        "requests": 44,
+        "statuses": {
+          "REFUTED": 22,
+          "ACCEPT": 22
+        },
+        "failure_obligations": {
+          "repair": 20,
+          "defined": 2
+        },
+        "full_direct_concrete_agreements": 44,
+        "identical_complete_records": 44,
+        "compact_confirmations": 22,
+        "source_input_observations": 16878,
+        "concrete_symbolic_agreements": 16878,
+        "undefined_source_input_observations": 257,
+        "given_test_occurrences_per_compiler": 2602,
+        "native_process_executions": 34474,
+        "ordinary_process_executions": 33960,
+        "defined_native_agreements": 33446,
+        "defined_native_disagreements": 0,
+        "ubsan_process_executions": 514,
+        "ubsan_confirmations": 514,
+        "all_given_tests_pass_both_compilers": 22,
+        "tests_pass_but_wrong": 0,
+        "pairs_with_undefined_reference_on_declared_domain": 0,
+        "computational_annotation_agreement": {
+          "compared": 16878,
+          "agreed": 16878,
+          "human_raters": 0,
+          "scope": "Independent concrete interpreter versus symbolic compiler; source grammar is shared. Native checks compare defined output observations; no native trace is claimed."
+        }
+      }
+    },
+    "introclass_certificates": {
+      "summary_file": "experiments/introclass-certificates/records/summary.json",
+      "summary_sha256": "1374cf43e2db0a53016240b2cf5c9ac0cfca523adfb08cebcf7cfe0421445b65",
+      "inventory_file": "experiments/introclass-certificates/records/manifest.json",
+      "inventory_sha256": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "verifier_file": "experiments/introclass-certificates/verify.py",
+      "verifier_sha256": "2bab69f591fbb0aa85a55671a573f74b6039d63cdb93b702a959aab53e79a92d",
+      "fields": {
+        "outcome": "PASS",
+        "patches": 6,
+        "original_subjects": 5,
+        "families": 2,
+        "normalized_sources": 13,
+        "source_input_observations": 2249,
+        "native_process_executions": 8996,
+        "native_correspondence_agreements": 8996,
+        "native_correspondence_disagreements": 0,
+        "compilations": 52,
+        "complete_receiver_agreements": 6,
+        "compact_confirmations": 6,
+        "given_test_compiler_checks": 168,
+        "tests_pass_but_wrong": 6,
+        "reference_math_agreements": 396,
+        "human_annotators": 0
+      }
+    },
+    "independent_normalization_review": {
+      "summary_file": "experiments/introclass-certificates/independent-review.json",
+      "summary_sha256": "e6cc0e2d599295c093ec52a9d349b105e66f94cef7336314cf857d357521d1df",
+      "inventory_file": "experiments/introclass-certificates/records/manifest.json",
+      "inventory_sha256": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
+      "verifier_file": "experiments/introclass-certificates/independent_review.py",
+      "verifier_sha256": "f67083717087e983ca6b47c15098bc2199351e6c1ae587f6e1e23aa9059cc95e",
+      "fields": {
+        "status": "PASS_INDEPENDENT_NORMALIZATION_REVIEW",
+        "reviewed_patches": 6,
+        "reviewed_sources": 13,
+        "structural_correspondence_agreements": 13,
+        "independent_value_and_trace_agreements": 2249,
+        "independent_native_output_agreements": 8996,
+        "canonical_counterexample_agreements": 6,
+        "given_test_compiler_checks": 168,
+        "human_annotators": 0,
+        "human_agreement": null
+      }
+    },
+    "domain_scale": {
+      "summary_file": "experiments/natural-domains-review/summary.json",
+      "summary_sha256": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "inventory_file": "experiments/natural-domains-review/summary.json",
+      "inventory_sha256": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
+      "verifier_file": "experiments/natural-domains-review/analyze_scale.py",
+      "verifier_sha256": "f7606990559bf81cdc6bfac19f6a6d4937e867c7f43b6693ab3a8742206cf515",
+      "fields": {
+        "outcome": "PASS",
+        "admission_point_cap": 4096,
+        "source_occurrences": 7806,
+        "distinct_source_sha256": 7425,
+        "known_arity_occurrences": 223,
+        "unknown_arity_occurrences": 7583,
+        "known_arity_distribution": {
+          "1": 69,
+          "2": 28,
+          "3": 69,
+          "4": 20,
+          "5": 14,
+          "6": 12,
+          "7": 7,
+          "8": 4
+        },
+        "eight_values_per_coordinate_exceeding_cap_occurrences": 37,
+        "complete_io_subjects": 100,
+        "all_defined_subjects": 95,
+        "cartesian_projection_product_above_cap": 50,
+        "all_defined_cartesian_projection_product_above_cap": 46,
+        "cartesian_projection_product_bins": {
+          "1-64": 30,
+          "4097-1000000": 38,
+          "65-4096": 20,
+          "above-1000000": 12
+        },
+        "all_defined_cartesian_projection_product_bins": {
+          "1-64": 29,
+          "4097-1000000": 35,
+          "65-4096": 20,
+          "above-1000000": 11
+        },
+        "minimum_retained_point_set_size": 13,
+        "maximum_retained_point_set_size": 172,
+        "maximum_cartesian_projection_product": 50056151040
+      }
+    },
+    "fresh_census": {
+      "summary_file": "experiments/natural-domains-review/fresh-census/recollection.json",
+      "summary_sha256": "6173668338932424c65511b4fd61016077310b64ef28050149a1b28c451f14d8",
+      "inventory_file": "experiments/natural-domains-review/fresh-census/manifest.json",
+      "inventory_sha256": "c860233967da6835a2d230c6d8e39c412f62fb6aa0acd80e1f347b5f766f4244",
+      "verifier_file": "experiments/natural-domains-review/recollect_census.py",
+      "verifier_sha256": "f5cdb35819f591f7b3038ac5e305fe3bb1f41b64cb89fc16b0317919cf6889dc",
+      "fields": {
+        "status": "PASS",
+        "archive_sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+        "archive_bytes": 265695532,
+        "comparisons": [
+          {
+            "file": "archive-provenance.json",
+            "json_equal": true,
+            "fresh_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3",
+            "retained_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3"
+          },
+          {
+            "file": "source-admission.json",
+            "json_equal": true,
+            "fresh_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344",
+            "retained_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344"
+          },
+          {
+            "file": "test-admission.json",
+            "json_equal": true,
+            "fresh_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433",
+            "retained_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433"
+          },
+          {
+            "file": "normalized-corpus.json",
+            "json_equal": true,
+            "fresh_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
+            "retained_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa"
+          },
+          {
+            "file": "concrete-observations.json",
+            "json_equal": true,
+            "fresh_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e",
+            "retained_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e"
+          },
+          {
+            "file": "staged-requests.json",
+            "json_equal": true,
+            "fresh_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64",
+            "retained_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64"
+          }
+        ],
+        "indexed_subjects": 3903,
+        "indexed_source_occurrences": 7806,
+        "syntactically_admitted_source_occurrences": 223,
+        "compatible_syntactic_pairs": 101,
+        "complete_io_subjects": 100,
+        "all_defined_subjects": 95,
+        "fresh_native_executions": 0
+      }
+    }
   }
 }

@@ -1,0 +1,11 @@
+--- a/smallest.c
++++ b/smallest.c
+@@ -26,7 +26,7 @@
+ 	if (b >= c)
+ 		smallest = c;
+ 	if (c >= d)
+-		smallest = d;
++		smallest = (smallest - d);
+ 	
+ 	else if (a >= d)
+ 		smallest = d;

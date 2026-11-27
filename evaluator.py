@@ -311,6 +311,9 @@ def run_smoke(args: argparse.Namespace, output: Path, report: dict[str, Any]) ->
         "tests.test_codeflaws_header_admission",
         "tests.test_current_admission_report",
         "tests.test_claim_ledger",
+        "tests.test_int32_refutation",
+        "tests.test_introclass_normalization",
+        "tests.test_update_result_types",
     ]
     step = command_record("smoke-tests",
                           [sys.executable, "-B", "-m", "unittest", "-v", *tests],

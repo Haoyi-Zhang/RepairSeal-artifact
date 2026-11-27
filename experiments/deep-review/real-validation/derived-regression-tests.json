@@ -1,0 +1,41 @@
+{
+  "schema": "repairseal-derived-regression-points-v1",
+  "abstract_sha256": "2cda98e3cbc7aef9edbf783c01c81ff40f8e0f322b8ca9df3ff3bbc394451dc1",
+  "test_count": 2,
+  "tests": [
+    {
+      "family": "median",
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "expected_stdout": "1\n",
+      "observed_candidate_stdout": "0\n",
+      "rejected_candidate_ids": [
+        "apr-043",
+        "apr-046",
+        "apr-069",
+        "apr-070"
+      ],
+      "selection": "Lexicographically first weak-order representative failing every selected candidate of this family; derived after observing outcomes, not a held-out test."
+    },
+    {
+      "family": "smallest",
+      "input": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "expected_stdout": "0\n",
+      "observed_candidate_stdout": "1\n",
+      "rejected_candidate_ids": [
+        "apr-072",
+        "apr-073"
+      ],
+      "selection": "Lexicographically first weak-order representative failing every selected candidate of this family; derived after observing outcomes, not a held-out test."
+    }
+  ],
+  "limits": "Two different arities/families require two separate test inputs. These points catch all six selected patches; they do not establish correctness of future patches or replace all-class analysis."
+}

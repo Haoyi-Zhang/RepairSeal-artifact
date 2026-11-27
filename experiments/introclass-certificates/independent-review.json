@@ -1,0 +1,620 @@
+{
+  "boundaries": [
+    "finite declared inputs and the thirteen exact source identities only",
+    "pycparser is shared parsing infrastructure; the AST comparison and concrete models are separate implementations",
+    "all scalar computations in these reviewed sources are int comparisons and assignments; int casts are applied only to declared int identifiers",
+    "argv strings and stdin tokens are canonical decimal encodings of values in int32 range",
+    "the complete teacher prompt/suffix and exact candidate decimal-newline outputs are checked; no arbitrary stripping",
+    "the signed request uses reference-everywhere; preservation classification remains in the separate real-patch study"
+  ],
+  "canonical_counterexample_agreements": 6,
+  "cases": [
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "-2",
+      "canonical_witness": {
+        "input": [
+          -1,
+          -1,
+          -2
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-043",
+      "domain_points": 133,
+      "family": "median",
+      "given_test_compiler_checks": 26,
+      "mismatch_points": 10,
+      "original_value": "-2",
+      "reference_value": "-1"
+    },
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "-2",
+      "canonical_witness": {
+        "input": [
+          -1,
+          -1,
+          -2
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-046",
+      "domain_points": 133,
+      "family": "median",
+      "given_test_compiler_checks": 26,
+      "mismatch_points": 10,
+      "original_value": "-2",
+      "reference_value": "-1"
+    },
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "-2",
+      "canonical_witness": {
+        "input": [
+          -1,
+          -1,
+          -2
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-069",
+      "domain_points": 133,
+      "family": "median",
+      "given_test_compiler_checks": 26,
+      "mismatch_points": 10,
+      "original_value": "-2",
+      "reference_value": "-1"
+    },
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "-2",
+      "canonical_witness": {
+        "input": [
+          -1,
+          -1,
+          -2
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-070",
+      "domain_points": 133,
+      "family": "median",
+      "given_test_compiler_checks": 26,
+      "mismatch_points": 10,
+      "original_value": "-2",
+      "reference_value": "-1"
+    },
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "0",
+      "canonical_witness": {
+        "input": [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-072",
+      "domain_points": 263,
+      "family": "smallest",
+      "given_test_compiler_checks": 32,
+      "mismatch_points": 41,
+      "original_value": "-1",
+      "reference_value": "-1"
+    },
+    {
+      "all_given_tests_pass": true,
+      "candidate_value": "0",
+      "canonical_witness": {
+        "input": [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "case_id": "apr-073",
+      "domain_points": 263,
+      "family": "smallest",
+      "given_test_compiler_checks": 32,
+      "mismatch_points": 41,
+      "original_value": "-1",
+      "reference_value": "-1"
+    }
+  ],
+  "given_test_compiler_checks": 168,
+  "human_agreement": null,
+  "human_annotators": 0,
+  "independent_native_output_agreements": 8996,
+  "independent_value_and_trace_agreements": 2249,
+  "input_record_sha256": {
+    "mappings.json": "8caf4d9f16a922323416d0cd75df87ae3587a839dfe7df8041fddbc5c249cfaf",
+    "native-clang.jsonl": "2bdfdd2307e0a572b21edd44fe7f987644a2ddc624f0527f7154de0b678237b7",
+    "native-gcc.jsonl": "346445dd9c34324cecf1fd7837a7da1c127bdc6cca7c49431e53bad7379ca3aa",
+    "protocol.json": "ed72232c0cfec3507fd8e025e41fc93f3d65b035d9252ea6b289577a3f352993",
+    "requests.json": "40bb600f1165959c5418ab3a45451891273c7aff7fe4c352ebe77fe92ceb0c1a",
+    "semantic-observations.jsonl": "795510e009122bc2d98166b39509515cb54420ddb731277979b13dd78d77fff9"
+  },
+  "method": "separate whole-body AST correspondence and hash-fixed separately written control-flow models; no import of normalization, bridge, circuit or collection implementations",
+  "review_findings_resolved": [
+    "identity macro expansion now preserves the original unparenthesized replacement text",
+    "the original main return and argument signatures are checked before input adaptation"
+  ],
+  "reviewed_implementation_sha256": {
+    "normalize.py": "0cb389ad23a9d2b44b7e19c18aa572561701a5d7785f1e3e6ddbfc79e0d8d20e",
+    "run.py": "968dfe5abf4dbb50e0ad215462906ff7a4199422c745447255e82c9f6b6f4c28"
+  },
+  "reviewed_patches": 6,
+  "reviewed_sources": 13,
+  "reviewer_sha256": "f67083717087e983ca6b47c15098bc2199351e6c1ae587f6e1e23aa9059cc95e",
+  "schema": "repairseal-independent-introclass-normalization-review-v1",
+  "sources": [
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "56ca45a2d58b7bd22f60f316cea6400cc2f42dee3705933a212415df8a0ce3a3",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "2695b63c2bf42cbd615d3c66b7bde0b1e006b1448b8d76a46c9543753a341ff7",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "054e9df95ba7b83cc970131e33c8c200d1139c31f5068e1061bb91416e314c2e",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "9a09d316ff43a2729eec6d512c91b0367de0b220b6a8b6a95fce50e48afdace4",
+      "domain_points": 263,
+      "family": "smallest",
+      "normalized_sha256": "3c1b94759e769cef3ac984dca272d8f7da214cbd2a4db2baeec8701c1d2f5e98",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "10985f694b7a31840113671e0451066d9678ccf160158cbb3eb682208436df27",
+      "raw_structure": {
+        "identity_int_casts": 1,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "201c979c11be394d7eea82fc3ed1bb25f57ea13bbe783acf3bda2fff9f9ee6da",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "24a920951edd0fa299b9fcc97a6291443b8a6e3c5c3e1f5192dddcb44e4209a3",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "first",
+          "second",
+          "third"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "149a8a5fbb67c35e930136165c8153aa32d8033f08d8b8e00f3463be5bade837",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "first",
+          "second",
+          "third"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "58a5d99b09b519ccc3907cac7390eaee02e222514244e9d6eb56f98e40ba2b22",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "aab3ca386be79fa3b45b9b85dd1e9a6008126d844909485b7b73c9fceea87d6f",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "40a5a239d6478a964d11210129202ff413a64291e6290e8269048d2e4af8d4ec",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "64fc09e8a996a4f124640bc5167120649fa651ee6f8cb193879e2c23e81ca973",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "0bc82d7d9556f64ed584a28309dc34598ef98ceae3a06313c6b18a3f60b72393",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "507dbc460c4196b74ca0f3c2e2dba597bd3018f27695233d8933e33c8ae2398a",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "original"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "733ab121b8942d0be9ea2be9a39e3df267013d0bea1be61e30365541dc4ee570",
+      "domain_points": 263,
+      "family": "smallest",
+      "normalized_sha256": "458396d3070a66ed7317331a8b63769a58c82711d1c1ef7bd751be8c571da7cd",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "5c2a509c0f949d306af92033bcb231c5293605796847b192d4126d507324045a",
+      "raw_structure": {
+        "identity_int_casts": 1,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "3a5c80c8d57dc576ab120ccba6646f844528f96e115d15e29b95be4fd12df94d",
+      "domain_points": 263,
+      "family": "smallest",
+      "normalized_sha256": "3ca62d211a1c96c25b08ba84680c07f77023540175fa88ecbfa609be8fd250ce",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "60f94f186ed17612fa0dad01e8ca704ebc19ec464b86eed755b1f4964405f1ef",
+      "raw_structure": {
+        "identity_int_casts": 1,
+        "if_nodes": 4,
+        "input_targets": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "original"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "2795e7b1c3b85beb98097e7570ceac52ed320607a8022f1670f674d85cca09fa",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "63388cef7b2d96cfd422c582dbee02d5acf3fa9b0c7ebc82a94d60cdb00b1b50",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "82bfa47a55903d17f34150217bec6cc51eebeb7ec6a316fb31e23e0e692ab289",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "candidate"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "77a149bbab9703c0af88534d31a2385dae68d5617d78d3f76a3863a659b3bed3",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "6ea08ae83fb4efcdf59b6b65657b45821f94ae86814922f0cd9ceefbfd1b6c7f",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "9053c0838e6608983a10ec8f5d3c7cef0fc81deb69181c0aa4596e555ca637d0",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "original"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "ce8a2479d24b0d7247b2469e1545b6442a9884998ac190824086b1741b66c6a3",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "551cf208fa64ceab524b4877fe803efe6c1b59f46466214cb894aff0c39897b3",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "a214b35ef181635655214aeffb38b11cf1d9115079e3ef89a7de89680e9fda75",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "a",
+          "b",
+          "c"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "original"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "b0eaecfdc8ef1a2fd8d73ca4398bb565cfb27da956efcaeb3cdfe165e65835e9",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "64bd56df5badf4b9d548e44c5e2ffe1d988dc9bae08e4cf5c7f7c41619298e5d",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "first",
+          "second",
+          "third"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "d82a6b552a442e241cb35c8fe7aa33315efa990d76dcc3abf243ab3e1dbeb72f",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 2,
+        "input_targets": [
+          "first",
+          "second",
+          "third"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "role": "original"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "839676ba65ec3527d17beb3ad685c1d75f8463dfe5934d9595b056eca39b7365",
+      "domain_points": 263,
+      "family": "smallest",
+      "normalized_sha256": "50905e0c6a817eea4c28141f590fc1c805a83fe6321273001566256cf280cc41",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 3,
+        "input_targets": [
+          "num1",
+          "num2",
+          "num3",
+          "num4"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "e80241d9eee5ef6b7ff3fc002a1866454154da3079fcb04655fbc8b00529cde7",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 3,
+        "input_targets": [
+          "num1",
+          "num2",
+          "num3",
+          "num4"
+        ],
+        "omitted_fixed_prompt": 1
+      },
+      "role": "reference"
+    },
+    {
+      "computation_ast_equal": true,
+      "computation_ast_sha256": "735575e637a763a46b86937c81c6888b451f3ee8916451a631dfd274b9a79054",
+      "domain_points": 133,
+      "family": "median",
+      "normalized_sha256": "5e98a6c7b755b5e7163b4a1d9bf095d196fd131f1f921f950a5473a3ecbb0af6",
+      "normalized_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 3,
+        "input_targets": [
+          "num1",
+          "num2",
+          "num3"
+        ],
+        "omitted_fixed_prompt": 0
+      },
+      "raw_sha256": "e805c04dbe96129bc40dcd1586aa6d9d70d4284544629202a47ce9eb51b4d50f",
+      "raw_structure": {
+        "identity_int_casts": 0,
+        "if_nodes": 3,
+        "input_targets": [
+          "num1",
+          "num2",
+          "num3"
+        ],
+        "omitted_fixed_prompt": 1
+      },
+      "role": "reference"
+    }
+  ],
+  "status": "PASS_INDEPENDENT_NORMALIZATION_REVIEW",
+  "structural_correspondence_agreements": 13
+}

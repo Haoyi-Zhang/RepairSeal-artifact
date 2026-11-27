@@ -1,0 +1,270 @@
+[
+  {
+    "id": "align3",
+    "source": "#include <stdio.h>\nint main(void){_Alignas(3) int x; scanf(\"%d\",&x);printf(\"%d\",x);return 0;}",
+    "source_sha256": "e05a44149bd01f02dfd10802c97da4c568f9d43031bcbd46752f4bb385c32d0f",
+    "concrete": {
+      "defined": true,
+      "value": "1",
+      "trace": [],
+      "undefined_reason": null,
+      "undefined_line": null,
+      "counters": {
+        "statement": 5,
+        "call:scanf": 1,
+        "call:printf": 1,
+        "expression": 1
+      },
+      "steps": 6
+    },
+    "direct": {
+      "status": "ACCEPT",
+      "witness": null,
+      "semantic_cells": 1,
+      "counters": {
+        "semantic_cells": 1,
+        "cache_queries": 3,
+        "cache_hits": 2,
+        "cache_writes": 1,
+        "key_coordinates": 0,
+        "support_nodes": 8,
+        "support_edges": 0,
+        "support_coordinate_visits": 0,
+        "axis_values_copied": 0,
+        "axes_copied": 0,
+        "projected_point_visits": 0,
+        "point_coordinates_filled": 0,
+        "root_predicate_tests": 3,
+        "trace_events_examined": 0,
+        "conditional_choices": 0,
+        "diagnostic_points": 0,
+        "diagnostic_candidates": 0,
+        "diagnostic_key_comparisons": 0
+      },
+      "projection_work": {
+        "points_scanned": 3,
+        "key_coordinates": 0,
+        "unique_representatives": 3,
+        "projection_queries": 3,
+        "encoded_coordinates": 1
+      },
+      "counter_scope": "local DAG values, named memo/support work, and point-set projection operations; source admission, allocation, and elapsed time excluded",
+      "nodes": 8,
+      "mode": "int32-demand"
+    },
+    "compiler": {
+      "command": [
+        "/usr/bin/gcc",
+        "-std=c11",
+        "-fsyntax-only",
+        "-x",
+        "c",
+        "-"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "<stdin>: In function \u2018main\u2019:\n<stdin>:2:1: error: requested alignment \u20183\u2019 is not a positive power of 2\n"
+    }
+  },
+  {
+    "id": "align1",
+    "source": "#include <stdio.h>\nint main(void){_Alignas(1) int x; scanf(\"%d\",&x);printf(\"%d\",x);return 0;}",
+    "source_sha256": "9f6a1135c82f00e7df900ab9350d7920ffe07e57ca084c38802605c076d108d5",
+    "concrete": {
+      "defined": true,
+      "value": "1",
+      "trace": [],
+      "undefined_reason": null,
+      "undefined_line": null,
+      "counters": {
+        "statement": 5,
+        "call:scanf": 1,
+        "call:printf": 1,
+        "expression": 1
+      },
+      "steps": 6
+    },
+    "direct": {
+      "status": "ACCEPT",
+      "witness": null,
+      "semantic_cells": 1,
+      "counters": {
+        "semantic_cells": 1,
+        "cache_queries": 3,
+        "cache_hits": 2,
+        "cache_writes": 1,
+        "key_coordinates": 0,
+        "support_nodes": 8,
+        "support_edges": 0,
+        "support_coordinate_visits": 0,
+        "axis_values_copied": 0,
+        "axes_copied": 0,
+        "projected_point_visits": 0,
+        "point_coordinates_filled": 0,
+        "root_predicate_tests": 3,
+        "trace_events_examined": 0,
+        "conditional_choices": 0,
+        "diagnostic_points": 0,
+        "diagnostic_candidates": 0,
+        "diagnostic_key_comparisons": 0
+      },
+      "projection_work": {
+        "points_scanned": 3,
+        "key_coordinates": 0,
+        "unique_representatives": 3,
+        "projection_queries": 3,
+        "encoded_coordinates": 1
+      },
+      "counter_scope": "local DAG values, named memo/support work, and point-set projection operations; source admission, allocation, and elapsed time excluded",
+      "nodes": 8,
+      "mode": "int32-demand"
+    },
+    "compiler": {
+      "command": [
+        "/usr/bin/gcc",
+        "-std=c11",
+        "-fsyntax-only",
+        "-x",
+        "c",
+        "-"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "<stdin>: In function \u2018main\u2019:\n<stdin>:2:32: error: \u2018_Alignas\u2019 specifiers cannot reduce alignment of \u2018x\u2019\n"
+    }
+  },
+  {
+    "id": "parameter_align",
+    "source": "#include <stdio.h>\nint main(_Alignas(3) int x,char **argv){scanf(\"%d\",&x);printf(\"%d\",x);return 0;}",
+    "source_sha256": "b7a6971b4be3540f699bdcf91cb21b6f24028e61439de793d2f16d406b9434d0",
+    "concrete": {
+      "defined": true,
+      "value": "1",
+      "trace": [],
+      "undefined_reason": null,
+      "undefined_line": null,
+      "counters": {
+        "statement": 4,
+        "call:scanf": 1,
+        "call:printf": 1,
+        "expression": 1
+      },
+      "steps": 5
+    },
+    "direct": {
+      "status": "ACCEPT",
+      "witness": null,
+      "semantic_cells": 1,
+      "counters": {
+        "semantic_cells": 1,
+        "cache_queries": 3,
+        "cache_hits": 2,
+        "cache_writes": 1,
+        "key_coordinates": 0,
+        "support_nodes": 8,
+        "support_edges": 0,
+        "support_coordinate_visits": 0,
+        "axis_values_copied": 0,
+        "axes_copied": 0,
+        "projected_point_visits": 0,
+        "point_coordinates_filled": 0,
+        "root_predicate_tests": 3,
+        "trace_events_examined": 0,
+        "conditional_choices": 0,
+        "diagnostic_points": 0,
+        "diagnostic_candidates": 0,
+        "diagnostic_key_comparisons": 0
+      },
+      "projection_work": {
+        "points_scanned": 3,
+        "key_coordinates": 0,
+        "unique_representatives": 3,
+        "projection_queries": 3,
+        "encoded_coordinates": 1
+      },
+      "counter_scope": "local DAG values, named memo/support work, and point-set projection operations; source admission, allocation, and elapsed time excluded",
+      "nodes": 8,
+      "mode": "int32-demand"
+    },
+    "compiler": {
+      "command": [
+        "/usr/bin/gcc",
+        "-std=c11",
+        "-fsyntax-only",
+        "-x",
+        "c",
+        "-"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "<stdin>:2:1: error: requested alignment \u20183\u2019 is not a positive power of 2\n<stdin>:2:26: error: alignment specified for parameter \u2018x\u2019\n"
+    }
+  },
+  {
+    "id": "qualified_void",
+    "source": "#include <stdio.h>\nint main(const void){int x;scanf(\"%d\",&x);printf(\"%d\",x);return 0;}",
+    "source_sha256": "1306993eedd58fe88d150fed29224fea2533b750363766e8c64f19484285d6c5",
+    "concrete": {
+      "defined": true,
+      "value": "1",
+      "trace": [],
+      "undefined_reason": null,
+      "undefined_line": null,
+      "counters": {
+        "statement": 5,
+        "call:scanf": 1,
+        "call:printf": 1,
+        "expression": 1
+      },
+      "steps": 6
+    },
+    "direct": {
+      "status": "ACCEPT",
+      "witness": null,
+      "semantic_cells": 1,
+      "counters": {
+        "semantic_cells": 1,
+        "cache_queries": 3,
+        "cache_hits": 2,
+        "cache_writes": 1,
+        "key_coordinates": 0,
+        "support_nodes": 8,
+        "support_edges": 0,
+        "support_coordinate_visits": 0,
+        "axis_values_copied": 0,
+        "axes_copied": 0,
+        "projected_point_visits": 0,
+        "point_coordinates_filled": 0,
+        "root_predicate_tests": 3,
+        "trace_events_examined": 0,
+        "conditional_choices": 0,
+        "diagnostic_points": 0,
+        "diagnostic_candidates": 0,
+        "diagnostic_key_comparisons": 0
+      },
+      "projection_work": {
+        "points_scanned": 3,
+        "key_coordinates": 0,
+        "unique_representatives": 3,
+        "projection_queries": 3,
+        "encoded_coordinates": 1
+      },
+      "counter_scope": "local DAG values, named memo/support work, and point-set projection operations; source admission, allocation, and elapsed time excluded",
+      "nodes": 8,
+      "mode": "int32-demand"
+    },
+    "compiler": {
+      "command": [
+        "/usr/bin/gcc",
+        "-std=c11",
+        "-fsyntax-only",
+        "-x",
+        "c",
+        "-"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "<stdin>:2:10: error: \u2018void\u2019 as only parameter may not be qualified\n"
+    }
+  }
+]

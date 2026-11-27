@@ -1,0 +1,25 @@
+#!/bin/bash
+#should export box=blackbox or whitebox 
+#should export EXP_HOME=/path/to/program/under/test
+
+box=blackbox
+
+testnum="$1"
+if [ "$1" -gt 8 ]; then
+   box=whitebox
+   testnum=$(($1 - 8))
+else
+   box=blackbox
+fi 
+
+assert-equal () {
+    diff  <(${ANGELIX_RUN:-eval} $1) <(echo "$2") #> /dev/null #<(echo -ne "$2")
+    #x=`${ANGELIX_RUN:-eval} $1`
+    #echo "Angela Phuong trinh:"${ANGELIX_RUN}" -- "$x
+}
+#HOME=/home/dxble/workspace/repairtools/angelix/tests/
+outputRes=`cat $EXP_HOME/smallest/tests/$box/${testnum}.out`
+input=`cat $EXP_HOME/smallest/tests/$box/${testnum}.in`
+
+output=`echo "$outputRes" | cut -d'>' -f2|sed 's/[^-?0-9]*//g'`
+assert-equal "./smallest $input" "$output"

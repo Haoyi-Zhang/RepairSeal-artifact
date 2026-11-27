@@ -1,0 +1,178 @@
+[
+  {
+    "compiler": "gcc",
+    "control": "int32-compile",
+    "command": [
+      "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "-std=c99",
+      "-O1",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "<NATIVE_WORK>/compiler-0/probe.c",
+      "-o",
+      "<NATIVE_WORK>/compiler-0/probe"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.03840852999996969,
+    "wall_seconds_limit": 60,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "gcc",
+    "control": "int32-run",
+    "command": [
+      "<NATIVE_WORK>/compiler-0/probe"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.004632660000197575,
+    "wall_seconds_limit": 2,
+    "stdout": "int32\n",
+    "stderr": "",
+    "stdout_sha256": "eda70ea48465f469be07c75ca5c77035979d9a4c5d5ee747f70fa5d108373fa9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 6,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "gcc",
+    "control": "ubsan-compile",
+    "command": [
+      "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "-std=c99",
+      "-O1",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "<NATIVE_WORK>/compiler-0/ubsan-control.c",
+      "-o",
+      "<NATIVE_WORK>/compiler-0/ubsan-control"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.06314072400004989,
+    "wall_seconds_limit": 60,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "gcc",
+    "control": "ubsan-run",
+    "command": [
+      "<NATIVE_WORK>/compiler-0/ubsan-control"
+    ],
+    "outcome": "nonzero",
+    "returncode": 1,
+    "elapsed_seconds": 0.010199199999988195,
+    "wall_seconds_limit": 2,
+    "stdout": "",
+    "stderr": "/workspace/scratch/a88b4d734b38/research/natural-expansion-native/compiler-0/ubsan-control.c:2:47: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "94ec965d1c7693c0d6f7ce8b831bd150d60039e78a1f4dd9e795b29732b6fbb2",
+    "stdout_bytes": 0,
+    "stderr_bytes": 190,
+    "truncated": false
+  },
+  {
+    "compiler": "clang",
+    "control": "int32-compile",
+    "command": [
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "-std=c99",
+      "-O1",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "<NATIVE_WORK>/compiler-1/probe.c",
+      "-o",
+      "<NATIVE_WORK>/compiler-1/probe"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.20332702199993946,
+    "wall_seconds_limit": 60,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "clang",
+    "control": "int32-run",
+    "command": [
+      "<NATIVE_WORK>/compiler-1/probe"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.006479038999714248,
+    "wall_seconds_limit": 2,
+    "stdout": "int32\n",
+    "stderr": "",
+    "stdout_sha256": "eda70ea48465f469be07c75ca5c77035979d9a4c5d5ee747f70fa5d108373fa9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 6,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "clang",
+    "control": "ubsan-compile",
+    "command": [
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "-std=c99",
+      "-O1",
+      "-Werror=implicit-function-declaration",
+      "-Werror=format",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "<NATIVE_WORK>/compiler-1/ubsan-control.c",
+      "-o",
+      "<NATIVE_WORK>/compiler-1/ubsan-control"
+    ],
+    "outcome": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 0.13673843399965335,
+    "wall_seconds_limit": 60,
+    "stdout": "",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "truncated": false
+  },
+  {
+    "compiler": "clang",
+    "control": "ubsan-run",
+    "command": [
+      "<NATIVE_WORK>/compiler-1/ubsan-control"
+    ],
+    "outcome": "nonzero",
+    "returncode": 1,
+    "elapsed_seconds": 0.01356639699997686,
+    "wall_seconds_limit": 2,
+    "stdout": "",
+    "stderr": "/workspace/scratch/a88b4d734b38/research/natural-expansion-native/compiler-1/ubsan-control.c:2:47: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /workspace/scratch/a88b4d734b38/research/natural-expansion-native/compiler-1/ubsan-control.c:2:47 \n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "014e4b32ac59c9e4aba6b3e7b57d48250a9913767b5ec80cac932bc4f3e1580a",
+    "stdout_bytes": 0,
+    "stderr_bytes": 345,
+    "truncated": false
+  }
+]

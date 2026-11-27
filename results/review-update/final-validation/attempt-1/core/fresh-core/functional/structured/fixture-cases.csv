@@ -1,0 +1,81 @@
+id,case,variant,status,witness,nodes,points,certificate_bytes,produce_ms,check_ms,topological_ms,session_direct_ms,refutation_certificate_bytes,refutation_check_ms,refutation_cells,certificate_rebuild_ms
+fixture-01-correct,1,correct,ACCEPT,,24,81,9934,2.340263,1.765899,1.37312,1.731012,,,,5.889333
+fixture-01-overfit,1,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",30,81,12193,1.884141,1.943043,1.654935,1.536817,667,0.493367,30,
+fixture-01-regression,1,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",31,81,12728,2.172042,2.372993,1.776873,1.386285,672,0.496353,31,
+fixture-01-undefined,1,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",34,81,14118,1.686839,2.159672,1.667462,0.783617,659,0.446079,34,
+fixture-02-correct,2,correct,ACCEPT,,21,81,9663,1.182679,1.494265,1.174671,1.251207,,,,6.273421
+fixture-02-overfit,2,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",29,81,13265,1.859893,1.678546,1.848061,1.32601,667,0.536773,29,
+fixture-02-regression,2,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",30,81,13800,1.939373,1.910787,1.958579,2.251641,672,0.482393,30,
+fixture-02-undefined,2,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",30,81,13351,1.849094,1.752739,1.634243,0.703542,659,0.428067,30,
+fixture-03-correct,3,correct,ACCEPT,,25,81,10521,1.364894,1.456702,1.589989,1.254105,,,,7.298214
+fixture-03-overfit,3,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",31,81,12799,3.048975,2.044973,1.755302,1.191012,667,0.542632,31,
+fixture-03-regression,3,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",32,81,13333,1.731345,2.176011,2.101104,1.440803,672,0.482901,32,
+fixture-03-undefined,3,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",35,81,14706,2.009474,2.325299,2.171139,0.951872,659,0.480668,35,
+fixture-04-correct,4,correct,ACCEPT,,24,81,10096,1.961361,2.787689,2.134066,2.039091,,,,9.404652
+fixture-04-overfit,4,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",30,81,12355,2.899037,2.039983,1.773267,1.721491,667,0.683884,30,
+fixture-04-regression,4,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",31,81,12890,3.224605,1.976201,3.128484,2.771786,672,1.173878,31,
+fixture-04-undefined,4,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",34,81,14280,2.959176,3.393395,2.978348,1.198587,659,0.619158,34,
+fixture-05-correct,5,correct,ACCEPT,,25,81,10728,1.583617,2.644665,1.270009,2.499447,,,,10.720889
+fixture-05-overfit,5,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",31,81,12988,3.66897,3.178791,4.234212,3.00614,667,1.107575,31,
+fixture-05-regression,5,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",32,81,13522,2.473456,2.028512,1.701491,1.288786,672,0.924119,32,
+fixture-05-undefined,5,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",35,81,14913,2.09166,2.056522,2.085065,0.881942,659,0.497187,35,
+fixture-06-correct,6,correct,ACCEPT,,24,81,9934,1.616491,2.047698,1.351288,1.449692,,,,6.127403
+fixture-06-overfit,6,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",30,81,12193,1.88897,1.801349,1.663559,1.286204,667,0.569899,30,
+fixture-06-regression,6,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",31,81,12728,2.460802,1.989856,1.660833,1.451374,672,0.555215,31,
+fixture-06-undefined,6,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",34,81,14118,1.528608,2.097138,1.8695,2.433389,659,0.768689,34,
+fixture-07-correct,7,correct,ACCEPT,,25,81,14633,3.006033,3.646464,2.230048,1.840463,,,,9.82217
+fixture-07-overfit,7,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",31,81,18027,3.334369,3.514902,3.063001,1.54974,685,0.818189,31,
+fixture-07-regression,7,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [4294967295, 3, 1, 0]}",32,81,18642,2.823213,3.081307,2.842007,2.38293,699,0.648031,32,
+fixture-07-undefined,7,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",35,81,18818,2.835985,4.108535,3.474461,1.299787,677,0.748522,35,
+fixture-08-correct,8,correct,ACCEPT,,28,81,15206,2.405691,3.014828,2.617547,2.080049,,,,11.322829
+fixture-08-overfit,8,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",34,81,18438,2.957895,4.123979,3.349181,1.717699,685,0.761041,34,
+fixture-08-regression,8,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [4294967295, 3, 1, 0]}",36,81,19925,3.199144,3.886532,1.8676,1.901835,699,0.777619,36,
+fixture-08-undefined,8,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",38,81,19391,2.376593,2.554913,2.02854,1.146291,677,0.472259,38,
+fixture-09-correct,9,correct,ACCEPT,,38,81,15770,1.906111,2.308158,1.814372,1.448376,,,,19.362654
+fixture-09-overfit,9,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",46,81,19133,2.570721,3.060833,2.712241,1.462585,667,0.660651,46,
+fixture-09-regression,9,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",47,81,19685,2.312383,2.513786,2.782248,1.769572,672,0.744483,47,
+fixture-09-undefined,9,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",45,81,18546,2.156407,2.239938,2.532391,0.972289,659,0.744174,45,
+fixture-10-correct,10,correct,ACCEPT,,38,81,16310,2.592801,2.730209,2.03243,1.418545,,,,20.73003
+fixture-10-overfit,10,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",46,81,19619,2.434318,2.454098,2.576832,1.249651,667,0.517762,46,
+fixture-10-regression,10,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",47,81,20171,2.560278,2.435759,2.437653,1.423798,672,0.578714,47,
+fixture-10-undefined,10,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",45,81,19086,2.141854,2.50102,3.701589,1.10468,659,1.120196,45,
+fixture-11-correct,11,correct,ACCEPT,,29,81,12842,1.463959,1.892746,1.877241,2.069134,,,,9.538834
+fixture-11-overfit,11,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",41,81,18043,2.309202,2.692126,2.217587,1.313308,667,0.490905,41,
+fixture-11-regression,11,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",42,81,18595,1.884044,2.18827,2.139646,1.755992,672,1.958043,42,
+fixture-11-undefined,11,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",37,81,16090,1.905422,2.203825,2.076203,0.963379,659,0.500194,37,
+fixture-12-correct,12,correct,ACCEPT,,29,81,13058,1.728943,2.358613,2.136523,1.436778,,,,9.559329
+fixture-12-overfit,12,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",41,81,18241,2.016161,2.462268,2.449667,1.282772,667,0.556067,41,
+fixture-12-regression,12,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",42,81,18793,2.316314,2.610524,2.293003,1.705098,672,0.737302,42,
+fixture-12-undefined,12,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",37,81,16306,1.968581,2.536831,1.784657,1.213973,659,0.66328,37,
+fixture-13-correct,13,correct,ACCEPT,,28,81,12568,2.767757,1.872028,1.637617,1.507874,,,,8.796416
+fixture-13-overfit,13,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1], [2, 1]], 'input': [0, 3, 1, 0]}",34,81,14829,2.449317,1.920257,1.922262,2.207326,673,0.87163,34,
+fixture-13-regression,13,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [3, 3, 1, 0]}",35,81,15363,2.131755,2.073631,2.030847,1.765071,678,0.623133,35,
+fixture-13-undefined,13,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",40,81,17803,1.979666,2.62095,2.441761,1.124349,659,0.702,40,
+fixture-14-correct,14,correct,ACCEPT,,28,81,12082,2.054306,1.790086,1.676261,1.664712,,,,8.259525
+fixture-14-overfit,14,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [0, 3, 1, 0]}",34,81,14343,1.883828,2.165319,2.035273,1.352218,673,0.559592,34,
+fixture-14-regression,14,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [3, 3, 1, 0]}",35,81,14877,1.898013,2.082394,2.038792,7.795843,678,0.762863,35,
+fixture-14-undefined,14,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",40,81,17317,2.411302,2.212139,2.343479,1.231584,659,0.651648,40,
+fixture-15-correct,15,correct,ACCEPT,,25,81,10999,1.937494,2.114295,1.704252,1.39771,,,,10.24868
+fixture-15-overfit,15,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [0, 3, 1, 0]}",33,81,14199,2.846941,2.096872,1.841281,1.217983,673,0.645724,33,
+fixture-15-regression,15,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1], [2, 1]], 'input': [3, 3, 1, 0]}",34,81,14733,2.37869,2.452396,2.061094,1.775971,678,0.72368,34,
+fixture-15-undefined,15,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",36,81,15736,3.102397,2.313362,2.178124,1.085772,659,1.087201,36,
+fixture-16-correct,16,correct,ACCEPT,,32,81,14457,1.703476,2.22601,1.765645,1.414668,,,,15.071746
+fixture-16-overfit,16,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [0, 3, 1, 0]}",44,81,19645,2.422728,2.613138,2.366937,1.309739,673,0.798135,44,
+fixture-16-regression,16,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [3, 3, 1, 0]}",45,81,20197,2.391826,2.68622,2.537418,2.754705,678,0.660051,45,
+fixture-16-undefined,16,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",42,81,18750,2.036749,2.668075,2.592271,1.120741,659,0.605713,42,
+fixture-17-correct,17,correct,ACCEPT,,38,81,16603,2.271849,3.247015,2.37954,1.764168,,,,33.224404
+fixture-17-overfit,17,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [0, 3, 1, 0]}",50,81,21790,2.347616,2.564382,2.771146,1.477117,673,0.834126,50,
+fixture-17-regression,17,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1], [2, 1]], 'input': [3, 3, 1, 0]}",51,81,22342,2.591753,2.79258,2.796439,2.0555,678,0.74755,51,
+fixture-17-undefined,17,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",49,81,21393,2.361078,3.231372,3.275746,1.23278,659,0.712441,49,
+fixture-18-correct,18,correct,ACCEPT,,29,81,11816,1.977563,2.613528,1.952719,1.647528,,,,14.989503
+fixture-18-overfit,18,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [3, 1]], 'input': [0, 3, 1, 0]}",37,81,15016,2.618357,2.84941,2.14286,1.806032,673,1.060388,37,
+fixture-18-regression,18,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 0], [3, 1]], 'input': [3, 3, 1, 0]}",38,81,15550,2.697702,2.681815,2.066827,2.000827,678,0.720183,38,
+fixture-18-undefined,18,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",42,81,17637,2.665441,2.812138,2.675844,1.028994,659,0.595086,42,
+fixture-19-correct,19,correct,ACCEPT,,22,81,8994,1.31065,1.704032,1.152685,1.374621,,,,4.539233
+fixture-19-overfit,19,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 1]], 'input': [0, 3, 1, 0]}",30,81,12191,1.52382,1.555414,1.487315,1.173274,667,0.496959,30,
+fixture-19-regression,19,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 1]], 'input': [3, 3, 1, 0]}",31,81,12726,2.547423,2.273284,1.891054,1.81032,672,0.6174,31,
+fixture-19-undefined,19,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",31,81,12682,1.913738,2.286607,2.583518,1.078608,659,0.649448,31,
+fixture-20-correct,20,correct,ACCEPT,,26,81,10626,1.94623,2.042553,1.528238,1.891153,,,,11.664837
+fixture-20-overfit,20,overfit,REFUTED,"{'obligation': 'repair', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [0, 3, 1, 0]}",34,81,13825,3.0552,2.303066,1.894791,1.410877,673,0.778528,34,
+fixture-20-regression,20,regression,REFUTED,"{'obligation': 'preserve', 'trace': [[0, 0], [1, 0], [2, 1]], 'input': [3, 3, 1, 0]}",35,81,14359,2.23747,2.42995,1.901491,1.795177,678,0.649774,35,
+fixture-20-undefined,20,undefined,REFUTED,"{'obligation': 'defined', 'trace': [], 'input': [0, 0, 0, 3]}",37,81,15363,2.529559,2.03556,2.092122,1.52297,659,0.681147,37,

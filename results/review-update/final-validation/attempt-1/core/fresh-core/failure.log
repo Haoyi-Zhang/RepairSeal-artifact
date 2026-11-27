@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/a88b4d734b38/final-validation-work/core-project/artifact/reproduce.py", line 797, in run
+    row["returncode"] = run_command(command, root, env, stdout, stderr, args.step_timeout)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a88b4d734b38/final-validation-work/core-project/artifact/reproduce.py", line 321, in run_command
+    raise ExecutionFailure("study process exited with code " + str(code), code)
+ExecutionFailure: study process exited with code 1

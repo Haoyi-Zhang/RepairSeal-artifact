@@ -1,0 +1,14 @@
+--- a/smallest.c
++++ b/smallest.c
+@@ -21,9 +21,9 @@
+ //	scanf("%i", &third);
+ //	scanf("%i", &fourth);
+ 
+-	if ((first<second) && (first<third) && (first<fourth))
++	if ((first < fourth))
+ 		printf("%d\n",ANGELIX_OUTPUT(int,(int) first, "stdout"));
+-	if ((second<first) && (second<third) && (second<fourth))
++	if ((((second < first) && (second < third)) && (second < fourth)))
+ 		printf("%d\n",ANGELIX_OUTPUT(int,(int) second, "stdout"));
+ 	if ((third<first) && (third<second) && (third<fourth))
+ 		printf("%d\n",ANGELIX_OUTPUT(int,(int) third, "stdout"));

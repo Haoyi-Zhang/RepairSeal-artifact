@@ -1,0 +1,14 @@
+--- a/smallest.c
++++ b/smallest.c
+@@ -18,9 +18,9 @@
+ 	printf("%d\n",ANGELIX_OUTPUT(int,(int) a, "stdout"));
+ else if (b < a && b < c && b < d)
+ 	printf("%d\n",ANGELIX_OUTPUT(int,(int) b, "stdout"));
+-else if (c < b && c < a && c < d)
++else if ((c < 2))
+ 	printf("%d\n",ANGELIX_OUTPUT(int,(int) c, "stdout"));
+-else if (d < b && d < c && d < a)
++else if ((((d < b) && (d < c)) && (d < a)))
+ 	printf("%d\n",ANGELIX_OUTPUT(int,(int) d, "stdout"));
+ 	
+ return 0;

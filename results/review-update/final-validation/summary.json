@@ -1,0 +1,306 @@
+{
+  "attempts": [
+    {
+      "directory": "attempt-1",
+      "ended_at_utc": "2026-11-26T18:06:17.285771+00:00",
+      "gates": {
+        "audit-data-integrity": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "core": {
+          "returncode": 1,
+          "status": "FAIL"
+        },
+        "expected-results": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "paper": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "preflight": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "smoke": {
+          "returncode": 0,
+          "status": "PASS"
+        }
+      },
+      "started_at_utc": "2026-11-26T17:59:31.929077+00:00",
+      "status": "FAIL"
+    },
+    {
+      "directory": "attempt-2",
+      "ended_at_utc": "2026-11-26T18:33:28.994656+00:00",
+      "gates": {
+        "audit-data-integrity": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "core": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "expected-results": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "paper": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "preflight": {
+          "returncode": 0,
+          "status": "PASS"
+        },
+        "smoke": {
+          "returncode": 0,
+          "status": "PASS"
+        }
+      },
+      "started_at_utc": "2026-11-26T18:14:40.375439+00:00",
+      "status": "PASS"
+    }
+  ],
+  "complete_unit_suite": {
+    "ok": true,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 422
+  },
+  "core_steps": [
+    {
+      "name": "verify-packaged-results",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "audit-delivery",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "fresh-core-reproduction",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "complete-unit-suite",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "verify-fresh-results",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "paper-build",
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "data_audit": {
+    "counts": {
+      "c": 8623,
+      "csv": 36,
+      "graphml": 4632,
+      "json": 32159,
+      "jsonl": 13,
+      "property": 808,
+      "sqlite": 15,
+      "zip": 3
+    },
+    "errors": [],
+    "intentional_malformed_graphml": [
+      "experiments/witness-interoperability/cases/0381/malformed.graphml",
+      "experiments/witness-interoperability/cases/0781/malformed.graphml",
+      "experiments/witness-interoperability/cases/0000/malformed.graphml",
+      "experiments/witness-interoperability/cases/0380/malformed.graphml",
+      "experiments/witness-interoperability/cases/0001/malformed.graphml",
+      "experiments/witness-interoperability/cases/0780/malformed.graphml"
+    ],
+    "review_update": {
+      "domain_scale": "PASS",
+      "fresh_census": "PASS",
+      "independent_definedness_review": "PASS",
+      "independent_normalization_review": "PASS",
+      "independent_patch_review": "PASS",
+      "introclass_certificates": "PASS",
+      "natural_expansion": "PASS",
+      "real_patches": "PASS"
+    }
+  },
+  "expected_results_sha256": "b50eacdedb1d1932bfd68fd4855f8ecfd60467a19bab5a67fe27a57d874aafd1",
+  "final_attempt": "attempt-2",
+  "final_run": "attempt-2/run.json",
+  "fresh_core_results": {
+    "checks": 222,
+    "failures": [],
+    "receipt": "attempt-2/core/fresh-key-result-trace/result.json",
+    "status": "PASS_KEY_RESULT_SOURCE_TRACE"
+  },
+  "fresh_reproduction_outcome": "PASS_SELECTED_CHECKS",
+  "fresh_scientific_stages": {
+    "analysis": {
+      "elapsed_seconds": 5.43205432600007,
+      "returncode": null,
+      "status": "PASS"
+    },
+    "demand": {
+      "elapsed_seconds": 174.2507831719995,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    "functional": {
+      "elapsed_seconds": 423.3022919260002,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    "headers": {
+      "elapsed_seconds": 3.5417176259998087,
+      "returncode": 0,
+      "status": "PASS"
+    }
+  },
+  "gates": {
+    "audit-data-integrity": {
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "audit_data_integrity.py"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/core-project/artifact",
+      "elapsed_seconds": 77.61147356033325,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/audit-data-integrity.stderr.log",
+      "stdout": "attempt-2/audit-data-integrity.stdout.log"
+    },
+    "core": {
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "core",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/core"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/core-project/artifact",
+      "elapsed_seconds": 976.769951581955,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/core.stderr.log",
+      "stdout": "attempt-2/core.stdout.log"
+    },
+    "expected-results": {
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "verify_expected_results.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/expected-results"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/core-project/artifact",
+      "elapsed_seconds": 11.976323366165161,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/expected-results.stderr.log",
+      "stdout": "attempt-2/expected-results.stdout.log"
+    },
+    "paper": {
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "paper",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/paper"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/paper-project/artifact",
+      "elapsed_seconds": 226.73459649085999,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/paper.stderr.log",
+      "stdout": "attempt-2/paper.stdout.log"
+    },
+    "preflight": {
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "preflight",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/preflight"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/core-project/artifact",
+      "elapsed_seconds": 19.050273180007935,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/preflight.stderr.log",
+      "stdout": "attempt-2/preflight.stdout.log"
+    },
+    "smoke": {
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "smoke",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/reports/smoke"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/final-validation-work-attempt2/core-project/artifact",
+      "elapsed_seconds": 27.52412223815918,
+      "returncode": 0,
+      "status": "PASS",
+      "stderr": "attempt-2/smoke.stderr.log",
+      "stdout": "attempt-2/smoke.stdout.log"
+    }
+  },
+  "generated_at_utc": "2026-11-26T18:33:36.407555+00:00",
+  "interpretation": "The final complete run passes all six gates. Earlier failed attempts remain failures and are retained in full. This is not a fresh full external CBMC/CPAchecker campaign.",
+  "packaged_results": {
+    "checks": 203,
+    "failures": [],
+    "receipt": "attempt-2/expected-results/result.json",
+    "status": "PASS_KEY_RESULT_SOURCE_TRACE"
+  },
+  "paper": {
+    "build_isolation": "core and paper use separate complete copies; no build command runs in the source project",
+    "delivery_files": 71,
+    "delivery_matches_original_zip": true,
+    "direct_pdf_inspection": "attempt-2/paper/rebuilt-output-inspection.json",
+    "integrity_receipt": "paper-original-integrity.json",
+    "note": "Rebuilt PDFs are outputs in disposable copies, not replacements for the supplied paper.",
+    "rebuilt_outputs": {
+      "figure-atlas.pdf": {
+        "bytes": 1438250,
+        "pages": 5,
+        "sha256": "7272afd65d4c513169398a37b418367cdba45fe7f8d6f7950ac690e38d52c228",
+        "status": "PASS"
+      },
+      "main.pdf": {
+        "bytes": 869099,
+        "pages": 39,
+        "sha256": "f445d62e1db3161b1737184d9e03a4d40c0ff2d8978082c1996fd8c6b32bc019",
+        "status": "PASS"
+      },
+      "supplementary.pdf": {
+        "bytes": 502233,
+        "pages": 18,
+        "sha256": "532669da712bc8124e7da898e80d09657c95b74e5498ee62992845b01db3a19f",
+        "status": "PASS"
+      }
+    },
+    "unchanged_during_final_run": true
+  },
+  "retention": "Attempt directories preserve original report and log bytes. Disposable full project copies may be removed after completion; original command cwd strings record where execution took place.",
+  "schema": "repairseal-final-validation-summary-v1",
+  "scientific_code_unchanged_since_final_run": true,
+  "smoke_tests": {
+    "ok": true,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 47
+  },
+  "status": "PASS"
+}

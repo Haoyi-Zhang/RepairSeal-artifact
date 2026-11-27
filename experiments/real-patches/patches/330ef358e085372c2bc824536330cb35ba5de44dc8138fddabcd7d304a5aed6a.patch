@@ -1,0 +1,11 @@
+--- a/median.c
++++ b/median.c
+@@ -20,7 +20,7 @@
+     z = a;
+   else if((a < b && b< c) || (c < b && b < a))
+     z = b;
+-  else if((a < c && c < b) || (b < c && c < a))
++  else if((1 || ((b < c) && (c < a))))
+     z = c;
+ 
+   //printf("%d is the median\n", z);

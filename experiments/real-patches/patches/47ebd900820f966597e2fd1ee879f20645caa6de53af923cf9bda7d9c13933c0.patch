@@ -1,0 +1,11 @@
+--- a/median.c
++++ b/median.c
+@@ -16,7 +16,7 @@
+   printf("%d\n", ANGELIX_OUTPUT(int, i1, "stdout"));
+   else if ((i2 >= i1 && i2 <= i3) || (i2 == i1 && i2 == i3) || (i2 > i1 && i2 < i3))
+   printf("%d\n", ANGELIX_OUTPUT(int, i2, "stdout"));
+-  else if ((i3 >= i2 && i3 <= i1) || (i3 == i2 && i3 == i1) || (i3 > i2 && i3 < i1))
++  else if (((((i3 >= i2) && (i3 <= i1)) || (i3 <= i2)) || ((i3 > i2) && (i3 < i1))))
+   printf("%d\n", ANGELIX_OUTPUT(int, i3, "stdout"));
+   return (0);
+ }

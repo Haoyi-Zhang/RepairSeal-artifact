@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import math
 from pathlib import Path
@@ -48,9 +49,16 @@ def get(value: Any, dotted: str) -> Any:
 
 
 def equal(actual: Any, expected: Any) -> bool:
-    if isinstance(expected, float):
-        return isinstance(actual, (int, float)) and math.isclose(
+    if type(expected) is float:
+        return type(actual) in (int, float) and math.isclose(
             float(actual), expected, rel_tol=1e-12, abs_tol=1e-12)
+    if type(actual) is not type(expected):
+        return False
+    if type(expected) is dict:
+        return (actual.keys() == expected.keys()
+                and all(equal(actual[key], value) for key, value in expected.items()))
+    if type(expected) is list:
+        return len(actual) == len(expected) and all(equal(a, e) for a, e in zip(actual, expected))
     return actual == expected
 
 
@@ -233,6 +241,43 @@ def verify_fresh(args: argparse.Namespace, expected: dict[str, Any], audit: Audi
                         key, "fresh-current-execution")
 
 
+def verify_update(expected: dict[str, Any], audit: Audit) -> None:
+    """Anchor new inventories, then compare independently recomputed fields."""
+    specification = expected["review_update"]
+    module_path = ARTIFACT / "verify_update_results.py"
+    audit.check("update:driver-hash", sha256(module_path), expected["review_update_driver_sha256"],
+                EXPECTED_PATH, "review_update_driver_sha256", "new-experiment-content-binding")
+    module_spec = importlib.util.spec_from_file_location("repairseal_update_expected_contract", module_path)
+    module = importlib.util.module_from_spec(module_spec)
+    module_spec.loader.exec_module(module)
+    audit.check("update:study-coverage", sorted(specification), sorted(module.STUDIES),
+                EXPECTED_PATH, "review_update.keys", "new-experiment-coverage")
+    for name, entry in specification.items():
+        summary_path = ARTIFACT / entry["summary_file"]
+        for label, path_key, hash_key in (("summary", "summary_file", "summary_sha256"),
+                                        ("inventory", "inventory_file", "inventory_sha256"),
+                                        ("verifier", "verifier_file", "verifier_sha256")):
+            path = ARTIFACT / entry[path_key]
+            audit.check(f"update:{name}:{label}-hash", sha256(path) if path.is_file() else None,
+                        entry[hash_key], EXPECTED_PATH, f"review_update.{name}.{hash_key}",
+                        "new-experiment-content-binding")
+        try:
+            result = module.recompute_study(name, ARTIFACT)
+        except (AssertionError, ValueError, TypeError, KeyError, IndexError, OSError) as exc:
+            result = {"status": "FAIL", "errors": [str(exc)], "recomputed": None}
+        audit.check(f"update:{name}:offline-replay", result["status"], "PASS", summary_path,
+                    "independent-offline-reduction.status", "new-record-recomputation")
+        audit.check(f"update:{name}:offline-errors", result["errors"], [], summary_path,
+                    "independent-offline-reduction.errors", "new-record-recomputation")
+        for field, wanted in entry["fields"].items():
+            try:
+                actual = get(result["recomputed"], field)
+            except (KeyError, TypeError, IndexError):
+                actual = None
+            audit.check(f"update:{name}:{field}", actual, wanted, summary_path, field,
+                        "new-record-recomputation")
+
+
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(description=__doc__)
     result.add_argument("--output", type=Path,
@@ -248,6 +293,7 @@ def main() -> int:
     expected = load(EXPECTED_PATH)
     audit = Audit()
     verify_packaged(expected, audit)
+    verify_update(expected, audit)
     verify_fresh(args, expected, audit)
     failures = audit.failures
     result = {

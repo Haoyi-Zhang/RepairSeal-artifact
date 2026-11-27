@@ -1,0 +1,14 @@
+--- a/median.c
++++ b/median.c
+@@ -18,9 +18,9 @@
+ 		printf("%d\n", ANGELIX_OUTPUT(int, n2, "stdout"));
+ 	else if ((n1>n2)&&(n1>n3)&&(n3>n2))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, n3, "stdout"));
+-	else if ((n2>n1)&&(n2>n3)&&(n3>n1))
++	else if ((((n2 > n1) && (n2 > n3)) && (n3 > n1)))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, n3, "stdout"));
+-	else if ((n2>n1)&&(n2>n3)&&(n1>n3))
++	else if ((3 > n3))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, n1, "stdout"));
+ 	else if ((n3>n1)&&(n3>n2)&&(n1>n2))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, n1, "stdout"));

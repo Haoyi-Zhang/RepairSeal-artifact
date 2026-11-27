@@ -1,0 +1,131 @@
+{
+  "outcome": "PASS_CLEAN_REPRODUCTION",
+  "stages": [
+    {
+      "stage": "study",
+      "instrumented_resources": {
+        "work_events": 657669,
+        "counts": {
+          "certificate_mutations": 180,
+          "certificate_steps": 8218,
+          "checker_projected_points": 9250,
+          "checker_source_tokens": 46908,
+          "checker_steps": 401637,
+          "checker_symbolic_nodes": 7453,
+          "counterexample_comparisons": 852,
+          "coverage_cells": 8160,
+          "native_defined_evaluations": 9180,
+          "obligation_families": 240,
+          "oracle_rows": 6480,
+          "producer_source_tokens": 14388,
+          "producer_steps": 80036,
+          "projected_points": 9940,
+          "requests": 80,
+          "source_mutations": 60,
+          "support_comparisons": 51840,
+          "symbolic_nodes": 2767
+        },
+        "wall_seconds": 1.8515564890003589,
+        "self_cpu_seconds": 1.155384,
+        "child_cpu_seconds": 0.747262,
+        "total_cpu_seconds": 1.9026459999999998,
+        "self_peak_rss_kib": 23168,
+        "largest_child_rss_kib": 98716,
+        "workers": 1
+      },
+      "whole_stage_cpu_seconds": 1.902911,
+      "wall_seconds": 1.8518134730002203,
+      "sampled_aggregate_peak_rss_bytes": 23912448,
+      "sampled_aggregate_peak_processes": 1
+    },
+    {
+      "stage": "regression",
+      "instrumented_resources": {
+        "work_events": 27702,
+        "counts": {
+          "boundary_oracle_rows": 450,
+          "certificate_steps": 498,
+          "checker_projected_points": 783,
+          "checker_source_tokens": 3011,
+          "checker_steps": 8837,
+          "checker_symbolic_nodes": 438,
+          "counterexample_comparisons": 185,
+          "coverage_cells": 498,
+          "json_controls": 5,
+          "producer_source_tokens": 1307,
+          "producer_steps": 10893,
+          "projected_points": 501,
+          "request_controls": 4,
+          "symbolic_nodes": 232,
+          "syntax_controls": 60
+        },
+        "wall_seconds": 0.039149506999820005,
+        "self_cpu_seconds": 0.039226000000000066,
+        "child_cpu_seconds": -2.7755575615628914e-17,
+        "total_cpu_seconds": 0.03922600000000004,
+        "self_peak_rss_kib": 23168,
+        "largest_child_rss_kib": 98716,
+        "workers": 1
+      },
+      "whole_stage_cpu_seconds": 0.04663800000000018,
+      "wall_seconds": 0.04655315600030008,
+      "sampled_aggregate_peak_rss_bytes": 23273472,
+      "sampled_aggregate_peak_processes": 1
+    },
+    {
+      "stage": "null-control",
+      "instrumented_resources": {
+        "work_events": 207440,
+        "counts": {
+          "certificate_steps": 2522,
+          "checker_projected_points": 8356,
+          "checker_source_tokens": 28776,
+          "checker_steps": 159754,
+          "checker_symbolic_nodes": 4806,
+          "counterexample_comparisons": 624,
+          "coverage_cells": 2522,
+          "null_requests": 80
+        },
+        "wall_seconds": 0.3405436489993008,
+        "self_cpu_seconds": 0.3451639999999999,
+        "child_cpu_seconds": -2.7755575615628914e-17,
+        "total_cpu_seconds": 0.3451639999999999,
+        "self_peak_rss_kib": 28416,
+        "largest_child_rss_kib": 98716,
+        "workers": 1
+      },
+      "whole_stage_cpu_seconds": 0.3468770000000001,
+      "wall_seconds": 0.34228666399940266,
+      "sampled_aggregate_peak_rss_bytes": 26951680,
+      "sampled_aggregate_peak_processes": 1
+    },
+    {
+      "stage": "publication",
+      "instrumented_resources": {
+        "work_events": 25000,
+        "counts": {
+          "report_cases": 80,
+          "report_native_rows": 18360,
+          "report_null_rows": 80,
+          "report_oracle_observations": 6480
+        },
+        "wall_seconds": 0.05463830400003644,
+        "self_cpu_seconds": 0.05371899999999982,
+        "child_cpu_seconds": -2.7755575615628914e-17,
+        "total_cpu_seconds": 0.053718999999999795,
+        "self_peak_rss_kib": 28416,
+        "largest_child_rss_kib": 98716,
+        "workers": 1
+      },
+      "whole_stage_cpu_seconds": 0.05396900000000038,
+      "wall_seconds": 0.05488068300019222,
+      "sampled_aggregate_peak_rss_bytes": 26685440,
+      "sampled_aggregate_peak_processes": 1
+    }
+  ],
+  "compared_files": 376,
+  "work_events": 918187,
+  "reconciliation_events": 376,
+  "measured_stage_cpu_seconds": 2.3503950000000007,
+  "resource_note": "5ms /proc samples include the serial scientific process and compiler descendants. Sampling can miss short-lived peaks; summed RSS may double-count shared pages. Per-process rusage maxima are also retained. One scientific worker; one resource-only sampling thread."
+}

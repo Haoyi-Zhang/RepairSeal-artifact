@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "bytes": 15775,
+      "path": "verify.py",
+      "sha256": "9d749341b9690c329e03a03dd3ac80305f1fd885126b26d7d9d64094204f282b"
+    },
+    {
+      "bytes": 15695,
+      "path": "executed-sources/verify.py",
+      "sha256": "17efe481034b9629f2552ace17c5cb05a8f53ff83550c4a7be93d84f7dabe719"
+    },
+    {
+      "bytes": 12879,
+      "path": "independent_definedness.py",
+      "sha256": "3a29e90753a404ceef232fdf5eedddc35c3750bcbb9f0070c5e619e641f07bed"
+    },
+    {
+      "bytes": 17296,
+      "path": "independent-definedness.json",
+      "sha256": "42582c5c4298b98f8895e4a7e3723ae361a4e2c15e082a82daee294e06c2b2db"
+    },
+    {
+      "bytes": 2072,
+      "path": "../../tests/test_independent_definedness.py",
+      "sha256": "5d5d06412683a54f4cacd44757c2a795c71ffe72c964a7d9522748d75fa07efc"
+    }
+  ],
+  "human_annotators": 0,
+  "independent_definedness_scope": "Existence of one concrete uninitialized-read witness per each of nine O0-labelled candidates; not a full independent-domain proof.",
+  "schema": "repairseal-post-collection-review-v1",
+  "scope": "Independent O0 witness path review added after final complete native collection. Current primary verifier changed only its inventory allowlist to include the additional regression test; collector, semantic implementation, primary classification logic and retained final collection records unchanged.",
+  "verifier_diff": "--- executed-sources/verify.py\n+++ verify.py\n@@ -182,7 +182,7 @@\n         for path in sorted(root.rglob('*')):\n             if path.is_file() and path.name not in {'hash-inventory.json','verification.json','run.log'} and '__pycache__' not in path.parts:\n                 rows.append({'path':str(path.relative_to(root)),'bytes':path.stat().st_size,'sha256':file_sha(path)})\n-        for name in ['test_real_patch_study.py','test_real_patches_independent_review.py']:\n+        for name in ['test_real_patch_study.py','test_real_patches_independent_review.py','test_independent_definedness.py']:\n             path=root.parent.parent/'tests'/name\n             if path.is_file():rows.append({'path':'../../tests/'+name,'bytes':path.stat().st_size,'sha256':file_sha(path)})\n         dump(root/'hash-inventory.json',rows)\n@@ -191,7 +191,7 @@\n         if json.loads((root/'labels.json').read_text())!=result['labels']:errors.append('labels/witnesses differ from recomputation')\n         for row in json.loads((root/'hash-inventory.json').read_text()):\n             rel=Path(row['path'])\n-            if rel.is_absolute() or ('..' in rel.parts and row['path'] not in {'../../tests/test_real_patch_study.py','../../tests/test_real_patches_independent_review.py'}):\n+            if rel.is_absolute() or ('..' in rel.parts and row['path'] not in {'../../tests/test_real_patch_study.py','../../tests/test_real_patches_independent_review.py','../../tests/test_independent_definedness.py'}):\n                 errors.append('invalid manifest path');continue\n             p=root/row['path']\n             if not p.is_file() or p.stat().st_size!=row['bytes'] or file_sha(p)!=row['sha256']:errors.append('hash inventory mismatch '+row['path'])\n"
+}

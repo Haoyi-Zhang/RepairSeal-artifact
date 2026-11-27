@@ -1,0 +1,17 @@
+--- a/median.c
++++ b/median.c
+@@ -14,12 +14,12 @@
+     b = atoi(argv[2]);
+     c = atoi(argv[3]);
+ 
+-  if ((b>a && b<c) || (b<a && b>c))
++  if ((((b > a) && (b < c)) || ((b >= c) && (b <= a))))
+     {
+      printf("%d\n", ANGELIX_OUTPUT(int, b, "stdout"));
+     }
+ 
+-  if ((c>a && c<b) || (c<a && c>b))
++  if ((((c > a) && (c < b)) || ((c < a) && (c > b))))
+     {
+       printf("%d\n", ANGELIX_OUTPUT(int, c, "stdout"));
+     }

@@ -1,0 +1,1936 @@
+{
+  "schema": "repairseal-owned-header-admission-v1",
+  "bridge_sha256": "260486342c4975105410762fe70b9eef203d60ea55e0d3de9e81db889a1f6330",
+  "test_sha256": "018c5e79f53246a682b80e15f80e7d08cb70f85ac873ec06bbbfa9891d51f4c4",
+  "preimage_sha256": null,
+  "case_count": 30,
+  "compiler_count": 2,
+  "compiler_identities": [
+    {
+      "family": "gcc",
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+      "version": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "flags": [
+        "-std=c99",
+        "-O1",
+        "-Werror=implicit-function-declaration",
+        "-Werror=format",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=all"
+      ]
+    },
+    {
+      "family": "clang",
+      "path": "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "sha256": "0a3c55936ac43954fbe4914e6e73b577ca9e35e75d89ef13d3e28c187f41ca1a",
+      "version": "Debian clang version 19.1.7 (3+b1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin",
+      "flags": [
+        "-std=c99",
+        "-O1",
+        "-Werror=implicit-function-declaration",
+        "-Werror=format"
+      ]
+    }
+  ],
+  "native_compilations": 60,
+  "native_executions": 42,
+  "records": [
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdio_EOF",
+      "source_sha256": "f0c9957099435ea611ce8cfdb81f1b651c1d774276feb4591339392b59d6a0a8",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "EOF"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdio_EOF"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:20: error: expected identifier or \u2018(\u2019 before \u2018-\u2019 token\n    2 | int main(void){int EOF;scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                    ^~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:35: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int EOF;scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                                   ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdio_EOF"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:20: error: expected identifier or '('\n    2 | int main(void){int EOF;scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                    ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:20: error: expected ')'\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:20: note: to match this '('\n/usr/include/stdio.h:105:13: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |             ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_EOF.c:2:35: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(void){int EOF;scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                                   ^~~~\n3 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdio_BUFSIZ",
+      "source_sha256": "221cf4c0d5bc265061b7fe12839336da5fd7e6b5618ca1f03c03259d16a49b98",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "BUFSIZ"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdio_BUFSIZ"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c:2:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    2 | int main(void){int BUFSIZ;scanf(\"%d\",&BUFSIZ);printf(\"%d\",BUFSIZ);return 0;}\n      |                    ^~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c:2:38: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int BUFSIZ;scanf(\"%d\",&BUFSIZ);printf(\"%d\",BUFSIZ);return 0;}\n      |                                      ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdio_BUFSIZ"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c:2:20: error: expected identifier or '('\n    2 | int main(void){int BUFSIZ;scanf(\"%d\",&BUFSIZ);printf(\"%d\",BUFSIZ);return 0;}\n      |                    ^\n/usr/include/stdio.h:100:16: note: expanded from macro 'BUFSIZ'\n  100 | #define BUFSIZ 8192\n      |                ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_BUFSIZ.c:2:38: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(void){int BUFSIZ;scanf(\"%d\",&BUFSIZ);printf(\"%d\",BUFSIZ);return 0;}\n      |                                      ^~~~~~~\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdio_L_tmpnam",
+      "source_sha256": "6e8f6ffa6f73842cffd2b6dffbd30dd418f34496e2d7ea05e5edd6643353dcda",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "L_tmpnam"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdio_L_tmpnam"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c:2:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    2 | int main(void){int L_tmpnam;scanf(\"%d\",&L_tmpnam);printf(\"%d\",L_tmpnam);return 0;}\n      |                    ^~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c:2:40: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int L_tmpnam;scanf(\"%d\",&L_tmpnam);printf(\"%d\",L_tmpnam);return 0;}\n      |                                        ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdio_L_tmpnam"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c:2:20: error: expected identifier or '('\n    2 | int main(void){int L_tmpnam;scanf(\"%d\",&L_tmpnam);printf(\"%d\",L_tmpnam);return 0;}\n      |                    ^\n/usr/include/stdio.h:124:18: note: expanded from macro 'L_tmpnam'\n  124 | #define L_tmpnam 20\n      |                  ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_L_tmpnam.c:2:40: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(void){int L_tmpnam;scanf(\"%d\",&L_tmpnam);printf(\"%d\",L_tmpnam);return 0;}\n      |                                        ^~~~~~~~~\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdio_NULL",
+      "source_sha256": "3a84407a8bb9bc5da1f8332c48989406f73b73f19640dcc9c2dcec0b7f0a0b1f",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "NULL"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdio_NULL"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /usr/include/stdio.h:34,\n                 from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: error: expected identifier or \u2018(\u2019 before \u2018void\u2019\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                    ^~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: error: expected \u2018)\u2019 before numeric constant\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                    ^~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:36: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                                    ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:52: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018void *\u2019 [-Werror=format=]\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                                                   ~^\n      |                                                    |\n      |                                                    int\n      |                                                   %p\ncc1: some warnings being treated as errors\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdio_NULL"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: error: expected identifier or '('\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                    ^\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:16: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |                ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: error: expected ')'\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:16: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |                ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: note: to match this '('\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:15: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |               ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: error: expected ')'\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                    ^\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:22: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |                      ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:20: note: to match this '('\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:14: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:36: error: cannot take the address of an rvalue of type 'void *'\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                                    ^~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_NULL.c:2:55: error: format specifies type 'int' but the argument has type 'void *' [-Werror,-Wformat]\n    2 | int main(void){int NULL;scanf(\"%d\",&NULL);printf(\"%d\",NULL);return 0;}\n      |                                                   ~~  ^~~~\n/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/lib/clang/19/include/__stddef_null.h:26:14: note: expanded from macro 'NULL'\n   26 | #define NULL ((void*)0)\n      |              ^~~~~~~~~~\n5 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdlib_EXIT_SUCCESS",
+      "source_sha256": "497b97aaeb509bd34cb0f4e8e5f291ea9c82be95a4c53dc4ebf313ab0491b388",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "EXIT_SUCCESS"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdlib_EXIT_SUCCESS"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c:2:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c:3:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    3 | int main(void){int EXIT_SUCCESS;scanf(\"%d\",&EXIT_SUCCESS);printf(\"%d\",EXIT_SUCCESS);return 0;}\n      |                    ^~~~~~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c:3:44: error: lvalue required as unary \u2018&\u2019 operand\n    3 | int main(void){int EXIT_SUCCESS;scanf(\"%d\",&EXIT_SUCCESS);printf(\"%d\",EXIT_SUCCESS);return 0;}\n      |                                            ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdlib_EXIT_SUCCESS"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c:3:20: error: expected identifier or '('\n    3 | int main(void){int EXIT_SUCCESS;scanf(\"%d\",&EXIT_SUCCESS);printf(\"%d\",EXIT_SUCCESS);return 0;}\n      |                    ^\n/usr/include/stdlib.h:93:22: note: expanded from macro 'EXIT_SUCCESS'\n   93 | #define EXIT_SUCCESS    0       /* Successful exit status.  */\n      |                         ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_EXIT_SUCCESS.c:3:44: error: cannot take the address of an rvalue of type 'int'\n    3 | int main(void){int EXIT_SUCCESS;scanf(\"%d\",&EXIT_SUCCESS);printf(\"%d\",EXIT_SUCCESS);return 0;}\n      |                                            ^~~~~~~~~~~~~\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "stdlib_MB_CUR_MAX",
+      "source_sha256": "77524a15f165ccf42634865be106bc9931996027970b297949a6726bd66e29b7",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "MB_CUR_MAX"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdlib_MB_CUR_MAX"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c:2:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c:3:20: error: conflicting types for \u2018__ctype_get_mb_cur_max\u2019; have \u2018int()\u2019\n    3 | int main(void){int MB_CUR_MAX;scanf(\"%d\",&MB_CUR_MAX);printf(\"%d\",MB_CUR_MAX);return 0;}\n      |                    ^~~~~~~~~~\n/usr/include/stdlib.h:98:15: note: previous declaration of \u2018__ctype_get_mb_cur_max\u2019 with type \u2018size_t(void)\u2019 {aka \u2018long unsigned int(void)\u2019}\n   98 | extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;\n      |               ^~~~~~~~~~~~~~~~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c:3:42: error: lvalue required as unary \u2018&\u2019 operand\n    3 | int main(void){int MB_CUR_MAX;scanf(\"%d\",&MB_CUR_MAX);printf(\"%d\",MB_CUR_MAX);return 0;}\n      |                                          ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdlib_MB_CUR_MAX"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdlib_MB_CUR_MAX.c:3:20: error: conflicting types for '__ctype_get_mb_cur_max'\n    3 | int main(void){int MB_CUR_MAX;scanf(\"%d\",&MB_CUR_MAX);printf(\"%d\",MB_CUR_MAX);return 0;}\n      |                    ^\n/usr/include/stdlib.h:97:21: note: expanded from macro 'MB_CUR_MAX'\n   97 | #define MB_CUR_MAX      (__ctype_get_mb_cur_max ())\n      |                          ^\n/usr/include/stdlib.h:98:15: note: previous declaration is here\n   98 | extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;\n      |               ^\n1 error generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "math_NAN",
+      "source_sha256": "533caf431f8d35be24cc5732977e1bcb5f9d2c88b567aaaea607e6c957754b7d",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "NAN"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-math_NAN"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:2:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: error: expected declaration specifiers or \u2018...\u2019 before string constant\n    3 | int main(void){int NAN;scanf(\"%d\",&NAN);printf(\"%d\",NAN);return 0;}\n      |                    ^~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:35: error: lvalue required as unary \u2018&\u2019 operand\n    3 | int main(void){int NAN;scanf(\"%d\",&NAN);printf(\"%d\",NAN);return 0;}\n      |                                   ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:50: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018double\u2019 [-Werror=format=]\n    3 | int main(void){int NAN;scanf(\"%d\",&NAN);printf(\"%d\",NAN);return 0;}\n      |                                                 ~^\n      |                                                  |\n      |                                                  int\n      |                                                 %f\ncc1: some warnings being treated as errors\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-math_NAN"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: error: expected parameter declarator\n    3 | int main(void){int NAN;scanf(\"%d\",&NAN);printf(\"%d\",NAN);return 0;}\n      |                    ^\n/usr/include/math.h:101:33: note: expanded from macro 'NAN'\n  101 | #   define NAN (__builtin_nanf (\"\"))\n      |                                 ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: error: expected ')'\n/usr/include/math.h:101:33: note: expanded from macro 'NAN'\n  101 | #   define NAN (__builtin_nanf (\"\"))\n      |                                 ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: note: to match this '('\n/usr/include/math.h:101:32: note: expanded from macro 'NAN'\n  101 | #   define NAN (__builtin_nanf (\"\"))\n      |                                ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: error: conflicting types for '__builtin_nanf'\n    3 | int main(void){int NAN;scanf(\"%d\",&NAN);printf(\"%d\",NAN);return 0;}\n      |                    ^\n/usr/include/math.h:101:17: note: expanded from macro 'NAN'\n  101 | #   define NAN (__builtin_nanf (\"\"))\n      |                 ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_NAN.c:3:20: note: '__builtin_nanf' is a builtin with type 'float (const char *)'\n/usr/include/math.h:101:17: note: expanded from macro 'NAN'\n  101 | #   define NAN (__builtin_nanf (\"\"))\n      |                 ^\n3 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "math_math_errhandling",
+      "source_sha256": "de21592d68afc5f99233f47892943d4bd7df7bcb2d90ae4457db5bab22257af8",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "math_errhandling"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-math_math_errhandling"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:2:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    3 | int main(void){int math_errhandling;scanf(\"%d\",&math_errhandling);printf(\"%d\",math_errhandling);return 0;}\n      |                    ^~~~~~~~~~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:48: error: lvalue required as unary \u2018&\u2019 operand\n    3 | int main(void){int math_errhandling;scanf(\"%d\",&math_errhandling);printf(\"%d\",math_errhandling);return 0;}\n      |                                                ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-math_math_errhandling"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:20: error: expected identifier or '('\n    3 | int main(void){int math_errhandling;scanf(\"%d\",&math_errhandling);printf(\"%d\",math_errhandling);return 0;}\n      |                    ^\n/usr/include/math.h:1018:29: note: expanded from macro 'math_errhandling'\n 1018 | #  define math_errhandling      (MATH_ERRNO | MATH_ERREXCEPT)\n      |                                  ^\n/usr/include/math.h:1005:21: note: expanded from macro 'MATH_ERRNO'\n 1005 | # define MATH_ERRNO     1       /* errno set by math functions.  */\n      |                         ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:20: error: expected ')'\n/usr/include/math.h:1018:29: note: expanded from macro 'math_errhandling'\n 1018 | #  define math_errhandling      (MATH_ERRNO | MATH_ERREXCEPT)\n      |                                  ^\n/usr/include/math.h:1005:21: note: expanded from macro 'MATH_ERRNO'\n 1005 | # define MATH_ERRNO     1       /* errno set by math functions.  */\n      |                         ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:20: note: to match this '('\n/usr/include/math.h:1018:28: note: expanded from macro 'math_errhandling'\n 1018 | #  define math_errhandling      (MATH_ERRNO | MATH_ERREXCEPT)\n      |                                 ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/math_math_errhandling.c:3:48: error: cannot take the address of an rvalue of type 'int'\n    3 | int main(void){int math_errhandling;scanf(\"%d\",&math_errhandling);printf(\"%d\",math_errhandling);return 0;}\n      |                                                ^~~~~~~~~~~~~~~~~\n3 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": true,
+      "id": "stdio_stdin",
+      "source_sha256": "634715eb390a2fc4df0d898ac7c492334f553c0993a779a2489d330c8541b8c2",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "stdin"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_stdin.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-stdio_stdin"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/stdio_stdin.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-stdio_stdin"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": true,
+      "id": "ctype_isalpha",
+      "source_sha256": "123a28fb9b958777efcf6f39bf9e949a309d9cc2deeeaa91bace8f849f492e03",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "isalpha"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ctype_isalpha.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ctype_isalpha"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ctype_isalpha.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ctype_isalpha"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "reserved-identifier",
+      "native_compiles": false,
+      "id": "implementation___LINE__",
+      "source_sha256": "bae1c56c68ee1aac4941e6c125f02ec3f8fc5200a6258f75857151c71cf43417",
+      "current": {
+        "admitted": false,
+        "code": "reserved-identifier",
+        "detail": "__LINE__"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-implementation___LINE__"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c:2:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    2 | int main(void){int __LINE__;scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |                    ^~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c:2:40: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int __LINE__;scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |                                        ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-implementation___LINE__"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c:2:20: error: expected identifier or '('\n    2 | int main(void){int __LINE__;scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |                    ^\n<scratch space>:55:1: note: expanded from here\n   55 | 2\n      | ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___LINE__.c:2:40: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(void){int __LINE__;scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |                                        ^~~~~~~~~\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "reserved-identifier",
+      "native_compiles": false,
+      "id": "implementation___STDC__",
+      "source_sha256": "b9cd33ce0cfeed29c842531ea38a65e0c6839b7b67dec8f605366902839a1cdf",
+      "current": {
+        "admitted": false,
+        "code": "reserved-identifier",
+        "detail": "__STDC__"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-implementation___STDC__"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c:2:20: error: expected identifier or \u2018(\u2019 before numeric constant\n    2 | int main(void){int __STDC__;scanf(\"%d\",&__STDC__);printf(\"%d\",__STDC__);return 0;}\n      |                    ^~~~~~~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c:2:40: error: lvalue required as unary \u2018&\u2019 operand\n    2 | int main(void){int __STDC__;scanf(\"%d\",&__STDC__);printf(\"%d\",__STDC__);return 0;}\n      |                                        ^\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-implementation___STDC__"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c:2:20: error: expected identifier or '('\n    2 | int main(void){int __STDC__;scanf(\"%d\",&__STDC__);printf(\"%d\",__STDC__);return 0;}\n      |                    ^\n<built-in>:391:18: note: expanded from macro '__STDC__'\n  391 | #define __STDC__ 1\n      |                  ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation___STDC__.c:2:40: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(void){int __STDC__;scanf(\"%d\",&__STDC__);printf(\"%d\",__STDC__);return 0;}\n      |                                        ^~~~~~~~~\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "reserved-identifier",
+      "native_compiles": true,
+      "id": "implementation__Private",
+      "source_sha256": "3f0e9b35adfce0d8f1e9f144f301930a800bde403795d4246cb0adce6d345a9b",
+      "current": {
+        "admitted": false,
+        "code": "reserved-identifier",
+        "detail": "_Private"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation__Private.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-implementation__Private"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation__Private.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-implementation__Private"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "reserved-identifier",
+      "native_compiles": true,
+      "id": "implementation__local",
+      "source_sha256": "b6495c07022e0b79468e9ecff3632e166afe07bcdcc0d8a8f46f908ac02240af",
+      "current": {
+        "admitted": false,
+        "code": "reserved-identifier",
+        "detail": "_local"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation__local.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-implementation__local"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/implementation__local.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-implementation__local"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "parameter_EOF_argv",
+      "source_sha256": "efc0a1d825ce1f38b12f64a18ed24b795ff80deded52f8d65593be3af4008afd",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "EOF"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-parameter_EOF_argv"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:14: error: expected \u2018)\u2019 before \u2018-\u2019 token\n    2 | int main(int EOF,char **argv){scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |              ^~~\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:18: error: expected \u2018;\u2019, \u2018,\u2019 or \u2018)\u2019 before \u2018char\u2019\n    2 | int main(int EOF,char **argv){scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                  ^~~~\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-parameter_EOF_argv"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:14: error: expected ')'\n    2 | int main(int EOF,char **argv){scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |              ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:14: note: to match this '('\n/usr/include/stdio.h:105:13: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |             ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:14: warning: omitting the parameter name in a function definition is a C23 extension [-Wc23-extensions]\n    2 | int main(int EOF,char **argv){scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |              ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_EOF_argv.c:2:42: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(int EOF,char **argv){scanf(\"%d\",&EOF);printf(\"%d\",EOF);return 0;}\n      |                                          ^~~~\n1 warning and 2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "parameter_n_EOF",
+      "source_sha256": "f45d19ae2e011813d83d08c919d3f0b0cea3cc8d1745658c207dafdf46f3d53c",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "EOF"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-parameter_n_EOF"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c:2:23: error: expected \u2018)\u2019 before \u2018-\u2019 token\n    2 | int main(int n,char **EOF){scanf(\"%d\",&n);printf(\"%d\",n);return 0;}\n      |                       ^~~\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-parameter_n_EOF"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c:2:23: error: expected ')'\n    2 | int main(int n,char **EOF){scanf(\"%d\",&n);printf(\"%d\",n);return 0;}\n      |                       ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c:2:23: note: to match this '('\n/usr/include/stdio.h:105:13: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |             ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter_n_EOF.c:2:23: warning: omitting the parameter name in a function definition is a C23 extension [-Wc23-extensions]\n    2 | int main(int n,char **EOF){scanf(\"%d\",&n);printf(\"%d\",n);return 0;}\n      |                       ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n1 warning and 1 error generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "reserved-identifier",
+      "native_compiles": false,
+      "id": "parameter___LINE___argv",
+      "source_sha256": "c85314d29003d4e0b6105d6e861e249333a48271f6f5147c37b7e3a389e1c289",
+      "current": {
+        "admitted": false,
+        "code": "reserved-identifier",
+        "detail": "__LINE__"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-parameter___LINE___argv"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:14: error: expected \u2018;\u2019, \u2018,\u2019 or \u2018)\u2019 before numeric constant\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |              ^~~~~~~~\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-parameter___LINE___argv"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:14: error: expected ')'\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |              ^\n<scratch space>:55:1: note: expanded from here\n   55 | 2\n      | ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:9: note: to match this '('\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |         ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:5: warning: only one parameter on 'main' declaration [-Wmain]\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |     ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:14: warning: omitting the parameter name in a function definition is a C23 extension [-Wc23-extensions]\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |              ^\n<scratch space>:55:1: note: expanded from here\n   55 | 2\n      | ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/parameter___LINE___argv.c:2:47: error: cannot take the address of an rvalue of type 'int'\n    2 | int main(int __LINE__,char **argv){scanf(\"%d\",&__LINE__);printf(\"%d\",__LINE__);return 0;}\n      |                                               ^~~~~~~~~\n2 warnings and 2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-macro-identifier",
+      "native_compiles": false,
+      "id": "unreachable_macro",
+      "source_sha256": "afd440655c1d56f0ece01cd13f58b5e852cd5e6e0e98890bb3b1d748c046b9e2",
+      "current": {
+        "admitted": false,
+        "code": "header-macro-identifier",
+        "detail": "EOF"
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-unreachable_macro"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c:1:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c: In function \u2018main\u2019:\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c:2:65: error: expected identifier or \u2018(\u2019 before \u2018-\u2019 token\n    2 | int main(void){int x;scanf(\"%d\",&x);printf(\"%d\",x);return 0;int EOF;}\n      |                                                                 ^~~\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-unreachable_macro"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c:2:65: error: expected identifier or '('\n    2 | int main(void){int x;scanf(\"%d\",&x);printf(\"%d\",x);return 0;int EOF;}\n      |                                                                 ^\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c:2:65: error: expected ')'\n/usr/include/stdio.h:105:14: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |              ^\n/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/unreachable_macro.c:2:65: note: to match this '('\n/usr/include/stdio.h:105:13: note: expanded from macro 'EOF'\n  105 | #define EOF (-1)\n      |             ^\n2 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "preprocessing-directive",
+      "native_compiles": false,
+      "id": "header_internal_space_leading",
+      "source_sha256": "3a333e657ffb1646498c629fbb5bc2ac57297e00c99bc6bd8e9e3361bf48834c",
+      "current": {
+        "admitted": false,
+        "code": "preprocessing-directive",
+        "detail": ""
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_leading.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-header_internal_space_leading"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_leading.c:1:10: fatal error:  stdio.h: No such file or directory\n    1 | #include < stdio.h>\n      |          ^~~~~~~~~~\ncompilation terminated.\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_leading.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-header_internal_space_leading"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_leading.c:1:10: error: ' stdio.h' file not found, did you mean 'stdio.h'?\n    1 | #include < stdio.h>\n      |          ^~~~~~~~~~\n      |          <stdio.h>\n1 error generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "preprocessing-directive",
+      "native_compiles": false,
+      "id": "header_internal_space_trailing",
+      "source_sha256": "6cc347c7faa4674b473667dcdf2d5f57e07b5104c51148c0d82103bf4d338789",
+      "current": {
+        "admitted": false,
+        "code": "preprocessing-directive",
+        "detail": ""
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_trailing.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-header_internal_space_trailing"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_trailing.c:1:10: fatal error: stdio.h : No such file or directory\n    1 | #include <stdio.h >\n      |          ^~~~~~~~~~\ncompilation terminated.\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_trailing.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-header_internal_space_trailing"
+          ],
+          "compile_returncode": 1,
+          "stderr": "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/header_internal_space_trailing.c:1:10: error: 'stdio.h ' file not found, did you mean 'stdio.h'?\n    1 | #include <stdio.h >\n      |          ^~~~~~~~~~\n      |          <stdio.h>\n1 error generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": false,
+      "code": "header-after-source-token",
+      "id": "late_include",
+      "source_sha256": "fe917db501032fdd0364cf8eebb43fbc4f40be7aa037c8dd469012c21c676ca2",
+      "current": {
+        "admitted": false,
+        "code": "header-after-source-token",
+        "detail": ""
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-late_include"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /usr/include/features.h:523,\n                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,\n                 from /usr/include/stdio.h:28,\n                 from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c:1:\n/usr/include/stdlib.h: In function \u2018main\u2019:\n/usr/include/stdlib.h:481:1: error: nested function \u2018atoi\u2019 declared \u2018extern\u2019\n  481 | __NTH (atoi (const char *__nptr))\n      | ^~~~~\n/usr/include/stdlib.h:481:1: error: static declaration of \u2018atoi\u2019 follows non-static declaration\nIn file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c:3:\n/usr/include/stdlib.h:105:12: note: previous declaration of \u2018atoi\u2019 with type \u2018int(const char *)\u2019\n  105 | extern int atoi (const char *__nptr)\n      |            ^~~~\n/usr/include/stdlib.h:486:1: error: nested function \u2018atol\u2019 declared \u2018extern\u2019\n  486 | __NTH (atol (const char *__nptr))\n      | ^~~~~\n/usr/include/stdlib.h:486:1: error: static declaration of \u2018atol\u2019 follows non-static declaration\n/usr/include/stdlib.h:108:17: note: previous declaration of \u2018atol\u2019 with type \u2018long int(const char *)\u2019\n  108 | extern long int atol (const char *__nptr)\n      |                 ^~~~\n/usr/include/stdlib.h:493:1: error: nested function \u2018atoll\u2019 declared \u2018extern\u2019\n  493 | __NTH (atoll (const char *__nptr))\n      | ^~~~~\n/usr/include/stdlib.h:493:1: error: static declaration of \u2018atoll\u2019 follows non-static declaration\n/usr/include/stdlib.h:113:36: note: previous declaration of \u2018atoll\u2019 with type \u2018long long int(const char *)\u2019\n  113 | __extension__ extern long long int atoll (const char *__nptr)\n      |                                    ^~~~~\nIn file included from /usr/include/stdlib.h:965:\n/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:20:1: error: nested function \u2018bsearch\u2019 declared \u2018extern\u2019\n   20 | bsearch (const void *__key, const void *__base, size_t __nmemb, size_t __size,\n      | ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:20:1: error: static declaration of \u2018bsearch\u2019 follows non-static declaration\n/usr/include/stdlib.h:960:14: note: previous declaration of \u2018bsearch\u2019 with type \u2018void *(const void *, const void *, size_t,  size_t,  int (*)(const void *, const void *))\u2019 {aka \u2018void *(const void *, const void *, long unsigned int,  long unsigned int,  int (*)(const void *, const void *))\u2019}\n  960 | extern void *bsearch (const void *__key, const void *__base,\n      |              ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:25:1: error: nested function \u2018atof\u2019 declared \u2018extern\u2019\n   25 | __NTH (atof (const char *__nptr))\n      | ^~~~~\n/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:25:1: error: static declaration of \u2018atof\u2019 follows non-static declaration\n/usr/include/stdlib.h:102:15: note: previous declaration of \u2018atof\u2019 with type \u2018double(const char *)\u2019\n  102 | extern double atof (const char *__nptr)\n      |               ^~~~\n",
+          "runs": []
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-late_include"
+          ],
+          "compile_returncode": 1,
+          "stderr": "In file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c:3:\n/usr/include/stdlib.h:482:1: error: function definition is not allowed here\n  482 | {\n      | ^\n/usr/include/stdlib.h:487:1: error: function definition is not allowed here\n  487 | {\n      | ^\n/usr/include/stdlib.h:494:1: error: function definition is not allowed here\n  494 | {\n      | ^\nIn file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c:3:\nIn file included from /usr/include/stdlib.h:965:\n/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:22:1: error: function definition is not allowed here\n   22 | {\n      | ^\nIn file included from /workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/late_include.c:3:\nIn file included from /usr/include/stdlib.h:1155:\n/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:26:1: error: function definition is not allowed here\n   26 | {\n      | ^\n5 errors generated.\n",
+          "runs": []
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7
+        ],
+        [
+          0
+        ],
+        [
+          2147483647
+        ]
+      ],
+      "outputs": [
+        "-7",
+        "0",
+        "2147483647"
+      ],
+      "id": "ordinary_x",
+      "source_sha256": "6a6e63162e6056dcd9eee3ae138943e5ab1a03f30fb4a7c7273a06e31e52245b",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_x.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_x"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_x.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_x"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7
+        ],
+        [
+          0
+        ],
+        [
+          2147483647
+        ]
+      ],
+      "outputs": [
+        "-7",
+        "0",
+        "2147483647"
+      ],
+      "id": "ordinary_MY_VALUE",
+      "source_sha256": "872206f0f6fe113d7cd8498d9ed0c19464828058ee3854459e097aceca126873",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_MY_VALUE.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_MY_VALUE"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_MY_VALUE.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_MY_VALUE"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7
+        ],
+        [
+          0
+        ],
+        [
+          2147483647
+        ]
+      ],
+      "outputs": [
+        "-7",
+        "0",
+        "2147483647"
+      ],
+      "id": "ordinary_NAN",
+      "source_sha256": "e7008b40d56504af4c937816dd8fe500d5a0b9f19cd5a7c87ac9f3583606ee4c",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_NAN.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_NAN"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_NAN.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_NAN"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7
+        ],
+        [
+          0
+        ],
+        [
+          2147483647
+        ]
+      ],
+      "outputs": [
+        "-7",
+        "0",
+        "2147483647"
+      ],
+      "id": "ordinary_EXIT_SUCCESS",
+      "source_sha256": "7297bd73e95f858214618c428b451dd0fab46035f90743fe015f66c2c7313103",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_EXIT_SUCCESS.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_EXIT_SUCCESS"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_EXIT_SUCCESS.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_EXIT_SUCCESS"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7
+        ],
+        [
+          0
+        ],
+        [
+          2147483647
+        ]
+      ],
+      "outputs": [
+        "-7",
+        "0",
+        "2147483647"
+      ],
+      "id": "ordinary_isalpha",
+      "source_sha256": "293ea9727c577b8dc15131e87fdfe2068c6b0e590704b7b48f7e6e4cc967c887",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_isalpha.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_isalpha"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_isalpha.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_isalpha"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7
+              ],
+              "returncode": 0,
+              "stdout": "-7",
+              "expected": "-7"
+            },
+            {
+              "inputs": [
+                0
+              ],
+              "returncode": 0,
+              "stdout": "0",
+              "expected": "0"
+            },
+            {
+              "inputs": [
+                2147483647
+              ],
+              "returncode": 0,
+              "stdout": "2147483647",
+              "expected": "2147483647"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -7,
+          3
+        ],
+        [
+          7,
+          -3
+        ],
+        [
+          -7,
+          -3
+        ]
+      ],
+      "outputs": [
+        "-21",
+        "-19",
+        "19"
+      ],
+      "id": "all_headers_arithmetic",
+      "source_sha256": "932835a2b546b3dc89f8f43cc05e8b892fe2a20146e6a75c3cc018ecfa9e1556",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/all_headers_arithmetic.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-all_headers_arithmetic"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7,
+                3
+              ],
+              "returncode": 0,
+              "stdout": "-21",
+              "expected": "-21"
+            },
+            {
+              "inputs": [
+                7,
+                -3
+              ],
+              "returncode": 0,
+              "stdout": "-19",
+              "expected": "-19"
+            },
+            {
+              "inputs": [
+                -7,
+                -3
+              ],
+              "returncode": 0,
+              "stdout": "19",
+              "expected": "19"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/all_headers_arithmetic.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-all_headers_arithmetic"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -7,
+                3
+              ],
+              "returncode": 0,
+              "stdout": "-21",
+              "expected": "-21"
+            },
+            {
+              "inputs": [
+                7,
+                -3
+              ],
+              "returncode": 0,
+              "stdout": "-19",
+              "expected": "-19"
+            },
+            {
+              "inputs": [
+                -7,
+                -3
+              ],
+              "returncode": 0,
+              "stdout": "19",
+              "expected": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          7
+        ]
+      ],
+      "outputs": [
+        "EOF"
+      ],
+      "id": "comments_and_strings",
+      "source_sha256": "769ce7ce51cc654f8d36f7ce752b5bf15d423701bc448188332af7e8c009b51c",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/comments_and_strings.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-comments_and_strings"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                7
+              ],
+              "returncode": 0,
+              "stdout": "EOF\n",
+              "expected": "EOF"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/comments_and_strings.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-comments_and_strings"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                7
+              ],
+              "returncode": 0,
+              "stdout": "EOF\n",
+              "expected": "EOF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          7
+        ]
+      ],
+      "outputs": [
+        "7"
+      ],
+      "id": "crlf_and_duplicate_header_prefix",
+      "source_sha256": "4ddc8bf40f635c7efe4c8c1031599006fa948325b19f901d67a7c5738643ba12",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/crlf_and_duplicate_header_prefix.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-crlf_and_duplicate_header_prefix"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                7
+              ],
+              "returncode": 0,
+              "stdout": "7",
+              "expected": "7"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/crlf_and_duplicate_header_prefix.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-crlf_and_duplicate_header_prefix"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                7
+              ],
+              "returncode": 0,
+              "stdout": "7",
+              "expected": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "admitted": true,
+      "native_compiles": true,
+      "inputs": [
+        [
+          -9
+        ]
+      ],
+      "outputs": [
+        "-9"
+      ],
+      "id": "ordinary_parameters",
+      "source_sha256": "915af78503bfa55d09fd5bfba9f8931b10c16cbded225041dacbfd7339b2b28f",
+      "current": {
+        "admitted": true
+      },
+      "native": [
+        {
+          "family": "gcc",
+          "command": [
+            "/usr/bin/x86_64-linux-gnu-gcc-14",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "-fsanitize=undefined",
+            "-fno-sanitize-recover=all",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_parameters.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/gcc-ordinary_parameters"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -9
+              ],
+              "returncode": 0,
+              "stdout": "-9",
+              "expected": "-9"
+            }
+          ]
+        },
+        {
+          "family": "clang",
+          "command": [
+            "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+            "-std=c99",
+            "-O1",
+            "-Werror=implicit-function-declaration",
+            "-Werror=format",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/ordinary_parameters.c",
+            "-o",
+            "/workspace/scratch/a88b4d734b38/baseline-work/tmp/repairseal-owned-headers-82rzr_d0/clang-ordinary_parameters"
+          ],
+          "compile_returncode": 0,
+          "stderr": "",
+          "runs": [
+            {
+              "inputs": [
+                -9
+              ],
+              "returncode": 0,
+              "stdout": "-9",
+              "expected": "-9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Owned controls only. Macro coverage is checked for these exact compiler paths and strict C99 flags, not every possible C implementation or compiler command line. These checks do not rerun the natural corpus or release gates."
+}

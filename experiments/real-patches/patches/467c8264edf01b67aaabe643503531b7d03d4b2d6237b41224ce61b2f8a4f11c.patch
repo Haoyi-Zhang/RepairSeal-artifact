@@ -1,0 +1,14 @@
+--- a/median.c
++++ b/median.c
+@@ -18,9 +18,9 @@
+ 	//scanf("%lf", &second);
+ 	//scanf("%lf", &third);
+ 
+-	if ((first>second && first<third) || (first<second && first>third))
++	if ((((first > second) && (first < third)) || ((first < second) && (first > third))))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, (int)first, "stdout"));
+-	if ((second>first && second<third) || (second<first && second>third))
++	if ((((second > first) && (second < third)) || 1))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, (int)second, "stdout"));
+ 	if ((third>first && third<second) || (third<first && third>second))
+ 		printf("%d\n", ANGELIX_OUTPUT(int, (int)third, "stdout"));

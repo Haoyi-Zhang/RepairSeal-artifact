@@ -1,0 +1,26 @@
+#ifndef ANGELIX_OUTPUT
+#define ANGELIX_OUTPUT(type, expr, id) expr
+#endif
+#include<stdlib.h>
+/**/
+#include <stdio.h>
+#include <math.h>
+int main(int argc, char *argv[]) {
+int a, b , c, d, r;
+a = atoi(argv[1]);
+b = atoi(argv[2]);
+c = atoi(argv[3]);
+d = atoi(argv[4]);
+//printf("Please enter 4 numbers seperated by spaces > ");
+//scanf("%d%d%d%d",&a,&b,&c,&d);
+if(((a < d) && (a < d)))
+r=a;
+else if((((b < a) && (b < c)) && (b < d)))
+r=b;
+else if(c<a && c<b && c<d)
+r=c;
+else
+r=a;
+printf("%d\n",ANGELIX_OUTPUT(int,(int)r, "stdout"));
+return 0;
+}

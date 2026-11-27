@@ -1,0 +1,27 @@
+--- artifact/src/codeflaws_int32_bridge.py
++++ artifact/current/src/codeflaws_int32_bridge.py
+@@ -247,6 +247,14 @@
+     def _count(self, node: c_ast.Node) -> None:
+         self.node_count += 1
+         require(self.node_count <= MAX_AST_NODES, "ast-size")
++        # Alignment is a declaration attribute, not a statement/expression.
++        # Ignoring it can turn a C constraint violation into an admitted
++        # program. This closed scalar profile does not model alignment, even
++        # when a particular specifier would be valid on the native target.
++        # pycparser stores ``align`` as an attribute, so Node.children() does
++        # not visit the contained Alignas nodes. Check it explicitly.
++        require(not getattr(node, "align", None)
++                and not isinstance(node, c_ast.Alignas), "alignment-specifier")
+         for _name, child in node.children():
+             self._count(child)
+ 
+@@ -430,7 +438,9 @@
+             visible.add(params[0].name); self.names.add(params[0].name); self.names.add(params[1].name)
+         elif params:
+             require(len(params) == 1 and isinstance(params[0], c_ast.Typename)
++                    and not params[0].quals and not params[0].align
+                     and isinstance(params[0].type, c_ast.TypeDecl)
++                    and not params[0].type.quals and not params[0].type.align
+                     and isinstance(params[0].type.type, c_ast.IdentifierType)
+                     and params[0].type.type.names == ["void"], "main-parameters")
+         require(fn.param_decls is None, "old-style-parameters")

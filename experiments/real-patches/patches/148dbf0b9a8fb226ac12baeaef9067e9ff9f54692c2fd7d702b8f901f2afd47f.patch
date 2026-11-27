@@ -1,0 +1,14 @@
+--- a/median.c
++++ b/median.c
+@@ -13,9 +13,9 @@
+ num1 = atoi(argv[1]);
+ num2 = atoi(argv[2]);
+ num3 = atoi(argv[3]);
+-if((num1<num2&&num1>num3)||(num1>num2&&num1<num3)) 
++if((num2 == num3)) 
+ median=num1;
+-else if ((num2<num1&&num2>num3)||(num2>num1&&num2<num3))
++else if ((num3 > (num2 + num1)))
+ median=num2;
+ else
+ median=num3;

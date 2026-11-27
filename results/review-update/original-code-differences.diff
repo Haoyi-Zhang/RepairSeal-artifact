@@ -1,0 +1,806 @@
+--- original/README.md
++++ updated/README.md
+@@ -7,6 +7,15 @@
+   `figure-atlas.pdf` (every figure in color and grayscale). See `paper/README.md`.
+ - `artifact/` - code, tests, retained data and results, and the evaluator entry
+   point (`artifact/evaluate.sh`). See `artifact/README.md`.
++- `RESULTS_UPDATE.md` - the empirical review update: real published repair
++  failures, new native/certificate cases, source-correspondence review,
++  reproducible result fields, validation outcomes, and explicit limits.
++
++The review update changes the artifact and adds evidence. Every supplied file
++under `paper/` is preserved byte for byte. The original evidence preservation
++check is `python3 -B artifact/tests/audit_original_evidence.py --verify-record`.
++Run paper builds in a separate copy when retaining the original delivered
++PDF bytes matters; a normal build intentionally regenerates paper outputs.
+ 
+ The two folders must stay siblings: the artifact evaluator builds and checks the
+ paper through `../paper`, and the paper build reads figures and records from
+--- original/artifact/README.md
++++ updated/artifact/README.md
+@@ -22,16 +22,17 @@
+ | --- | --- |
+ | `evaluate.sh`, `evaluator.py` | Evaluator entry point (`preflight`, `smoke`, `core`, `external`, ...). |
+ | `reproduce.py` | Lower-level scientific driver; every stage writes to a new directory. |
+-| `verify_expected_results.py`, `expected-results.json` | Exact checks of the numbers reported in the paper against named record fields and record hashes. |
++| `verify_expected_results.py`, `expected-results.json` | Original result checks plus 203 total checks binding the empirical update to exact fields, file hashes, and offline recomputation. |
++| `verify_update_results.py` | Offline recomputation of eight new studies and independent reviews, without external archives or compilers. |
+ | `src/` | Receivers, checkers, producers, demand evaluator, domain transport. |
+-| `tests/` | Unit tests (366) and the study drivers invoked by `reproduce.py`. |
++| `tests/` | 422 unit tests (the original 366 plus 56 additions) and the study drivers invoked by `reproduce.py`. |
+ | `data/`, `proof-data/`, `experiments/`, `results/` | Retained study records (inputs, outputs, protocols, hash inventories). |
+ | `public-data/`, `inputs/` | Small public inputs (Codeflaws metadata, CEIL_DIV source, fixture requests). |
+ | `figures/` | Figure generators used by the paper build (see `figures/README.md`). |
+ | `docs/`, `proofs/`, `formats.md` | Protocols, proof notes, and certificate formats. |
+ | `claim_evidence_ledger.csv` | Claim-to-evidence map (paths relative to this directory). |
+ | `evaluation-record/` | Path-normalized record of the authors' final acceptance run. |
+-| `audit_delivery.py`, `audit_data_integrity.py` | Packaging audit (paths, licenses, caches, bindings) and parse check of every data file (`python3 -B audit_data_integrity.py`; 10-25 s on a local Linux file system, about 7 min on a Windows drive mounted in WSL; prints counts and `"errors": []`, exit code 0). |
++| `audit_delivery.py`, `audit_data_integrity.py` | Packaging audit (paths, licenses, caches, bindings) and parse check of every data file plus all eight review-update reductions (`python3 -B audit_data_integrity.py`; prints counts, review statuses, and `"errors": []`, exit code 0). |
+ | `external-inputs.json`, `external-stages.json`, `external_resources.csv` | Identities and sources of external tools/data that are not redistributed. |
+ | `licenses/`, `THIRD_PARTY_NOTICES.md`, `LICENSE` | License texts. |
+ 
+@@ -114,28 +115,101 @@
+ repository; existing evidence is never overwritten. (Without `--output`, the
+ evaluator writes to `../evaluation-output/<UTC>-<mode>/`.)
+ 
+-## Quick check (about 1 minute)
+-
+-```sh
+-./evaluate.sh preflight --output ../rs-out/preflight   # files, pinned versions, hygiene, 36 result checks, delivery audit
++## Quick check
++
++```sh
++./evaluate.sh preflight --output ../rs-out/preflight   # files, pinned versions, hygiene, 203 result checks, delivery audit
+ ./evaluate.sh smoke     --output ../rs-out/smoke       # receiving, transport, header-admission, journal, ledger tests
+ python3 -B verify_expected_results.py --output ../rs-out/verify
+ ```
+ 
+ Expected: the two evaluator calls print `{"status": "PASS", ...}`, and the
+-checker prints `{"status": "PASS_KEY_RESULT_SOURCE_TRACE", "checks": 36, "failures": 0, ...}`.
++checker prints `{"status": "PASS_KEY_RESULT_SOURCE_TRACE", "checks": 203, "failures": 0, ...}`.
+ Each evaluator run stores commands, environment, logs, and results in
+ `<output>/evaluation.json`. Missing external tools do not fail `preflight`.
+ 
++## Empirical review update
++
++The original paper and historical data remain unchanged. The update adds a
++fixed sample of actual published Angelix patches, larger source-linked case
++studies, explicit tests-pass-but-wrong examples, independent computational
++reviews, and a domain-scale census. Read `../RESULTS_UPDATE.md` for the complete
++Chinese report, per-case conclusions, measured validation results, and every
++claim's file/field location. `docs/review-update-protocol.md` states the shared
++methodological rules before interpreting the counts.
++
++| New evidence | Observed result | Entry point and bound records |
++| --- | --- | --- |
++| Published-patch failure taxonomy | 127 distinct patches from 67 original sources; primary O0/O1/O2/correct/other = 9/95/8/1/14 | `experiments/real-patches/README.md`, `summary.json`, `labels.json` |
++| All given tests pass, additional declared-domain violation | 11/127 sampled patches; 11/14 all-test-passing patches | `experiments/real-patches/summary.json`, `records/native.jsonl` |
++| Independent patch classification review | 127/127 computational agreement; zero human annotators | `experiments/real-patches/independent-review.json` |
++| Independent O0 witness review | 9/9 uninitialized-read witnesses confirmed by a separate path executor | `experiments/real-patches/independent-definedness.json` |
++| Codeflaws expansion | 20 main pairs plus two targeted pairs, 21 problems, 44 full/direct/concrete agreements, 22 compact confirmations | `experiments/natural-expansion/README.md`, `records/summary.json` |
++| Real test-passing APR certificate cases | Six patches from five original subjects; six full/direct and compact refutations | `experiments/introclass-certificates/README.md`, `records/summary.json` |
++| Independent normalization review | 13 structural correspondences; 2,249 value/trace and 8,996 native-output agreements | `experiments/introclass-certificates/independent-review.json` |
++| Domain scaling | 50/100 observed coordinate products exceed 4,096; 7,583 source arities remain unknown | `experiments/natural-domains-review/summary.json`, two census CSVs |
++| Fresh whole-archive census | All six recomputed census records byte-identical to the originals | `experiments/natural-domains-review/fresh-census/recollection.json` |
++
++From this directory:
++
++```sh
++# Recompute all new source/certificate/statistical checks and reviews offline.
++python3 -B verify_update_results.py --output ../review-offline.json
++# Retain all 36 original checks and require the new hashes/results as well.
++python3 -B verify_expected_results.py --output ../review-expected
++# Parse every retained data file and rerun all new study validators.
++python3 -B audit_data_integrity.py
++```
++
++The 203 packaged expected-result checks comprise the 36 original checks and
++167 new checks. The new contract binds 125 scientific/review fields across
++eight studies, their summaries/inventories/validators, and the update driver
++and exact study set. Altered receipt bytes, forged counts, failed studies,
++and omission of a required study are rejection cases. The historical source-inventory
++reconciliation additionally names and hash-pins the one new
++`src/int32_refutation.py` module; all old source bindings and scientific-field
++comparisons remain exact, and unknown or modified modules are rejected. The existing `preflight`,
++`smoke`, `core`, and paper build still use their original entry points; no old
++check is removed or relaxed. `core` adds 19 original fresh-result checks to the
++203 packaged checks, for 222 checks in its final trace.
++
++The added signed compact checker, `src/int32_refutation.py`, binds the full
++request and an actual member of its exact point set, and checks only that
++member. It confirms a violation, not acceptance or canonical leastness.
++All new signed case requests preserve the existing reference-everywhere
++policy. The real-patch taxonomy separately uses an explicit original/reference
++repair region to measure preservation failures.
++
++Every fresh native campaign records its commands, tool identities, stream
++bytes/hashes, complete input coverage, and actual process outcomes. Offline
++verification checks those receipts and recomputes semantic results; it is not
++another native execution. Reproduction commands for new GCC/Clang executions
++are in each study README. The Codeflaws archive and full Angelix archive are
++external inputs; selected IntroClass sources/patches are distributed with their
++original notices. No new full CBMC/CPAchecker external campaign is claimed.
++
++The original-delivery integrity check is intentionally separate:
++
++```sh
++python3 -B tests/audit_original_evidence.py --verify-record
++```
++
++It checks all 71 original paper files and 63,544 original scientific evidence
++files against a manifest collected from the uploaded ZIP, and preserves every
++old expected-result leaf. It requires the complete original project, including
++its paper companion. Normal paper builds regenerate outputs, so use a separate
++copy if you need to retain the supplied PDF bytes. This integrity check is not
++an extra restriction on ordinary standalone-artifact use.
++
+ ## Reproducing the paper's results
+ 
+ | Paper result | Command | Output | Expected | Time |
+ | --- | --- | --- | --- | --- |
+-| All bound numbers in `expected-results.json` (780 requests, transport targets, witness, coverage, timing and overhead medians) | `python3 -B verify_expected_results.py --output ../rs-out/verify` | `../rs-out/verify/result.json` | `PASS_KEY_RESULT_SOURCE_TRACE`, 36 checks | seconds |
+-| 780 canonical complete decisions; 5,308,130 support-keyed vs 39,276,283 live-node semantic values (fresh execution) | `python3 -B reproduce.py --checks demand --output ../rs-out/demand` then `python3 -B verify_expected_results.py --output ../rs-out/v-demand --fresh-demand ../rs-out/demand/unsigned-demand` | `reproduction.json`, `unsigned-demand/summary.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 44 checks | ~2-3 min |
++| All bound numbers in `expected-results.json` (780 requests, transport targets, witness, coverage, timing and overhead medians) | `python3 -B verify_expected_results.py --output ../rs-out/verify` | `../rs-out/verify/result.json` | `PASS_KEY_RESULT_SOURCE_TRACE`, 203 checks | typically under a minute on a local Linux filesystem |
++| 780 canonical complete decisions; 5,308,130 support-keyed vs 39,276,283 live-node semantic values (fresh execution) | `python3 -B reproduce.py --checks demand --output ../rs-out/demand` then `python3 -B verify_expected_results.py --output ../rs-out/v-demand --fresh-demand ../rs-out/demand/unsigned-demand` | `reproduction.json`, `unsigned-demand/summary.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 211 checks | ~2-3 min plus update verification |
+ | Timing, coverage, counter-overhead and witness-search summaries (recomputed from retained raw records) | `python3 -B reproduce.py --checks analysis --output ../rs-out/analysis` | `../rs-out/analysis/reproduction.json` | `PASS_SELECTED_CHECKS` | seconds |
+-| Functional campaign (780 reloaded requests, 380 full / 285 compact certificates, 6,000 tamper rejections) and native header controls | `python3 -B reproduce.py --checks functional headers --gcc $(which gcc) --clang $(which clang) --output ../rs-out/fh` then `python3 -B verify_expected_results.py --output ../rs-out/v-fh --fresh-functional ../rs-out/fh/functional --fresh-headers ../rs-out/fh/header-admission` | `functional/complete-reproduction.json`, `header-admission/report.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 47 checks | ~4-6 min |
+-| Unit suite | `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` | console | `Ran 366 tests`, `OK (skipped=2)`; `OK (skipped=1)` under CPython 3.12.14; `OK` with 3.12.14 and `CBMC_BINARY=/usr/bin/cbmc` | ~1 min |
++| Functional campaign (780 reloaded requests, 380 full / 285 compact certificates, 6,000 tamper rejections) and native header controls | `python3 -B reproduce.py --checks functional headers --gcc $(which gcc) --clang $(which clang) --output ../rs-out/fh` then `python3 -B verify_expected_results.py --output ../rs-out/v-fh --fresh-functional ../rs-out/fh/functional --fresh-headers ../rs-out/fh/header-admission` | `functional/complete-reproduction.json`, `header-admission/report.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 214 checks | ~4-6 min plus update verification |
++| Unit suite | `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` | console | `Ran 422 tests`, `OK` with the pinned CPython 3.12.14 and CBMC 6.6.0 environment; optional interpreter/CBMC-dependent tests retain their original skip conditions. Actual final status is recorded in `../RESULTS_UPDATE.md` | ~1 min |
+ | Everything local in one go (analysis, functional, demand, headers, unit suite, fresh verification; plus the paper build when `../paper` exists) | `./evaluate.sh core --output ../rs-out/core` | `../rs-out/core/evaluation.json` | `PASS` | ~7-12 min |
+ | Paper build (only with `../paper`; see below) | `./evaluate.sh paper --output ../rs-out/paper` | `../rs-out/paper/evaluation.json` | `PASS` | ~30 s |
+ | CBMC/CPAchecker, Codeflaws, timing campaigns, historical receipts | see [External campaigns](#external-campaigns) | `<output>/evaluation.json` | `PASS`; without the inputs `FAILED_PRECONDITION` (exit 3) with zero studies started | ~1.5-2 h (witness ~70 min, Codeflaws ~30-35 min, CBMC <1 min) |
+--- original/artifact/THIRD_PARTY_NOTICES.md
++++ updated/artifact/THIRD_PARTY_NOTICES.md
+@@ -8,6 +8,21 @@
+ - **Codeflaws.** Metadata and normalized observations are included; the pinned
+   original source/test archive is an external input.  The repository notice is
+   retained in `licenses/Codeflaws-MIT.txt`.
++- **Angelix published patch inventory and IntroClass.** The review update uses
++  the deposited materials in Xuan-Bach D. Le, *Overfitting in semantics-based
++  program repair*, Zenodo 1012686, https://doi.org/10.5281/zenodo.1012686
++  (16 October 2017). Its deposited metadata states CC BY 4.0. Original IntroClass
++  source retains the ProgramRepair 2015 BSD 3-Clause notice. Both source
++  metadata and the original license text are retained in
++  `experiments/real-patches/source-audit/`. The published diffs, exact applied
++  candidate source, and original source paths are identified in `corpus.json`
++  in that directory's parent. These materials retain their third-party
++  licenses; RepairSeal's license does not replace them. Files under
++  `experiments/introclass-certificates/records/normalized/` are explicitly
++  adapted derivatives with per-source transformation records and attribution.
++  Complete dataset archives are not redistributed. See the source-study README
++  for archive identities and https://creativecommons.org/licenses/by/4.0/ for
++  the CC BY 4.0 terms.
+ - **CBMC and CPAchecker.** Process products and retained outputs are included;
+   verifier binaries are external prerequisites for fresh campaigns.
+ - **GCC and Clang.** Compiler binaries are not included.  Every fresh native run
+@@ -15,8 +30,8 @@
+ - **llama.cpp.** The artifact retains the source-linked CEIL_DIV edit and finite
+   mechanism model; it does not redistribute or execute the full upstream
+   application.  The supplied upstream notice is in `public-data/ceil-div-LICENSE.txt`.
+-- **ACM acmart.** Used only by the companion paper sources (not part of this
+-  repository), which carry the class, bibliography style, and `acmart-LICENSE.txt`.
++- **ACM acmart.** Used only by the companion paper sources, which carry the
++  class, bibliography style, and `acmart-LICENSE.txt`.
+ - **Fonts.** No font binaries are distributed in this delivery.  Figure scripts
+   use an installed Times New Roman face (the delivered figures embed Times New
+   Roman subsets) with matplotlib's bundled STIX fonts for mathematics, and a
+--- original/artifact/audit_data_integrity.py
++++ updated/artifact/audit_data_integrity.py
+@@ -56,5 +56,16 @@
+         if 'CHECK' not in text: raise ValueError('property lacks CHECK')
+         counts['property']+=1
+     except Exception as e: errors.append({'path':rel,'error':repr(e)})
+-print(json.dumps({'counts':counts,'intentional_malformed_graphml':malformed,'errors':errors},indent=2))
++# Keep every existing parse/integrity check and add semantic/receipt closure for
++# the empirical update. A parseable summary alone is not sufficient evidence.
++from verify_update_results import verify as verify_update
++update=verify_update(root)
++if update['status']!='PASS':
++    errors.append({'path':'review-update','error':update.get('errors', ['update verification failed'])})
++for name, result in update['studies'].items():
++    if result['status']!='PASS':
++        errors.append({'path':'review-update/'+name,'error':result['errors']})
++print(json.dumps({'counts':counts,'intentional_malformed_graphml':malformed,
++                  'review_update':{name:result['status'] for name,result in update['studies'].items()},
++                  'errors':errors},indent=2))
+ raise SystemExit(1 if errors else 0)
+--- original/artifact/claim_evidence_ledger.csv
++++ updated/artifact/claim_evidence_ledger.csv
+@@ -1,25 +1,35 @@
+-claim_id,claim,evidence,status,boundary
+-P1,"The repair contract preserves candidate definedness, guarded repair and preservation obligations, and one canonical diagnostic.",src/proof_dag_checker.py; src/int32_circuit.py; ../paper/sections/contract.tex; ../paper/sections/guarantees.tex,proved for the stated construction,Finite declared inputs and the source semantics defined in the paper.
+-P2,Full-vector evidence erasure gives the same canonical result and complete record while removing supplied-value comparisons.,src/proof_dag_checker.py; src/int32_circuit.py; data/signed-contract/requests.json; ../paper/sections/guarantees.tex,proved and observed,The full-vector format and equally required output record.
+-P3,"All 780 unsigned conformance requests retain the same canonical result under full, live-node, projected-live and demand evaluation.",data/unsigned-demand/protocol.json; data/unsigned-demand/decisions.json; data/unsigned-demand/summary.json,observed,380 core and 400 grammar requests; authored mechanism and boundary controls.
+-P4,All 1478 signed natural requests retain the same canonical result under the five receiving implementations.,data/signed-contract/requests.json; data/receiving-time/work.json; data/receiving-time/summary.json,observed,"739 existing-source candidate-subject combinations, each on repair and union inputs; the signed repair guard is true everywhere."
+-P5,Instrumented demand/live median paired receiving-time ratios are 1.30 on repair inputs and 2.19 on union inputs; every problem aggregate favors live-node evaluation.,data/receiving-time/timings.jsonl; data/receiving-time/request-timing-summary.json; data/receiving-time/analysis.json; reproduce.py,observed and independently recomputed,739 requests per stage; ten balanced repetitions; 35 dependent problem groups; demand traversal instrumentation is enabled.
+-P6,Point-local demand preserves canonical results while removing support-key construction and cross-input sharing.,tests/int32_point_demand.py; tests/test_int32_point_demand.py; experiments/point-demand/measurements/work.json; ../paper/sections/guarantees.tex,proved and observed,"The same conditional local rules, obligation priority and diagnostic minimization."
+-P7,"With measurement bookkeeping enabled, point-local/support-keyed median time ratios are 0.86 and 0.73; point-local/live-node ratios are 1.12 and 1.60.",experiments/point-demand/measurements/timings.jsonl; experiments/point-demand/measurements/analysis.json; tests/verify_point_demand_study.py,observed and independently recomputed,"A separate four-arm experiment: 1478 requests, twelve balanced repetitions and 70944 timed calls."
+-P8,Independent C verification agrees on 804 Boolean finite repair decisions: 210 acceptances and 594 refutations.,data/c-verification/protocol.json; data/c-verification/cases.json; data/c-verification/summary.json; tests/cbmc_comparison.py,observed,Complete-domain Boolean outputs; the solver counterexample need not be canonical.
+-P9,Whole-index signed-source admission yields 95 eligible pairs across 35 problems and 16 defect classes.,data/source-programs/archive-provenance.json; data/source-programs/source-admission.json; data/source-programs/test-admission.json; data/source-programs/normalized-corpus.json; data/source-programs/summary.json,observed,3903 indexed subjects and 7806 source occurrences screened; original sources and test partitions.
+-P10,"The two native compilers perform 352 compilations and 15368 actual program executions, with output tokens agreeing with concrete interpretation.",data/source-programs/native-plan.json; data/source-programs/native-compilations.json; data/source-programs/native-observations-gcc.jsonl; data/source-programs/native-observations-clang.jsonl; ../paper/generate_tables.py,observed and independently recomputed,176 source contents and 7684 distinct source/raw-input cases per compiler.
+-P11,"Concrete signed interpretation and symbolic lowering agree on 8064 source/input observations, including 122 undefined observations.",data/signed-contract/source-observations.json; data/signed-contract/summary.json; src/codeflaws_int32_bridge.py; src/int32_circuit.py,observed,"Definedness, output token and modeled source-if trace; undefined subjects remain in exclusion records."
+-P12,"Of 549 compatible cross-source combinations, 325 pass repair inputs and 233 pass their union with held-out inputs, giving 92 reversals.",data/signed-contract/requests.json; data/signed-contract/stages.json; data/natural-combinations/analysis.json; ../paper/generate_tables.py,observed and independently recomputed,"Existing archived candidates, grouped by problem; 95 own-reference and 95 own-original controls are separate."
+-P13,Global support-projection coverage suffices to reuse an established acceptance under a changed domain.,src/domain_transport.py; tests/test_domain_transport.py; ../paper/sections/guarantees.tex; ../paper/sections/supp-transport.tex,proved for the stated construction,Fixed source/policy context and accepted history; diagnostic ordering is a separate condition.
+-P14,The 285-target transport study has 190 covered targets with no new semantic cells; cold demand computes 18705 cells on those targets.,data/contract-study/transport.json; data/unsigned-demand/transport.json; data/unsigned-demand/summary.json,observed,Three constructed domain changes for each of 95 accepted core bases; admission and coverage work remains.
+-P15,"Every input coordinate occurs in the computed global obligation supports of all 24 natural unsigned requests, so their Cartesian transport criterion reduces to domain containment.",data/natural-support.json; data/natural-domains/request-results.json,observed,24 source-linked requests including 15 acceptances; overlapping domains are retained.
+-P16,The receiver rejects all 8945 retained core packet and misuse controls.,data/core-study/complete-reproduction.json; data/core-study/structured/tamper-controls.json; data/core-study/structured/refutation-controls.json; data/core-study/structured/acceptance-misuse-controls.json,observed,"6000 full-packet, 2850 compact-packet and 95 accepted-request misuse attempts."
+-P17,Physical-line-ending and header-admission controls expose source errors that producer/receiver agreement alone misses.,data/source-correspondence/summary.json; data/header-admission/report.json; tests/test_source_lexing.py; tests/test_codeflaws_header_admission.py,observed,Native compiler checks of the exact owned source controls and current admission rules.
+-P18,Receiver context and atomic admission preserve valid state when evidence or a receiving call fails.,src/admission_journal.py; src/reusing_checker.py; tests/test_admission_journal.py; tests/test_cache_atomicity.py; data/admission-journal/summary.json,observed,Durable approval context and process-local cache state have distinct consequences.
+-C38,Full and direct receivers agree on all five source-linked/control statuses and canonical witnesses with cells 1176 1680 1806 1848 2268 per arm,tests/upstream_ceil_case.py; results/upstream-ceil/summary.json; ../paper/generate_ceil.py,supported matched comparison,One actual old/new macro relation plus three authored adverse candidates; 210 interpreted observations; no speed advantage or independent sample claim; paper companion is optional for the standalone artifact
+-P19,"The complete external campaign retains 804 cases and 18 registered controls; 594 producer-input projections confirm refutation, and three excluded-input controls become unconfirmed.",experiments/witness-interoperability/protocol.json; experiments/witness-interoperability/cases.json; experiments/witness-interoperability/summary.json; experiments/witness-interoperability/verification.json; experiments/witness-interoperability/product-equivalence.json; experiments/witness-input-controls/summary.json; experiments/witness-product-controls/native-controls.json; tests/verify_witness_interoperability.py; tests/verify_witness_products.py,executed and independently reconciled,804 finite products; 699086 native point observations; current and executed products match exactly. Boolean confirmation does not certify every supplied annotation.
+-P20,"Among 593 confirmed input/trivial pairs with the same started analysis, input projections lower both iteration and value-analysis abstraction-computation counts in 585 pairs and tie in eight.",experiments/witness-interoperability/search-statistics.json; tests/analyze_witness_search.py; figures/witness_search_figure.py,secondary descriptive analysis,"All 594 planned refutations retained; 285 core, 299 grammar and nine natural confirmed pairs; eight natural pairs tie; no elapsed-time comparison."
+-P21,None of the 420 repair-accepted natural combinations satisfies global support-projection coverage on its original held-out extension; fresh union evaluation accepts 328.,experiments/signed-coverage/coverage-before-union.json; experiments/signed-coverage/summary.json; experiments/signed-coverage/independent-verification.json; tests/verify_signed_coverage_study.py,observed and independently recomputed,"All 739 combinations and 1478 stage outcomes reconciled; structural support is a sufficient criterion, not a semantic-dependence proof."
+-P22,"Removing measurement bookkeeping preserves every canonical result and typed memo-store sequence; point-local/live-node median time ratios become 1.04 and 1.20, and point-local/support-keyed ratios become 0.86 and 0.69.",experiments/counter-overhead/protocol.json; experiments/counter-overhead/work.json; experiments/counter-overhead/timings.jsonl; experiments/counter-overhead/analysis.json; experiments/counter-overhead/independent-verification.json; tests/counter_free_receivers.py; tests/verify_counter_overhead_study.py,executed and independently recomputed,1478 original-source requests; 7390 untimed preflight calls and 73900 timed calls in ten balanced orders; all ratios are within this five-arm campaign; 35 dependent problem groups; close repair-stage ratio is not a strong speed disadvantage.
+-P23,"For the 420 repair-accepted natural combinations, the largest per-obligation share of union-domain support projections absent from the repair domain has median 84% (328 union acceptances) and 91% (92 reversals), minimum 8%; 388 bases exceed one half.",experiments/signed-coverage/coverage-with-union-outcomes.json; ../paper/figure-source/make_figures.py,descriptive analysis of retained records,Computed from the retained per-obligation uncovered keys; describes the archive extension and is not a predictor of acceptance; paper companion is optional for the standalone artifact.
++claim_id,claim,evidence,status,boundary
++P1,"The repair contract preserves candidate definedness, guarded repair and preservation obligations, and one canonical diagnostic.",src/proof_dag_checker.py; src/int32_circuit.py; ../paper/sections/contract.tex; ../paper/sections/guarantees.tex,proved for the stated construction,Finite declared inputs and the source semantics defined in the paper.
++P2,Full-vector evidence erasure gives the same canonical result and complete record while removing supplied-value comparisons.,src/proof_dag_checker.py; src/int32_circuit.py; data/signed-contract/requests.json; ../paper/sections/guarantees.tex,proved and observed,The full-vector format and equally required output record.
++P3,"All 780 unsigned conformance requests retain the same canonical result under full, live-node, projected-live and demand evaluation.",data/unsigned-demand/protocol.json; data/unsigned-demand/decisions.json; data/unsigned-demand/summary.json,observed,380 core and 400 grammar requests; authored mechanism and boundary controls.
++P4,All 1478 signed natural requests retain the same canonical result under the five receiving implementations.,data/signed-contract/requests.json; data/receiving-time/work.json; data/receiving-time/summary.json,observed,"739 existing-source candidate-subject combinations, each on repair and union inputs; the signed repair guard is true everywhere."
++P5,Instrumented demand/live median paired receiving-time ratios are 1.30 on repair inputs and 2.19 on union inputs; every problem aggregate favors live-node evaluation.,data/receiving-time/timings.jsonl; data/receiving-time/request-timing-summary.json; data/receiving-time/analysis.json; reproduce.py,observed and independently recomputed,739 requests per stage; ten balanced repetitions; 35 dependent problem groups; demand traversal instrumentation is enabled.
++P6,Point-local demand preserves canonical results while removing support-key construction and cross-input sharing.,tests/int32_point_demand.py; tests/test_int32_point_demand.py; experiments/point-demand/measurements/work.json; ../paper/sections/guarantees.tex,proved and observed,"The same conditional local rules, obligation priority and diagnostic minimization."
++P7,"With measurement bookkeeping enabled, point-local/support-keyed median time ratios are 0.86 and 0.73; point-local/live-node ratios are 1.12 and 1.60.",experiments/point-demand/measurements/timings.jsonl; experiments/point-demand/measurements/analysis.json; tests/verify_point_demand_study.py,observed and independently recomputed,"A separate four-arm experiment: 1478 requests, twelve balanced repetitions and 70944 timed calls."
++P8,Independent C verification agrees on 804 Boolean finite repair decisions: 210 acceptances and 594 refutations.,data/c-verification/protocol.json; data/c-verification/cases.json; data/c-verification/summary.json; tests/cbmc_comparison.py,observed,Complete-domain Boolean outputs; the solver counterexample need not be canonical.
++P9,Whole-index signed-source admission yields 95 eligible pairs across 35 problems and 16 defect classes.,data/source-programs/archive-provenance.json; data/source-programs/source-admission.json; data/source-programs/test-admission.json; data/source-programs/normalized-corpus.json; data/source-programs/summary.json,observed,3903 indexed subjects and 7806 source occurrences screened; original sources and test partitions.
++P10,"The two native compilers perform 352 compilations and 15368 actual program executions, with output tokens agreeing with concrete interpretation.",data/source-programs/native-plan.json; data/source-programs/native-compilations.json; data/source-programs/native-observations-gcc.jsonl; data/source-programs/native-observations-clang.jsonl; ../paper/generate_tables.py,observed and independently recomputed,176 source contents and 7684 distinct source/raw-input cases per compiler.
++P11,"Concrete signed interpretation and symbolic lowering agree on 8064 source/input observations, including 122 undefined observations.",data/signed-contract/source-observations.json; data/signed-contract/summary.json; src/codeflaws_int32_bridge.py; src/int32_circuit.py,observed,"Definedness, output token and modeled source-if trace; undefined subjects remain in exclusion records."
++P12,"Of 549 compatible cross-source combinations, 325 pass repair inputs and 233 pass their union with held-out inputs, giving 92 reversals.",data/signed-contract/requests.json; data/signed-contract/stages.json; data/natural-combinations/analysis.json; ../paper/generate_tables.py,observed and independently recomputed,"Existing archived candidates, grouped by problem; 95 own-reference and 95 own-original controls are separate."
++P13,Global support-projection coverage suffices to reuse an established acceptance under a changed domain.,src/domain_transport.py; tests/test_domain_transport.py; ../paper/sections/guarantees.tex; ../paper/sections/supp-transport.tex,proved for the stated construction,Fixed source/policy context and accepted history; diagnostic ordering is a separate condition.
++P14,The 285-target transport study has 190 covered targets with no new semantic cells; cold demand computes 18705 cells on those targets.,data/contract-study/transport.json; data/unsigned-demand/transport.json; data/unsigned-demand/summary.json,observed,Three constructed domain changes for each of 95 accepted core bases; admission and coverage work remains.
++P15,"Every input coordinate occurs in the computed global obligation supports of all 24 natural unsigned requests, so their Cartesian transport criterion reduces to domain containment.",data/natural-support.json; data/natural-domains/request-results.json,observed,24 source-linked requests including 15 acceptances; overlapping domains are retained.
++P16,The receiver rejects all 8945 retained core packet and misuse controls.,data/core-study/complete-reproduction.json; data/core-study/structured/tamper-controls.json; data/core-study/structured/refutation-controls.json; data/core-study/structured/acceptance-misuse-controls.json,observed,"6000 full-packet, 2850 compact-packet and 95 accepted-request misuse attempts."
++P17,Physical-line-ending and header-admission controls expose source errors that producer/receiver agreement alone misses.,data/source-correspondence/summary.json; data/header-admission/report.json; tests/test_source_lexing.py; tests/test_codeflaws_header_admission.py,observed,Native compiler checks of the exact owned source controls and current admission rules.
++P18,Receiver context and atomic admission preserve valid state when evidence or a receiving call fails.,src/admission_journal.py; src/reusing_checker.py; tests/test_admission_journal.py; tests/test_cache_atomicity.py; data/admission-journal/summary.json,observed,Durable approval context and process-local cache state have distinct consequences.
++C38,Full and direct receivers agree on all five source-linked/control statuses and canonical witnesses with cells 1176 1680 1806 1848 2268 per arm,tests/upstream_ceil_case.py; results/upstream-ceil/summary.json; ../paper/generate_ceil.py,supported matched comparison,One actual old/new macro relation plus three authored adverse candidates; 210 interpreted observations; no speed advantage or independent sample claim; paper companion is optional for the standalone artifact
++P19,"The complete external campaign retains 804 cases and 18 registered controls; 594 producer-input projections confirm refutation, and three excluded-input controls become unconfirmed.",experiments/witness-interoperability/protocol.json; experiments/witness-interoperability/cases.json; experiments/witness-interoperability/summary.json; experiments/witness-interoperability/verification.json; experiments/witness-interoperability/product-equivalence.json; experiments/witness-input-controls/summary.json; experiments/witness-product-controls/native-controls.json; tests/verify_witness_interoperability.py; tests/verify_witness_products.py,executed and independently reconciled,804 finite products; 699086 native point observations; current and executed products match exactly. Boolean confirmation does not certify every supplied annotation.
++P20,"Among 593 confirmed input/trivial pairs with the same started analysis, input projections lower both iteration and value-analysis abstraction-computation counts in 585 pairs and tie in eight.",experiments/witness-interoperability/search-statistics.json; tests/analyze_witness_search.py; figures/witness_search_figure.py,secondary descriptive analysis,"All 594 planned refutations retained; 285 core, 299 grammar and nine natural confirmed pairs; eight natural pairs tie; no elapsed-time comparison."
++P21,None of the 420 repair-accepted natural combinations satisfies global support-projection coverage on its original held-out extension; fresh union evaluation accepts 328.,experiments/signed-coverage/coverage-before-union.json; experiments/signed-coverage/summary.json; experiments/signed-coverage/independent-verification.json; tests/verify_signed_coverage_study.py,observed and independently recomputed,"All 739 combinations and 1478 stage outcomes reconciled; structural support is a sufficient criterion, not a semantic-dependence proof."
++P22,"Removing measurement bookkeeping preserves every canonical result and typed memo-store sequence; point-local/live-node median time ratios become 1.04 and 1.20, and point-local/support-keyed ratios become 0.86 and 0.69.",experiments/counter-overhead/protocol.json; experiments/counter-overhead/work.json; experiments/counter-overhead/timings.jsonl; experiments/counter-overhead/analysis.json; experiments/counter-overhead/independent-verification.json; tests/counter_free_receivers.py; tests/verify_counter_overhead_study.py,executed and independently recomputed,1478 original-source requests; 7390 untimed preflight calls and 73900 timed calls in ten balanced orders; all ratios are within this five-arm campaign; 35 dependent problem groups; close repair-stage ratio is not a strong speed disadvantage.
++P23,"For the 420 repair-accepted natural combinations, the largest per-obligation share of union-domain support projections absent from the repair domain has median 84% (328 union acceptances) and 91% (92 reversals), minimum 8%; 388 bases exceed one half.",experiments/signed-coverage/coverage-with-union-outcomes.json; ../paper/figure-source/make_figures.py,descriptive analysis of retained records,Computed from the retained per-obligation uncovered keys; describes the archive extension and is not a predictor of acceptance; paper companion is optional for the standalone artifact.
++RU1,"The fixed sample has 127 published Angelix patches: primary definedness 9, repair-region 95, preservation 8, bounded-correct 1, and other 14.",experiments/real-patches/protocol.json; experiments/real-patches/inventory.json; experiments/real-patches/corpus.json; experiments/real-patches/labels.json; experiments/real-patches/summary.json; experiments/real-patches/verify.py,new native execution and offline recomputation,Two IntroClass families; 67 original sources; at most two distinct candidates per original. Primary precedence O0/O1/O2; overlap counts are separate; no population generalization.
++RU2,"Eleven of 127 sampled patches pass every published blackbox and whitebox test on both plain compilers but fail the additional finite domain; 14 pass all tests, comprising 11 wrong, one bounded-correct, and two other.",experiments/real-patches/given-tests.json; experiments/real-patches/points.json; experiments/real-patches/records/native.jsonl; experiments/real-patches/labels.json; experiments/real-patches/summary.json,observed and independently recomputed,"11/127 and 11/14 use different denominators. Other is unresolved, not correct. A new witnessed test would expose the failure."
++RU3,"Separate mathematical-reference and native-receipt label reduction agrees on all 127 patches, and a separate path executor confirms one uninitialized-read witness for each of the nine O0 patches.",experiments/real-patches/independent_review.py; experiments/real-patches/independent-review.json; experiments/real-patches/independent_definedness.py; experiments/real-patches/independent-definedness.json,independent computational review,"Zero human annotators. Label reduction shares primary definedness records; the additional independent executor establishes existence of nine O0 witnesses, not all undefined points or unrestricted C semantics."
++RU4,"The Codeflaws expansion evaluates 22 pairs across 21 problems: 44 full/direct/concrete agreements, 22 compact confirmations, 33446 defined native agreements, and 514 UBSan confirmations.",experiments/natural-expansion/frozen-plan.json; experiments/natural-expansion/problem-sources.json; experiments/natural-expansion/records/summary.json; experiments/natural-expansion/records/requests.json; experiments/natural-expansion/verify.py,new native execution and offline recomputation,"Twenty deterministic main pairs and two outcome-directed definedness followups; existing archive sources, not new APR-generated patches. Reference-everywhere policy; no nonvacuous signed O2 root. Zero all-tests-pass-but-wrong examples in this cohort."
++RU5,Six published test-passing incorrect patches produce matching full/direct canonical refutations and six independently checked compact refutations.,experiments/introclass-certificates/records/protocol.json; experiments/introclass-certificates/records/requests.json; experiments/introclass-certificates/records/summary.json; experiments/introclass-certificates/verify.py,new native execution and certificate replay,"Six distinct patches from five original subjects in two families, selected after failures were known; does not estimate prevalence. Median 133 points, smallest 263 points."
++RU6,"Independent structure and branch-model review matches 13 source adaptations, 2249 value-and-trace observations, 8996 complete native outputs, six canonical witnesses, and 168 supplied-test/compiler checks.",experiments/introclass-certificates/normalize.py; experiments/introclass-certificates/independent_review.py; experiments/introclass-certificates/independent-review.json; experiments/introclass-certificates/records/native-gcc.jsonl; experiments/introclass-certificates/records/native-clang.jsonl,independent computational review of fresh executions,Exact source identities and finite domains; pycparser is shared infrastructure. No two-human agreement or global transformation-equivalence claim.
++RU7,"Observed coordinate projection products exceed 4096 for 50 of 100 complete-I/O Codeflaws subjects, including 46 of the 95 all-defined subjects; source arity is known for 223 of 7806 occurrences.",experiments/natural-domains-review/source-arity-census.csv; experiments/natural-domains-review/test-projection-scale.csv; experiments/natural-domains-review/summary.json; experiments/natural-domains-review/analyze_scale.py,recomputed from the complete retained census,"7583 arities remain unknown. Cartesian combinations are not claimed legal, defined, independent, or executed. The eight-values-per-coordinate scenario is explicitly hypothetical."
++RU8,A fresh reread of the pinned complete Codeflaws archive reproduces all six source/test/concrete census records byte for byte.,experiments/natural-domains-review/recollect_census.py; experiments/natural-domains-review/fresh-census/recollection.json; experiments/natural-domains-review/fresh-census/manifest.json,fresh whole-archive collection,Same frontend; zero native executions in this collection. Compiler execution evidence belongs to the separate natural-expansion campaign.
++RU9,All 71 original paper files and 63544 original scientific evidence files match the uploaded project bytes.,tests/audit_original_evidence.py; results/review-update/original-evidence-integrity.json; results/review-update/original-evidence-manifest.json; results/review-update/original-evidence-offline.json,original ZIP comparison and offline preservation verification,The original-delivery integrity gate is separate from normal evaluator runs because normal paper builds regenerate PDF outputs. New records and allowed code/documentation edits are outside the protected original-evidence inventory.
++RU10,The signed compact checker confirms a typed witness in the exact declared point set while evaluating only that point and binding the whole task context.,src/int32_refutation.py; tests/test_int32_refutation.py; experiments/natural-expansion/records/summary.json; experiments/introclass-certificates/records/summary.json,implementation with adversarial controls and real-case execution,"Confirms a violation; does not establish acceptance, canonical leastness, or membership in a Cartesian projection in place of the actual correlated domain."
+--- original/artifact/evaluator.py
++++ updated/artifact/evaluator.py
+@@ -311,6 +311,9 @@
+         "tests.test_codeflaws_header_admission",
+         "tests.test_current_admission_report",
+         "tests.test_claim_ledger",
++        "tests.test_int32_refutation",
++        "tests.test_introclass_normalization",
++        "tests.test_update_result_types",
+     ]
+     step = command_record("smoke-tests",
+                           [sys.executable, "-B", "-m", "unittest", "-v", *tests],
+--- original/artifact/expected-results.json
++++ updated/artifact/expected-results.json
+@@ -63,5 +63,386 @@
+       "purpose": "application-level CEIL_DIV build and execution",
+       "bundled": false
+     }
++  },
++  "review_update_driver_sha256": "7536aea2e52a57ebfcafa786bd073453a3231a9b1a8c75860a6f44380c920e51",
++  "review_update": {
++    "real_patches": {
++      "summary_file": "experiments/real-patches/summary.json",
++      "summary_sha256": "b61d108a6f04e3fae9358d14cc856f052aef30584e731ecedc2a2d1d793d97aa",
++      "inventory_file": "experiments/real-patches/hash-inventory.json",
++      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
++      "verifier_file": "experiments/real-patches/verify.py",
++      "verifier_sha256": "9d749341b9690c329e03a03dd3ac80305f1fd885126b26d7d9d64094204f282b",
++      "fields": {
++        "selected_patches": 127,
++        "unique_original_sources": 67,
++        "unique_candidate_sources": 127,
++        "sampling_counts": {
++          "application_successes": 939,
++          "raw_patch_occurrences": 3209,
++          "selected": 127,
++          "unique_applied_candidates": 519,
++          "unique_originals": 67
++        },
++        "strict_application_exclusion_reasons": {
++          "exact old context mismatch": 2270
++        },
++        "primary_counts": {
++          "correct": 1,
++          "definedness": 9,
++          "other": 14,
++          "preservation": 8,
++          "repair-region": 95
++        },
++        "nonexclusive_counts": {
++          "correct": 1,
++          "definedness": 9,
++          "other": 14,
++          "preservation": 81,
++          "repair-region": 99
++        },
++        "by_source_tool_family": [
++          {
++            "all_given_tests_pass": 6,
++            "family": "median",
++            "nonexclusive_counts": {
++              "definedness": 3,
++              "other": 4,
++              "preservation": 49,
++              "repair-region": 58
++            },
++            "patches": 72,
++            "primary_counts": {
++              "definedness": 3,
++              "other": 4,
++              "preservation": 8,
++              "repair-region": 57
++            },
++            "repair_tool": "Angelix (published patch inventory)",
++            "source": "IntroClass / Zenodo 1012686",
++            "tests_pass_but_wrong": 5
++          },
++          {
++            "all_given_tests_pass": 8,
++            "family": "smallest",
++            "nonexclusive_counts": {
++              "correct": 1,
++              "definedness": 6,
++              "other": 10,
++              "preservation": 32,
++              "repair-region": 41
++            },
++            "patches": 55,
++            "primary_counts": {
++              "correct": 1,
++              "definedness": 6,
++              "other": 10,
++              "repair-region": 38
++            },
++            "repair_tool": "Angelix (published patch inventory)",
++            "source": "IntroClass / Zenodo 1012686",
++            "tests_pass_but_wrong": 6
++          }
++        ],
++        "all_given_tests_pass": 14,
++        "all_given_test_passing_primary_counts": {
++          "correct": 1,
++          "other": 2,
++          "repair-region": 11
++        },
++        "tests_pass_but_wrong": 11,
++        "tests_pass_but_wrong_fraction_all_selected": {
++          "denominator": 127,
++          "numerator": 11
++        },
++        "tests_pass_but_wrong_fraction_all_test_passing": {
++          "denominator": 14,
++          "numerator": 11
++        },
++        "semantic_observations": 32375,
++        "semantic_replayed": 32375,
++        "native_executions": 130772,
++        "compiled_artifacts": 784,
++        "successful_compilations": 784,
++        "defined_native_correspondence_checks": 126696,
++        "source_admission_counts": {
++          "admitted": 175,
++          "unsupported": 21
++        },
++        "source_correspondence_pass": 175,
++        "source_correspondence_total": 196,
++        "finite_input_points": {
++          "median": 133,
++          "smallest": 263
++        },
++        "given_test_cases": {
++          "median": 13,
++          "smallest": 16
++        },
++        "review": {
++          "human_agreement": null,
++          "human_annotators": 0,
++          "kind": "rule-based labels with independent replay; human agreement not measured"
++        }
++      }
++    },
++    "independent_patch_review": {
++      "summary_file": "experiments/real-patches/independent-review.json",
++      "summary_sha256": "d7958521cd694de5161345380eb876d4b3106a21660b8a074ab3597f1055c567",
++      "inventory_file": "experiments/real-patches/hash-inventory.json",
++      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
++      "verifier_file": "experiments/real-patches/independent_review.py",
++      "verifier_sha256": "921c3c0938e547255a00aa5263639420ff19cbb6ddb6bf75d092ca45e61c4ece",
++      "fields": {
++        "status": "PASS_INDEPENDENT_LABEL_REVIEW",
++        "reviewed_patches": 127,
++        "agreed_patches": 127,
++        "agreement_fraction": {
++          "denominator": 127,
++          "numerator": 127
++        },
++        "disagreements": [],
++        "primary_counts": {
++          "correct": 1,
++          "definedness": 9,
++          "other": 14,
++          "preservation": 8,
++          "repair-region": 95
++        },
++        "nonexclusive_counts": {
++          "correct": 1,
++          "definedness": 9,
++          "other": 14,
++          "preservation": 81,
++          "repair-region": 99
++        },
++        "all_given_tests_pass": 14,
++        "tests_pass_but_wrong": 11,
++        "native_receipts_checked": 130772,
++        "defined_native_correspondence_checks": 126696,
++        "mathematical_reference_native_checks": 1584,
++        "candidate_undefined_observation_reasons": {
++          "uninitialized-read:Small": 29,
++          "uninitialized-read:e": 69,
++          "uninitialized-read:m": 36,
++          "uninitialized-read:median": 20,
++          "uninitialized-read:smallest": 157
++        },
++        "human_annotators": 0,
++        "human_agreement": null
++      }
++    },
++    "independent_definedness_review": {
++      "summary_file": "experiments/real-patches/independent-definedness.json",
++      "summary_sha256": "42582c5c4298b98f8895e4a7e3723ae361a4e2c15e082a82daee294e06c2b2db",
++      "inventory_file": "experiments/real-patches/hash-inventory.json",
++      "inventory_sha256": "a3f009f58a801a99584f4439fd289f1f8d9f0675351138c2e4aafd0cd9273920",
++      "verifier_file": "experiments/real-patches/independent_definedness.py",
++      "verifier_sha256": "3a29e90753a404ceef232fdf5eedddc35c3750bcbb9f0070c5e619e641f07bed",
++      "fields": {
++        "status": "PASS_INDEPENDENT_DEFINEDNESS_WITNESSES",
++        "reviewed_patches": 9,
++        "confirmed_uninitialized_read_witnesses": 9,
++        "human_annotators": 0,
++        "human_agreement": null
++      }
++    },
++    "natural_expansion": {
++      "summary_file": "experiments/natural-expansion/records/summary.json",
++      "summary_sha256": "92906764ded55d44901c1df08718173544663ec9a1302756aee55fbab9d2b29b",
++      "inventory_file": "experiments/natural-expansion/records/manifest.json",
++      "inventory_sha256": "ce2373b9ddc965b0864caea5a67109b3abc9b4e30db9fe973e2b8a85f74d2c25",
++      "verifier_file": "experiments/natural-expansion/verify.py",
++      "verifier_sha256": "cc6dcd8249133ac0a5ff4818ae4f7a36729ba1914b0b4f3dfe73437ca295fcfd",
++      "fields": {
++        "outcome": "PASS",
++        "selection_pairs": 20,
++        "targeted_definedness_pairs": 2,
++        "total_pairs": 22,
++        "distinct_problems": 21,
++        "source_versions": 44,
++        "requests": 44,
++        "statuses": {
++          "REFUTED": 22,
++          "ACCEPT": 22
++        },
++        "failure_obligations": {
++          "repair": 20,
++          "defined": 2
++        },
++        "full_direct_concrete_agreements": 44,
++        "identical_complete_records": 44,
++        "compact_confirmations": 22,
++        "source_input_observations": 16878,
++        "concrete_symbolic_agreements": 16878,
++        "undefined_source_input_observations": 257,
++        "given_test_occurrences_per_compiler": 2602,
++        "native_process_executions": 34474,
++        "ordinary_process_executions": 33960,
++        "defined_native_agreements": 33446,
++        "defined_native_disagreements": 0,
++        "ubsan_process_executions": 514,
++        "ubsan_confirmations": 514,
++        "all_given_tests_pass_both_compilers": 22,
++        "tests_pass_but_wrong": 0,
++        "pairs_with_undefined_reference_on_declared_domain": 0,
++        "computational_annotation_agreement": {
++          "compared": 16878,
++          "agreed": 16878,
++          "human_raters": 0,
++          "scope": "Independent concrete interpreter versus symbolic compiler; source grammar is shared. Native checks compare defined output observations; no native trace is claimed."
++        }
++      }
++    },
++    "introclass_certificates": {
++      "summary_file": "experiments/introclass-certificates/records/summary.json",
++      "summary_sha256": "1374cf43e2db0a53016240b2cf5c9ac0cfca523adfb08cebcf7cfe0421445b65",
++      "inventory_file": "experiments/introclass-certificates/records/manifest.json",
++      "inventory_sha256": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
++      "verifier_file": "experiments/introclass-certificates/verify.py",
++      "verifier_sha256": "2bab69f591fbb0aa85a55671a573f74b6039d63cdb93b702a959aab53e79a92d",
++      "fields": {
++        "outcome": "PASS",
++        "patches": 6,
++        "original_subjects": 5,
++        "families": 2,
++        "normalized_sources": 13,
++        "source_input_observations": 2249,
++        "native_process_executions": 8996,
++        "native_correspondence_agreements": 8996,
++        "native_correspondence_disagreements": 0,
++        "compilations": 52,
++        "complete_receiver_agreements": 6,
++        "compact_confirmations": 6,
++        "given_test_compiler_checks": 168,
++        "tests_pass_but_wrong": 6,
++        "reference_math_agreements": 396,
++        "human_annotators": 0
++      }
++    },
++    "independent_normalization_review": {
++      "summary_file": "experiments/introclass-certificates/independent-review.json",
++      "summary_sha256": "e6cc0e2d599295c093ec52a9d349b105e66f94cef7336314cf857d357521d1df",
++      "inventory_file": "experiments/introclass-certificates/records/manifest.json",
++      "inventory_sha256": "6f6637a7cedac123e9a5118c9a84438e00bc462ec307bf85b9407ed1861028fc",
++      "verifier_file": "experiments/introclass-certificates/independent_review.py",
++      "verifier_sha256": "f67083717087e983ca6b47c15098bc2199351e6c1ae587f6e1e23aa9059cc95e",
++      "fields": {
++        "status": "PASS_INDEPENDENT_NORMALIZATION_REVIEW",
++        "reviewed_patches": 6,
++        "reviewed_sources": 13,
++        "structural_correspondence_agreements": 13,
++        "independent_value_and_trace_agreements": 2249,
++        "independent_native_output_agreements": 8996,
++        "canonical_counterexample_agreements": 6,
++        "given_test_compiler_checks": 168,
++        "human_annotators": 0,
++        "human_agreement": null
++      }
++    },
++    "domain_scale": {
++      "summary_file": "experiments/natural-domains-review/summary.json",
++      "summary_sha256": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
++      "inventory_file": "experiments/natural-domains-review/summary.json",
++      "inventory_sha256": "1bb9f8422aa0b6bf301dad2666d1691548580c4011df962ba1edc162821e542a",
++      "verifier_file": "experiments/natural-domains-review/analyze_scale.py",
++      "verifier_sha256": "f7606990559bf81cdc6bfac19f6a6d4937e867c7f43b6693ab3a8742206cf515",
++      "fields": {
++        "outcome": "PASS",
++        "admission_point_cap": 4096,
++        "source_occurrences": 7806,
++        "distinct_source_sha256": 7425,
++        "known_arity_occurrences": 223,
++        "unknown_arity_occurrences": 7583,
++        "known_arity_distribution": {
++          "1": 69,
++          "2": 28,
++          "3": 69,
++          "4": 20,
++          "5": 14,
++          "6": 12,
++          "7": 7,
++          "8": 4
++        },
++        "eight_values_per_coordinate_exceeding_cap_occurrences": 37,
++        "complete_io_subjects": 100,
++        "all_defined_subjects": 95,
++        "cartesian_projection_product_above_cap": 50,
++        "all_defined_cartesian_projection_product_above_cap": 46,
++        "cartesian_projection_product_bins": {
++          "1-64": 30,
++          "4097-1000000": 38,
++          "65-4096": 20,
++          "above-1000000": 12
++        },
++        "all_defined_cartesian_projection_product_bins": {
++          "1-64": 29,
++          "4097-1000000": 35,
++          "65-4096": 20,
++          "above-1000000": 11
++        },
++        "minimum_retained_point_set_size": 13,
++        "maximum_retained_point_set_size": 172,
++        "maximum_cartesian_projection_product": 50056151040
++      }
++    },
++    "fresh_census": {
++      "summary_file": "experiments/natural-domains-review/fresh-census/recollection.json",
++      "summary_sha256": "6173668338932424c65511b4fd61016077310b64ef28050149a1b28c451f14d8",
++      "inventory_file": "experiments/natural-domains-review/fresh-census/manifest.json",
++      "inventory_sha256": "c860233967da6835a2d230c6d8e39c412f62fb6aa0acd80e1f347b5f766f4244",
++      "verifier_file": "experiments/natural-domains-review/recollect_census.py",
++      "verifier_sha256": "f5cdb35819f591f7b3038ac5e305fe3bb1f41b64cb89fc16b0317919cf6889dc",
++      "fields": {
++        "status": "PASS",
++        "archive_sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
++        "archive_bytes": 265695532,
++        "comparisons": [
++          {
++            "file": "archive-provenance.json",
++            "json_equal": true,
++            "fresh_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3",
++            "retained_sha256": "7618151efe5a853a9e75b4397616556056b1da6af361eae7d7e67a5c82734cb3"
++          },
++          {
++            "file": "source-admission.json",
++            "json_equal": true,
++            "fresh_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344",
++            "retained_sha256": "fd0a6885bb53f88102fca85446049d9acdf3072b9cfad5f529b830bbb55aa344"
++          },
++          {
++            "file": "test-admission.json",
++            "json_equal": true,
++            "fresh_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433",
++            "retained_sha256": "f0528cf24181f79dc3644c15c8356f56397a89ba0a1f4d1321caa09889d81433"
++          },
++          {
++            "file": "normalized-corpus.json",
++            "json_equal": true,
++            "fresh_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa",
++            "retained_sha256": "b96d9bc7c172665b45d72e5c26ebd01ee99a486a7ab4ff5fc59f99d63ca673aa"
++          },
++          {
++            "file": "concrete-observations.json",
++            "json_equal": true,
++            "fresh_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e",
++            "retained_sha256": "7183246d0e2dc265d529e0b804bd46ac4984f325af704a37f95af17d9abe572e"
++          },
++          {
++            "file": "staged-requests.json",
++            "json_equal": true,
++            "fresh_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64",
++            "retained_sha256": "bf6632a34c067494ea712e20a3464756b7a27df09325506749ab4d10dc637d64"
++          }
++        ],
++        "indexed_subjects": 3903,
++        "indexed_source_occurrences": 7806,
++        "syntactically_admitted_source_occurrences": 223,
++        "compatible_syntactic_pairs": 101,
++        "complete_io_subjects": 100,
++        "all_defined_subjects": 95,
++        "fresh_native_executions": 0
++      }
++    }
+   }
+ }
+--- original/artifact/external_resources.csv
++++ updated/artifact/external_resources.csv
+@@ -10,3 +10,4 @@
+ Times New Roman and STIX,consistent figure typography,system font configuration (Times New Roman installed as a user or system font e.g. Debian contrib ttf-mscorefonts-installer; STIX bundled with Matplotlib),The current figure generators use an installed Times New Roman face with STIX mathematics (the delivered figures embed Times New Roman and STIX subsets) and fall back to Liberation Serif / DejaVu Serif,Typesetting only; generated vector PDFs embed the face used by the evaluator environment,Font binaries are not redistributed; the Linux Libertine OFL notice remains for provenance of earlier builds
+ ACM acmart and bibliography style,manuscript typesetting,../paper/acmart.cls,The paper directory contains the supplied class bibliography style and acmart-LICENSE.txt,Typesetting only; these assets are not part of the receiving implementation,Keep the supplied publication-template license
+ Research literature and upstream reports,problem motivation and claim-level comparison,../paper/references.bib,Bibliographic metadata primary URLs inspected loci and supported manuscript claims are recorded in paper/reference-evidence.json,The bibliography distinguishes cited research from tools actually executed in the artifact,Paper text and third-party figures are not redistributed as external resources
++Angelix and IntroClass published repairs,real published patch taxonomy and certificate cases,https://doi.org/10.5281/zenodo.1012686 ; https://github.com/ProgramRepair/IntroClass,Selected published diffs and exact applied sources with original member paths and hashes; all published tests for the two families,127 selected candidates actually executed; six exploratory patches additionally received by the full/direct/compact implementations,Zenodo metadata CC BY 4.0; original IntroClass BSD 3-Clause notice retained in experiments/real-patches/source-audit; full archives not bundled
+--- original/artifact/tests/reproduce_all.py
++++ updated/artifact/tests/reproduce_all.py
+@@ -15,6 +15,13 @@
+ from reproduce_all_core import compare_exact
+ from verify_natural_domain_evidence import verify as verify_native_evidence
+ 
++# The review update adds exactly this module. The historical unsigned contract
++# campaign does not import it. Bind its bytes as well as its name; this is not
++# a wildcard exception for later source additions or altered historical code.
++REVIEW_SOURCE_ADDITIONS = {
++    'src/int32_refutation.py': 'f5eb16eea7f3e337524d33c67a2faecf154ba694b5cf23d42ef1dd773a51a133',
++}
++
+ 
+ def source_bindings(root):
+     """Bind the complete local Python implementation and driver inventory."""
+@@ -35,7 +42,8 @@
+     """Reconcile bounded source-inventory and receiver-identity transitions.
+ 
+     The unchanged study driver binds every top-level source module, including
+-    three round-3 modules that it does not import. Domain-transport receipts
++    three round-3 modules and the one hash-pinned review-update module that it
++    does not import. Domain-transport receipts
+     also bind the Python implementation and version, so an otherwise identical
+     fresh run has a new receiver identity. Validate both transitions explicitly
+     before comparing every scientific field. This is not permission for
+@@ -44,7 +52,7 @@
+     record_names = ('protocol.json', 'corpus-bindings.json', 'decisions.json', 'transport.json')
+     permitted_additions = {
+         'src/codeflaws_int32_bridge.py', 'src/demand_evaluator.py', 'src/int32_circuit.py',
+-    }
++    } | set(REVIEW_SOURCE_ADDITIONS)
+     documents = {}
+     actual_records = {}
+     for side, directory in (('retained', retained), ('current', current)):
+@@ -74,7 +82,10 @@
+         compare_exact(digest, current_inventory[name], 'contract comparison unchanged historical source ' + name)
+     additions = set(current_inventory) - set(historical_bindings)
+     compare_exact(sorted(permitted_additions), sorted(additions),
+-                  'contract comparison declared round-3 source additions')
++                  'contract comparison declared round-3 and review source additions')
++    for name, digest in REVIEW_SOURCE_ADDITIONS.items():
++        compare_exact(digest, current_inventory[name],
++                      'contract comparison exact review source addition ' + name)
+ 
+     compare_exact(
+         {key: value for key, value in documents['retained']['protocol.json'].items() if key != 'source_bindings'},
+--- original/artifact/verify_expected_results.py
++++ updated/artifact/verify_expected_results.py
+@@ -10,6 +10,7 @@
+ 
+ import argparse
+ import hashlib
++import importlib.util
+ import json
+ import math
+ from pathlib import Path
+@@ -48,9 +49,16 @@
+ 
+ 
+ def equal(actual: Any, expected: Any) -> bool:
+-    if isinstance(expected, float):
+-        return isinstance(actual, (int, float)) and math.isclose(
++    if type(expected) is float:
++        return type(actual) in (int, float) and math.isclose(
+             float(actual), expected, rel_tol=1e-12, abs_tol=1e-12)
++    if type(actual) is not type(expected):
++        return False
++    if type(expected) is dict:
++        return (actual.keys() == expected.keys()
++                and all(equal(actual[key], value) for key, value in expected.items()))
++    if type(expected) is list:
++        return len(actual) == len(expected) and all(equal(a, e) for a, e in zip(actual, expected))
+     return actual == expected
+ 
+ 
+@@ -233,6 +241,43 @@
+                         key, "fresh-current-execution")
+ 
+ 
++def verify_update(expected: dict[str, Any], audit: Audit) -> None:
++    """Anchor new inventories, then compare independently recomputed fields."""
++    specification = expected["review_update"]
++    module_path = ARTIFACT / "verify_update_results.py"
++    audit.check("update:driver-hash", sha256(module_path), expected["review_update_driver_sha256"],
++                EXPECTED_PATH, "review_update_driver_sha256", "new-experiment-content-binding")
++    module_spec = importlib.util.spec_from_file_location("repairseal_update_expected_contract", module_path)
++    module = importlib.util.module_from_spec(module_spec)
++    module_spec.loader.exec_module(module)
++    audit.check("update:study-coverage", sorted(specification), sorted(module.STUDIES),
++                EXPECTED_PATH, "review_update.keys", "new-experiment-coverage")
++    for name, entry in specification.items():
++        summary_path = ARTIFACT / entry["summary_file"]
++        for label, path_key, hash_key in (("summary", "summary_file", "summary_sha256"),
++                                        ("inventory", "inventory_file", "inventory_sha256"),
++                                        ("verifier", "verifier_file", "verifier_sha256")):
++            path = ARTIFACT / entry[path_key]
++            audit.check(f"update:{name}:{label}-hash", sha256(path) if path.is_file() else None,
++                        entry[hash_key], EXPECTED_PATH, f"review_update.{name}.{hash_key}",
++                        "new-experiment-content-binding")
++        try:
++            result = module.recompute_study(name, ARTIFACT)
++        except (AssertionError, ValueError, TypeError, KeyError, IndexError, OSError) as exc:
++            result = {"status": "FAIL", "errors": [str(exc)], "recomputed": None}
++        audit.check(f"update:{name}:offline-replay", result["status"], "PASS", summary_path,
++                    "independent-offline-reduction.status", "new-record-recomputation")
++        audit.check(f"update:{name}:offline-errors", result["errors"], [], summary_path,
++                    "independent-offline-reduction.errors", "new-record-recomputation")
++        for field, wanted in entry["fields"].items():
++            try:
++                actual = get(result["recomputed"], field)
++            except (KeyError, TypeError, IndexError):
++                actual = None
++            audit.check(f"update:{name}:{field}", actual, wanted, summary_path, field,
++                        "new-record-recomputation")
++
++
+ def parser() -> argparse.ArgumentParser:
+     result = argparse.ArgumentParser(description=__doc__)
+     result.add_argument("--output", type=Path,
+@@ -248,6 +293,7 @@
+     expected = load(EXPECTED_PATH)
+     audit = Audit()
+     verify_packaged(expected, audit)
++    verify_update(expected, audit)
+     verify_fresh(args, expected, audit)
+     failures = audit.failures
+     result = {

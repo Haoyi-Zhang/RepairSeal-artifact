@@ -1,0 +1,47 @@
+{
+  "upstream_changes": 1,
+  "selected_macro_definitions": 2,
+  "inputs": 42,
+  "repair_inputs": 12,
+  "preserved_inputs": 30,
+  "status": "ACCEPT",
+  "canonical_witness": null,
+  "cells_per_full_or_direct_arm": 1680,
+  "lowered_models_match_mathematical_reference": true,
+  "upstream_source_retrieval": null,
+  "native_harness_executed": true,
+  "native_input_rows": 84,
+  "native_scalar_observations": 336,
+  "compilers": [
+    {
+      "id": "gcc",
+      "executable": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "version_first_line": "gcc (Debian 14.2.0-19) 14.2.0",
+      "flags": [
+        "-std=c11",
+        "-O2"
+      ],
+      "compile_returncode": 0,
+      "run_returncode": 0
+    },
+    {
+      "id": "clang",
+      "executable": "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "version_first_line": "Debian clang version 19.1.7 (3+b1)",
+      "flags": [
+        "-std=c11",
+        "-O2"
+      ],
+      "compile_returncode": 0,
+      "run_returncode": 0
+    }
+  ],
+  "upstream_application_executed": false,
+  "bridge_scope": "Selected pure unsigned expression lowering only; no preprocessing/callsite/type inference or general C admission",
+  "diagnostic_scope": "Traces belong to the generated scalar normalization, not native macro events",
+  "source_bindings": {
+    "src/macro_bridge.py": "90cdc3fc5394dcd911c912abff9dbc6f19d955ec98b15f925754c204126a8b83",
+    "tests/macro_transfer_study.py": "c20d817b6eb9e73110c052034842d3da659b7404f7feaa2bb3c2bf64f51575cd",
+    "public-data/ceil-div-source.json": "10c4adf3d5948fae9589cc48c9c2eff95fc86c223f7a210f5a40d5c5f245f357"
+  }
+}

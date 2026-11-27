@@ -1,0 +1,13 @@
+--- a/median.c
++++ b/median.c
+@@ -18,8 +18,8 @@
+ 		m = c;
+ 	else {
+ 		if ((a>=b && a<=c) || (a>=c && a<=b))
+-			m = b;
+-		else if ((b>=a && b<=c) || (b>=c && b<=a))
++			m = a;
++		else if ((b <= b))
+ 			m = b;
+ 		else if ((c>=a && c<=b) || (c>=b && c<=a))
+ 			m = c;

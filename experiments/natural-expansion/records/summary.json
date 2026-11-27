@@ -1,0 +1,1540 @@
+{
+  "schema": "repairseal-natural-expansion-summary-v1",
+  "outcome": "PASS",
+  "selection_pairs": 20,
+  "targeted_definedness_pairs": 2,
+  "total_pairs": 22,
+  "distinct_problems": 21,
+  "source_versions": 44,
+  "requests": 44,
+  "statuses": {
+    "REFUTED": 22,
+    "ACCEPT": 22
+  },
+  "failure_obligations": {
+    "repair": 20,
+    "defined": 2
+  },
+  "full_direct_concrete_agreements": 44,
+  "identical_complete_records": 44,
+  "compact_confirmations": 22,
+  "source_input_observations": 16878,
+  "concrete_symbolic_agreements": 16878,
+  "undefined_source_input_observations": 257,
+  "given_test_occurrences_per_compiler": 2602,
+  "native_process_executions": 34474,
+  "ordinary_process_executions": 33960,
+  "defined_native_agreements": 33446,
+  "defined_native_disagreements": 0,
+  "ubsan_process_executions": 514,
+  "ubsan_confirmations": 514,
+  "all_given_tests_pass_both_compilers": 22,
+  "tests_pass_but_wrong": 0,
+  "pairs_with_undefined_reference_on_declared_domain": 0,
+  "computational_annotation_agreement": {
+    "compared": 16878,
+    "agreed": 16878,
+    "human_raters": 0,
+    "scope": "Independent concrete interpreter versus symbolic compiler; source grammar is shared. Native checks compare defined output observations; no native trace is claimed."
+  },
+  "cases": [
+    {
+      "subject": "104-A-bug-7900405-7900409",
+      "problem": "104-A",
+      "candidate_role": "original",
+      "candidate_sha256": "252abd8028ec295e40d0d28dc98e7656914133d59f692ce5af53370b1bb07c8f",
+      "domain_points": 25,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "input": [
+          21
+        ]
+      },
+      "given_test_occurrences": 48,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 1,
+          "heldout_pass": 24,
+          "repair_fail": 1,
+          "repair_pass": 22
+        },
+        "clang": {
+          "heldout_fail": 1,
+          "heldout_pass": 24,
+          "repair_fail": 1,
+          "repair_pass": 22
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "104-A-bug-7900405-7900409",
+      "problem": "104-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "f6ba3fec949d02c445b85b9e10e611e29a175aee064e81775ff9fdd8f74c53a7",
+      "domain_points": 25,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 48,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 25,
+          "repair_pass": 23
+        },
+        "clang": {
+          "heldout_pass": 25,
+          "repair_pass": 23
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "122-A-bug-18015599-18015631",
+      "problem": "122-A",
+      "candidate_role": "original",
+      "candidate_sha256": "d5aa3de36743ceebcce06f7ed78f95e7df5895c4ddb5ce820a63158976ccca98",
+      "domain_points": 1000,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ]
+        ],
+        "input": [
+          477
+        ]
+      },
+      "given_test_occurrences": 44,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 2,
+          "heldout_pass": 34,
+          "repair_fail": 1,
+          "repair_pass": 7
+        },
+        "clang": {
+          "heldout_fail": 2,
+          "heldout_pass": 34,
+          "repair_fail": 1,
+          "repair_pass": 7
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "122-A-bug-18015599-18015631",
+      "problem": "122-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "5288bb69eb3279fbc3d0ae5ea4f4448a1a2bdc46f580c53283216400a934d5bc",
+      "domain_points": 1000,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 44,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 36,
+          "repair_pass": 8
+        },
+        "clang": {
+          "heldout_pass": 36,
+          "repair_pass": 8
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "171-B-bug-1458594-1458980",
+      "problem": "171-B",
+      "candidate_role": "original",
+      "candidate_sha256": "767eb1b033e07fba0d29f1570ab21bea933c915740087dec4a96c9e4e4a5b8f4",
+      "domain_points": 102,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          2
+        ]
+      },
+      "given_test_occurrences": 41,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 38,
+          "heldout_pass": 1,
+          "repair_fail": 2
+        },
+        "clang": {
+          "heldout_fail": 38,
+          "heldout_pass": 1,
+          "repair_fail": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "171-B-bug-1458594-1458980",
+      "problem": "171-B",
+      "candidate_role": "reference",
+      "candidate_sha256": "53c78fbed13fc0050d0bc9074894b877a1381174d19e0e1fd1d56f40f84924c7",
+      "domain_points": 102,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 41,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 39,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_pass": 39,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "313-A-bug-16465019-16465065",
+      "problem": "313-A",
+      "candidate_role": "original",
+      "candidate_sha256": "87c7bb3b3b2cfb603c69061f209b216156587087c6dbdd8c4012d394f9caaa25",
+      "domain_points": 1134,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input": [
+          -623563697
+        ]
+      },
+      "given_test_occurrences": 54,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 10,
+          "heldout_pass": 37,
+          "repair_fail": 1,
+          "repair_pass": 6
+        },
+        "clang": {
+          "heldout_fail": 10,
+          "heldout_pass": 37,
+          "repair_fail": 1,
+          "repair_pass": 6
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "313-A-bug-16465019-16465065",
+      "problem": "313-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "8136f48738cf79b731f40d975d340f493064ba9ae4c62892d770b73c3c8cf134",
+      "domain_points": 1134,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 54,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 47,
+          "repair_pass": 7
+        },
+        "clang": {
+          "heldout_pass": 47,
+          "repair_pass": 7
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "617-A-bug-17713160-17713171",
+      "problem": "617-A",
+      "candidate_role": "original",
+      "candidate_sha256": "4afabed47f16ef0c129e96f4e392278c31cff8a59780b61f27a4670734f0fca7",
+      "domain_points": 152,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ]
+        ],
+        "input": [
+          1
+        ]
+      },
+      "given_test_occurrences": 36,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 20,
+          "heldout_pass": 13,
+          "repair_fail": 1,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_fail": 20,
+          "heldout_pass": 13,
+          "repair_fail": 1,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "617-A-bug-17713160-17713171",
+      "problem": "617-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "c264bc776401468952f6f9821cfb24e5396c02046f532701bace65e017ae2463",
+      "domain_points": 152,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 36,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 33,
+          "repair_pass": 3
+        },
+        "clang": {
+          "heldout_pass": 33,
+          "repair_pass": 3
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "672-A-bug-18054472-18054639",
+      "problem": "672-A",
+      "candidate_role": "original",
+      "candidate_sha256": "1f1d586cf83699e3997dfefef4ef3b31a13c67e4a1b09850ba63144fa7a3dd28",
+      "domain_points": 1000,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "input": [
+          215
+        ]
+      },
+      "given_test_occurrences": 67,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 3,
+          "heldout_pass": 34,
+          "repair_fail": 1,
+          "repair_pass": 29
+        },
+        "clang": {
+          "heldout_fail": 3,
+          "heldout_pass": 34,
+          "repair_fail": 1,
+          "repair_pass": 29
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "672-A-bug-18054472-18054639",
+      "problem": "672-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "027be8f5fbd26161267c8518824ba991b99ac74f969f2a92d7dbd1d1018d499b",
+      "domain_points": 1000,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 67,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 37,
+          "repair_pass": 30
+        },
+        "clang": {
+          "heldout_pass": 37,
+          "repair_pass": 30
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "194-A-bug-7939649-7939655",
+      "problem": "194-A",
+      "candidate_role": "original",
+      "candidate_sha256": "8e1b7b5410bb84ccdca4088496d34dfd7ea7f76845317a0e4738aa380e496d9c",
+      "domain_points": 69,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          1,
+          4
+        ]
+      },
+      "given_test_occurrences": 44,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 18,
+          "heldout_pass": 20,
+          "repair_fail": 1,
+          "repair_pass": 5
+        },
+        "clang": {
+          "heldout_fail": 18,
+          "heldout_pass": 20,
+          "repair_fail": 1,
+          "repair_pass": 5
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "194-A-bug-7939649-7939655",
+      "problem": "194-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "a97ab7bbf2799e7bca82129594723dc8d69d354c7f9f56cbcfb72f69f1bd371a",
+      "domain_points": 69,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 44,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 38,
+          "repair_pass": 6
+        },
+        "clang": {
+          "heldout_pass": 38,
+          "repair_pass": 6
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "451-A-bug-17925132-17925142",
+      "problem": "451-A",
+      "candidate_role": "original",
+      "candidate_sha256": "9b149c103297d937fd57c2fa32e46e1b632f72be8c685ca39b8ea1312b5046e4",
+      "domain_points": 77,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "input": [
+          2,
+          3
+        ]
+      },
+      "given_test_occurrences": 32,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 6,
+          "heldout_pass": 22,
+          "repair_fail": 2,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_fail": 6,
+          "heldout_pass": 22,
+          "repair_fail": 2,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "451-A-bug-17925132-17925142",
+      "problem": "451-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "7736d33e0eb7fa78626d829ccfae999cba6a6945502d63e72d5ef539ee620fa2",
+      "domain_points": 77,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 32,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 28,
+          "repair_pass": 4
+        },
+        "clang": {
+          "heldout_pass": 28,
+          "repair_pass": 4
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "476-A-bug-16348364-16348536",
+      "problem": "476-A",
+      "candidate_role": "original",
+      "candidate_sha256": "c688e0b3e0ba585d4414ec15d4298bf1ffccfbcddc67e1993227d45a61d12845",
+      "domain_points": 333,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "input": [
+          3,
+          2
+        ]
+      },
+      "given_test_occurrences": 42,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 19,
+          "heldout_pass": 16,
+          "repair_fail": 1,
+          "repair_pass": 6
+        },
+        "clang": {
+          "heldout_fail": 19,
+          "heldout_pass": 16,
+          "repair_fail": 1,
+          "repair_pass": 6
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "476-A-bug-16348364-16348536",
+      "problem": "476-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "3bd7469457946e1d1fd54785e17237ea209b07995f870bc82f51be7a08bc463e",
+      "domain_points": 333,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 42,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 35,
+          "repair_pass": 7
+        },
+        "clang": {
+          "heldout_pass": 35,
+          "repair_pass": 7
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "570-B-bug-13182087-13182283",
+      "problem": "570-B",
+      "candidate_role": "original",
+      "candidate_sha256": "91e460ee0995dd4539d1d08e55172b7a8b7f3557a59b2503aa6acf85bd9e4e47",
+      "domain_points": 100,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ]
+        ],
+        "input": [
+          1,
+          1
+        ]
+      },
+      "given_test_occurrences": 77,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 2,
+          "heldout_pass": 58,
+          "repair_fail": 1,
+          "repair_pass": 16
+        },
+        "clang": {
+          "heldout_fail": 2,
+          "heldout_pass": 58,
+          "repair_fail": 1,
+          "repair_pass": 16
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "570-B-bug-13182087-13182283",
+      "problem": "570-B",
+      "candidate_role": "reference",
+      "candidate_sha256": "2b6c48dcf94e623d562fadc479e66f35b24dbe81bbc2f9e25ba7c5fccf0b7a4b",
+      "domain_points": 100,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 77,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 60,
+          "repair_pass": 17
+        },
+        "clang": {
+          "heldout_pass": 60,
+          "repair_pass": 17
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "638-A-bug-16913566-16913587",
+      "problem": "638-A",
+      "candidate_role": "original",
+      "candidate_sha256": "efb5782e6d8d10d37661680118844275806ce10fc4357775a2108d083425599b",
+      "domain_points": 100,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ]
+        ],
+        "input": [
+          4,
+          4
+        ]
+      },
+      "given_test_occurrences": 75,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 33,
+          "heldout_pass": 36,
+          "repair_fail": 1,
+          "repair_pass": 5
+        },
+        "clang": {
+          "heldout_fail": 33,
+          "heldout_pass": 36,
+          "repair_fail": 1,
+          "repair_pass": 5
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "638-A-bug-16913566-16913587",
+      "problem": "638-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "b5029998455173a34c31082c5e6874d38540e778f57583156ecc55611593d321",
+      "domain_points": 100,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 75,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 69,
+          "repair_pass": 6
+        },
+        "clang": {
+          "heldout_pass": 69,
+          "repair_pass": 6
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "90-A-bug-3761963-3761989",
+      "problem": "90-A",
+      "candidate_role": "original",
+      "candidate_sha256": "f7de04fca2bf2ae33bd784a032ca60a934bb9c97567e5155cb5e924b2e155863",
+      "domain_points": 530,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          1,
+          1,
+          0
+        ]
+      },
+      "given_test_occurrences": 62,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 6,
+          "heldout_pass": 49,
+          "repair_fail": 1,
+          "repair_pass": 6
+        },
+        "clang": {
+          "heldout_fail": 6,
+          "heldout_pass": 49,
+          "repair_fail": 1,
+          "repair_pass": 6
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "90-A-bug-3761963-3761989",
+      "problem": "90-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "cf5e25a88fe08dfc35ccabc392a979678b9d42eb15825fb751911741b134f055",
+      "domain_points": 530,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 62,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 55,
+          "repair_pass": 7
+        },
+        "clang": {
+          "heldout_pass": 55,
+          "repair_pass": 7
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "112-B-bug-668250-668255",
+      "problem": "112-B",
+      "candidate_role": "original",
+      "candidate_sha256": "b425448a4e508439c847efe3d9030c20c260d67479d440a35d2dd23d4717a11f",
+      "domain_points": 212,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            1
+          ]
+        ],
+        "input": [
+          4,
+          1,
+          3
+        ]
+      },
+      "given_test_occurrences": 36,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 1,
+          "heldout_pass": 32,
+          "repair_fail": 1,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_fail": 1,
+          "heldout_pass": 32,
+          "repair_fail": 1,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "112-B-bug-668250-668255",
+      "problem": "112-B",
+      "candidate_role": "reference",
+      "candidate_sha256": "f9ec5c878ee9f668c16a58c9af0d5ba87ede85233b9cee3598a90615517226d8",
+      "domain_points": 212,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 36,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 33,
+          "repair_pass": 3
+        },
+        "clang": {
+          "heldout_pass": 33,
+          "repair_pass": 3
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "124-A-bug-17380518-17380581",
+      "problem": "124-A",
+      "candidate_role": "original",
+      "candidate_sha256": "1a4e6ece9906740c0e8af47e735e9d591bb596400a784242377796d42f1c93ac",
+      "domain_points": 178,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          2,
+          0,
+          0
+        ]
+      },
+      "given_test_occurrences": 55,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 15,
+          "heldout_pass": 35,
+          "repair_fail": 1,
+          "repair_pass": 4
+        },
+        "clang": {
+          "heldout_fail": 15,
+          "heldout_pass": 35,
+          "repair_fail": 1,
+          "repair_pass": 4
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "124-A-bug-17380518-17380581",
+      "problem": "124-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "9a63befef21eaa8110318684d52256c39253dff298f5c235c6d600683778951a",
+      "domain_points": 178,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 55,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 50,
+          "repair_pass": 5
+        },
+        "clang": {
+          "heldout_pass": 50,
+          "repair_pass": 5
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "168-A-bug-13795832-13795874",
+      "problem": "168-A",
+      "candidate_role": "original",
+      "candidate_sha256": "bb2ba34c04e0dc8e15fac47884200b013e0fc56cea824b89e54462531f020c9b",
+      "domain_points": 360,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ]
+        ],
+        "input": [
+          2,
+          2,
+          50
+        ]
+      },
+      "given_test_occurrences": 47,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 12,
+          "heldout_pass": 31,
+          "repair_fail": 1,
+          "repair_pass": 3
+        },
+        "clang": {
+          "heldout_fail": 12,
+          "heldout_pass": 31,
+          "repair_fail": 1,
+          "repair_pass": 3
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "168-A-bug-13795832-13795874",
+      "problem": "168-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "852f2827ee0a23a0f05486e6e3b0834fb99f15b56ec0543d166d15ac7d4a3c5f",
+      "domain_points": 360,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 47,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 43,
+          "repair_pass": 4
+        },
+        "clang": {
+          "heldout_pass": 43,
+          "repair_pass": 4
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "197-A-bug-4169281-4169297",
+      "problem": "197-A",
+      "candidate_role": "original",
+      "candidate_sha256": "27c42294a3509338729b45b3e0247e8e1fda064ede4e4470c7f22b713be0cdf6",
+      "domain_points": 591,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "input": [
+          2,
+          2,
+          1
+        ]
+      },
+      "given_test_occurrences": 105,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 8,
+          "heldout_pass": 87,
+          "repair_fail": 1,
+          "repair_pass": 9
+        },
+        "clang": {
+          "heldout_fail": 8,
+          "heldout_pass": 87,
+          "repair_fail": 1,
+          "repair_pass": 9
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "197-A-bug-4169281-4169297",
+      "problem": "197-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "409146fb9f8c5f4be16a7575caf30aa0a5193d8dde62a48d96d263a847f2b261",
+      "domain_points": 591,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 105,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 95,
+          "repair_pass": 10
+        },
+        "clang": {
+          "heldout_pass": 95,
+          "repair_pass": 10
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "216-A-bug-5868432-5868621",
+      "problem": "216-A",
+      "candidate_role": "original",
+      "candidate_sha256": "a2ccd88bfec472d629588e877f2a1cedda23b0a8ecb87d235499683fe0f2a947",
+      "domain_points": 537,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          3,
+          2,
+          2
+        ]
+      },
+      "given_test_occurrences": 43,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 30,
+          "heldout_pass": 10,
+          "repair_fail": 1,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_fail": 30,
+          "heldout_pass": 10,
+          "repair_fail": 1,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "216-A-bug-5868432-5868621",
+      "problem": "216-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "61d14a9de5634b3b59fc23fdb165f77d8b6bfe214628ea01157e21c658dea457",
+      "domain_points": 537,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 43,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 40,
+          "repair_pass": 3
+        },
+        "clang": {
+          "heldout_pass": 40,
+          "repair_pass": 3
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "515-A-bug-16913836-16913854",
+      "problem": "515-A",
+      "candidate_role": "original",
+      "candidate_sha256": "a5714508592a47fac13e7091444ab6b6812fea876cd9e737b39dc3e7c4664dc0",
+      "domain_points": 516,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "input": [
+          -1000000000,
+          -999999999,
+          1
+        ]
+      },
+      "given_test_occurrences": 55,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 4,
+          "heldout_pass": 36,
+          "repair_fail": 1,
+          "repair_pass": 14
+        },
+        "clang": {
+          "heldout_fail": 4,
+          "heldout_pass": 36,
+          "repair_fail": 1,
+          "repair_pass": 14
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "515-A-bug-16913836-16913854",
+      "problem": "515-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "3b889c0f13dbffd2eed8d0094c7be58a12995da54f385dae3f7558ca57631d36",
+      "domain_points": 516,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 55,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 40,
+          "repair_pass": 15
+        },
+        "clang": {
+          "heldout_pass": 40,
+          "repair_pass": 15
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "546-A-bug-18027083-18027120",
+      "problem": "546-A",
+      "candidate_role": "original",
+      "candidate_sha256": "bf3044a43c6a19ab055f31a45d8c38b324c3a42402e89d912832c019f6f12191",
+      "domain_points": 298,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [],
+        "input": [
+          1,
+          2,
+          1
+        ]
+      },
+      "given_test_occurrences": 17,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 5,
+          "heldout_pass": 10,
+          "repair_fail": 1,
+          "repair_pass": 1
+        },
+        "clang": {
+          "heldout_fail": 5,
+          "heldout_pass": 10,
+          "repair_fail": 1,
+          "repair_pass": 1
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "546-A-bug-18027083-18027120",
+      "problem": "546-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "de0ccd8aa1f18931a6338e72988a2e3eee6a10339bee5a9513747fad347de3ef",
+      "domain_points": 298,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 17,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 15,
+          "repair_pass": 2
+        },
+        "clang": {
+          "heldout_pass": 15,
+          "repair_pass": 2
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "659-A-bug-18007364-18007390",
+      "problem": "659-A",
+      "candidate_role": "original",
+      "candidate_sha256": "208513df1ec7c00e6372da5e23326a3e1f7a7ce51edca5da75aa5ea93cf03473",
+      "domain_points": 256,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "repair",
+        "trace": [
+          [
+            0,
+            1
+          ]
+        ],
+        "input": [
+          2,
+          2,
+          1
+        ]
+      },
+      "given_test_occurrences": 79,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 15,
+          "heldout_pass": 35,
+          "repair_fail": 1,
+          "repair_pass": 28
+        },
+        "clang": {
+          "heldout_fail": 15,
+          "heldout_pass": 35,
+          "repair_fail": 1,
+          "repair_pass": 28
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "659-A-bug-18007364-18007390",
+      "problem": "659-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "7f6361d8623272c1f6f6749977e01ffdcdea04161ebfbb10c3706600ebd94e0f",
+      "domain_points": 256,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 79,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 50,
+          "repair_pass": 29
+        },
+        "clang": {
+          "heldout_pass": 50,
+          "repair_pass": 29
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "171-B-bug-1463121-1463124",
+      "problem": "171-B",
+      "candidate_role": "original",
+      "candidate_sha256": "c3817fb0082e5265653e80f20352dc91494a92d626bdf78238f3c878927e52ba",
+      "domain_points": 102,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "defined",
+        "trace": [],
+        "input": [
+          14999
+        ]
+      },
+      "given_test_occurrences": 49,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 12,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 8,
+          "heldout_pass": 31,
+          "repair_fail": 1,
+          "repair_pass": 9
+        },
+        "clang": {
+          "heldout_fail": 8,
+          "heldout_pass": 31,
+          "repair_fail": 1,
+          "repair_pass": 9
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "171-B-bug-1463121-1463124",
+      "problem": "171-B",
+      "candidate_role": "reference",
+      "candidate_sha256": "10eb7e122219982e56cefc5319254b0eca1b49095fafcff432b8c12827653c34",
+      "domain_points": 102,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 49,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 39,
+          "repair_pass": 10
+        },
+        "clang": {
+          "heldout_pass": 39,
+          "repair_pass": 10
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "675-A-bug-18264119-18264212",
+      "problem": "675-A",
+      "candidate_role": "original",
+      "candidate_sha256": "9e822be55b6c81815bbdb1b87ada80ae721c0664c724a880f156c45b042fec1b",
+      "domain_points": 767,
+      "status": "REFUTED",
+      "witness": {
+        "obligation": "defined",
+        "trace": [],
+        "input": [
+          -1000000000,
+          -2,
+          -1000000000
+        ]
+      },
+      "given_test_occurrences": 193,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 245,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_fail": 4,
+          "heldout_pass": 174,
+          "repair_fail": 1,
+          "repair_pass": 14
+        },
+        "clang": {
+          "heldout_fail": 4,
+          "heldout_pass": 174,
+          "repair_fail": 1,
+          "repair_pass": 14
+        }
+      },
+      "all_given_tests_pass_both_compilers": false,
+      "tests_pass_but_wrong": false
+    },
+    {
+      "subject": "675-A-bug-18264119-18264212",
+      "problem": "675-A",
+      "candidate_role": "reference",
+      "candidate_sha256": "4e1237056531edf5e7fd1eeb9f9fc5ca3e428bb414d66a96d350b0ce6a0522e6",
+      "domain_points": 767,
+      "status": "ACCEPT",
+      "witness": null,
+      "given_test_occurrences": 193,
+      "reference_defined_on_declared_domain": true,
+      "reference_undefined_points": 0,
+      "reference_first_undefined_input": null,
+      "candidate_undefined_points": 0,
+      "ordinary_tests": {
+        "gcc": {
+          "heldout_pass": 178,
+          "repair_pass": 15
+        },
+        "clang": {
+          "heldout_pass": 178,
+          "repair_pass": 15
+        }
+      },
+      "all_given_tests_pass_both_compilers": true,
+      "tests_pass_but_wrong": false
+    }
+  ],
+  "scope": "Finite-domain exact-source observations. No automatic-repair-tool provenance is claimed for Codeflaws submissions. Native UB executions are observations of particular compilers, never a defined C value. All provided repair and held-out tests are included. No inference beyond declared points or to independent benchmark samples."
+}

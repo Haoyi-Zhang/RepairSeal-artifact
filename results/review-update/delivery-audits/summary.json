@@ -1,0 +1,28 @@
+{
+  "schema": "repairseal-final-delivery-audits-v1",
+  "status": "PASS",
+  "data_integrity": {
+    "returncode": 0,
+    "errors": [],
+    "receipt": "data-integrity.json",
+    "scope": "Final project after both validation attempts were collected; this audit output was archived afterwards."
+  },
+  "original_preservation": {
+    "returncode": 0,
+    "files_checked": 63615,
+    "errors": [],
+    "receipt": "original-preservation.json"
+  },
+  "delivery_hygiene": {
+    "returncode": 0,
+    "checks": 235,
+    "failures": [],
+    "receipt": "final-delivery-audit.json"
+  },
+  "initial_hygiene_failure": {
+    "receipt": "initial-delivery-audit.json",
+    "failures": 4,
+    "reason": "Execution-only GCC/Clang links in each of the two fresh-core output directories."
+  },
+  "resolution": "Only the four execution-only links were removed. Link targets, all scientific outputs, process receipts, and log bytes were unchanged. See packaging-exclusions.json."
+}

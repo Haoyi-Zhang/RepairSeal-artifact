@@ -1,0 +1,20 @@
+{
+  "schema": "repairseal-introclass-execution-receipt-v1",
+  "returncode": 0,
+  "fresh_native_execution": true,
+  "command": [
+    "python3",
+    "-B",
+    "experiments/introclass-certificates/run.py",
+    "--output",
+    "<NEW_OUTPUT>",
+    "--native-work",
+    "<NEW_NATIVE_WORK>"
+  ],
+  "environment": "GCC 14.2.0 and Clang 19.1.7 with CPython 3.12.14; compiler executable hashes and flags in records/compilers.json",
+  "native_process_executions": 8996,
+  "stdout_sha256": "4ce091a6b88af4f2e90c47a84c3f4a9c0228ed1298f91ed9547beee037662476",
+  "offline_verification_status": "PASS",
+  "offline_checks": 60,
+  "note": "This is the final complete native run after independent adapter review. A preceding development run is not counted in final statistics."
+}

@@ -1,0 +1,32 @@
+/**/
+
+#include <stdio.h>
+#ifndef ANGELIX_OUTPUT
+#define ANGELIX_OUTPUT(type, expr, id) expr
+#endif
+
+int
+main(int argc, char *argv[])
+{
+
+	int A, B, C;
+	//printf("Pleaes enter 3 numbers seperated by spaces > ");
+	//scanf("%d%d%d", &A, &B, &C);
+	A = atoi(argv[1]);
+  	B = atoi(argv[2]);
+  	C = atoi(argv[3]);
+	if ( ((A > B) && (A < C)))
+		printf("%d\n", ANGELIX_OUTPUT(int, A, "stdout"));
+	if ( ((5 < B) && (5 < B)))
+		printf("%d\n", ANGELIX_OUTPUT(int, A, "stdout"));
+	if ( B > C && B < A)
+		printf("%d\n", ANGELIX_OUTPUT(int, B, "stdout"));
+	if ( B > A && B < C)
+		printf("%d\n", ANGELIX_OUTPUT(int, B, "stdout"));
+	if ( (9 <= A))
+		printf("%d\n", ANGELIX_OUTPUT(int, C, "stdout"));
+	if ( (6 == C))
+		printf("%d\n", ANGELIX_OUTPUT(int, C, "stdout"));
+
+return(0);
+}

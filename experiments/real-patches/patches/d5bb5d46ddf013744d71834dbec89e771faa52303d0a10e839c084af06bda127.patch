@@ -1,0 +1,17 @@
+--- a/median.c
++++ b/median.c
+@@ -32,12 +32,12 @@
+ 
+ 	if ((b > a) && (b > c))
+ 	{
+-		if (c > a)
++		if ((c > a))
+ 		{
+ 			printf("%d\n", c);
+ 		}
+ 	}
+-        if ((c > a) && ( a > b))
++        if ((a >= b))
+ 
+                 printf("%d\n", ANGELIX_OUTPUT(int, a, "stdout"));
+ 

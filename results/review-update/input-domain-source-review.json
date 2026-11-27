@@ -1,0 +1,15 @@
+{
+  "schema": "repairseal-introclass-input-intent-source-review-v1",
+  "reviewed_at_utc": "2026-11-26T18:24:02.749755+00:00",
+  "source_title": "The ManyBugs and IntroClass Benchmarks for Automated Repair of C Programs",
+  "source_url": "https://people.cs.umass.edu/~brun/pubs/pubs/LeGoues15tse.pdf",
+  "doi": "10.1109/TSE.2015.2454513",
+  "location": "Section 5.4, constituent programs, median and smallest",
+  "method": "Read the benchmark authors original program descriptions and test-design explanation.",
+  "findings": [
+    "The median task takes three C int inputs and computes their median; the test-design explanation explicitly includes equal inputs.",
+    "The smallest task takes four C int inputs; its test-design explanation explicitly includes positive, negative, and repeated input values.",
+    "The declared small integer grids are within the described integer-input tasks. Repeated values are intended inputs, rather than an unsupported distinct-values extension."
+  ],
+  "scope": "Benchmark-input-intent documentation, not a new native execution or an unrestricted source-equivalence proof."
+}

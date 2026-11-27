@@ -1,0 +1,17 @@
+#!/bin/bash
+#should export box=whitebox or whitebox 
+#should export EXP_HOME=/path/to/program/under/test
+
+box=whitebox
+
+assert-equal () {
+    diff  <(${ANGELIX_RUN:-eval} $1) <(echo "$2") #> /dev/null #<(echo -ne "$2")
+    #x=`${ANGELIX_RUN:-eval} $1`
+    #echo "Angela Phuong trinh:"${ANGELIX_RUN}" -- "$x
+}
+#HOME=/home/dxble/workspace/repairtools/angelix/tests/
+outputRes=`cat $EXP_HOME/median/tests/$box/$1.out`
+input=`cat $EXP_HOME/median/tests/$box/$1.in`
+
+output=`echo "$outputRes" | cut -d'>' -f2|sed 's/[^0-9]*//g'`
+assert-equal "./median $input|tail -1" "$output"

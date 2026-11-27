@@ -1,0 +1,170 @@
+{
+  "schema": "repairseal-artifact-evaluation-v1",
+  "mode": "preflight",
+  "started_utc": "2026-11-26T17:22:27+00:00",
+  "project_root": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM",
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "verify-packaged-results",
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact/verify_expected_results.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/pinned-no-clang/preflight/key-result-trace"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM",
+      "stdout": "logs/verify-packaged-results.stdout.log",
+      "stderr": "logs/verify-packaged-results.stderr.log",
+      "started_utc": "2026-11-26T17:22:30+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-26T17:22:30+00:00",
+      "elapsed_seconds": 0.11486549500000365
+    },
+    {
+      "name": "audit-delivery",
+      "command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python3",
+        "-B",
+        "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact/audit_delivery.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/pinned-no-clang/preflight/delivery-audit.json"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM",
+      "stdout": "logs/audit-delivery.stdout.log",
+      "stderr": "logs/audit-delivery.stderr.log",
+      "started_utc": "2026-11-26T17:22:30+00:00",
+      "timeout_seconds": 600,
+      "status": "PASS",
+      "returncode": 0,
+      "ended_utc": "2026-11-26T17:22:34+00:00",
+      "elapsed_seconds": 3.4770783280000614
+    }
+  ],
+  "interpretation": "Local fresh execution, retained-output recomputation, and external-only campaigns are distinct states. A missing external prerequisite starts zero scientific studies and is not a negative result.",
+  "paper_companion": "PRESENT",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "cpu_count": 9,
+    "packages": {
+      "pycparser": {
+        "expected": "3.0",
+        "actual": "3.0",
+        "status": "PASS"
+      },
+      "matplotlib": {
+        "expected": "3.10.8",
+        "actual": "3.10.8",
+        "status": "PASS"
+      },
+      "numpy": {
+        "expected": "2.3.5",
+        "actual": "2.3.5",
+        "status": "PASS"
+      },
+      "PyMuPDF": {
+        "expected": "1.26.7",
+        "actual": "1.26.7",
+        "status": "PASS"
+      },
+      "pillow": {
+        "expected": "12.3.0",
+        "actual": "12.3.0",
+        "status": "PASS"
+      }
+    },
+    "gcc": {
+      "status": "READY",
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "sha256": "a23ecab8ff08f09ad8c80602c2c5df7f49e09c25905cb8975902e101bf72635f",
+      "returncode": 0,
+      "version_output": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "clang": {
+      "status": "MISSING"
+    },
+    "java": {
+      "status": "READY",
+      "path": "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+      "sha256": "4b384afb65f3d79edb5b8d0a089e7d50073c954e7a0b2775fc4c47ca50355d70",
+      "returncode": 0,
+      "version_output": "openjdk 21.0.13.1 2026-11-17\nOpenJDK Runtime Environment (build 21.0.13.1+2-1-deb13u1-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.13.1+2-1-deb13u1-Debian, mixed mode, sharing)"
+    }
+  },
+  "required_files": [
+    {
+      "path": "artifact/LICENSE",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/reproduce.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/verify_expected_results.py",
+      "status": "PASS"
+    },
+    {
+      "path": "artifact/expected-results.json",
+      "status": "PASS"
+    },
+    {
+      "path": "README.md",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/main.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/supplementary.tex",
+      "status": "PASS"
+    },
+    {
+      "path": "paper/build.sh",
+      "status": "PASS"
+    }
+  ],
+  "path_hygiene": {
+    "status": "PASS",
+    "documentation_hits": [],
+    "cache_files": []
+  },
+  "external_preconditions": {
+    "status": "FAILED_PRECONDITION",
+    "scientific_studies_started": 0,
+    "requirements": {
+      "historical_python": {
+        "status": "MISSING"
+      },
+      "boolean_cbmc": {
+        "status": "MISSING"
+      },
+      "witness_cbmc": {
+        "status": "MISSING"
+      },
+      "cpachecker": {
+        "status": "MISSING"
+      },
+      "codeflaws_archive": {
+        "status": "MISSING"
+      },
+      "upstream_vulkan": {
+        "status": "MISSING",
+        "note": "A source checkout alone is not proof of application-level execution; the external mode records the command separately."
+      }
+    }
+  },
+  "ended_utc": "2026-11-26T17:22:34+00:00",
+  "exit_code": 0
+}

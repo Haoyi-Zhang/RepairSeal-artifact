@@ -1,0 +1,45 @@
+{
+  "application_successes": 939,
+  "correct_scope": "entire explicitly enumerated finite input set only; no global correctness assertion",
+  "domain": {
+    "median": {
+      "arity": 3,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ]
+    },
+    "smallest": {
+      "arity": 4,
+      "values": [
+        -1,
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "domain_union_policy": "The exact finite declared set is the Cartesian grid union all given blackbox and whitebox input vectors, retained in points.json.",
+  "guard": "R(x) iff original is undefined, has nonzero exit status, or original stdout differs from the numeric reference stdout; K is its complement where original and reference are defined",
+  "independence": "no human inter-annotator agreement claim; independent label reduction and native executions are reported separately",
+  "inner_bytes": 99566658,
+  "inner_member": "esemdata/CVC4/instrumented_IntroClass_0.5_4.zip",
+  "inner_sha256": "c58e955a9cc417ecfc8e9b7512de1391105b07a07b0b65231662e96f6d67c6d1",
+  "labels": "nonexclusive O0/O1/O2; O1/O2 count defined wrong outputs only; primary precedence definedness, repair-region, preservation, correct; unresolved reference/compilation/profile/correspondence -> other",
+  "outcome_blind_selection": true,
+  "outer_archive_bytes": 1088378260,
+  "outer_archive_sha256": "65814e170d5887074b04cbb0dee958f078b12e5da49671364a6f7f2a6f7f7c7e",
+  "outer_md5": "8347801dc54761bbbf1a9f8dc156e3f2",
+  "patches_are_published_tool_outputs": true,
+  "raw_patch_occurrences": 3209,
+  "repairs_were_not_regenerated": true,
+  "schema": "repairseal-real-patches-v1",
+  "selected": 127,
+  "selection": "all exact-application src/*.patch in median and smallest; deduplicate (original SHA256, applied-candidate SHA256); first two candidate SHA256 values per original SHA256; order by family, subject, candidate hash",
+  "test_policy": "all original blackbox and whitebox cases, unfiltered; exact candidate stdout against the published numeric Angelix oracle and exit code zero",
+  "unique_applied_candidates": 519,
+  "unique_originals": 67
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "repairseal-update-baseline-v1",
+  "label": "initial-environment",
+  "artifact": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "steps": [
+    {
+      "name": "preflight",
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "preflight",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/initial/preflight"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:21:40.378641+00:00",
+      "elapsed_seconds": 6.4415671825408936,
+      "returncode": 1,
+      "stdout": "preflight.stdout.log",
+      "stderr": "preflight.stderr.log"
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "smoke",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/initial/smoke"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:21:46.820601+00:00",
+      "elapsed_seconds": 6.365324258804321,
+      "returncode": 1,
+      "stdout": "smoke.stdout.log",
+      "stderr": "smoke.stderr.log"
+    },
+    {
+      "name": "verify",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "verify_expected_results.py",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/initial/verify"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:21:53.186314+00:00",
+      "elapsed_seconds": 0.0654759407043457,
+      "returncode": 0,
+      "stdout": "verify.stdout.log",
+      "stderr": "verify.stderr.log"
+    },
+    {
+      "name": "core",
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "core",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/initial/core"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:21:53.252285+00:00",
+      "elapsed_seconds": 8.89005970954895,
+      "returncode": 1,
+      "stdout": "core.stdout.log",
+      "stderr": "core.stderr.log"
+    },
+    {
+      "name": "paper",
+      "command": [
+        "sh",
+        "evaluate.sh",
+        "paper",
+        "--output",
+        "/workspace/scratch/a88b4d734b38/baseline-work/initial/paper"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:22:02.142915+00:00",
+      "elapsed_seconds": 7.02044153213501,
+      "returncode": 1,
+      "stdout": "paper.stdout.log",
+      "stderr": "paper.stderr.log"
+    },
+    {
+      "name": "audit-data-integrity",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "audit_data_integrity.py"
+      ],
+      "cwd": "/workspace/scratch/a88b4d734b38/baseline-work/RepairSeal_TOSEM/artifact",
+      "started_utc": "2026-11-26T17:22:09.164114+00:00",
+      "elapsed_seconds": 15.569985151290894,
+      "returncode": 0,
+      "stdout": "audit-data-integrity.stdout.log",
+      "stderr": "audit-data-integrity.stderr.log"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "issues": [
+    {
+      "fix": "Parse 0-prefixed integer constants in base eight and reject invalid literal forms",
+      "issue": "C octal literals had been interpreted as decimal",
+      "sample_impact": "No 196 retained sources contains a multi-digit octal literal; latest offline replay of all 32375 observations is unchanged."
+    },
+    {
+      "fix": "Reject all shift expressions from the closed source profile",
+      "issue": "Negative signed right shifts must not be labeled undefined behavior",
+      "sample_impact": "No 196 retained sources contains a shift expression; no observation or label changes."
+    },
+    {
+      "fix": "Substitute the raw expr token sequence, preserving exact source precedence",
+      "issue": "Identity macro expansion had added parentheses absent from its published definition",
+      "sample_impact": "All 467 inspected invocations use an identifier or int cast of an identifier; exact semantic receipt replay is unchanged."
+    },
+    {
+      "fix": "Original returncode != 0 belongs to the operational repair region",
+      "issue": "Repair guard must include original nonzero process status",
+      "sample_impact": "Latest 127 labels, witness sets, and repair/preservation counts replay identically."
+    }
+  ],
+  "no_human_agreement_claim": true,
+  "regression_tests_artifact_relative": "tests/test_real_patch_study.py",
+  "review_scope": "Independent implementation review of the closed int32 source interpreter"
+}

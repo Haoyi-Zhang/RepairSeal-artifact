@@ -1,0 +1,361 @@
+{
+  "schema": "repairseal-key-result-audit-v2",
+  "status": "PASS_KEY_RESULT_SOURCE_TRACE",
+  "checks": 36,
+  "failures": [],
+  "records": [
+    {
+      "name": "complete_decision_requests",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "canonical_corpus_results",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "pruned_live_node_semantic_values",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.pruned)",
+      "expected": 39276283,
+      "actual": 39276283,
+      "status": "PASS"
+    },
+    {
+      "name": "support_keyed_semantic_values",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "sum(corpora.*.cells.demand)",
+      "expected": 5308130,
+      "actual": 5308130,
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/protocol.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.protocol.json",
+      "expected": "2978adbe4a060ff336c53525ff8d1aba012b9d8d460b24e342ad0246e8dbbf5a",
+      "actual": "2978adbe4a060ff336c53525ff8d1aba012b9d8d460b24e342ad0246e8dbbf5a",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/corpus-bindings.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.corpus-bindings.json",
+      "expected": "4892023c590d274a33a6d0ac58cd226413cdccb8803a9607b2a87876d5bf5dfc",
+      "actual": "4892023c590d274a33a6d0ac58cd226413cdccb8803a9607b2a87876d5bf5dfc",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/decisions.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.decisions.json",
+      "expected": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "actual": "35e93f82d185445cac4ba462e7bf21f5b7dd3e55d15b22c3f68d108c36af1fb5",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/transport.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.transport.json",
+      "expected": "d0212036aa8fe0ba3941b73d9204d7b3c37db499f013bef46de3fc35b2ba15e9",
+      "actual": "d0212036aa8fe0ba3941b73d9204d7b3c37db499f013bef46de3fc35b2ba15e9",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:unsigned-demand/axis-scaling.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/unsigned-demand/summary.json",
+      "field": "records.axis-scaling.json",
+      "expected": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "actual": "c19549d7d0e57e59acec99e6b6e0a30bd00cb02de911ea544cb3065df4d1052d",
+      "status": "PASS"
+    },
+    {
+      "name": "controlled_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.new_requests",
+      "expected": 285,
+      "actual": 285,
+      "status": "PASS"
+    },
+    {
+      "name": "covered_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.covered_requests",
+      "expected": 190,
+      "actual": 190,
+      "status": "PASS"
+    },
+    {
+      "name": "fallback_transport_targets",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.fallback_requests",
+      "expected": 95,
+      "actual": 95,
+      "status": "PASS"
+    },
+    {
+      "name": "covered_new_semantic_cells_per_arm",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "transport.covered_new_semantic_cells_per_arm",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "contract_same_canonical_results",
+      "provenance": "packaged-deterministic-record",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "same_canonical_results",
+      "expected": 780,
+      "actual": 780,
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/protocol.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.protocol.json",
+      "expected": "458b3744d93660a141d797df3b9fed7647f50464d34440fca930ca118b435167",
+      "actual": "458b3744d93660a141d797df3b9fed7647f50464d34440fca930ca118b435167",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/corpus-bindings.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.corpus-bindings.json",
+      "expected": "b02e6af66eea60fa455fa630fc0a772952388197cda6e15ef090ab24a5726454",
+      "actual": "b02e6af66eea60fa455fa630fc0a772952388197cda6e15ef090ab24a5726454",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/decisions.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.decisions.json",
+      "expected": "c350dff81f2516eba53dbda69722bc4618fc9290913c84bc8fd752b02214e407",
+      "actual": "c350dff81f2516eba53dbda69722bc4618fc9290913c84bc8fd752b02214e407",
+      "status": "PASS"
+    },
+    {
+      "name": "record-hash:contract-study/transport.json",
+      "provenance": "record-binding",
+      "source": "artifact/data/contract-study/summary.json",
+      "field": "records.transport.json",
+      "expected": "14bc9baa5fdca510265b4dffbbc87463ab4627ffdb2d44e98347381942004c86",
+      "actual": "14bc9baa5fdca510265b4dffbbc87463ab4627ffdb2d44e98347381942004c86",
+      "status": "PASS"
+    },
+    {
+      "name": "witness_planned_refutations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.planned_refutations",
+      "expected": 594,
+      "actual": 594,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_matched_confirmations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.both_confirmed",
+      "expected": 593,
+      "actual": 593,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_iterations_lower",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.iterations.input_lower",
+      "expected": 585,
+      "actual": 585,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_iterations_equal",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.iterations.equal",
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_abstractions_lower",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.abstraction_computations.input_lower",
+      "expected": 585,
+      "actual": 585,
+      "status": "PASS"
+    },
+    {
+      "name": "witness_abstractions_equal",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/witness-interoperability/search-statistics.json",
+      "field": "groups.all.metrics.abstraction_computations.equal",
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "signed_combinations",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.combinations",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "repair_accepted",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.accepted_repair",
+      "expected": 420,
+      "actual": 420,
+      "status": "PASS"
+    },
+    {
+      "name": "coverage_authorized",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.covered_accepted",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "union_accepted",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.union_status.ACCEPT",
+      "expected": 328,
+      "actual": 328,
+      "status": "PASS"
+    },
+    {
+      "name": "repair_accept_union_refute",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/signed-coverage/summary.json",
+      "field": "groups.all.uncovered_accepted_union_status.REFUTED",
+      "expected": 92,
+      "actual": 92,
+      "status": "PASS"
+    },
+    {
+      "name": "receiving_time_repair_requests",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.requests",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "demand_slower_than_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.demand_slower_than_live",
+      "expected": 730,
+      "actual": 730,
+      "status": "PASS"
+    },
+    {
+      "name": "median_demand_over_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "repair.demand_over_live.p50",
+      "expected": 1.297816140061079,
+      "actual": 1.297816140061079,
+      "status": "PASS"
+    },
+    {
+      "name": "receiving_time_union_requests",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.requests",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "demand_slower_than_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.demand_slower_than_live",
+      "expected": 739,
+      "actual": 739,
+      "status": "PASS"
+    },
+    {
+      "name": "median_demand_over_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/data/receiving-time/analysis.json",
+      "field": "union.demand_over_live.p50",
+      "expected": 2.188666174775451,
+      "actual": 2.188666174775451,
+      "status": "PASS"
+    },
+    {
+      "name": "median_uninstrumented_support_over_live_repair",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/counter-overhead/analysis.json",
+      "field": "repair.ratios.support_uninstrumented_over_live.p50",
+      "expected": 1.1874391518275138,
+      "actual": 1.1874391518275138,
+      "status": "PASS"
+    },
+    {
+      "name": "median_uninstrumented_support_over_live_union",
+      "provenance": "retained-output-recomputation",
+      "source": "artifact/experiments/counter-overhead/analysis.json",
+      "field": "union.ratios.support_uninstrumented_over_live.p50",
+      "expected": 1.730102797664843,
+      "actual": 1.730102797664843,
+      "status": "PASS"
+    }
+  ],
+  "external_only": {
+    "historical_python": {
+      "implementation": "CPython",
+      "version": "3.12.14",
+      "purpose": "exact historical admission-receipt compatibility"
+    },
+    "boolean_cbmc": {
+      "version": "6.6.0",
+      "purpose": "fresh 804-request Boolean comparison"
+    },
+    "witness_cbmc": {
+      "version": "6.11.0",
+      "purpose": "fresh witness producer campaign"
+    },
+    "cpachecker": {
+      "version": "4.3",
+      "purpose": "fresh witness receiver campaign"
+    },
+    "codeflaws_archive": {
+      "bytes": 265695532,
+      "sha256": "2673fc16fa05590c5c1171f5b633594713ae9207346a3d0ba4c4d8b2eea82b11",
+      "purpose": "fresh native, signed, coverage, and timing campaigns"
+    },
+    "upstream_vulkan": {
+      "purpose": "application-level CEIL_DIV build and execution",
+      "bundled": false
+    }
+  },
+  "interpretation": "PASS binds exact named fields and record inventories. It does not convert retained-output recomputation or unavailable external campaigns into fresh execution."
+}

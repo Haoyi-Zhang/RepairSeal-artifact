@@ -1,0 +1,145 @@
+{
+  "collection_script_snapshot_available": false,
+  "final_hardened_interpreter_replay": {
+    "collection_script_snapshot_available": false,
+    "final_interpreter_sha256": "aab7e9c01885a54cd079cd23a38e997316b4dbafc99f86315ab5dbc109d128aa",
+    "final_verifier_sha256": "17efe481034b9629f2552ace17c5cb05a8f53ff83550c4a7be93d84f7dabe719",
+    "identity_scope": "final verified implementations; not a contemporaneous collection-script snapshot",
+    "native_records_rewritten": false,
+    "native_records_sha256": "15264234ca7a8db78812194ea98c216654ab3d0733c8b3a64c023560f293a30b",
+    "semantic_fields_unchanged": true,
+    "semantic_observations_replayed": 32375,
+    "semantics_records_sha256": "408e76a29c599200fda1c256c430d2163c45f49f1f1771b01b5249dae6415a2c",
+    "status": "PASS_REAL_PATCH_RECORDS"
+  },
+  "records": {
+    "independent-review.json": "e9a5769be700a9a88a2b1244fbc61411e170a965b6cdd36d7a98793740fd9885",
+    "records/admission.json": "2dd1230297b4298d3d07613585cd996af2db775895e68847db7adafff04cc525",
+    "records/compiles.json": "4b1246f303d49a28a61fcc55549700c873b56b2bc4e86c356d9a05fc1833d694",
+    "records/environment.json": "85592d43f9016d5c7540a171981d064a3f73763fd91c76dbe73fdea213689f49",
+    "records/native.jsonl": "15264234ca7a8db78812194ea98c216654ab3d0733c8b3a64c023560f293a30b",
+    "records/semantics.jsonl": "408e76a29c599200fda1c256c430d2163c45f49f1f1771b01b5249dae6415a2c"
+  },
+  "schema": "repairseal-prior-collection-summary-v1",
+  "summary": {
+    "all_given_test_passing_primary_counts": {
+      "correct": 1,
+      "other": 2,
+      "repair-region": 11
+    },
+    "all_given_tests_pass": 14,
+    "boundaries": [
+      "finite grid plus every supplied blackbox and whitebox input only",
+      "candidate source bytes are exact applications of published diffs to published instrumented sources",
+      "the release contains historical patches from several synthesis configurations; configurations are not inferred from the enclosing directory name",
+      "definedness is established by the closed int32 interpreter; sanitizer silence alone is never a definedness proof",
+      "the inference is about this deterministic sample of published scalar patches, not all C repairs or a random population sample"
+    ],
+    "by_source_tool_family": [
+      {
+        "all_given_tests_pass": 6,
+        "family": "median",
+        "nonexclusive_counts": {
+          "definedness": 3,
+          "other": 4,
+          "preservation": 49,
+          "repair-region": 58
+        },
+        "patches": 72,
+        "primary_counts": {
+          "definedness": 3,
+          "other": 4,
+          "preservation": 8,
+          "repair-region": 57
+        },
+        "repair_tool": "Angelix (published patch inventory)",
+        "source": "IntroClass / Zenodo 1012686",
+        "tests_pass_but_wrong": 5
+      },
+      {
+        "all_given_tests_pass": 8,
+        "family": "smallest",
+        "nonexclusive_counts": {
+          "correct": 1,
+          "definedness": 6,
+          "other": 10,
+          "preservation": 32,
+          "repair-region": 41
+        },
+        "patches": 55,
+        "primary_counts": {
+          "correct": 1,
+          "definedness": 6,
+          "other": 10,
+          "repair-region": 38
+        },
+        "repair_tool": "Angelix (published patch inventory)",
+        "source": "IntroClass / Zenodo 1012686",
+        "tests_pass_but_wrong": 6
+      }
+    ],
+    "compiled_artifacts": 784,
+    "defined_native_correspondence_checks": 126696,
+    "finite_input_points": {
+      "median": 133,
+      "smallest": 263
+    },
+    "given_test_cases": {
+      "median": 13,
+      "smallest": 16
+    },
+    "native_executions": 130772,
+    "nonexclusive_counts": {
+      "correct": 1,
+      "definedness": 9,
+      "other": 14,
+      "preservation": 81,
+      "repair-region": 99
+    },
+    "primary_counts": {
+      "correct": 1,
+      "definedness": 9,
+      "other": 14,
+      "preservation": 8,
+      "repair-region": 95
+    },
+    "review": {
+      "human_agreement": null,
+      "human_annotators": 0,
+      "kind": "rule-based labels with independent replay; human agreement not measured"
+    },
+    "sampling_counts": {
+      "application_successes": 939,
+      "raw_patch_occurrences": 3209,
+      "selected": 127,
+      "unique_applied_candidates": 519,
+      "unique_originals": 67
+    },
+    "schema": "repairseal-real-patches-summary-v1",
+    "selected_patches": 127,
+    "semantic_observations": 32375,
+    "semantic_replayed": 32375,
+    "source_admission_counts": {
+      "admitted": 175,
+      "unsupported": 21
+    },
+    "source_correspondence_pass": 175,
+    "source_correspondence_total": 196,
+    "strict_application_exclusion_reasons": {
+      "exact old context mismatch": 2270
+    },
+    "successful_compilations": 784,
+    "tests_pass_but_wrong": 11,
+    "tests_pass_but_wrong_fraction_all_selected": {
+      "denominator": 127,
+      "numerator": 11
+    },
+    "tests_pass_but_wrong_fraction_all_test_passing": {
+      "denominator": 14,
+      "numerator": 11
+    },
+    "unique_candidate_sources": 127,
+    "unique_original_sources": 67
+  },
+  "superseded_by": "final collection with source snapshots"
+}

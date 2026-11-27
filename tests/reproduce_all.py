@@ -15,6 +15,13 @@ from scientific_driver import new_output_directory, require_assertions
 from reproduce_all_core import compare_exact
 from verify_natural_domain_evidence import verify as verify_native_evidence
 
+# The review update adds exactly this module. The historical unsigned contract
+# campaign does not import it. Bind its bytes as well as its name; this is not
+# a wildcard exception for later source additions or altered historical code.
+REVIEW_SOURCE_ADDITIONS = {
+    'src/int32_refutation.py': 'f5eb16eea7f3e337524d33c67a2faecf154ba694b5cf23d42ef1dd773a51a133',
+}
+
 
 def source_bindings(root):
     """Bind the complete local Python implementation and driver inventory."""
@@ -35,7 +42,8 @@ def compare_contract_study(root, retained, current):
     """Reconcile bounded source-inventory and receiver-identity transitions.
 
     The unchanged study driver binds every top-level source module, including
-    three round-3 modules that it does not import. Domain-transport receipts
+    three round-3 modules and the one hash-pinned review-update module that it
+    does not import. Domain-transport receipts
     also bind the Python implementation and version, so an otherwise identical
     fresh run has a new receiver identity. Validate both transitions explicitly
     before comparing every scientific field. This is not permission for
@@ -44,7 +52,7 @@ def compare_contract_study(root, retained, current):
     record_names = ('protocol.json', 'corpus-bindings.json', 'decisions.json', 'transport.json')
     permitted_additions = {
         'src/codeflaws_int32_bridge.py', 'src/demand_evaluator.py', 'src/int32_circuit.py',
-    }
+    } | set(REVIEW_SOURCE_ADDITIONS)
     documents = {}
     actual_records = {}
     for side, directory in (('retained', retained), ('current', current)):
@@ -74,7 +82,10 @@ def compare_contract_study(root, retained, current):
         compare_exact(digest, current_inventory[name], 'contract comparison unchanged historical source ' + name)
     additions = set(current_inventory) - set(historical_bindings)
     compare_exact(sorted(permitted_additions), sorted(additions),
-                  'contract comparison declared round-3 source additions')
+                  'contract comparison declared round-3 and review source additions')
+    for name, digest in REVIEW_SOURCE_ADDITIONS.items():
+        compare_exact(digest, current_inventory[name],
+                      'contract comparison exact review source addition ' + name)
 
     compare_exact(
         {key: value for key, value in documents['retained']['protocol.json'].items() if key != 'source_bindings'},

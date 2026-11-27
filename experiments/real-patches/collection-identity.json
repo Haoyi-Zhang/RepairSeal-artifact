@@ -1,0 +1,107 @@
+{
+  "collection_exit_code": 0,
+  "completion_recorded_utc": "2026-11-26T17:45:25.001034+00:00",
+  "dependency": {
+    "pycparser_module_sha256": "a6156247202e52682a13890d99a0aaa66e56544048bf351215aa41bf85d7df1a",
+    "pycparser_version": "3.00"
+  },
+  "execution_command": [
+    "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python",
+    "-Bu",
+    "/workspace/scratch/a88b4d734b38/research/real-patches-final-run/executed-sources/study.py",
+    "run",
+    "--root",
+    "/workspace/scratch/a88b4d734b38/research/real-patches-final-run",
+    "--jobs",
+    "4"
+  ],
+  "frozen_supporting_modules": [
+    "executed-sources/fetch_source.py",
+    "executed-sources/tests/test_real_patch_study.py",
+    "executed-sources/tests/test_real_patches_independent_review.py"
+  ],
+  "identity_scope": "source files frozen before this fresh complete native execution; source/hash inventory checked again after completion",
+  "native_collection_modules": [
+    "executed-sources/study.py",
+    "executed-sources/patch_study.py",
+    "executed-sources/scalar_semantics.py"
+  ],
+  "post_collection_validation_modules": [
+    "executed-sources/verify.py",
+    "executed-sources/independent_review.py"
+  ],
+  "prepared_utc": "2026-11-26T17:42:31.398866+00:00",
+  "protected_inputs": {
+    "corpus.json": "5a1c8ad4645681dc0440b8957ab0a3fe81cb3de3c5473be8f3de82ca17b8c3cb",
+    "given-tests.json": "dfbf30e2d99a05187043f7ae4342190d563b41d8141f7ca9d3f83dd2d9a41363",
+    "points.json": "f6199f38c896a38ca2ffcadeb15f56489f97392be37913f4319dfff388645ad1",
+    "protocol.json": "a8a2fa8af0bf9d935be0565e7c2c630cf8d80fbc2f33b5f52f0312335619ee21"
+  },
+  "protected_inputs_unchanged": true,
+  "python": {
+    "executable": "/workspace/scratch/a88b4d734b38/baseline-work/venv/bin/python",
+    "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "results": {
+    "independent-review.json": "d7958521cd694de5161345380eb876d4b3106a21660b8a074ab3597f1055c567",
+    "labels.json": "8bf9124ca5d63ea2956367b1478c433a9ca2857f9d5bda235f11bf6bdf45ddfb",
+    "records/admission.json": "2dd1230297b4298d3d07613585cd996af2db775895e68847db7adafff04cc525",
+    "records/compiles.json": "e273ade64df05602d00b673911be38700c15cde28d846aa788959205aee6d407",
+    "records/environment.json": "85592d43f9016d5c7540a171981d064a3f73763fd91c76dbe73fdea213689f49",
+    "records/native.jsonl": "452331839c84114f6efa92c6d43b68b02ba8f1d58c4fc82433506efd790970b5",
+    "records/semantics.jsonl": "41e14ea3bab863dd850e17a398f0af6b9f8ff372e92d9b60f41caf9f8078a0f1",
+    "summary.json": "b61d108a6f04e3fae9358d14cc856f052aef30584e731ecedc2a2d1d793d97aa"
+  },
+  "schema": "repairseal-current-collection-identity-v1",
+  "semantic_and_summary_counts_unchanged_from_prior": true,
+  "source_snapshot_hashes_verified_after_run": true,
+  "sources": [
+    {
+      "bytes": 2900,
+      "path": "executed-sources/fetch_source.py",
+      "sha256": "99502c36eb0f0f284a8c9e6ca723a76cccfffc75a2a6292f32565efbcbc2c2ab"
+    },
+    {
+      "bytes": 19416,
+      "path": "executed-sources/independent_review.py",
+      "sha256": "921c3c0938e547255a00aa5263639420ff19cbb6ddb6bf75d092ca45e61c4ece"
+    },
+    {
+      "bytes": 18024,
+      "path": "executed-sources/patch_study.py",
+      "sha256": "52d3d00fcd0694eddf3f7a844fc8956d78d7ee621346265543debaf05dd1dc17"
+    },
+    {
+      "bytes": 12286,
+      "path": "executed-sources/scalar_semantics.py",
+      "sha256": "aab7e9c01885a54cd079cd23a38e997316b4dbafc99f86315ab5dbc109d128aa"
+    },
+    {
+      "bytes": 156,
+      "path": "executed-sources/study.py",
+      "sha256": "a0843522a182e70af01e4f9e4c0259d3d894f53235f91c0c3ecf2f8a91779458"
+    },
+    {
+      "bytes": 15695,
+      "path": "executed-sources/verify.py",
+      "sha256": "17efe481034b9629f2552ace17c5cb05a8f53ff83550c4a7be93d84f7dabe719"
+    },
+    {
+      "bytes": 3621,
+      "path": "executed-sources/tests/test_real_patch_study.py",
+      "sha256": "4a3a15c0fffbd7e48b2ddfd44ead05ab9e08fb369480418bbda64c536766527a"
+    },
+    {
+      "bytes": 2867,
+      "path": "executed-sources/tests/test_real_patches_independent_review.py",
+      "sha256": "5695fdc9c6faf8800ee9aa18fdc6f8f9cb407ce77b03809e18c910d64d777fb1"
+    }
+  ],
+  "status": "PASS_FRESH_SNAPSHOT_COLLECTION",
+  "stdout_capture": "run.log",
+  "verifications": {
+    "independent": "PASS_INDEPENDENT_LABEL_REVIEW",
+    "primary": "PASS_REAL_PATCH_RECORDS"
+  }
+}

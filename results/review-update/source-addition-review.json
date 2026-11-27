@@ -1,0 +1,73 @@
+{
+  "schema": "repairseal-review-source-addition-review-v1",
+  "status": "PASS_SCOPED_SOURCE_ADDITION_REVIEW",
+  "reviewed_at_utc": "2026-11-26T18:15:27.183165+00:00",
+  "review_kind": "Separate automated source-difference and rejection-control review; no human review claimed.",
+  "reviewed_files_sha256": {
+    "tests/reproduce_all.py": "80842ba5749e26ee7a81cbf76216d9e78d21c9bd9c1f504135a74dc9e805dc34",
+    "tests/test_review_source_additions.py": "e3b367be8432900cf9775b5c989ac689e8ef41163c4d7676b7c5c5de0e701d82",
+    "tests/test_driver_contracts.py": "beab229b0ccd29c7321871286445a98c4d665f03edf62d96433108d8e57f9893",
+    "src/int32_refutation.py": "f5eb16eea7f3e337524d33c67a2faecf154ba694b5cf23d42ef1dd773a51a133",
+    "tests/reproduce_all_core.py": "f48233e0b99a7c9e948f5ef222ffb74cde1b66c88a99dc9f1d1db81f7fe041fe"
+  },
+  "original_reproduce_all_sha256": "758b94875d2ec85748cd86953e08010fca3c8cd284efa52a6c0392faadde786a",
+  "allowed_review_additions": {
+    "src/int32_refutation.py": "f5eb16eea7f3e337524d33c67a2faecf154ba694b5cf23d42ef1dd773a51a133"
+  },
+  "code_review": {
+    "all_other_original_definitions_unchanged": true,
+    "original_historical_binding_loop_unchanged": true,
+    "entire_original_scientific_comparison_tail_unchanged": true,
+    "observations": [
+      "The new allowlist contains one exact module path and its fixed SHA-256; it is not a filename pattern.",
+      "Current source bindings must equal the actual source inventory; historical members must still exist with unchanged hashes.",
+      "The set of additions must equal the three preexisting round-3 paths plus the one declared review path.",
+      "The new module hash is checked even when the current protocol and summary inventories were recomputed.",
+      "Protocol, corpus, decisions, transport scientific fields and summary comparisons retain their original implementation."
+    ]
+  },
+  "unit_execution": {
+    "working_directory": "artifact",
+    "python_version": "3.12.14",
+    "tests_run": 12,
+    "failures": 0,
+    "runs": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_review_source_additions.py -v",
+        "returncode": 0,
+        "tests_run": 4,
+        "test_names": [
+          "test_changed_declared_module_is_rejected_after_all_receipts_are_rehashed",
+          "test_changed_historical_module_is_still_rejected",
+          "test_exact_declared_new_module_preserves_old_scientific_fields",
+          "test_unknown_added_module_is_rejected_after_all_receipts_are_rehashed"
+        ],
+        "stdout": "",
+        "stderr": "test_changed_declared_module_is_rejected_after_all_receipts_are_rehashed (test_review_source_additions.ReviewSourceAdditionTests.test_changed_declared_module_is_rejected_after_all_receipts_are_rehashed) ... ok\ntest_changed_historical_module_is_still_rejected (test_review_source_additions.ReviewSourceAdditionTests.test_changed_historical_module_is_still_rejected) ... ok\ntest_exact_declared_new_module_preserves_old_scientific_fields (test_review_source_additions.ReviewSourceAdditionTests.test_exact_declared_new_module_preserves_old_scientific_fields) ... ok\ntest_unknown_added_module_is_rejected_after_all_receipts_are_rehashed (test_review_source_additions.ReviewSourceAdditionTests.test_unknown_added_module_is_rejected_after_all_receipts_are_rehashed) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.127s\n\nOK\n"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_driver_contracts.py -v",
+        "returncode": 0,
+        "tests_run": 8,
+        "test_names": [
+          "test_all_assertion_campaigns_refuse_both_optimized_modes_before_output",
+          "test_cli_preserves_existing_evidence_before_starting_a_campaign",
+          "test_contract_reconciliation_allows_only_verified_receiver_identity",
+          "test_empty_test_discovery_is_not_conformance_evidence",
+          "test_later_gate_failure_replaces_an_early_core_success_status",
+          "test_measurement_projection_is_schema_and_path_specific",
+          "test_output_helpers_preserve_files_and_dangling_symlinks",
+          "test_scientific_comparison_distinguishes_json_numeric_types"
+        ],
+        "stdout": "",
+        "stderr": "test_all_assertion_campaigns_refuse_both_optimized_modes_before_output (test_driver_contracts.ScientificDriverBoundaries.test_all_assertion_campaigns_refuse_both_optimized_modes_before_output) ... ok\ntest_cli_preserves_existing_evidence_before_starting_a_campaign (test_driver_contracts.ScientificDriverBoundaries.test_cli_preserves_existing_evidence_before_starting_a_campaign) ... ok\ntest_contract_reconciliation_allows_only_verified_receiver_identity (test_driver_contracts.ScientificDriverBoundaries.test_contract_reconciliation_allows_only_verified_receiver_identity) ... ok\ntest_empty_test_discovery_is_not_conformance_evidence (test_driver_contracts.ScientificDriverBoundaries.test_empty_test_discovery_is_not_conformance_evidence) ... ok\ntest_later_gate_failure_replaces_an_early_core_success_status (test_driver_contracts.ScientificDriverBoundaries.test_later_gate_failure_replaces_an_early_core_success_status) ... ok\ntest_measurement_projection_is_schema_and_path_specific (test_driver_contracts.ScientificDriverBoundaries.test_measurement_projection_is_schema_and_path_specific) ... ok\ntest_output_helpers_preserve_files_and_dangling_symlinks (test_driver_contracts.ScientificDriverBoundaries.test_output_helpers_preserve_files_and_dangling_symlinks) ... ok\ntest_scientific_comparison_distinguishes_json_numeric_types (test_driver_contracts.ScientificDriverBoundaries.test_scientific_comparison_distinguishes_json_numeric_types) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 8.505s\n\nOK\n"
+      }
+    ]
+  },
+  "scope_limits": [
+    "The positive control reconciles a copied retained contract study with the declared source addition and verified current receiver identity; it is not a new full scientific campaign.",
+    "Negative controls actually reject an unknown module, an altered declared module, an altered historical module, and changed scientific transport fields even after affected receipts are rehashed.",
+    "The eight original driver-boundary tests were run unchanged, including optimized-mode rejection, evidence preservation, strict scientific typing, later-gate failure propagation, and missing conformance tests.",
+    "This review does not itself establish success of a subsequent complete core run or any new scientific result."
+  ]
+}

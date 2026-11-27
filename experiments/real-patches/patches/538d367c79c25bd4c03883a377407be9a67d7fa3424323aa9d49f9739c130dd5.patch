@@ -1,0 +1,17 @@
+--- a/smallest.c
++++ b/smallest.c
+@@ -30,12 +30,12 @@
+ 	Small = N2;
+ }
+ 
+-if (N3 < N1 && N3 < N2 && N3 < N4)
++if ((N4 <= N2))
+ {
+ 	Small = N3;
+ }
+ 
+-if (N4 < N1 && N4 < N2 && N4 < N3)
++if ((N4 <= N2))
+ {
+ 	Small = N4;
+ }

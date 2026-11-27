@@ -1,0 +1,159 @@
+{
+  "schema": "repairseal-deep-review-gate-v1",
+  "status": "PASS_DEEP_REVIEW",
+  "started_utc": "2026-11-26T19:56:27.339248+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "historical_requested": true,
+  "unit_tests_requested": true,
+  "phases": [
+    {
+      "name": "exact-source-and-evidence-bindings",
+      "status": "PASS",
+      "files": 102
+    },
+    {
+      "name": "admission",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/experiments/deep-review/receiver-audit/verify_audit.py",
+        "--output",
+        "/workspace/scratch/f1dbe774c20a/validation/final-gate/admission.json"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:27.360629+00:00",
+      "status": "PASS"
+    },
+    {
+      "name": "order-classes",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/experiments/deep-review/real-validation/run.py",
+        "verify",
+        "--data",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/experiments/deep-review/real-validation/records"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:27.958012+00:00",
+      "status": "PASS"
+    },
+    {
+      "name": "independent-order",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/experiments/deep-review/research-audit/review_order_reduction.py",
+        "--output",
+        "/workspace/scratch/f1dbe774c20a/validation/final-gate/independent-order.json"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:28.561790+00:00",
+      "status": "PASS"
+    },
+    {
+      "name": "trace-order",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/experiments/deep-review/research-audit/trace_order_counterexample.py",
+        "--output",
+        "/workspace/scratch/f1dbe774c20a/validation/final-gate/trace-order"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:28.683362+00:00",
+      "status": "PASS"
+    },
+    {
+      "name": "admission-tests",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_attribute_admission.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:28.806197+00:00",
+      "status": "PASS",
+      "test_count": 6,
+      "expected_test_count": 6
+    },
+    {
+      "name": "order-tests",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_weak_order_validation.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:29.079242+00:00",
+      "status": "PASS",
+      "test_count": 17,
+      "expected_test_count": 17
+    },
+    {
+      "name": "current-cli-tests",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "current/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:31.489866+00:00",
+      "status": "PASS",
+      "test_count": 4,
+      "expected_test_count": 4
+    },
+    {
+      "name": "current-compatibility-tests",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "-c",
+        "import sys,unittest\nsys.path[:0]=['current/src','tests']\nimport codeflaws_int32_bridge,int32_circuit,int32_refutation,proof_dag_checker\ns=unittest.defaultTestLoader.loadTestsFromNames(['test_codeflaws_int32_bridge','test_int32_circuit','test_int32_refutation','test_codeflaws_header_admission','test_codeflaws_diagnostic_determinism'])\nr=unittest.TextTestRunner(verbosity=2).run(s)\nraise SystemExit(not r.wasSuccessful())\n"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:32.960189+00:00",
+      "status": "PASS",
+      "test_count": 43,
+      "expected_test_count": 43
+    },
+    {
+      "name": "historical-203",
+      "command": [
+        "/opt/runtime/python/bin/python3",
+        "-B",
+        "/workspace/scratch/f1dbe774c20a/work/RepairSeal_TOSEM/artifact/verify_expected_results.py",
+        "--output",
+        "/workspace/scratch/f1dbe774c20a/validation/final-gate/historical-203"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-11-26T19:56:42.211003+00:00",
+      "status": "PASS"
+    }
+  ],
+  "fresh_native_executions": 0,
+  "scope": "Fresh local semantic/reduction and optional unit checks; native compiler outputs remain retained receipts.",
+  "completed_utc": "2026-11-26T19:56:54.238227+00:00",
+  "unit_tests_run": 70
+}

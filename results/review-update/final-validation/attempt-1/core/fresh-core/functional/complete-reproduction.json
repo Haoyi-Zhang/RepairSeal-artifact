@@ -1,0 +1,118 @@
+{
+  "baseline_compared_files": 376,
+  "core_outcome": "PASS_COMPLETE_REPRODUCTION",
+  "disk_compact_certificates_validated": 285,
+  "disk_full_certificates_validated": 380,
+  "disk_grammar_results_validated": 400,
+  "disk_requests_reloaded": 780,
+  "failure": "round2 reproduction failed: 4",
+  "failure_type": "SystemExit",
+  "holdout_compact_refutations": 300,
+  "holdout_differential_cases": 400,
+  "holdout_forged_refutations_rejected": 100,
+  "holdout_oracle_agreements": 400,
+  "left_deep_ast_regression": {
+    "ast_depth": 1500,
+    "ast_nodes": 2999,
+    "compact_checker_rejection": "AST depth",
+    "diagnostic_guard_bypass": "RecursionError",
+    "full_checker_rejection": "AST depth",
+    "isolated_wall_seconds": 0.09961068599977807,
+    "long_literal_rejection": "literal length",
+    "production_producer_rejection": "AST depth",
+    "source_characters": 3034,
+    "timeout_seconds": 10,
+    "tokens": 3009,
+    "wrong_acceptance_observed": false
+  },
+  "native_compilers": [
+    {
+      "compile_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "native-harness.c",
+        "-o",
+        "native-gcc"
+      ],
+      "compile_returncode": 0,
+      "executable": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "id": "gcc",
+      "output_file": "native-outputs-gcc.csv",
+      "run_command": [
+        "./native-gcc"
+      ],
+      "run_returncode": 0,
+      "version_command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "--version"
+      ],
+      "version_first_line": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+    },
+    {
+      "compile_command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+        "-std=c11",
+        "-O0",
+        "native-harness.c",
+        "-o",
+        "native-clang"
+      ],
+      "compile_returncode": 0,
+      "executable": "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "id": "clang",
+      "output_file": "native-outputs-clang.csv",
+      "run_command": [
+        "./native-clang"
+      ],
+      "run_returncode": 0,
+      "version_command": [
+        "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+        "--version"
+      ],
+      "version_first_line": "Debian clang version 19.1.7 (3+b1)"
+    }
+  ],
+  "native_defined_evaluations_per_compiler": 9180,
+  "operator_probes": 21,
+  "outcome": "FAILED_COMPLETE_REPRODUCTION",
+  "producer_complexity_regression": {
+    "certificate_bytes_identical": true,
+    "certificate_sha256": "27095d3c79486221e4a7d71d021322394c787aedc2c38c95a3924e08b3ea7378",
+    "legacy_over_topological_ratio": 22.37735849056604,
+    "legacy_recursive_node_visits": 3558,
+    "nodes": 53,
+    "points": 3,
+    "source_characters": 147,
+    "terms": 48,
+    "topological_vector_cells": 159
+  },
+  "proof_dag_byte_compared_files": 1845,
+  "public_archive_records": 300,
+  "scope_note": "Codeflaws evidence is an archival index audit; public sources are not executed by this command.",
+  "security_certificate_type_rejections": 7,
+  "security_json_text_rejections": 4,
+  "security_request_rejections": 47,
+  "selector_admission_regression": {
+    "boundary": "The mathematical selector semantics is short-circuit total, but the prototype admits only selectors whose reconstructed definedness simplifies directly to true.",
+    "compact_checker_rejection": "guard totality not simplified to true",
+    "domain": [
+      0,
+      1,
+      2
+    ],
+    "full_checker_rejection": "guard totality not simplified to true",
+    "producer_rejection": "guard totality not simplified to true",
+    "prototype_admitted": false,
+    "selector": "(x == 0u) || ((1u / x) > 0u)",
+    "selector_truth_values": [
+      true,
+      true,
+      false
+    ],
+    "semantically_defined_at_all_domain_points": true
+  },
+  "structured_requests": 380,
+  "tamper_controls": 6000,
+  "wall_seconds": 224.68287975700014
+}

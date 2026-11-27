@@ -1,0 +1,128 @@
+{
+  "schema": "repairseal-review-update-integration-review-v1",
+  "status": "PASS_SCOPED_INTEGRATION_REVIEW",
+  "reviewed_at_utc": "2026-11-26T18:00:42.044959+00:00",
+  "review_kind": "Separate automated code and control-flow review; no human review claimed.",
+  "reviewed_files_sha256": {
+    "verify_update_results.py": "7536aea2e52a57ebfcafa786bd073453a3231a9b1a8c75860a6f44380c920e51",
+    "verify_expected_results.py": "a194ed9e59ec2cc356f24dd87dd6a442013db4e218dcb9ad86037dd82036e380",
+    "audit_data_integrity.py": "a76dd7b3478fbcbb1a4391b96d6152d447f880b59bb27e91f65eaf75d9baaf27",
+    "tests/test_update_integration.py": "54f5522f70388cf0d1413c6f63c2afb81867c5a080901ef7ac70023ab4a2d81d",
+    "expected-results.json": "b50eacdedb1d1932bfd68fd4855f8ecfd60467a19bab5a67fe27a57d874aafd1"
+  },
+  "unit_execution": {
+    "command": "python -B -m unittest discover -s tests -p test_update_integration.py -v",
+    "working_directory": "artifact",
+    "python_version": "3.12.14",
+    "returncode": 0,
+    "tests_run": 6,
+    "test_names": [
+      "test_altered_receipt_is_rejected_even_when_numbers_match",
+      "test_consistent_result_and_bindings_pass",
+      "test_empty_study_selection_is_not_success",
+      "test_explicit_scale_failure_is_not_discarded",
+      "test_failed_study_and_missing_study_are_rejected",
+      "test_forged_summary_number_cannot_replace_recomputation"
+    ],
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ff9e0c9f4d81398c3770a7e830b3605fcd9bd7e16ab193e8831568f64e10ab73"
+  },
+  "additional_negative_probes": [
+    {
+      "case": "explicit empty selection",
+      "observed_status": "FAIL",
+      "has_top_level_error": true,
+      "passed": true
+    },
+    {
+      "case": "domain explicit FAIL",
+      "observed_status": "FAIL",
+      "observed_study_status": "FAIL",
+      "summary_computation_called": false,
+      "passed": true
+    },
+    {
+      "case": "domain PASS with error",
+      "observed_status": "FAIL",
+      "observed_study_status": "FAIL",
+      "summary_computation_called": false,
+      "passed": true
+    },
+    {
+      "case": "domain missing outcome",
+      "observed_status": "FAIL",
+      "observed_study_status": "FAIL",
+      "summary_computation_called": false,
+      "passed": true
+    },
+    {
+      "case": "unknown study",
+      "observed_status": "FAIL",
+      "observed_study_status": "FAIL",
+      "passed": true
+    }
+  ],
+  "expected_result_bindings": {
+    "configured_studies": [
+      "domain_scale",
+      "fresh_census",
+      "independent_definedness_review",
+      "independent_normalization_review",
+      "independent_patch_review",
+      "introclass_certificates",
+      "natural_expansion",
+      "real_patches"
+    ],
+    "exact_study_set_matches_driver": true,
+    "driver_hash_matches": true,
+    "summary_inventory_verifier_hashes_checked": 24,
+    "all_hashes_match": true,
+    "configured_scientific_review_fields": 125
+  },
+  "original_gate_preservation": {
+    "original_zip_sha256": "9481ba49b8d3f122f590606914a136839b0e484e2f8798fd8a6fdc554f4b4b1d",
+    "unchanged_ast_definitions": {
+      "load": true,
+      "sha256": true,
+      "get": true,
+      "Audit": true,
+      "verify_packaged": true,
+      "verify_fresh": true,
+      "parser": true
+    },
+    "original_integrity_audit_initial_statements_preserved": 10,
+    "original_integrity_parse_blocks_unchanged": true,
+    "manual_control_flow_findings": [
+      "The existing packaged and optional fresh-result checks remain in the main path; update checks are added.",
+      "Recursive exact-type comparisons reject boolean/integer substitution while retaining the existing float tolerance.",
+      "The integrity audit rejects a non-PASS aggregate update status as well as failed child studies."
+    ]
+  },
+  "documentation_path_review": {
+    "ledger_claims_checked": [
+      "RU1",
+      "RU2",
+      "RU3",
+      "RU4",
+      "RU5",
+      "RU6",
+      "RU7",
+      "RU8",
+      "RU9",
+      "RU10"
+    ],
+    "evidence_path_occurrences_checked": 44,
+    "missing_paths": [],
+    "documents_read": [
+      "README.md",
+      "docs/review-update-protocol.md"
+    ],
+    "finding": "The new offline commands reference the implemented entry points. The original-evidence integrity gate is explicitly separate from standalone artifact evaluation."
+  },
+  "scope_limits": [
+    "This record checks integration failure propagation, expected-file bindings, original gate preservation, and referenced paths.",
+    "The five additional probes use controlled mocked outcomes and do not rerun scientific experiments.",
+    "No complete eight-study recomputation or fresh native compiler campaign was performed as part of this final integration review.",
+    "Scientific semantics, reported experiment totals, statistical representativeness, and human agreement are not independently established by this record."
+  ]
+}

@@ -22,16 +22,17 @@ coverage check is `no conclusion`, not a refutation.
 | --- | --- |
 | `evaluate.sh`, `evaluator.py` | Evaluator entry point (`preflight`, `smoke`, `core`, `external`, ...). |
 | `reproduce.py` | Lower-level scientific driver; every stage writes to a new directory. |
-| `verify_expected_results.py`, `expected-results.json` | Exact checks of the numbers reported in the paper against named record fields and record hashes. |
+| `verify_expected_results.py`, `expected-results.json` | Original result checks plus 203 total checks binding the empirical update to exact fields, file hashes, and offline recomputation. |
+| `verify_update_results.py` | Offline recomputation of eight new studies and independent reviews, without external archives or compilers. |
 | `src/` | Receivers, checkers, producers, demand evaluator, domain transport. |
-| `tests/` | Unit tests (366) and the study drivers invoked by `reproduce.py`. |
+| `tests/` | 422 unit tests (the original 366 plus 56 additions) and the study drivers invoked by `reproduce.py`. |
 | `data/`, `proof-data/`, `experiments/`, `results/` | Retained study records (inputs, outputs, protocols, hash inventories). |
 | `public-data/`, `inputs/` | Small public inputs (Codeflaws metadata, CEIL_DIV source, fixture requests). |
 | `figures/` | Figure generators used by the paper build (see `figures/README.md`). |
 | `docs/`, `proofs/`, `formats.md` | Protocols, proof notes, and certificate formats. |
 | `claim_evidence_ledger.csv` | Claim-to-evidence map (paths relative to this directory). |
 | `evaluation-record/` | Path-normalized record of the authors' final acceptance run. |
-| `audit_delivery.py`, `audit_data_integrity.py` | Packaging audit (paths, licenses, caches, bindings) and parse check of every data file (`python3 -B audit_data_integrity.py`; 10-25 s on a local Linux file system, about 7 min on a Windows drive mounted in WSL; prints counts and `"errors": []`, exit code 0). |
+| `audit_delivery.py`, `audit_data_integrity.py` | Packaging audit (paths, licenses, caches, bindings) and parse check of every data file plus all eight review-update reductions (`python3 -B audit_data_integrity.py`; prints counts, review statuses, and `"errors": []`, exit code 0). |
 | `external-inputs.json`, `external-stages.json`, `external_resources.csv` | Identities and sources of external tools/data that are not redistributed. |
 | `licenses/`, `THIRD_PARTY_NOTICES.md`, `LICENSE` | License texts. |
 
@@ -114,28 +115,106 @@ invocation needs an output path that does not exist yet and lies outside the
 repository; existing evidence is never overwritten. (Without `--output`, the
 evaluator writes to `../evaluation-output/<UTC>-<mode>/`.)
 
-## Quick check (about 1 minute)
+## Quick check
 
 ```sh
-./evaluate.sh preflight --output ../rs-out/preflight   # files, pinned versions, hygiene, 36 result checks, delivery audit
+./evaluate.sh preflight --output ../rs-out/preflight   # files, pinned versions, hygiene, 203 result checks, delivery audit
 ./evaluate.sh smoke     --output ../rs-out/smoke       # receiving, transport, header-admission, journal, ledger tests
 python3 -B verify_expected_results.py --output ../rs-out/verify
 ```
 
 Expected: the two evaluator calls print `{"status": "PASS", ...}`, and the
-checker prints `{"status": "PASS_KEY_RESULT_SOURCE_TRACE", "checks": 36, "failures": 0, ...}`.
+checker prints `{"status": "PASS_KEY_RESULT_SOURCE_TRACE", "checks": 203, "failures": 0, ...}`.
 Each evaluator run stores commands, environment, logs, and results in
 `<output>/evaluation.json`. Missing external tools do not fail `preflight`.
+
+## Empirical review update
+
+The historical data remain unchanged, and the manuscript in `../paper` has been
+revised from these records only (Sections 3.2 and 7.4 and the supplement sections
+on released patches and exact order classes). The update adds a
+fixed sample of actual published Angelix patches, larger source-linked case
+studies, explicit tests-pass-but-wrong examples, independent computational
+reviews, and a domain-scale census. Read `../RESULTS_UPDATE.md` for the complete
+Chinese report, per-case conclusions, measured validation results, and every
+claim's file/field location. `docs/review-update-protocol.md` states the shared
+methodological rules before interpreting the counts.
+
+| New evidence | Observed result | Entry point and bound records |
+| --- | --- | --- |
+| Published-patch failure taxonomy | 127 distinct patches from 67 original sources; primary O0/O1/O2/correct/other = 9/95/8/1/14 | `experiments/real-patches/README.md`, `summary.json`, `labels.json` |
+| All given tests pass, additional declared-domain violation | 11/127 sampled patches; 11/14 all-test-passing patches | `experiments/real-patches/summary.json`, `records/native.jsonl` |
+| Independent patch classification review | 127/127 computational agreement; zero human annotators | `experiments/real-patches/independent-review.json` |
+| Independent O0 witness review | 9/9 uninitialized-read witnesses confirmed by a separate path executor | `experiments/real-patches/independent-definedness.json` |
+| Codeflaws expansion | 20 main pairs plus two targeted pairs, 21 problems, 44 full/direct/concrete agreements, 22 compact confirmations | `experiments/natural-expansion/README.md`, `records/summary.json` |
+| Real test-passing APR certificate cases | Six patches from five original subjects; six full/direct and compact refutations | `experiments/introclass-certificates/README.md`, `records/summary.json` |
+| Independent normalization review | 13 structural correspondences; 2,249 value/trace and 8,996 native-output agreements | `experiments/introclass-certificates/independent-review.json` |
+| Domain scaling | 50/100 observed coordinate products exceed 4,096; 7,583 source arities remain unknown | `experiments/natural-domains-review/summary.json`, two census CSVs |
+| Fresh whole-archive census | All six recomputed census records byte-identical to the originals | `experiments/natural-domains-review/fresh-census/recollection.json` |
+
+From this directory:
+
+```sh
+# Recompute all new source/certificate/statistical checks and reviews offline.
+python3 -B verify_update_results.py --output ../review-offline.json
+# Retain all 36 original checks and require the new hashes/results as well.
+python3 -B verify_expected_results.py --output ../review-expected
+# Parse every retained data file and rerun all new study validators.
+python3 -B audit_data_integrity.py
+```
+
+The 203 packaged expected-result checks comprise the 36 original checks and
+167 new checks. The new contract binds 125 scientific/review fields across
+eight studies, their summaries/inventories/validators, and the update driver
+and exact study set. Altered receipt bytes, forged counts, failed studies,
+and omission of a required study are rejection cases. The historical source-inventory
+reconciliation additionally names and hash-pins the one new
+`src/int32_refutation.py` module; all old source bindings and scientific-field
+comparisons remain exact, and unknown or modified modules are rejected. The existing `preflight`,
+`smoke`, `core`, and paper build still use their original entry points; no old
+check is removed or relaxed. `core` adds 19 original fresh-result checks to the
+203 packaged checks, for 222 checks in its final trace.
+
+The added signed compact checker, `src/int32_refutation.py`, binds the full
+request and an actual member of its exact point set, and checks only that
+member. It confirms a violation, not acceptance or canonical leastness.
+All new signed case requests preserve the existing reference-everywhere
+policy. The real-patch taxonomy separately uses an explicit original/reference
+repair region to measure preservation failures.
+
+Every fresh native campaign records its commands, tool identities, stream
+bytes/hashes, complete input coverage, and actual process outcomes. Offline
+verification checks those receipts and recomputes semantic results; it is not
+another native execution. Reproduction commands for new GCC/Clang executions
+are in each study README. The Codeflaws archive and full Angelix archive are
+external inputs; selected IntroClass sources/patches are distributed with their
+original notices. No new full CBMC/CPAchecker external campaign is claimed.
+
+The original-delivery integrity check is intentionally separate:
+
+```sh
+python3 -B tests/audit_original_evidence.py --verify-record
+```
+
+It checks the 63,544 original scientific evidence files (data, proof data,
+experiments, results, evaluation record) against a manifest collected from the
+uploaded ZIP; each must still match byte for byte, and every old expected-result
+leaf must be unchanged. Any difference in these groups fails the check. The 71
+files of the originally uploaded manuscript are registered in the same manifest
+as a historical record of that version: because the authors revise the paper
+after upload, files that differ from the uploaded manuscript are listed under
+`paper_files_revised_since_upload` instead of failing the check. The check runs
+the same way standalone and with the paper beside the artifact.
 
 ## Reproducing the paper's results
 
 | Paper result | Command | Output | Expected | Time |
 | --- | --- | --- | --- | --- |
-| All bound numbers in `expected-results.json` (780 requests, transport targets, witness, coverage, timing and overhead medians) | `python3 -B verify_expected_results.py --output ../rs-out/verify` | `../rs-out/verify/result.json` | `PASS_KEY_RESULT_SOURCE_TRACE`, 36 checks | seconds |
-| 780 canonical complete decisions; 5,308,130 support-keyed vs 39,276,283 live-node semantic values (fresh execution) | `python3 -B reproduce.py --checks demand --output ../rs-out/demand` then `python3 -B verify_expected_results.py --output ../rs-out/v-demand --fresh-demand ../rs-out/demand/unsigned-demand` | `reproduction.json`, `unsigned-demand/summary.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 44 checks | ~2-3 min |
+| All bound numbers in `expected-results.json` (780 requests, transport targets, witness, coverage, timing and overhead medians) | `python3 -B verify_expected_results.py --output ../rs-out/verify` | `../rs-out/verify/result.json` | `PASS_KEY_RESULT_SOURCE_TRACE`, 203 checks | typically under a minute on a local Linux filesystem |
+| 780 canonical complete decisions; 5,308,130 support-keyed vs 39,276,283 live-node semantic values (fresh execution) | `python3 -B reproduce.py --checks demand --output ../rs-out/demand` then `python3 -B verify_expected_results.py --output ../rs-out/v-demand --fresh-demand ../rs-out/demand/unsigned-demand` | `reproduction.json`, `unsigned-demand/summary.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 211 checks | ~2-3 min plus update verification |
 | Timing, coverage, counter-overhead and witness-search summaries (recomputed from retained raw records) | `python3 -B reproduce.py --checks analysis --output ../rs-out/analysis` | `../rs-out/analysis/reproduction.json` | `PASS_SELECTED_CHECKS` | seconds |
-| Functional campaign (780 reloaded requests, 380 full / 285 compact certificates, 6,000 tamper rejections) and native header controls | `python3 -B reproduce.py --checks functional headers --gcc $(which gcc) --clang $(which clang) --output ../rs-out/fh` then `python3 -B verify_expected_results.py --output ../rs-out/v-fh --fresh-functional ../rs-out/fh/functional --fresh-headers ../rs-out/fh/header-admission` | `functional/complete-reproduction.json`, `header-admission/report.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 47 checks | ~4-6 min |
-| Unit suite | `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` | console | `Ran 366 tests`, `OK (skipped=2)`; `OK (skipped=1)` under CPython 3.12.14; `OK` with 3.12.14 and `CBMC_BINARY=/usr/bin/cbmc` | ~1 min |
+| Functional campaign (780 reloaded requests, 380 full / 285 compact certificates, 6,000 tamper rejections) and native header controls | `python3 -B reproduce.py --checks functional headers --gcc $(which gcc) --clang $(which clang) --output ../rs-out/fh` then `python3 -B verify_expected_results.py --output ../rs-out/v-fh --fresh-functional ../rs-out/fh/functional --fresh-headers ../rs-out/fh/header-admission` | `functional/complete-reproduction.json`, `header-admission/report.json` | `PASS_SELECTED_CHECKS`; then `PASS_KEY_RESULT_SOURCE_TRACE`, 214 checks | ~4-6 min plus update verification |
+| Unit suite | `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` | console | `Ran 422 tests`, `OK` with the pinned CPython 3.12.14 and CBMC 6.6.0 environment; optional interpreter/CBMC-dependent tests retain their original skip conditions. Actual final status is recorded in `../RESULTS_UPDATE.md` | ~1 min |
 | Everything local in one go (analysis, functional, demand, headers, unit suite, fresh verification; plus the paper build when `../paper` exists) | `./evaluate.sh core --output ../rs-out/core` | `../rs-out/core/evaluation.json` | `PASS` | ~7-12 min |
 | Paper build (only with `../paper`; see below) | `./evaluate.sh paper --output ../rs-out/paper` | `../rs-out/paper/evaluation.json` | `PASS` | ~30 s |
 | CBMC/CPAchecker, Codeflaws, timing campaigns, historical receipts | see [External campaigns](#external-campaigns) | `<output>/evaluation.json` | `PASS`; without the inputs `FAILED_PRECONDITION` (exit 3) with zero studies started | ~1.5-2 h (witness ~70 min, Codeflaws ~30-35 min, CBMC <1 min) |
@@ -155,10 +234,14 @@ delivery audit. Figure regeneration is described in `figures/README.md`.
 The paper build needs the TeX/poppler/font packages listed under
 [Installing the external tools](#installing-the-external-tools); it rewrites the
 PDFs inside `../paper`, so run it on a copy if the delivered PDFs must stay
-untouched. The build produces `main.pdf` (39 pages, nine figures: five statistical
+untouched. The build produces `main.pdf` (40 pages, nine figures: five statistical
 figures generated from the retained records and four conceptual figures reserved as
-framed slots of their final size) and `supplementary.pdf` (18 pages, one conceptual
-figure slot). All statistical-figure text is Times New Roman with STIX mathematics;
+framed slots of their final size) and `supplementary.pdf` (22 pages, one conceptual
+figure slot). Its tables for the released-patch study, the source-bound cases, and
+the observed-domain scale come from `paper/generate_review_tables.py`, which reads
+the records of `experiments/real-patches`, `natural-expansion`,
+`introclass-certificates`, `natural-domains-review`, and `deep-review` and asserts
+each number against an independent field before writing it. All statistical-figure text is Times New Roman with STIX mathematics;
 the figure atlas and `figure-manifest.json` bind each figure to its generator and
 source records. A
 rebuild keeps the page counts and the manuscript text; bytes and extracted-text

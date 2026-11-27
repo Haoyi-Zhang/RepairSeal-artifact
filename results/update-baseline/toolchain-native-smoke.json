@@ -1,0 +1,42 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/smoke.c",
+      "-o",
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/smoke"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "smoke"
+    ],
+    "returncode": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/root/usr/lib/llvm-19/bin/clang",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=undefined",
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/smoke.c",
+      "-o",
+      "/workspace/scratch/a88b4d734b38/baseline-work/toolchain/smoke"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "smoke"
+    ],
+    "returncode": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  }
+]

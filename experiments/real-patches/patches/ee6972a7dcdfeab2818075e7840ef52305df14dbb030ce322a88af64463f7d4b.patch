@@ -1,0 +1,13 @@
+--- a/median.c
++++ b/median.c
+@@ -23,8 +23,8 @@
+ 	}
+ 	
+ 	
+-	if (C > large) 
+-		median = large;
++	if ((large <= C)) 
++		median = A;
+ 	else if (C < small)
+ 		median = small;
+ 	else

@@ -1,0 +1,39 @@
+{
+  "review_date_local": "2026-11-27",
+  "timezone": "UTC+08:00",
+  "scope": "Targeted primary-source checks; not a systematic literature review or a rerun of external experiments.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "WG14 N1570, C11 Committee Draft",
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+      "sections": ["3.4.3", "6.5.5"],
+      "use": "Undefined source behavior does not guarantee any particular native output."
+    },
+    {
+      "id": "S2",
+      "title": "CBMC official tutorial",
+      "url": "https://github.com/diffblue/cbmc/blob/develop/doc/cprover-manual/cbmc-tutorial.md",
+      "use": "An unwind bound requires completeness checking, rather than inference from observed tests alone."
+    },
+    {
+      "id": "S3",
+      "title": "Poracle: Testing Patches Under Preservation Conditions to Combat the Overfitting Problem of Program Repair",
+      "url": "https://www.jooyongyi.com/papers/TOSEM23.pdf",
+      "artifact_url": "https://github.com/UNIST-LOFT/poracle",
+      "use": "Nearest-work distinction: preservation conditions and differential fuzzing. No head-to-head measurement is claimed."
+    },
+    {
+      "id": "S4",
+      "title": "Format for Correctness Witnesses, version 2.0",
+      "url": "https://sosy-lab.gitlab.io/benchmarking/sv-witnesses/yaml/correctness-witnesses.html",
+      "use": "Invariant witness content differs from a recomputed materialized value record."
+    },
+    {
+      "id": "S5",
+      "title": "Case Study on Verification-Witness Validators: Where We Are and Where We Go — supplementary results",
+      "url": "https://sv-comp.sosy-lab.org/2022/results/validators/",
+      "use": "Validator studies include erroneous confirmation of invalid witnesses; Boolean agreement alone is insufficient evidence of annotation consumption."
+    }
+  ]
+}

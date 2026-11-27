@@ -1,0 +1,97 @@
+{
+  "status": "PROPOSED_REPLACEMENTS_FOR_SEPARATE_REVISED_COPY",
+  "original_paper_modified": false,
+  "replacements": [
+    {
+      "file": "sections/contract.tex",
+      "expected_occurrences": 1,
+      "old": "The order of the last two components is a design decision with a diagnostic purpose. The least trace names the shallowest source branch at which the candidate's control flow parts from the behavior the obligations accept. That is the branch a maintainer wants named first, because a repair is usually a change to one branch and the question is which one it got wrong. Ordering by input alone would report the numerically smallest failing input, which is a property of the sample rather than of the program: such a point can lie on a deep path inside a later branch, and the maintainer must then walk the trace to learn which decision is implicated. Since the trace is a function of the input, the trace-first order refines the input order rather than replacing it, so the reported point is the least member of the shallowest failing class and every reported key remains an actual violation.",
+      "new": "Trace-first ordering is a deterministic diagnostic convention: it first selects the lexicographically least failing candidate trace, with false preceding true at the first differing event, and then the least actual input in that trace class. It is not a shortest-path or shallowest-branch rule, does not refine numeric input order, and does not identify the cause of a defect. For example, a failing input with trace $[(0,0),(1,1),(2,1)]$ precedes one with trace $[(0,1)]$, although the former executes more nested conditionals. An unused but defined scratch computation can introduce either trace without affecting the wrong output. The convention makes independently scheduled complete receivers comparable; its usefulness for human debugging remains unmeasured.",
+      "reason": "A fresh two-request control disproves depth, refinement, and causal localization claims; canonical ordering itself remains unchanged."
+    },
+    {
+      "file": "sections/contract.tex",
+      "expected_occurrences": 1,
+      "old": "The order is not invariant under editing. Inserting a conditional renumbers every later site. Moving a statement across a branch changes the preorder. Macro expansion adds sites the source does not show, and merging or deleting a branch shortens traces, so a scratch conditional can change the diagnostic without changing any returned value. A diagnostic therefore belongs to exact source bytes, which is why the request binds source content identifiers and why an accepted result is re-established after a refactoring instead of being compared across it. An input-ordered diagnostic would survive such edits, and that is its only advantage: it is stable because it says less.",
+      "new": "The order is not invariant under source editing. Inserting, moving, or replacing a conditional can change site identifiers or trace bits while preserving all returned values. In our two-point control, exchanging the branches of an equivalent conditional changes the canonical witness from input $1$ to input $0$ while both inputs still return the same incorrect value. A diagnostic therefore belongs to exact source bytes and the declared ordering. Numeric input order is an alternative convention with different stability properties; neither convention has an established usability advantage in this study.",
+      "reason": "Removes unsupported maintainer preference and sole-advantage assertions; adds executed behavior-preserving control."
+    },
+    {
+      "file": "sections/guarantees.tex",
+      "expected_occurrences": 1,
+      "old": "since every projection set is contained in $\\D$ the count is at most $LM$",
+      "new": "the projection map from $\\D$ onto each $\\pi_{S_k}(\\D)$ is surjective, so $|\\pi_{S_k}(\\D)|\\le|\\D|$ and the count is at most $LM$",
+      "reason": "Projection tuples may have smaller arity than domain tuples; cardinality inequality, not literal set inclusion, proves the bound."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "expected_occurrences": 1,
+      "old": "An accepted result transfers to a changed domain exactly when the obligations' input projections are already covered.",
+      "new": "An accepted result can be transported to a changed domain when the obligations' input projections are already covered. This is a sufficient authorization rule, not a necessary condition for the changed request to pass.",
+      "reason": "Avoids contradicting sufficient-only theorem and uncovered-but-accepted observations."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "expected_occurrences": 1,
+      "old": "Each line of work answers its question under its own output contract. None asks how the computational value of the same repair evidence changes when the contract changes, and none supplies a common contract under which a receiver that uses evidence and one that does not are guaranteed to return the same answer.",
+      "new": "These lines of work motivate our comparison dimensions: the property returned, the information supplied, and the state already established by the receiver. Our contribution is a specific finite repair contract and matched implementations that hold the canonical result fixed within a complete-decision comparison, then separate that comparison from existential confirmation and acceptance transport. The erasure result concerns the implemented value-record format and traversal; it is not a lower bound for proof-carrying code, invariant witnesses, or certifying algorithms in general.",
+      "reason": "Narrows novelty to demonstrated contract/receivers instead of unverified universal absence of prior work."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "The erasure theorem says that a full record does not shorten the receiver's computation, not that the record is worthless. Its remaining gains are evidentiary. The record can be audited after the fact, because it holds what the producer asserted at the time. It crosses an administrative boundary, because a party that cannot obtain the producer's toolchain, corpus, or hardware can still compare the submitted cells with its own reconstruction. And it reproduces the decision without the producer's environment, which is what makes an old acceptance checkable at all.",
+      "new": "The erasure theorem states that the implemented full value record does not shorten semantic evaluation by a receiver that recomputes every expected cell. The record nevertheless exposes the submitted intermediate claims in a portable form for later comparison with a reconstruction. This documentary role depends on retaining the complete request, observation codec, source semantics, and a compatible receiver. A self-contained record does not by itself authenticate who issued it, establish when it was approved, or validate a modeling assumption shared by producer and receiver.",
+      "reason": "Self-hashes are integrity bindings rather than authenticated provenance; environment-independent historical approval was not demonstrated."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "The concrete case is archival re-adjudication. A maintainer must decide whether a repair accepted three years ago may be carried into a new release, and the compiler, the corpus, and the reviewer who approved it are no longer available. Direct evaluation answers for today and says nothing about what was accepted then; the stored record answers both, and a difference between the two is itself the audit signal. For this purpose the measured price, about 1.6 times the receiving time of a direct check and 23 times the bytes of a one-point refutation (Section~\\ref{sec:cost-results}), buys a decision that survives the loss of its environment. Where that question is never asked, as in a local gate that wants today's verdict, the record earns nothing and the direct receiver is the right instrument.",
+      "new": "Archival re-adjudication is a possible use case, not a measured advantage of full vectors over every alternative record. A versioned request together with a result receipt and authenticated provenance is a smaller baseline for preserving what was approved; full vectors additionally retain the producer's intermediate assertions. The current study measures the computation and size of its implemented formats, but does not quantify an audit benefit over that baseline or show that the full record survives the loss of all required semantic infrastructure. A receiver choosing a format should therefore distinguish the need to retain those intermediate claims from the need to compute a current verdict.",
+      "reason": "Provides missing smaller documentary baseline and distinguishes proposal from measured effect."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "The contract also decides something a test suite cannot. A suite decides its own samples; the contract decides a universal statement over a named finite domain and, when it fails, returns the least violating obligation, trace, and input. For the two natural pairs of the supplement, the combined tests already separate every original from its repair, so those cases illustrate admission and source correspondence rather than discrimination. The running example contains the case that testing cannot see. A candidate that evaluates an unused $1/(n-1)$ assignment returns the correct value at every input yet divides by zero at $n=1$; no comparison of returned values observes the fault, and the definedness obligation refutes the candidate at $(0,1)$. The same argument covers preservation points that no test samples. The contract therefore does not give a better verdict on the same samples; it gives a verdict on every declared input, with a named reason and witness when it fails.",
+      "new": "The finite contract makes coverage and definedness explicit. Exhaustive evaluation of the same finite domain under the same source semantics can establish the same Boolean result; a certificate is not intrinsically more discriminating than that evaluation. The empirical repair examples instead show that the complete published test sets omit inputs at which the candidates fail, and that the discovered violations can be checked again from request-bound evidence. Definedness is a separate observation: an executed unused division by zero violates the C profile even when a particular native build produces the expected output. Such an execution has no defined C return value, and another build may trap or produce a different observation. Output agreement alone is therefore insufficient evidence of definedness; a lack of a native failure is not proof that the source operation is valid.",
+      "reason": "Corrects false inherent superiority over finite exhaustive testing and false claim of defined returns at UB points."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "No original \\codeflaws{} source is admitted by the unsigned expression frontend, and the signed frontend admits 223 of 7,806 occurrences (Section~\\ref{sec:evaluation-methodology}). The path from the current frontends to real submitted patches has four steps, in the order the evidence supports them. The first is bounded loops, which account for much of the excluded benchmark material: a loop whose trip count is bounded by an input can be unrolled to a bound recorded in the request, and the archive's own tests supply the bound an author intended. The second is arrays and pointer-free memory, which need a finite heap model and an index bound; the word circuit already carries the arithmetic. The third is macro use and preprocessing, where the honest option is to validate rather than model: expand under a declared configuration and check that the lowered scalar program agrees with the expanded source on the declared inputs, which turns the manual correspondence of Section~\\ref{sec:ceil-consumer} into a checked obligation. The fourth is scale, where the 4,096-point bound is the binding constraint and projection-based admission (Section~\\ref{sec:policy}) is the change that lifts it. Each step keeps the rule the paper relies on: a construct is either modeled exactly or rejected before any verdict.",
+      "new": "The current frontends remain restricted even after the empirical patch extension: the signed archive census admits 223 of 7,806 source occurrences, and the newly received APR patches belong to small scalar program families. Extending that coverage requires new semantics and validation. For a loop, an unrolling bound must be justified for every declared input, for example by a proved bound or a checked unwinding assertion; observed tests provide a candidate bound but do not recover an author's intention or establish completeness. Arrays and memory need an explicit finite object and index model, including initialization and definedness. Preprocessing requires a declared configuration and a correspondence argument for the expanded and admitted sources. Projection-based admission can avoid irrelevant Cartesian growth only after the relevant projections, diagnostic representatives, and resource checks are handled without constructing the prohibited full product. These are distinct future implementation tasks, and no result here claims that they have been completed.",
+      "reason": "Avoids treating observed test loop bounds as proof, automatic scale lift, and planned source support as implemented."
+    },
+    {
+      "file": "sections/guarantees.tex",
+      "expected_occurrences": 1,
+      "old": "The signed point-set extension implements only complete-domain receiving paths.",
+      "new": "The empirical update additionally implements a signed exact-point compact checker. Its point membership test uses an actual vector from the declared point set rather than independent coordinate membership; its reference-everywhere policy makes preservation vacuous. The same single-point argument establishes a submitted violation, without establishing acceptance or leastness.",
+      "reason": "Current int32_refutation.py and six APR case records contradict obsolete signed-only-full statement; exact-point and R=True scopes are essential."
+    },
+    {
+      "file": "sections/evaluation-methodology.tex",
+      "expected_occurrences": 1,
+      "old": "The unsigned profile exposes all four receiving interfaces; the signed profile implements the complete-domain paths.",
+      "new": "The unsigned profile exposes all four receiving interfaces. The signed profile implements complete-domain paths and, in the empirical update, an exact-point compact refutation interface. The signed interface retains its reference-everywhere policy.",
+      "reason": "Aligns methodology with implemented signed compact checker without inventing signed preservation support."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "so the record bought auditability rather than speed, at about 1.6 times the receiving time of a direct check and 23 times the bytes of a one-point refutation.",
+      "new": "so the record retained submitted intermediate claims without reducing local semantic work, at about 1.6 times the receiving time of a direct check and 23 times the bytes of a one-point refutation.",
+      "reason": "Auditability is a design property/use case; comparative audit benefit was not measured."
+    },
+    {
+      "file": "sections/discussion.tex",
+      "expected_occurrences": 1,
+      "old": "The artifact, the retained records, and the scripts that regenerate every reported decision, table, and figure are available under the MIT license at \\url{https://github.com/Haoyi-Zhang/RepairSeal-artifact}.",
+      "new": "The original RepairSeal code and reproduction scripts are released under the MIT license at \\url{https://github.com/Haoyi-Zhang/RepairSeal-artifact}. Redistributed third-party sources and data retain their own licenses and attribution notices, as specified in the artifact; the MIT license does not relicense those materials.",
+      "reason": "New empirical patch sources include CC BY 4.0 archive material and BSD notices; blanket MIT statement is too broad. Repository availability must be verified separately before submission."
+    }
+  ]
+}

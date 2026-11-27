@@ -1,0 +1,14 @@
+--- a/median.c
++++ b/median.c
+@@ -15,9 +15,9 @@
+     //scanf ("%d", &b);
+     //printf("Enter third integer > %d", c);
+     //scanf ("%d", &c);
+-    if ((a>=b && b>=c)||(a<=b && b<=c))
++    if (((a + a) <= b))
+        printf("%d\n", ANGELIX_OUTPUT(int, b, "stdout"));
+-    else if ((b>=a && a>=c)||(c<=a && a<=b))
++    else if (((c + b) > a))
+        printf("%d\n", ANGELIX_OUTPUT(int, a, "stdout"));
+     else if ((a>=c && c>=b)||(a<=c && c<=b))
+        printf("%d\n", ANGELIX_OUTPUT(int, c, "stdout"));
